@@ -144,11 +144,12 @@ const WithOptionTogglerButton = () => {
                 color="text.primary"
                 align={'center'}
               >
-                We are founded by a leading academic and researcher in the field
-                of Industrial Systems Engineering.
-                <br />
-                For entrepreneurs, startups and freelancers. If you didn’t find
-                what you needed, these could help!
+                SOFTLIX is your one-stop solutions provider for Web, Mobile and
+                Software Development. We strive day and night to deliver quality
+                services to our clients, and to address their design and
+                development needs. We strongly believe that integrity,
+                dedication, punctuality and confidentiality are the key values
+                we carry to build long-term business relationships.
               </Typography>
             </Box>
             {renderToggler()}

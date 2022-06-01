@@ -154,7 +154,7 @@ const Jobs = () => {
             Design & UX, Engineering
           </Typography>
           <Typography color={'text.secondary'}>
-            User experience and design are top priorities at theFront.
+            User experience and design are top priorities at Softlix.
           </Typography>
         </Box>
         <Box

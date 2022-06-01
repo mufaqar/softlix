@@ -24,7 +24,7 @@ const Footer = () => {
             display={'flex'}
             component="a"
             href="/"
-            title="theFront"
+            title="Softlix"
             width={{ xs: 160, md: 170 }}
           >
             <Box
@@ -83,7 +83,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; theFront. 2021, Macccccarian. All rights reserved
+          &copy; Softlix. 2021, Macccccarian. All rights reserved
         </Typography>
         <Typography
           align={'center'}

@@ -84,8 +84,8 @@ const Solutions = () => {
           Your new website marketing solution is here
         </Typography>
         <Typography variant="h6" color={'text.secondary'} data-aos={'fade-up'}>
-          theFront Kit offers a completely customizable website landing pages
-          and supported pages management platform.
+          Softlix Kit offers a completely customizable website landing pages and
+          supported pages management platform.
           <br />
           Here’s what makes us different.
         </Typography>

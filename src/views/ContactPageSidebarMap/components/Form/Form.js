@@ -1,5 +1,7 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
@@ -9,6 +11,8 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
+import emailjs from '@emailjs/browser';
+import { useRouter } from 'next/router';
 
 import Container from 'components/Container';
 import axios from 'axios';
@@ -19,7 +23,7 @@ const validationSchema = yup.object({
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your first name'),
-  lname: yup
+  mobile: yup
     .string()
     .trim()
     .min(10, 'Please enter a valid number')
@@ -34,9 +38,11 @@ const validationSchema = yup.object({
 });
 
 const Contact = () => {
+  const formRef = useRef();
+  const router = useRouter();
   const theme = useTheme();
   const [fname, setFname] = useState('');
-  const [lname, setLname] = useState('');
+  const [mobile, setMobile] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [success, setSuccess] = useState('');
@@ -44,44 +50,68 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const LeftSide = () => {
-    const initialValues = {
-      fname: '',
-      lname: '',
-      email: '',
-      message: '',
+    const sendMail = () => {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_SERVICE_ID,
+          process.env.NEXT_PUBLIC_TEMPLATE_CONTACT_US_ID,
+          formRef.current,
+          process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log(formRef.current);
+            console.log(formRef);
+            router.push('/thank-page');
+          },
+          (error) => {
+            console.log(error.text);
+            setBtnLabel('Submit');
+          },
+        );
     };
 
     const onSubmit = (values) => {
       setBtnLabel('Sending...');
       let data = {};
       data.fname = formik.values.fname;
-      data.lname = formik.values.lname;
+      data.mobile = formik.values.mobile;
       data.email = formik.values.email;
       data.message = formik.values.message;
 
-      fetch('api/email', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      }).then((res) => {
-        console.log('Response received');
-        if (res.status === 200) {
-          console.log('Response succeeded!');
-          setSubmitted(true);
-          setFname('');
-          setLname('');
-          setEmail('');
-          setMessage('');
-          setSuccess('Email sent successfully');
-          setBtnLabel('Sent');
-        }
-      });
+      sendMail();
+
+      //   fetch('api/email', {
+      //     method: 'POST',
+      //     headers: {
+      //       Accept: 'application/json, text/plain, */*',
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(data),
+      //   }).then((res) => {
+      //     console.log('Response received');
+      //     if (res.status === 200) {
+      //       console.log('Response succeeded!');
+      //       setSubmitted(true);
+      //       setFname('');
+      //       setMobile('');
+      //       setEmail('');
+      //       setMessage('');
+      //       setSuccess('Email sent successfully');
+      //       setBtnLabel('Sent');
+      //     }
+      //   });
+      //   return values;
+      // };
       return values;
     };
-
+    const initialValues = {
+      fname: '',
+      mobile: '',
+      email: '',
+      message: '',
+    };
     const formik = useFormik({
       initialValues,
       validationSchema: validationSchema,
@@ -108,7 +138,7 @@ const Contact = () => {
           </Typography>
         </Box>
         <Box>
-          <form noValidate onSubmit={formik.handleSubmit}>
+          <form ref={formRef} noValidate onSubmit={formik.handleSubmit}>
             <Grid container spacing={4}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -132,12 +162,12 @@ const Contact = () => {
                   variant="outlined"
                   color="primary"
                   size="medium"
-                  name="lname"
+                  name="mobile"
                   fullWidth
-                  value={formik.values.lname}
+                  value={formik.values.mobile}
                   onChange={formik.handleChange}
-                  error={formik.touched.lname && Boolean(formik.errors.lname)}
-                  helperText={formik.touched.lname && formik.errors.lname}
+                  error={formik.touched.mobile && Boolean(formik.errors.mobile)}
+                  helperText={formik.touched.mobile && formik.errors.mobile}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -306,5 +336,4 @@ const Contact = () => {
     </Box>
   );
 };
-
 export default Contact;

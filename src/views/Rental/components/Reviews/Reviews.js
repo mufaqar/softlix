@@ -100,7 +100,7 @@ const Reviews = () => {
           </Typography>
           <Typography variant="h6" align={'center'} color={'text.secondary'}>
             Companies from across the globe have had fantastic experiences using
-            theFront.
+            Softlix.
             <br />
             Here’s what they have to say.
           </Typography>
@@ -111,9 +111,10 @@ const Reviews = () => {
             '& .slick-slide img': {
               objectFit: 'cover',
             },
-            '& .slick-list, & .slick-slider, & .slick-track, & .slick-slide > div': {
-              height: { xs: 'auto', md: 1 },
-            },
+            '& .slick-list, & .slick-slider, & .slick-track, & .slick-slide > div':
+              {
+                height: { xs: 'auto', md: 1 },
+              },
             '& .slick-prev, & .slick-next': {
               zIndex: 2,
               bottom: 0,

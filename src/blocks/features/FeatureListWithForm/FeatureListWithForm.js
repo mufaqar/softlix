@@ -124,7 +124,7 @@ const FeatureListWithForm = () => {
                   </Typography>
                 </Typography>
                 <Typography color="text.secondary">
-                  Using theFront to build your site means never worrying about
+                  Using Softlix to build your site means never worrying about
                   designing another page or cross browser compatibility. Our
                   ever-growing library of components and pre-designed layouts
                   will make your life easier.

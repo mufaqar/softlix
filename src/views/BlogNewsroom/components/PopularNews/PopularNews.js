@@ -61,7 +61,7 @@ const PopularNews = () => {
         >
           Keep up to date with what we're working on!
           <br />
-          theFront is an ever evolving theme with regular updates.
+          Softlix is an ever evolving theme with regular updates.
         </Typography>
       </Box>
       <Grid container spacing={4}>

@@ -58,7 +58,7 @@ const WithBrandBgColor = () => {
               sx={{ color: 'common.white' }}
             >
               Companies from across the globe have had fantastic experiences
-              using theFront.
+              using Softlix.
               <br />
               Here’s what they have to say.
             </Typography>

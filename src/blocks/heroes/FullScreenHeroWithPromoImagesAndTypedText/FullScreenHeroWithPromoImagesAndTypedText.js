@@ -128,7 +128,7 @@ const FullScreenHeroWithPromoImagesAndTypedText = () => {
                 color="text.secondary"
                 sx={{ fontWeight: 400 }}
               >
-                theFront will make your product look modern and professional
+                Softlix will make your product look modern and professional
                 while saving you precious time.
               </Typography>
               <Box

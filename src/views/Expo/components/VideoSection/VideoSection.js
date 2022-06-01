@@ -25,7 +25,7 @@ const VideoSection = () => {
               variant="h4"
               sx={{ fontWeight: 700 }}
             >
-              Why partner with theFront?
+              Why partner with Softlix?
             </Typography>
           </Box>
           <Box marginBottom={3}>

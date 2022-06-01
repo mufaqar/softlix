@@ -53,7 +53,7 @@ const Footer = () => {
             display={'flex'}
             component="a"
             href="/"
-            title="theFront"
+            title="Softlix"
             width={{ xs: 160, md: 170 }}
           >
             <Box
@@ -179,7 +179,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; 2022, SOFTLIX Agency. All rights reserved
+          &copy; 2022, SOFTLIX is Product of RDMI Tech Ventures Pvt. Ltd
         </Typography>
         <Typography
           align={'center'}

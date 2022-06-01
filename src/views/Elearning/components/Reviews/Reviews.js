@@ -76,7 +76,7 @@ const Reviews = () => {
           data-aos={'fade-up'}
         >
           Companies from across the globe have had fantastic experiences using
-          theFront.
+          Softlix.
           <br />
           Here’s what they have to say.
         </Typography>

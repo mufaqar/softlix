@@ -23,15 +23,13 @@ const Topbar = ({ onSidebarOpen }) => {
         display={'flex'}
         component="a"
         href="/"
-        title="theFront"
+        title="Softlix"
         width={{ xs: 100, md: 120 }}
       >
         <Box
           component={'img'}
           src={
-            mode === 'light'
-              ? '/images/IMG_3570.png'
-              : '/images/IMG_3570.png'
+            mode === 'light' ? '/images/IMG_3570.png' : '/images/IMG_3570.png'
           }
           height={1}
           width={1}

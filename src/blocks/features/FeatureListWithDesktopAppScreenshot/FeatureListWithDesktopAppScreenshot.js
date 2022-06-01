@@ -16,7 +16,7 @@ const mock = [
   {
     title: 'Built for developers',
     subtitle:
-      'theFront is built to make your life easier. Variables, build tooling, documentation, and reusable components.',
+      'Softlix is built to make your life easier. Variables, build tooling, documentation, and reusable components.',
     icon: (
       <svg
         height={24}
@@ -38,7 +38,7 @@ const mock = [
   {
     title: 'Designed to be modern',
     subtitle:
-      'Designed with the latest design trends in mind. theFront feels modern, minimal, and beautiful.',
+      'Designed with the latest design trends in mind. Softlix feels modern, minimal, and beautiful.',
     icon: (
       <svg
         height={24}
@@ -60,7 +60,7 @@ const mock = [
   {
     title: 'Documentation for everything',
     subtitle:
-      'We\'ve written extensive documentation for components and tools, so you never have to reverse engineer anything.',
+      "We've written extensive documentation for components and tools, so you never have to reverse engineer anything.",
     icon: (
       <svg
         height={24}

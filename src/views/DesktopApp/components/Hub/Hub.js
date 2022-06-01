@@ -92,8 +92,8 @@ const Hero = () => {
           </Box>
           <Box marginBottom={4}>
             <Typography variant="h6" component="p" color="text.secondary">
-              theFront styles and extends MUI components, but also included
-              brand new landing page focused components.
+              Softlix styles and extends MUI components, but also included brand
+              new landing page focused components.
             </Typography>
           </Box>
           <Box>

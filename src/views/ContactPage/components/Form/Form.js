@@ -1,5 +1,6 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useRef } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useTheme } from '@mui/material/styles';
@@ -9,6 +10,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { useRouter } from 'next/router';
+import emailjs from '@emailjs/browser';
 
 const validationSchema = yup.object({
   fullName: yup
@@ -17,10 +20,7 @@ const validationSchema = yup.object({
     .min(2, 'Please enter a valid full name')
     .max(50, 'Please enter a valid full name')
     .required('Please specify your full name'),
-  message: yup
-    .string()
-    .trim()
-    .required('Please specify your message'),
+  message: yup.string().trim().required('Please specify your message'),
   email: yup
     .string()
     .trim()
@@ -29,6 +29,8 @@ const validationSchema = yup.object({
 });
 
 const Form = () => {
+  const router = useRouter();
+  const formRef = useRef();
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -40,7 +42,27 @@ const Form = () => {
     email: '',
   };
 
+  const sendMail = () => {
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_CONTACT_US_ID,
+        formRef.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          // console.log(form.current);
+          router.push('/thank-page');
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+  };
   const onSubmit = (values) => {
+    sendMail();
     return values;
   };
 
@@ -71,6 +93,7 @@ const Form = () => {
         maxWidth={600}
         margin={'0 auto'}
         component={'form'}
+        ref={formRef}
         onSubmit={formik.handleSubmit}
         sx={{
           '& .MuiOutlinedInput-root.MuiInputBase-multiline': {

@@ -156,7 +156,7 @@ const WithOptionTogglerButton = () => {
           <Typography
             variant="subtitle2"
             sx={{
-              fontWeight: 700, 
+              fontWeight: 700,
               color:
                 pricingOption !== 'annual' ? 'common.white' : 'text.primary',
             }}
@@ -196,234 +196,274 @@ const WithOptionTogglerButton = () => {
                 color="text.primary"
                 align={'center'}
               >
-                We are founded by a leading academic and researcher in the field
-                of Industrial Systems Engineering.
-                <br />
-                For entrepreneurs, startups and freelancers. If you didn’t find
-                what you needed, these could help!
+                SOFTLIX is your one-stop solutions provider for Web, Mobile and
+                Software Development. We strive day and night to deliver quality
+                services to our clients, and to address their design and
+                development needs. We strongly believe that integrity,
+                dedication, punctuality and confidentiality are the key values
+                we carry to build long-term business relationships.
               </Typography>
             </Box>
-           <Box sx={{ width: '100%' }}>
-       <Box sx={{ borderBottom: 1, borderColor: 'divider', display:'flex', width:'100%', maxWidth:'500px', margin:'0 auto'  }}>
-              <Tabs  sx={{  display:'flex', width:'100%',
-              "& .MuiTabs-flexContainer": {
-            width: '100%',
-    justifyContent:'space-around',
-    },
-     }} variant="scrollable"  scrollButtons="auto" value={value} onChange={handleChange}  aria-label="basic tabs example">
-                <Tab sx={{  fontSsize: '16px', fontWeight: '600' }} label="Website Design & Development" {...a11yProps(1)} />
-                <Tab sx={{  fontSsize: '16px', fontWeight: '600' }} label="App development" {...a11yProps(0)} />
-                
+            <Box sx={{ width: '100%' }}>
+              <Box
+                sx={{
+                  borderBottom: 1,
+                  borderColor: 'divider',
+                  display: 'flex',
+                  width: '100%',
+                  maxWidth: '500px',
+                  margin: '0 auto',
+                }}
+              >
+                <Tabs
+                  sx={{
+                    display: 'flex',
+                    width: '100%',
+                    '& .MuiTabs-flexContainer': {
+                      width: '100%',
+                      justifyContent: 'space-around',
+                    },
+                  }}
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  value={value}
+                  onChange={handleChange}
+                  aria-label="basic tabs example"
+                >
+                  <Tab
+                    sx={{ fontSsize: '16px', fontWeight: '600' }}
+                    label="Website Design & Development"
+                    {...a11yProps(1)}
+                  />
+                  <Tab
+                    sx={{ fontSsize: '16px', fontWeight: '600' }}
+                    label="App development"
+                    {...a11yProps(0)}
+  />
                 </Tabs>
-            </Box>
-      <TabPanel value={value} index={0}>
-      <Container>
-      
-        <Grid container spacing={4}>
-          {mock.map((item, i) => (
-            <Grid item xs={12} md={4} key={i}>
-              <Box
-                component={Card}
-                height={1}
-                display={'flex'}
-                flexDirection={'column'}
-                variant={'outlined'}
-              >
-                <CardContent
-                  sx={{
-                    padding: 4,
-                  }}
-                >
-                  <Box marginBottom={2}>
-                    <Typography variant={'h4'} fontWeight={600} gutterBottom>
-                      {item.title}
-                    </Typography>
-                    <Typography color={'text.secondary'}>
-                      {item.subtitle}
-                    </Typography>
-                  </Box>
-                  <Box
-                    display={'flex'}
-                    alignItems={'baseline'}
-                    marginBottom={2}
-                  >
-                    <Typography variant={'h3'} fontWeight={700}>
-                      {pricingOption === 'annual'
-                        ? item.price.annual
-                        : item.price.monthly}
-                    </Typography>
-                    <Typography
-                      variant={'subtitle1'}
-                      color={'text.secondary'}
-                      fontWeight={700}
-                    >
-                      {pricingOption === 'annual' ? '' : ''}
-                    </Typography>
-                  </Box>
-                  <Grid container spacing={1}>
-                    {item.features.map((feature, j) => (
-                      <Grid item xs={12} key={j}>
+              </Box>
+              <TabPanel value={value} index={0}>
+                <Container>
+            <Grid container spacing={4}>
+                    {mock.map((item, i) => (
+                      <Grid item xs={12} md={4} key={i}>
                         <Box
-                          component={ListItem}
-                          disableGutters
-                          width={'auto'}
-                          padding={0}
+                          component={Card}
+                          height={1}
+                          display={'flex'}
+                          flexDirection={'column'}
+                          variant={'outlined'}
                         >
-                          <Box
-                            component={ListItemAvatar}
-                            minWidth={'auto !important'}
-                            marginRight={2}
+                          <CardContent
+                            sx={{
+                              padding: 4,
+                            }}
                           >
-                            <Box
-                              component={Avatar}
-                              bgcolor={theme.palette.primary.main}
-                              width={20}
-                              height={20}
-                            >
-                              <svg
-                                width={12}
-                                height={12}
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
+                            <Box marginBottom={2}>
+                              <Typography
+                                variant={'h4'}
+                                fontWeight={600}
+                                gutterBottom
                               >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
+                                {item.title}
+                              </Typography>
+                              <Typography color={'text.secondary'}>
+                                {item.subtitle}
+                              </Typography>
                             </Box>
-                          </Box>
-                          <ListItemText primary={feature} />
+                            <Box
+                              display={'flex'}
+                              alignItems={'baseline'}
+                              marginBottom={2}
+                            >
+                              <Typography variant={'h3'} fontWeight={700}>
+                                {pricingOption === 'annual'
+                                  ? item.price.annual
+                                  : item.price.monthly}
+                              </Typography>
+                              <Typography
+                                variant={'subtitle1'}
+                                color={'text.secondary'}
+                                fontWeight={700}
+                              >
+                                {pricingOption === 'annual' ? '' : ''}
+                              </Typography>
+                            </Box>
+                            <Grid container spacing={1}>
+                              {item.features.map((feature, j) => (
+                                <Grid item xs={12} key={j}>
+                                  <Box
+                                    component={ListItem}
+                                    disableGutters
+                                    width={'auto'}
+                                    padding={0}
+                                  >
+                                    <Box
+                                      component={ListItemAvatar}
+                                      minWidth={'auto !important'}
+                                      marginRight={2}
+                                    >
+                                      <Box
+                                        component={Avatar}
+                                        bgcolor={theme.palette.primary.main}
+                                        width={20}
+                                        height={20}
+                                      >
+                                        <svg
+                                          width={12}
+                                          height={12}
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clipRule="evenodd"
+                                          />
+                                        </svg>
+                                      </Box>
+                                    </Box>
+                                    <ListItemText primary={feature} />
+                                  </Box>
+                                </Grid>
+                              ))}
+                            </Grid>
+                          </CardContent>
+                          <Box flexGrow={1} />
+                          <CardActions
+                            sx={{ justifyContent: 'flex-end', padding: 4 }}
+                          >
+                            <Link
+                              underline="none"
+                              component="a"
+                              href="/hire-us"
+                            >
+                              {' '}
+                              <Button size={'large'} variant={'contained'}>
+                                Talk To Sales
+                              </Button>{' '}
+                            </Link>
+                          </CardActions>
                         </Box>
                       </Grid>
                     ))}
                   </Grid>
-                </CardContent>
-                <Box flexGrow={1} />
-                <CardActions sx={{ justifyContent: 'flex-end', padding: 4 }}>
-                  <Link
-                underline="none"
-                component="a"
-                href="/hire-us" > <Button size={'large'} variant={'contained'}>
-                    Talk To Sales
-                  </Button> </Link>
-                </CardActions>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Container>
-
-        <Grid container spacing={4}>
-          {mock2.map((item, i) => (
-            <Grid item xs={12} md={4} key={i}>
-              <Box
-                component={Card}
-                height={1}
-                display={'flex'}
-                flexDirection={'column'}
-                variant={'outlined'}
-              >
-                <CardContent
-                  sx={{
-                    padding: 4,
-                  }}
-                >
-                  <Box marginBottom={2}>
-                    <Typography variant={'h4'} fontWeight={600} gutterBottom>
-                      {item.title}
-                    </Typography>
-                    <Typography color={'text.secondary'}>
-                      {item.subtitle}
-                    </Typography>
-                  </Box>
-                  <Box
-                    display={'flex'}
-                    alignItems={'baseline'}
-                    marginBottom={2}
-                  >
-                    <Typography variant={'h3'} fontWeight={700}>
-                      {pricingOption === 'annual'
-                        ? item.price.annual
-                        : item.price.monthly}
-                    </Typography>
-                    <Typography
-                      variant={'subtitle1'}
-                      color={'text.secondary'}
-                      fontWeight={700}
-                    >
-                      {pricingOption === 'annual' ? '' : ''}
-                    </Typography>
-                  </Box>
-                  <Grid container spacing={1}>
-                    {item.features.map((feature, j) => (
-                      <Grid item xs={12} key={j}>
+                </Container>
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <Container>
+                  <Grid container spacing={4}>
+                    {mock2.map((item, i) => (
+                      <Grid item xs={12} md={4} key={i}>
                         <Box
-                          component={ListItem}
-                          disableGutters
-                          width={'auto'}
-                          padding={0}
+                          component={Card}
+                          height={1}
+                          display={'flex'}
+                          flexDirection={'column'}
+                          variant={'outlined'}
                         >
-                          <Box
-                            component={ListItemAvatar}
-                            minWidth={'auto !important'}
-                            marginRight={2}
+                          <CardContent
+                            sx={{
+                              padding: 4,
+                            }}
                           >
-                            <Box
-                              component={Avatar}
-                              bgcolor={theme.palette.primary.main}
-                              width={20}
-                              height={20}
-                            >
-                              <svg
-                                width={12}
-                                height={12}
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
+                            <Box marginBottom={2}>
+                              <Typography
+                                variant={'h4'}
+                                fontWeight={600}
+                                gutterBottom
                               >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
+                                {item.title}
+                              </Typography>
+                              <Typography color={'text.secondary'}>
+                                {item.subtitle}
+                              </Typography>
                             </Box>
-                          </Box>
-                          <ListItemText primary={feature} />
+                            <Box
+                              display={'flex'}
+                              alignItems={'baseline'}
+                              marginBottom={2}
+                            >
+                              <Typography variant={'h3'} fontWeight={700}>
+                                {pricingOption === 'annual'
+                                  ? item.price.annual
+                                  : item.price.monthly}
+                              </Typography>
+                              <Typography
+                                variant={'subtitle1'}
+                                color={'text.secondary'}
+                                fontWeight={700}
+                              >
+                                {pricingOption === 'annual' ? '' : ''}
+                              </Typography>
+                            </Box>
+                            <Grid container spacing={1}>
+                              {item.features.map((feature, j) => (
+                                <Grid item xs={12} key={j}>
+                                  <Box
+                                    component={ListItem}
+                                    disableGutters
+                                    width={'auto'}
+                                    padding={0}
+                                  >
+                                    <Box
+                                      component={ListItemAvatar}
+                                      minWidth={'auto !important'}
+                                      marginRight={2}
+                                    >
+                                      <Box
+                                        component={Avatar}
+                                        bgcolor={theme.palette.primary.main}
+                                        width={20}
+                                        height={20}
+                                      >
+                                        <svg
+                                          width={12}
+                                          height={12}
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clipRule="evenodd"
+                                          />
+                                        </svg>
+                                      </Box>
+                                    </Box>
+                                    <ListItemText primary={feature} />
+                                  </Box>
+                                </Grid>
+                              ))}
+                            </Grid>
+                          </CardContent>
+                          <Box flexGrow={1} />
+                          <CardActions
+                            sx={{ justifyContent: 'flex-end', padding: 4 }}
+                          >
+                            <Link
+                              underline="none"
+                              component="a"
+                              href="/hire-us"
+                            >
+                              {' '}
+                              <Button size={'large'} variant={'contained'}>
+                                Talk To Sales
+                              </Button>{' '}
+                            </Link>
+                          </CardActions>
                         </Box>
                       </Grid>
                     ))}
                   </Grid>
-                </CardContent>
-                <Box flexGrow={1} />
-                <CardActions sx={{ justifyContent: 'flex-end', padding: 4 }}>
-                  <Link
-                underline="none"
-                component="a"
-                href="/hire-us" >  <Button size={'large'} variant={'contained'}>
-                    Talk To Sales
-                  </Button> </Link>
-                </CardActions>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-      </TabPanel>
+                </Container>
+              </TabPanel>
     </Box>
-            
           </Box>
         </Container>
       </Box>
-      
-
- 
     </Box>
   );
 };

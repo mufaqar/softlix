@@ -527,7 +527,7 @@ const PageReferences = () => {
           color={'text.secondary'}
           align={'center'}
         >
-          theFront is an ever-growing system of composable components. We’re
+          Softlix is an ever-growing system of composable components. We’re
           consistently adding landing examples, improving components, and
           gathering feedback from customers to make their experience better.
         </Typography>

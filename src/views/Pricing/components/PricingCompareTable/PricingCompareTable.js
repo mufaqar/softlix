@@ -80,11 +80,11 @@ const PricingCompareTable = () => {
   const theme = useTheme();
   return (
     <Box>
-      <Box marginBottom={4}>
+      {/* <Box marginBottom={4}>
         <Typography fontWeight={700} variant={'h4'}>
           Compare the options
         </Typography>
-      </Box>
+      </Box> */}
       <Box>
         <TableContainer component={Paper} elevation={0}>
           <Table aria-label="caption table" sx={{ minWidth: 600 }}>

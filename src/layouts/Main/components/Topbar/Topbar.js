@@ -30,7 +30,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         display={'flex'}
         component="a"
         href="/"
-        title="theFront"
+        title="Softlix"
         width={{ xs: 160, md: 170 }}
       >
         <Box

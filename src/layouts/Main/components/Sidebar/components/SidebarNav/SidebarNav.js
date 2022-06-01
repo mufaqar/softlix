@@ -26,7 +26,7 @@ const SidebarNav = ({ pages }) => {
           display={'flex'}
           component="a"
           href="/"
-          title="theFront"
+          title="Softlix"
           width={{ xs: 100, md: 120 }}
         >
           <Box

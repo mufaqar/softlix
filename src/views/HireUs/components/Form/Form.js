@@ -13,6 +13,8 @@ import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import axios from 'axios';
 import { useTheme } from '@mui/material/styles';
+import { useRouter } from 'next/router';
+
 const validationSchema = yup.object({
   firstName: yup
     .string()
@@ -47,6 +49,7 @@ const validationSchema = yup.object({
 });
 
 const Form = () => {
+  const router = useRouter();
   const form = useRef();
   const theme = useTheme();
   const [firstName, setFname] = useState('');
@@ -76,16 +79,19 @@ const Form = () => {
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_HIRE_US_ID,
         form.current,
         process.env.NEXT_PUBLIC_PUBLIC_KEY,
       )
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
+          // console.log(form.current);
+          router.push('/thank-page');
         },
         (error) => {
           console.log(error.text);
+          setBtnLabel('Submit');
         },
       );
   };

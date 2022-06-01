@@ -100,7 +100,7 @@ const mock = [
   },
   {
     title: 'Continuous Updates',
-    subtitle: 'We continually deploy improvements and new updates to theFront.',
+    subtitle: 'We continually deploy improvements and new updates to Softlix.',
     icon: (
       <svg
         height={24}

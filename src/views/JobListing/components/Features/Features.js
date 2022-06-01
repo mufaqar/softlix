@@ -42,7 +42,7 @@ const Features = () => {
           <Box>
             <Box marginBottom={2}>
               <Typography variant={'h4'} sx={{ fontWeight: 700 }} gutterBottom>
-                Learn with theFront
+                Learn with Softlix
               </Typography>
               <Typography color="text.secondary" variant={'h6'}>
                 Send one-off and automated email, push, and in-app messages to

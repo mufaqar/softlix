@@ -38,13 +38,13 @@ const HeroWithDashboardScreenshotAndCta = () => {
                     )} 0%)`,
                   }}
                 >
-                  built with theFront
+                  built with Softlix
                 </Typography>
               </Typography>
             </Box>
             <Box marginBottom={3}>
               <Typography variant="h6" component="p" color="text.secondary">
-                World developers use our theFront theme to build their internal
+                World developers use our Softlix theme to build their internal
                 tools and client admin applications.
                 <br />
                 Save yourself time and money.

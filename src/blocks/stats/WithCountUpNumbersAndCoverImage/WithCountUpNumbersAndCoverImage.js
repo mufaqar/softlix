@@ -46,9 +46,8 @@ const WithCountUpNumbersAndCoverImage = () => {
             </Typography>
             <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
               Whether you're creating a subscription service, an on-demand
-              marketplace, an e-commerce store, or a portfolio showcase,
-              theFront helps you create the best possible product for your
-              users.
+              marketplace, an e-commerce store, or a portfolio showcase, Softlix
+              helps you create the best possible product for your users.
             </Typography>
           </Box>
           <Grid container spacing={2}>

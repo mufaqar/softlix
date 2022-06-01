@@ -44,7 +44,7 @@ const Hero = () => {
           color: 'common.white',
         }}
       >
-        Join the world's leading companies at theFront 2021
+        Join the world's leading companies at Softlix 2021
       </Typography>
       <Typography
         variant="h6"

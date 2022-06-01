@@ -45,7 +45,7 @@ const Hero = () => {
               fontWeight: 700,
             }}
           >
-            Welcome to theFront.
+            Welcome to Softlix.
             <br />
             Develop anything your business needs.
           </Typography>
@@ -56,7 +56,8 @@ const Hero = () => {
             sx={{ fontWeight: 400 }}
             align={'center'}
           >
-            We are ready to hear from you! If you have any questions, do not hesitate to leave us a message. We will be looking forward to it!
+            We are ready to hear from you! If you have any questions, do not
+            hesitate to leave us a message. We will be looking forward to it!
           </Typography>
         </Box>
         <Box
