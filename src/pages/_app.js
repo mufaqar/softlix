@@ -18,7 +18,12 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <title>Sitedesign Agency | Modern Website Design & Mobile App Development</title>
+
+        <meta
+          name="description"
+          content="Softlix is IT services Company with certified Experts who can help you build your idea. Software, Apps, Website Development Using Modern Technologies & stacks"
+        />
+        <title>SOFTLIX : Software, Mobile Apps and Other IT Services</title>
       </Head>
       <Page>
         <Component {...pageProps} />

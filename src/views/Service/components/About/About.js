@@ -18,7 +18,7 @@ const Hero = () => {
     <Box>
       <Box marginBottom={2}>
         <Typography component={'span'} variant="h3" sx={{ fontWeight: 700 }}>
-          One-stop solutions for {' '}
+          One-stop solutions for{' '}
           <Typography
             component={'span'}
             variant={'inherit'}
@@ -35,7 +35,8 @@ const Hero = () => {
         </Typography>
       </Box>
       <Typography variant="h6" component="p" color={'text.secondary'}>
-        Looking for a professional website design or Software company? Look no further than Sitedesign Agency.
+        Looking for a professional website design or Software company? Look no
+        further than SOFTLIX Agency.
       </Typography>
       <Box
         display="flex"
@@ -44,20 +45,13 @@ const Hero = () => {
         marginTop={4}
       >
         {[
-           '/images/logo-1.png',
+          '/images/logo-1.png',
           '/images/blive.png',
           '/images/theprint.png',
-          '/images/midday.png'
+          '/images/midday.png',
         ].map((item, i) => (
           <Box maxWidth={70} marginTop={2} marginRight={4} key={i}>
-            <Box
-              component="img"
-              height={1}
-              width={1}
-              src={item}
-              alt="..."
-             
-            />
+            <Box component="img" height={1} width={1} src={item} alt="..." />
           </Box>
         ))}
       </Box>

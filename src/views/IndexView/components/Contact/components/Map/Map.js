@@ -22,7 +22,8 @@ const Map = () => {
         </Box>
         <Box>
           <Typography variant="h6" color={'text.secondary'}>
-           We are ready to hear from you! If you have any questions, do not hesitate to leave us a message. We will be looking forward to it!
+            We are ready to hear from you! If you have any questions, do not
+            hesitate to leave us a message. We will be looking forward to it!
           </Typography>
         </Box>
       </Box>
@@ -55,11 +56,13 @@ const Map = () => {
           >
             Call us:
           </Typography>
-         <Box  component="a"
-          href="tel:919818565561" sx={{color: '#2c4bff', textDecoration: 'none'}}>
-
-           <Typography variant={'subtitle1'}>+9198185 65561</Typography>
-           </Box>
+          <Box
+            component="a"
+            href="tel:919818565561"
+            sx={{ color: '#2c4bff', textDecoration: 'none' }}
+          >
+            <Typography variant={'subtitle1'}>+9198185 65561</Typography>
+          </Box>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography
@@ -69,8 +72,17 @@ const Map = () => {
           >
             Email us:
           </Typography>
-         <Box  component="a"
-          href="mailto:support@sitedesign.agency" sx={{color: '#2c4bff', textDecoration: 'none'}}> <Typography variant={'subtitle1'}> support@sitedesign.agency </Typography> </Box>
+          <Box
+            component="a"
+            href="mailto:support@softlix.tech"
+            sx={{ color: '#2c4bff', textDecoration: 'none' }}
+          >
+            {' '}
+            <Typography variant={'subtitle1'}>
+              {' '}
+              support@softlix.tech{' '}
+            </Typography>{' '}
+          </Box>
         </Grid>
         <Grid item xs={6}>
           <Typography

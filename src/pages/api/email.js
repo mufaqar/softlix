@@ -1,6 +1,4 @@
-
 import nodemailer from 'nodemailer';
-
 
 export default function handler(req, res) {
   console.log(req.body);
@@ -16,19 +14,18 @@ export default function handler(req, res) {
 
   const mailData = {
     from: 'support@softlix.tech',
-    to: 'support@sitedesign.agency',//shubhamsharma715@gmail.com',
+    to: 'support@softlix.tech', //shubhamsharma715@gmail.com',
     subject: `Message From ${req.body.fname}`,
     text: 'Sent from: ' + req.body.email,
     html: `<p>Name: ${req.body.fname}</p>
     <p>Email: ${req.body.email}</p>
     <p>Mobile: ${req.body.lname}</p>
-    <p>Requirements: ${req.body.message}</p>`
+    <p>Requirements: ${req.body.message}</p>`,
   };
   transporter.sendMail(mailData, function (err) {
-    if(err)
-      res.status(400).end(JSON.stringify({ message:'Error'+err.message }));
-    else
-      res.status(200).end(JSON.stringify({ message:'Send Mail' }));
-  }); 
+    if (err)
+      res.status(400).end(JSON.stringify({ message: 'Error' + err.message }));
+    else res.status(200).end(JSON.stringify({ message: 'Send Mail' }));
+  });
   res.status(200);
 }

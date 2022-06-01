@@ -27,8 +27,8 @@ const mock = [
   },
   {
     label: 'Email',
-    value: 'support@sitedesign.agency',
-    link:'mailto:support@sitedesign.agency',
+    value: 'support@softlix.tech',
+    link: 'mailto:support@softlix.tech',
     icon: (
       <svg
         width={20}
@@ -79,7 +79,8 @@ const Contact = () => {
           Contact details
         </Typography>
         <Typography color="text.secondary" align={'center'}>
-          We are ready to hear from you! If you have any questions, do not hesitate to leave us a message. We will be looking forward to it!
+          We are ready to hear from you! If you have any questions, do not
+          hesitate to leave us a message. We will be looking forward to it!
         </Typography>
       </Box>
       <Box
@@ -101,18 +102,13 @@ const Contact = () => {
               minWidth={'auto !important'}
               marginRight={2}
             >
-              <Box
-                component={Avatar}
-                bgcolor='#2f6ad9'
-                width={40}
-                height={40}
-              >
+              <Box component={Avatar} bgcolor="#2f6ad9" width={40} height={40}>
                 {item.icon}
               </Box>
             </Box>
-          <Link underline="none" href={item.link} component="a" >
-          <ListItemText primary={item.label} secondary={item.value} />
-          </Link>
+            <Link underline="none" href={item.link} component="a">
+              <ListItemText primary={item.label} secondary={item.value} />
+            </Link>
           </Box>
         ))}
       </Box>

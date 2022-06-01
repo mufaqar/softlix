@@ -33,12 +33,11 @@ const ContactCard = () => {
           contact us.
         </Typography>
         <Typography variant={'subtitle2'}>
-         support@sitedesign.agency
+          support@softlix.tech
           <br />
-         Sector 63, Noida, UP,
+          Sector 63, Noida, UP,
           <br />
-         India, 201309
-          
+          India, 201309
         </Typography>
       </Box>
     </Box>

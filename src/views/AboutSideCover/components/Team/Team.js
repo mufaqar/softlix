@@ -18,19 +18,20 @@ const mock = [
     title: 'Digital Marketing Company in Florida',
     avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
     about:
-      'SiteDesign was recommended by the software consultants we were working with. They told us it\'s a software company that had worked well for their previous clients in streamlining software and data operations. They were right.',
+      "SOFTLIX was recommended by the software consultants we were working with. They told us it's a software company that had worked well for their previous clients in streamlining software and data operations. They were right.",
   },
   {
     name: 'Spokesperson',
     title: 'Video Marketing company in Chicago',
-    avatar: 'We\'ve been trying to put together a functional website from quite a long while. I am happy to say we finally hired SiteDesign team and they\'ve worked closely with us throughout the process, staying on task, on target, and on budget. Their service is highly recommended!'
-        },
+    avatar:
+      "We've been trying to put together a functional website from quite a long while. I am happy to say we finally hired SOFTLIX team and they've worked closely with us throughout the process, staying on task, on target, and on budget. Their service is highly recommended!",
+  },
   {
     name: 'Owner',
     title: 'Ecommerce Store in New York',
     avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
     about:
-      'I am really impressed by the quality of services I received from SiteDesign. You were right on schedule, charged reasonable prices, were professional and courteous in dealings, and delivered items well before time. I have got a good e-commerce site for my products. My revenue has increased because of SiteDesign and I will definitely use your services again.',
+      'I am really impressed by the quality of services I received from SOFTLIX. You were right on schedule, charged reasonable prices, were professional and courteous in dealings, and delivered items well before time. I have got a good e-commerce site for my products. My revenue has increased because of SOFTLIX and I will definitely use your services again.',
   },
 ];
 
@@ -39,12 +40,19 @@ const Team = () => {
   return (
     <Box>
       <Box marginBottom={4}>
-        
-         <Typography variant={'h4'} gutterBottom sx={{ fontWeight: 700, textAlign: 'center', }}>
-              Our team
-            </Typography>
-        <Typography  variant={'h6'} sx={{ textAlign: 'center',maxWidth:'80%', margin:'0 auto' }}>
-          Our work life at SiteDesign is not simply centered around work only; we also have fun. Here are the highlights of the events so far
+        <Typography
+          variant={'h4'}
+          gutterBottom
+          sx={{ fontWeight: 700, textAlign: 'center' }}
+        >
+          Our team
+        </Typography>
+        <Typography
+          variant={'h6'}
+          sx={{ textAlign: 'center', maxWidth: '80%', margin: '0 auto' }}
+        >
+          Our work life at SOFTLIX is not simply centered around work only; we
+          also have fun. Here are the highlights of the events so far
         </Typography>
       </Box>
       <Grid container spacing={2}>

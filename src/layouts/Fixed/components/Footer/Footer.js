@@ -31,8 +31,8 @@ const Footer = () => {
               component={'img'}
               src={
                 mode === 'light'
-                  ? '/images/main-logo.jpg'
-                  : '/images/main-logo.jpg'
+                  ? '/images/IMG_3570.png'
+                  : '/images/IMG_3570.png'
               }
               height={1}
               width={1}

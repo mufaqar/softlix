@@ -36,9 +36,14 @@ const Headline = () => {
         >
           About us
         </Typography>
-        
+
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-         SiteDesign is your one-stop solutions provider for Web, Mobile and Software Development. We strive day and night to deliver quality services to our clients, and to address their design and development needs. We strongly believe that integrity, dedication, punctuality and confidentiality are the key values we carry to build long-term business relationships.
+          SOFTLIX is your one-stop solutions provider for Web, Mobile and
+          Software Development. We strive day and night to deliver quality
+          services to our clients, and to address their design and development
+          needs. We strongly believe that integrity, dedication, punctuality and
+          confidentiality are the key values we carry to build long-term
+          business relationships.
         </Typography>
       </Box>
     </Box>

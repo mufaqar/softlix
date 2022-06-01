@@ -30,7 +30,7 @@ const mock = [
       'We provide regular status updates to our clients so that they can track the progress of their project. Contact us for more details.',
   },
   {
-    title: 'What is unique about Sitedesign?',
+    title: 'What is unique about SOFTLIX?',
     subtitle:
       'We offer a unique combination of website development, app development, and digital marketing services. Contact us',
   },
@@ -94,7 +94,7 @@ const mock = [
     subtitle:
       'We offer a full refund if you cancel your project within the first 24 hours. Contact us for more details.',
   },
-    {
+  {
     title: 'What is your pricing policy?',
     subtitle:
       'We offer competitive rates for all of our services. Contact us for a free quote.',

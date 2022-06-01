@@ -11,7 +11,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   const {
-  //  landings: landingPages,
+    //  landings: landingPages,
     secondary: secondaryPages,
     company: companyPages,
     account: accountPages,
@@ -37,8 +37,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           component={'img'}
           src={
             mode === 'light' && !colorInvert
-              ? '/images/main-logo.jpg' 
-              : '/images/main-logo.jpg'
+              ? '/images/IMG_3570.png'
+              : '/images/IMG_3570.png'
           }
           height={1}
           width={1}
@@ -51,8 +51,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             id={'home-pages'}
             colorInvert={colorInvert}
             link={'/'}
-          /> 
-        </Box> 
+          />
+        </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Pricing'}
@@ -62,7 +62,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           />
         </Box>
 
-          <Box marginLeft={4}>
+        <Box marginLeft={4}>
           <NavItem
             title={'Services'}
             id={'Services-pages'}
@@ -70,7 +70,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             link={'/service'}
           />
         </Box>
-          <Box marginLeft={4}>
+        <Box marginLeft={4}>
           <NavItem
             title={'Resource'}
             id={'Resource-pages'}
@@ -78,7 +78,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             link={'#'}
           />
         </Box>
-         <Box marginLeft={4}>
+        <Box marginLeft={4}>
           <NavItem
             title={'Blog'}
             id={'Blog-pages'}
@@ -86,7 +86,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             link={'/blog'}
           />
         </Box>
-       
       </Box>
       <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
         <Button

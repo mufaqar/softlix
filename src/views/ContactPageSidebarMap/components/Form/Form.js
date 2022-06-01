@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 
 import Container from 'components/Container';
-import axios from 'axios'
+import axios from 'axios';
 const validationSchema = yup.object({
   fname: yup
     .string()
@@ -30,21 +30,18 @@ const validationSchema = yup.object({
     .trim()
     .email('Please enter a valid email address')
     .required('Email is required.'),
-  message: yup
-    .string()
-    .trim()
-    .required('Please specify your requirements'),
+  message: yup.string().trim().required('Please specify your requirements'),
 });
 
 const Contact = () => {
   const theme = useTheme();
-  const [fname, setFname] = useState('')
-  const [lname, setLname] = useState('')
-const [email, setEmail] = useState('')
-const [message, setMessage] = useState('')
-const[success, setSuccess] = useState('')
-const[btnLabel, setBtnLabel] = useState('Submit')
-const [submitted, setSubmitted] = useState(false)
+  const [fname, setFname] = useState('');
+  const [lname, setLname] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [success, setSuccess] = useState('');
+  const [btnLabel, setBtnLabel] = useState('Submit');
+  const [submitted, setSubmitted] = useState(false);
 
   const LeftSide = () => {
     const initialValues = {
@@ -55,36 +52,33 @@ const [submitted, setSubmitted] = useState(false)
     };
 
     const onSubmit = (values) => {
-
       setBtnLabel('Sending...');
-    let data = {
-      
-    };
-    data.fname=formik.values.fname;
-    data.lname=formik.values.lname;
-    data.email=formik.values.email;
-    data.message=formik.values.message;
+      let data = {};
+      data.fname = formik.values.fname;
+      data.lname = formik.values.lname;
+      data.email = formik.values.email;
+      data.message = formik.values.message;
 
-    fetch('api/email', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then((res) => {
-      console.log('Response received')
-      if (res.status === 200) {
-        console.log('Response succeeded!')
-        setSubmitted(true)
-        setFname('')
-        setLname('')
-        setEmail('')
-        setMessage('')
-        setSuccess('Email sent successfully');
-        setBtnLabel('Sent');
-      }
-    })
+      fetch('api/email', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      }).then((res) => {
+        console.log('Response received');
+        if (res.status === 200) {
+          console.log('Response succeeded!');
+          setSubmitted(true);
+          setFname('');
+          setLname('');
+          setEmail('');
+          setMessage('');
+          setSuccess('Email sent successfully');
+          setBtnLabel('Sent');
+        }
+      });
       return values;
     };
 
@@ -96,13 +90,17 @@ const [submitted, setSubmitted] = useState(false)
 
     return (
       <Box>
-
         <Box marginBottom={4}>
           <Typography variant={'h3'} sx={{ fontWeight: 700 }} gutterBottom>
             Contact us
           </Typography>
-           <Typography color="text.secondary" marginBottom={4}>
-            SiteDesign is your one-stop solutions provider for Web, Mobile and Software Development. We strive day and night to deliver quality services to our clients, and to address their design and development needs. We strongly believe that integrity, dedication, punctuality and confidentiality are the key values we carry to build long-term business relationships.
+          <Typography color="text.secondary" marginBottom={4}>
+            SOFTLIX is your one-stop solutions provider for Web, Mobile and
+            Software Development. We strive day and night to deliver quality
+            services to our clients, and to address their design and development
+            needs. We strongly believe that integrity, dedication, punctuality
+            and confidentiality are the key values we carry to build long-term
+            business relationships.
           </Typography>
 
           <Typography color="text.secondary">
@@ -122,14 +120,9 @@ const [submitted, setSubmitted] = useState(false)
                   name="fname"
                   fullWidth
                   value={formik.values.fname}
-                  onChange={formik.handleChange }
-
-                  error={
-                    formik.touched.fname && Boolean(formik.errors.fname)
-                  }
-                  helperText={
-                    formik.touched.fname && formik.errors.fname
-                  }
+                  onChange={formik.handleChange}
+                  error={formik.touched.fname && Boolean(formik.errors.fname)}
+                  helperText={formik.touched.fname && formik.errors.fname}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -143,9 +136,7 @@ const [submitted, setSubmitted] = useState(false)
                   fullWidth
                   value={formik.values.lname}
                   onChange={formik.handleChange}
-                  error={
-                    formik.touched.lname && Boolean(formik.errors.lname)
-                  }
+                  error={formik.touched.lname && Boolean(formik.errors.lname)}
                   helperText={formik.touched.lname && formik.errors.lname}
                 />
               </Grid>
@@ -191,15 +182,13 @@ const [submitted, setSubmitted] = useState(false)
                   size="medium"
                   type="submit"
                 >
-                 {btnLabel}
+                  {btnLabel}
                 </Button>
-                 <Box>
-              {success}
-              </Box>
+                <Box>{success}</Box>
               </Grid>
               <Grid item xs={12}>
                 <Typography color="text.secondary">
-                 We Typically reply in Maximum 2 Hours
+                  We Typically reply in Maximum 2 Hours
                 </Typography>
               </Grid>
               <Grid item xs={12}>
@@ -217,7 +206,6 @@ const [submitted, setSubmitted] = useState(false)
                     >
                       Privacy Policy
                     </Box>
-                    
                     .
                   </Typography>
                 </Box>

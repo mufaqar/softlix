@@ -19,12 +19,15 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <link
-            rel="shortcut icon"
-            href="/images/favicon.ico"
-          />
+          <link rel="shortcut icon" href="/images/favicon.ico" />
           <meta name="theme-color" content="#ffffff" />
-          
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+          ></link>
+
           <meta
             name="description"
             content="A modern design system for your new landing and web pages."
@@ -41,11 +44,11 @@ export default class MyDocument extends Document {
           />
           <meta
             property="og:title"
-            content="Sitedesign Agency | Modern Website Design & Mobile App Development"
+            content="SOFTLIX Agency | Modern Website Design & Mobile App Development"
           />
           <meta
             property="og:description"
-            content="Looking for a professional website design or Software company? Look no further than Sitedesign Agency. We create beautiful websites, Apps, Software using the latest technologies like Nextjs, Flutter, React Native & Firebase."
+            content="Looking for a professional website design or Software company? Look no further than SOFTLIX Agency. We create beautiful websites, Apps, Software using the latest technologies like Nextjs, Flutter, React Native & Firebase."
           />
           <meta
             property="og:url"
@@ -56,7 +59,13 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
             rel="stylesheet"
           />
-          <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/21402567.js"></script>
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js-na1.hs-scripts.com/21402567.js"
+          ></script>
         </Head>
         <body>
           <Drift appId="gv9ah6ni8h8b" />
@@ -102,11 +111,12 @@ MyDocument.getInitialProps = async (ctx) => {
   ctx.renderPage = () =>
     originalRenderPage({
       // Take precedence over the CacheProvider in our custom _app.js
-      enhanceComponent: (Component) => (props) => (
-        <CacheProvider value={cache}>
-          <Component {...props} />
-        </CacheProvider>
-      ),
+      enhanceComponent: (Component) => (props) =>
+        (
+          <CacheProvider value={cache}>
+            <Component {...props} />
+          </CacheProvider>
+        ),
     });
 
   const initialProps = await Document.getInitialProps(ctx);

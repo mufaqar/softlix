@@ -12,26 +12,34 @@ const Footer = () => {
 
   return (
     <Grid container spacing={2}>
-    <Box sx={{ position: 'fixed',  bottom: '40px', left: '30px', zIndex:'999' }}>
-     <Link
-                underline="none"
-                component="a"
-                href="https://api.whatsapp.com/send?phone=919818565561&text="
-                color="text.primary"
-                variant={'subtitle2'}
-                sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#e4e4e4', padding: '0px 1px', borderRadius: '30px', paddingRight: '20px', fontWeight: 'bold; color: #7e7c7d', }}
-              >
-              <Box
-                component={'img'}
-                src={
-                  '/images/whatsapp.png'
-                }
-                sx={{ marginRight: '10px', width: '41px',   marginLeft: '-2px' }}
-              />
-
-                WhatsApp Us
-              </Link>
-             </Box>
+      <Box
+        sx={{ position: 'fixed', bottom: '40px', left: '30px', zIndex: '999' }}
+      >
+        <Link
+          underline="none"
+          component="a"
+          href="https://api.whatsapp.com/send?phone=919818565561&text="
+          color="text.primary"
+          variant={'subtitle2'}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            background: '#e4e4e4',
+            padding: '0px 1px',
+            borderRadius: '30px',
+            paddingRight: '20px',
+            fontWeight: 'bold; color: #7e7c7d',
+          }}
+        >
+          <Box
+            component={'img'}
+            src={'/images/whatsapp.png'}
+            sx={{ marginRight: '10px', width: '41px', marginLeft: '-2px' }}
+          />
+          WhatsApp Us
+        </Link>
+      </Box>
 
       <Grid item xs={12}>
         <Box
@@ -52,8 +60,8 @@ const Footer = () => {
               component={'img'}
               src={
                 mode === 'light'
-                  ? '/images/main-logo.jpg'
-                  : '/images/main-logo.jpg' 
+                  ? '/images/IMG_3570.png'
+                  : '/images/IMG_3570.png'
               }
               height={1}
               width={1}
@@ -103,7 +111,6 @@ const Footer = () => {
                 variant={'subtitle2'}
               >
                 Contact Us
-
               </Link>
             </Box>
             <Box marginTop={1} marginRight={2}>
@@ -118,7 +125,7 @@ const Footer = () => {
               </Link>
             </Box>
 
-              <Box marginTop={1} marginRight={2}>
+            <Box marginTop={1} marginRight={2}>
               <Link
                 underline="none"
                 component="a"
@@ -129,7 +136,7 @@ const Footer = () => {
                 Terms of use
               </Link>
             </Box>
-              <Box marginTop={1} marginRight={2}> 
+            <Box marginTop={1} marginRight={2}>
               <Link
                 underline="none"
                 component="a"
@@ -160,9 +167,8 @@ const Footer = () => {
                 variant={'subtitle2'}
               >
                 Refund Policy
-              </Link> 
+              </Link>
             </Box>
-           
           </Box>
         </Box>
       </Grid>
@@ -173,7 +179,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy;  2022, Sitedesign Agency. All rights reserved
+          &copy; 2022, SOFTLIX Agency. All rights reserved
         </Typography>
         <Typography
           align={'center'}

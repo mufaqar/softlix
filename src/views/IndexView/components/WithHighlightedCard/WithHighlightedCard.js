@@ -16,21 +16,21 @@ import Container from 'components/Container';
 const mock = [
   {
     feedback:
-      'SiteDesign was recommended by the software consultants we were working with. They told us it\'s a software company that had worked well for their previous clients in streamlining software and data operations. They were right.',
+      "SOFTLIX was recommended by the software consultants we were working with. They told us it's a software company that had worked well for their previous clients in streamlining software and data operations. They were right.",
     name: 'President of Operations,',
     title: 'Digital Marketing Company in Florida',
     avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
   },
   {
     feedback:
-      'We\'ve been trying to put together a functional website from quite a long while. I am happy to say we finally hired SiteDesign team and they\'ve worked closely with us throughout the process, staying on task, on target, and on budget. Their service is highly recommended!',
+      "We've been trying to put together a functional website from quite a long while. I am happy to say we finally hired SOFTLIX team and they've worked closely with us throughout the process, staying on task, on target, and on budget. Their service is highly recommended!",
     name: 'Spokesperson',
     title: 'Video Marketing company in Chicago',
     avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
   },
   {
     feedback:
-      'I am really impressed by the quality of services I received from SiteDesign. You were right on schedule, charged reasonable prices, were professional and courteous in dealings, and delivered items well before time. I have got a good e-commerce site for my products. My revenue has increased because of SiteDesign and I will definitely use your services again.',
+      'I am really impressed by the quality of services I received from SOFTLIX. You were right on schedule, charged reasonable prices, were professional and courteous in dealings, and delivered items well before time. I have got a good e-commerce site for my products. My revenue has increased because of SOFTLIX and I will definitely use your services again.',
     name: 'Chary Smith',
     title: 'Owner',
     avatar: 'Ecommerce Store in New York',

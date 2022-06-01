@@ -97,105 +97,107 @@ const Hero = () => {
     >
       <Box paddingY={{ xs: 0, sm: '1rem', md: '1.5rem' }}>
         <Container>
-        <Grid container>
-         <Grid xs={12} md={6}>
-            <Typography
-              variant="h2"
-              color="text.primary"
-              gutterBottom
-              sx={{
-                fontWeight: 700, fontSize:'3.25rem!important',
-              }}
-            >
-              {/* We Build Software, Websites & Mobile Apps in A  */}
-              One-stop solutions for
-              <br />
-              {' '}
+          <Grid container>
+            <Grid xs={12} md={6}>
               <Typography
-                color={'primary'}
-                component={'span'}
-                variant={'inherit'}
+                variant="h2"
+                color="text.primary"
+                gutterBottom
                 sx={{
-                  background: `linear-gradient(180deg, transparent 82%, ${alpha(
-                    theme.palette.secondary.main,
-                    0.3,
-                  )} 0%)`,
+                  fontWeight: 700,
+                  fontSize: '3.25rem!important',
                 }}
               >
-                <Typed
-                  strings={['Websites','Android Apps','IOS Apps','Softwares']}
-                  typeSpeed={80}
-                  loop={true}
-                />
+                {/* We Build Software, Websites & Mobile Apps in A  */}
+                One-stop solutions for
+                <br />{' '}
+                <Typography
+                  color={'primary'}
+                  component={'span'}
+                  variant={'inherit'}
+                  sx={{
+                    background: `linear-gradient(180deg, transparent 82%, ${alpha(
+                      theme.palette.secondary.main,
+                      0.3,
+                    )} 0%)`,
+                  }}
+                >
+                  <Typed
+                    strings={[
+                      'Websites',
+                      'Android Apps',
+                      'IOS Apps',
+                      'Softwares',
+                    ]}
+                    typeSpeed={80}
+                    loop={true}
+                  />
+                </Typography>
               </Typography>
-            </Typography>
-            <Typography
-              variant="h6"
-              component="p"
-              color="text.secondary"
-              sx={{ fontWeight: 400 }}
-            >
-              Looking for a professional website design or Software company? Look no further than Sitedesign Agency. We create beautiful websites, Apps, Software using the latest technologies like Nextjs, Flutter, React Native & Firebase.
-
-            </Typography>
-            <Box
-              display="flex"
-              flexDirection={{ xs: 'column', sm: 'row' }}
-              alignItems={{ xs: 'stretched', sm: 'flex-start' }}
-              marginTop={4}
-            >
-              <Button
-                component={'a'}
-                variant="contained"
-                color="primary"
-                size="large"
-                fullWidth={isMd ? false : true}
-                href={'/hire-us'}
+              <Typography
+                variant="h6"
+                component="p"
+                color="text.secondary"
+                sx={{ fontWeight: 400 }}
               >
-               Get Quotation 
-              </Button>
+                Looking for a professional website design or Software company?
+                Look no further than SOFTLIX Agency. We create beautiful
+                websites, Apps, Software using the latest technologies like
+                Nextjs, Flutter, React Native & Firebase.
+              </Typography>
               <Box
-                marginTop={{ xs: 2, sm: 0 }}
-                marginLeft={{ sm: 2 }}
-                width={{ xs: '100%', md: 'auto' }}
+                display="flex"
+                flexDirection={{ xs: 'column', sm: 'row' }}
+                alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+                marginTop={4}
               >
                 <Button
                   component={'a'}
-                  href={'/portfolio'}
-                  variant="outlined"
+                  variant="contained"
                   color="primary"
                   size="large"
                   fullWidth={isMd ? false : true}
+                  href={'/hire-us'}
                 >
-                  View Portfolio
+                  Get Quotation
                 </Button>
-              </Box>
-            </Box>
-          </Grid>
-           <Grid xs={12} md={6}>
-            <Box
-                  component={LazyLoadImage}
-                  effect="blur"
-                  src="/images/home-hero.jpg"
-                  alt="Image Description"
-                  width={1}
-                  height={1}
-                  sx={{
-                    objectFit: 'cover',
-                    filter:
-                      theme.palette.mode === 'dark'
-                        ? 'brightness(0.7)'
-                        : 'none',
-                  }}
+                <Box
+                  marginTop={{ xs: 2, sm: 0 }}
+                  marginLeft={{ sm: 2 }}
+                  width={{ xs: '100%', md: 'auto' }}
                 >
+                  <Button
+                    component={'a'}
+                    href={'/portfolio'}
+                    variant="outlined"
+                    color="primary"
+                    size="large"
+                    fullWidth={isMd ? false : true}
+                  >
+                    View Portfolio
+                  </Button>
                 </Box>
-      </Grid>
-      </Grid>
+              </Box>
+            </Grid>
+            <Grid xs={12} md={6}>
+              <Box
+                component={LazyLoadImage}
+                effect="blur"
+                src="/images/home-hero.jpg"
+                alt="Image Description"
+                width={1}
+                height={1}
+                sx={{
+                  objectFit: 'cover',
+                  filter:
+                    theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+                }}
+              ></Box>
+            </Grid>
+          </Grid>
         </Container>
-      
-      
+      </Box>
     </Box>
-     </Box>
   );
 };
 

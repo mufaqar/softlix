@@ -28,7 +28,7 @@ const mock = [
   },
   {
     label: 'Email',
-    value: 'support@sitedesign.agency',
+    value: 'support@softlix.tech',
     icon: (
       <svg
         width={20}
@@ -61,7 +61,7 @@ const mock = [
       </svg>
     ),
   },
-    {
+  {
     label: 'Company',
     value: 'RDMI Tech Ventures Pvt. Ltd',
     icon: (
@@ -71,9 +71,7 @@ const mock = [
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-      >
-        
-      </svg>
+      ></svg>
     ),
   },
 ];
