@@ -59,7 +59,7 @@ const TopNav = () => {
             <FacebookIcon />
           </IconButton>
         </Button>
-        <Button
+        {/* <Button
           variant="text"
           color="primary"
           component="a"
@@ -76,7 +76,7 @@ const TopNav = () => {
           <IconButton aria-label="Instagram">
             <LinkedInIcon />
           </IconButton>
-        </Button>
+        </Button> */}
         <Button
           variant="text"
           color="primary"

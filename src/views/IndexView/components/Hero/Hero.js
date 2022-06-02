@@ -150,6 +150,12 @@ const Hero = () => {
                 flexDirection={{ xs: 'column', sm: 'row' }}
                 alignItems={{ xs: 'stretched', sm: 'flex-start' }}
                 marginTop={4}
+                sx={{
+                  ['@media (min-width:400px)']: {
+                    // eslint-disable-line no-useless-computed-key
+                    marginBottom: '30px',
+                  },
+                }}
               >
                 <Button
                   component={'a'}
@@ -164,6 +170,13 @@ const Hero = () => {
                     color: 'white',
                     '&:hover': {
                       backgroundColor: 'rgba(0,118,255,.9)',
+                    },
+
+                    ['@media (min-width:300px) and (max-width:600px)']: {
+                      // eslint-disable-line no-useless-computed-key
+                      width: '90vw',
+                      height: '50px',
+                      fontSize: '14px',
                     },
                   }}
                   size="large"
@@ -195,6 +208,12 @@ const Hero = () => {
                       '&:hover': {
                         backgroundColor: 'rgba(255,255,255,.9)',
                         boxShadow: '0 6px 20px rgb(93 93 93 / 23%)',
+                      },
+                      ['@media (min-width:300px) and (max-width:600px)']: {
+                        // eslint-disable-line no-useless-computed-key
+                        width: '90vw',
+                        height: '50px',
+                        fontSize: '14px',
                       },
                     }}
                   >
