@@ -74,8 +74,9 @@ const SidebarNav = ({ pages }) => {
             fullWidth
             component="a"
             href="/portfolio"
+            // sx={{ color: '#1983FF' }}
           >
-            View Portfolio
+            View Pricing
           </Button>
         </Box>
         <Box marginTop={1}>

@@ -24,20 +24,24 @@ const Features = () => {
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={2}>
             <Typography variant={'h4'} sx={{ fontWeight: 700 }} gutterBottom>
-             Why Choose Us?
+              Why Choose Us?
             </Typography>
-            <Typography color="text.secondary" variant={'h6'}>
-             
-            </Typography>
+            <Typography color="text.secondary" variant={'h6'}></Typography>
           </Box>
           <Grid container spacing={1}>
             {[
-              'Dedicated teams',
-              'Global know-how',
-              'Respect of the client needs, culture, identity and objectives',
-              'True Partners',
-              'Focus on innovation',
-              'Easy to work with',
+              'Excellent & Hybrid team',
+              'Effective delivery',
+              'Quality efforts',
+              'Genuineness and commitment',
+              'Up to 50% Cost Saving',
+              'Source Code Authorization',
+              'Non-Disclosure Agreement',
+              'No Lock-In Contract',
+              'Agile & DevOps Implementation',
+              'Clean Code & Architecture',
+              'Fast and Easy On-boarding',
+              'Total Control Over the Code',
             ].map((item, i) => (
               <Grid item xs={12} key={i}>
                 <Box

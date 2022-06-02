@@ -29,6 +29,11 @@ const validationSchema = yup.object({
 });
 
 const Form = () => {
+  const [fullName, setFullname] = useState('');
+  // const [mobile, setMobile] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
   const router = useRouter();
   const formRef = useRef();
   const theme = useTheme();
@@ -53,7 +58,7 @@ const Form = () => {
       .then(
         (result) => {
           console.log(result.text);
-          // console.log(form.current);
+          console.log(form.current);
           router.push('/thank-page');
         },
         (error) => {
@@ -93,8 +98,6 @@ const Form = () => {
         maxWidth={600}
         margin={'0 auto'}
         component={'form'}
-        ref={formRef}
-        onSubmit={formik.handleSubmit}
         sx={{
           '& .MuiOutlinedInput-root.MuiInputBase-multiline': {
             padding: 0,
@@ -105,84 +108,88 @@ const Form = () => {
           },
         }}
       >
-        <Grid container spacing={isMd ? 4 : 2}>
-          <Grid item xs={12}>
-            <Typography
-              variant="subtitle1"
-              color="text.primary"
-              fontWeight={700}
-              gutterBottom
-            >
-              Full name
-            </Typography>
-            <TextField
-              placeholder="Your full name"
-              variant="outlined"
-              size="medium"
-              name="fullName"
-              fullWidth
-              type="text"
-              value={formik.values.fullName}
-              onChange={formik.handleChange}
-              error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-              helperText={formik.touched.fullName && formik.errors.fullName}
-            />
+        <form ref={formRef} onSubmit={formik.handleSubmit}>
+          <Grid container spacing={isMd ? 4 : 2}>
+            <Grid item xs={12}>
+              <Typography
+                variant="subtitle1"
+                color="text.primary"
+                fontWeight={700}
+                gutterBottom
+              >
+                Full name
+              </Typography>
+              <TextField
+                placeholder="Your full name"
+                variant="outlined"
+                size="medium"
+                name="fullName"
+                fullWidth
+                type="text"
+                value={formik.values.fullName}
+                onChange={formik.handleChange}
+                error={
+                  formik.touched.fullName && Boolean(formik.errors.fullName)
+                }
+                helperText={formik.touched.fullName && formik.errors.fullName}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                variant="subtitle1"
+                color="text.primary"
+                fontWeight={700}
+                gutterBottom
+              >
+                E-mail
+              </Typography>
+              <TextField
+                placeholder="Your e-mail address"
+                variant="outlined"
+                size="medium"
+                name="email"
+                fullWidth
+                type="email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                error={formik.touched.email && Boolean(formik.errors.email)}
+                helperText={formik.touched.email && formik.errors.email}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                variant="subtitle1"
+                color="text.primary"
+                fontWeight={700}
+                gutterBottom
+              >
+                Message
+              </Typography>
+              <TextField
+                placeholder="Your question about our services"
+                variant="outlined"
+                name="message"
+                fullWidth
+                multiline
+                rows={4}
+                value={formik.values.message}
+                onChange={formik.handleChange}
+                error={formik.touched.message && Boolean(formik.errors.message)}
+                helperText={formik.touched.message && formik.errors.message}
+              />
+            </Grid>
+            <Grid item container justifyContent="center" xs={12}>
+              <Button
+                variant="contained"
+                type="submit"
+                color="primary"
+                size="large"
+              >
+                Send the question
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <Typography
-              variant="subtitle1"
-              color="text.primary"
-              fontWeight={700}
-              gutterBottom
-            >
-              E-mail
-            </Typography>
-            <TextField
-              placeholder="Your e-mail address"
-              variant="outlined"
-              size="medium"
-              name="email"
-              fullWidth
-              type="email"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              error={formik.touched.email && Boolean(formik.errors.email)}
-              helperText={formik.touched.email && formik.errors.email}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              variant="subtitle1"
-              color="text.primary"
-              fontWeight={700}
-              gutterBottom
-            >
-              Message
-            </Typography>
-            <TextField
-              placeholder="Your question about our services"
-              variant="outlined"
-              name="message"
-              fullWidth
-              multiline
-              rows={4}
-              value={formik.values.message}
-              onChange={formik.handleChange}
-              error={formik.touched.message && Boolean(formik.errors.message)}
-              helperText={formik.touched.message && formik.errors.message}
-            />
-          </Grid>
-          <Grid item container justifyContent="center" xs={12}>
-            <Button
-              variant="contained"
-              type="submit"
-              color="primary"
-              size="large"
-            >
-              Send the question
-            </Button>
-          </Grid>
-        </Grid>
+        </form>
       </Box>
     </Box>
   );

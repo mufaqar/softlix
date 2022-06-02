@@ -47,11 +47,14 @@ const Hero = () => {
           width: '100%',
           height: '100%',
           zIndex: -1,
+          // backgroundColor: 'white',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundImage:
-            'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
+            'url(https://images.pexels.com/photos/6390198/pexels-photo-6390198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)',
+          // backgroundImage:
+          //   'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
         }}
       />
       <Box
@@ -63,7 +66,8 @@ const Hero = () => {
           bottom: 0,
           width: 1,
           height: 1,
-          background: alpha('#161c2d', 0.6),
+          background: alpha('#161c2d', 0.3),
+          // background: 'white',
           zIndex: 1,
         }}
       />
@@ -79,7 +83,6 @@ const Hero = () => {
           >
             5 Best Practices for Outsourcing IT Projects
           </Typography>
-         
         </Box>
       </Container>
     </Box>

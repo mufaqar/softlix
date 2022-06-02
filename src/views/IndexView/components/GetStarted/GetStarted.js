@@ -31,7 +31,8 @@ const GetStarted = () => {
         sx={{ fontWeight: 400 }}
         align={'center'}
       >
-        We are ready to hear from you! If you have any questions, do not hesitate to leave us a message. We will be looking forward to it!
+        We are ready to hear from you! If you have any questions, do not
+        hesitate to leave us a message. We will be looking forward to it!
       </Typography>
       <Box
         display="flex"
@@ -48,7 +49,7 @@ const GetStarted = () => {
           fullWidth={isMd ? false : true}
           href={'/hire-us'}
         >
-         Get Quotation
+          Get Quotation
         </Button>
         <Box
           marginTop={{ xs: 2, sm: 0 }}
@@ -60,10 +61,11 @@ const GetStarted = () => {
             href={'/docs/introduction'}
             variant="outlined"
             color="primary"
+            // sx={{ color: '#1983FF' }}
             size="large"
             fullWidth={isMd ? false : true}
           >
-           View Portfolio
+            View Pricing
           </Button>
         </Box>
       </Box>

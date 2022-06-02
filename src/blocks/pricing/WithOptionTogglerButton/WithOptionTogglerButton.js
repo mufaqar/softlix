@@ -23,23 +23,55 @@ import Container from 'components/Container';
 const mock = [
   {
     title: 'Basic',
-    subtitle: 'We provide you Basic app for both Android and IOS with fully working functionality',
+    subtitle:
+      'We provide you Basic app for both Android and IOS with fully working functionality',
     price: { monthly: '₹70000', annual: '₹70000' },
-    features: ['Delivery days 30 Days', 'Revisions unlimited', 'Functional All', 'Mobile operating system', 'Upload to app store', 'App Icon', 'Splash screen', 'Ad network integration', 'Include source code'],
+    features: [
+      'Delivery days 30 Days',
+      'Revisions unlimited',
+      'Functional All',
+      'Mobile operating system',
+      'Upload to app store',
+      'App Icon',
+      'Splash screen',
+      'Ad network integration',
+      'Include source code',
+    ],
     isHighlighted: false,
   },
   {
     title: 'Standard',
     subtitle: 'Connecting App with Backend Server, With Free 1 month Support',
     price: { monthly: '₹1.5 Lac', annual: '₹1.5 Lac' },
-    features: ['Delivery days 45 Days', 'Revisions unlimited', 'Functional All', 'Mobile operating system', 'Upload to app store', 'App Icon', 'Splash screen', 'Ad network integration', 'Include source code'],
+    features: [
+      'Delivery days 45 Days',
+      'Revisions unlimited',
+      'Functional All',
+      'Mobile operating system',
+      'Upload to app store',
+      'App Icon',
+      'Splash screen',
+      'Ad network integration',
+      'Include source code',
+    ],
     isHighlighted: true,
   },
   {
     title: 'Premium',
-    subtitle: 'Fully Customised App, Depends on your project requirement, With Free 2 month Support ',
+    subtitle:
+      'Fully Customised App, Depends on your project requirement, With Free 2 month Support ',
     price: { monthly: '₹2.5 Lacs', annual: '₹2.5 Lacs' },
-    features: ['Delivery days 60 Days', 'Revisions unlimited', 'Functional All', 'Mobile operating system', 'Upload to app store', 'App Icon', 'Splash screen', 'Ad network integration', 'Include source code'],
+    features: [
+      'Delivery days 60 Days',
+      'Revisions unlimited',
+      'Functional All',
+      'Mobile operating system',
+      'Upload to app store',
+      'App Icon',
+      'Splash screen',
+      'Ad network integration',
+      'Include source code',
+    ],
     isHighlighted: false,
   },
 ];
@@ -47,23 +79,47 @@ const mock = [
 const mock2 = [
   {
     title: 'Basic',
-    subtitle: 'The fundamentals to get your brand new company legitimate and up and running.',
+    subtitle:
+      'The fundamentals to get your brand new company legitimate and up and running.',
     price: { monthly: '₹4 Lacs', annual: '₹4 Lacs' },
-    features: ['Delivery days 14 Days', 'Revisions 1', 'No.of pages or screens 1', 'Responsive Design '],
+    features: [
+      'Delivery days 14 Days',
+      'Revisions 1',
+      'No.of pages or screens 1',
+      'Responsive Design ',
+    ],
     isHighlighted: false,
   },
   {
     title: 'Standard',
-    subtitle: 'Perfect for already running companies looking to redesign their existing website',
+    subtitle:
+      'Perfect for already running companies looking to redesign their existing website',
     price: { monthly: '₹6 Lacs', annual: '₹6 Lacs' },
-    features: ['Delivery days 45 Days', 'Revisions 2', 'No.of pages or screens 4', 'Responsive Design ', 'Convert to HTML/CSS', 'Source File'],
+    features: [
+      'Delivery days 45 Days',
+      'Revisions 2',
+      'No.of pages or screens 4',
+      'Responsive Design ',
+      'Convert to HTML/CSS',
+      'Source File',
+    ],
     isHighlighted: true,
   },
   {
     title: 'Premium',
-    subtitle: 'An e-com store and site curated and hosted through your own website, showcasing up to 10 products',
+    subtitle:
+      'An e-com store and site curated and hosted through your own website, showcasing up to 10 products',
     price: { monthly: '₹8 Lacs', annual: '₹8 Lacs' },
-    features: ['Delivery days 30 Days', 'Revisions 3', 'No.of pages or screens 7', 'Responsive Design ', 'Prototype', 'Content Upload', 'Convert to HTML/CSS', 'Source File'],
+    features: [
+      'Delivery days 30 Days',
+      'Revisions 3',
+      'No.of pages or screens 7',
+      'Responsive Design ',
+      'Prototype',
+      'Content Upload',
+      'Convert to HTML/CSS',
+      'Source File',
+    ],
     isHighlighted: false,
   },
 ];
@@ -191,7 +247,7 @@ const WithOptionTogglerButton = () => {
                 Flexible pricing options
               </Typography>
               <Typography
-                variant="h6"
+                variant="h3"
                 component="p"
                 color="text.primary"
                 align={'center'}
@@ -239,12 +295,12 @@ const WithOptionTogglerButton = () => {
                     sx={{ fontSsize: '16px', fontWeight: '600' }}
                     label="App development"
                     {...a11yProps(0)}
-  />
+                  />
                 </Tabs>
               </Box>
               <TabPanel value={value} index={0}>
                 <Container>
-            <Grid container spacing={4}>
+                  <Grid container spacing={4}>
                     {mock.map((item, i) => (
                       <Grid item xs={12} md={4} key={i}>
                         <Box
@@ -460,7 +516,7 @@ const WithOptionTogglerButton = () => {
                   </Grid>
                 </Container>
               </TabPanel>
-    </Box>
+            </Box>
           </Box>
         </Container>
       </Box>

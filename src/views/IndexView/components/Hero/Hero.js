@@ -171,10 +171,11 @@ const Hero = () => {
                     href={'/portfolio'}
                     variant="outlined"
                     color="primary"
+                    // sx={{ color: '#1983FF' }}
                     size="large"
                     fullWidth={isMd ? false : true}
                   >
-                    View Portfolio
+                    View Pricing
                   </Button>
                 </Box>
               </Box>

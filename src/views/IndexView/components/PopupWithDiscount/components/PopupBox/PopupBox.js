@@ -76,14 +76,14 @@ const PopupBox = ({ onClose, open }) => {
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_HIRE_US_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_POPUP_ID,
         formRef.current,
         process.env.NEXT_PUBLIC_PUBLIC_KEY,
       )
       .then(
         (result) => {
           console.log(result.text);
-          // console.log(form.current);
+          console.log(formRef.current);
           router.push('/thank-page');
         },
         (error) => {

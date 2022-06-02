@@ -10,7 +10,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 //const TopNav = ({ colorInvert = false }) => {
 const TopNav = () => {
   return (
-    <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+    <Box
+      display={'flex'}
+      justifyContent={'flex-end'}
+      alignItems={'center'}
+      sx={{ backgroundColor: 'white' }}
+    >
       <Box marginLeft={4}>
         <Button
           variant="text"
