@@ -50,8 +50,9 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundImage:
-            'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
+          // backgroundImage:
+          //   'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
+          backgroundImage: 'url(/images/blue.jpg)',
         }}
       />
       <Box
@@ -79,7 +80,6 @@ const Hero = () => {
           >
             12 Web Development Trends for 2022 and Beyond
           </Typography>
-          
         </Box>
       </Container>
     </Box>

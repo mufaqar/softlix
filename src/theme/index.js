@@ -24,7 +24,7 @@ const getTheme = (mode, themeToggler) =>
           styleOverrides: {
             root: {
               fontWeight: 400,
-              borderRadius: 5,
+              borderRadius: 7,
               paddingTop: 10,
               paddingBottom: 10,
             },

@@ -50,8 +50,7 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundImage:
-            'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
+          backgroundImage: 'url(/images/blue.jpg)',
         }}
       />
       <Box
@@ -79,7 +78,6 @@ const Hero = () => {
           >
             10 Tech Trends That Will Influence Your Marketing 2022
           </Typography>
-         
         </Box>
       </Container>
     </Box>

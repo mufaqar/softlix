@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 //import ThemeModeToggler from 'components/ThemeModeToggler';
 
 //const TopNav = ({ colorInvert = false }) => {
@@ -44,7 +46,7 @@ const TopNav = () => {
           color="primary"
           component="a"
           target="blank"
-          href="https://www.facebook.com/SOFTLIXofficial"
+          href="https://facebook.com/softlixglobal"
           size="medium"
           sx={{
             padding: 0,
@@ -62,7 +64,43 @@ const TopNav = () => {
           color="primary"
           component="a"
           target="blank"
-          href="https://www.instagram.com/SOFTLIXagency/"
+          href=" https://www.linkedin.com/showcase/softlixglobal/"
+          size="medium"
+          sx={{
+            padding: 0,
+            background: 'none!important',
+            minWidth: 'auto!important',
+          }}
+        >
+          {' '}
+          <IconButton aria-label="Instagram">
+            <LinkedInIcon />
+          </IconButton>
+        </Button>
+        <Button
+          variant="text"
+          color="primary"
+          component="a"
+          target="blank"
+          href="https://twitter.com/Softlixglobal"
+          size="medium"
+          sx={{
+            padding: 0,
+            background: 'none!important',
+            minWidth: 'auto!important',
+          }}
+        >
+          {' '}
+          <IconButton aria-label="Instagram">
+            <TwitterIcon />
+          </IconButton>
+        </Button>
+        <Button
+          variant="text"
+          color="primary"
+          component="a"
+          target="blank"
+          href=" https://instagram.com/softlixglobal"
           size="medium"
           sx={{
             padding: 0,

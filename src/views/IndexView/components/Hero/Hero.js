@@ -153,8 +153,19 @@ const Hero = () => {
               >
                 <Button
                   component={'a'}
-                  variant="contained"
+                  // variant="contained"
                   color="primary"
+                  sx={{
+                    backgroundColor: '#0070f3',
+                    width: '200px',
+                    borderRadius: '7px',
+                    fontFamily: 'Inter',
+                    fontSize: '16px',
+                    color: 'white',
+                    '&:hover': {
+                      backgroundColor: 'rgba(0,118,255,.9)',
+                    },
+                  }}
                   size="large"
                   fullWidth={isMd ? false : true}
                   href={'/hire-us'}
@@ -168,12 +179,24 @@ const Hero = () => {
                 >
                   <Button
                     component={'a'}
-                    href={'/docs/introduction'}
-                    variant="outlined"
-                    color="primary"
-                    // sx={{ color: '#1983FF' }}
+                    href={'/pricing'}
+                    // variant=" "
+                    // color="primary"
                     size="large"
                     fullWidth={isMd ? false : true}
+                    sx={{
+                      background: 'white',
+                      fontSize: '16px',
+                      fontFamily: 'Inter',
+                      width: '200px',
+                      borderRadius: '7px',
+                      color: '#696969',
+                      boxShadow: '0 4px 14px 0 rgb(0 0 0 / 10%)',
+                      '&:hover': {
+                        backgroundColor: 'rgba(255,255,255,.9)',
+                        boxShadow: '0 6px 20px rgb(93 93 93 / 23%)',
+                      },
+                    }}
                   >
                     View Pricing
                   </Button>

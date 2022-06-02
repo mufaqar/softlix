@@ -51,8 +51,7 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundImage:
-            'url(https://images.pexels.com/photos/6390198/pexels-photo-6390198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)',
+          backgroundImage: 'url(/images/blue.jpg)',
           // backgroundImage:
           //   'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
         }}

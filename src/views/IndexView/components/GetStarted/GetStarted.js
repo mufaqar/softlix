@@ -58,7 +58,7 @@ const GetStarted = () => {
         >
           <Button
             component={'a'}
-            href={'/docs/introduction'}
+            href={'/pricing'}
             variant="outlined"
             color="primary"
             // sx={{ color: '#1983FF' }}

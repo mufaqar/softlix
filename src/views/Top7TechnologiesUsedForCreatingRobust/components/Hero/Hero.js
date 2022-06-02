@@ -50,8 +50,9 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundImage:
-            'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
+          backgroundImage: 'url(/images/blue.jpg)',
+          // backgroundImage:
+          //   'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
         }}
       />
       <Box
@@ -77,9 +78,8 @@ const Hero = () => {
               marginBottom: 2,
             }}
           >
-           Top 7 Technologies Used For Creating Robust Mobile Apps in 2020
+            Top 7 Technologies Used For Creating Robust Mobile Apps in 2020
           </Typography>
-         
         </Box>
       </Container>
     </Box>

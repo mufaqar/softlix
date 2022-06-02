@@ -60,6 +60,7 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
       >
         <Container paddingY={1}>
           <Topbar
+            // sx={{ position: 'sticky' }}
             onSidebarOpen={handleSidebarOpen}
             pages={pages}
             colorInvert={trigger ? false : colorInvert}

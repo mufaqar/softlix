@@ -50,8 +50,9 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundImage:
-            'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
+          backgroundImage: 'url(/images/blue.jpg)',
+          // backgroundImage:
+          //   'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
         }}
       />
       <Box
@@ -77,9 +78,8 @@ const Hero = () => {
               marginBottom: 2,
             }}
           >
-          5 Tips for Choosing the Right Web Development Company
+            5 Tips for Choosing the Right Web Development Company
           </Typography>
-          
         </Box>
       </Container>
     </Box>

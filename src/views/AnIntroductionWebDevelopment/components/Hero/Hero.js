@@ -50,8 +50,9 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundImage:
-            'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
+          // backgroundImage:
+          //   'url(https://assets.maccarianagency.com/backgrounds/img3.jpg)',
+          backgroundImage: 'url(/images/blue.jpg)',
         }}
       />
       <Box
@@ -77,9 +78,8 @@ const Hero = () => {
               marginBottom: 2,
             }}
           >
-          An introduction to Web Development Technologies
+            An introduction to Web Development Technologies
           </Typography>
-         
         </Box>
       </Container>
     </Box>

@@ -71,10 +71,10 @@ const SidebarNav = ({ pages }) => {
             size={'large'}
             variant="outlined"
             color="primary"
-            href={'/docs/introduction'}
+            href={'/pricing'}
             fullWidth
             component="a"
-            href="/portfolio"
+            // href="/portfolio"
             // sx={{ color: '#1983FF' }}
           >
             View Pricing
