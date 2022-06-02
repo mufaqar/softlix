@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 //import ThemeModeToggler from 'components/ThemeModeToggler';
 
@@ -59,7 +59,7 @@ const TopNav = () => {
             <FacebookIcon />
           </IconButton>
         </Button>
-        <Button
+        {/* <Button
           variant="text"
           color="primary"
           component="a"
@@ -76,7 +76,7 @@ const TopNav = () => {
           <IconButton aria-label="Instagram">
             <LinkedInIcon />
           </IconButton>
-        </Button>
+        </Button> */}
         <Button
           variant="text"
           color="primary"

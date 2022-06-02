@@ -96,7 +96,7 @@ const mock2 = [
       'Perfect for already running companies looking to redesign their existing website',
     price: { monthly: '₹6 Lacs', annual: '₹6 Lacs' },
     features: [
-      'Delivery days 45 Days',
+      'Delivery days 30 Days',
       'Revisions 2',
       'No.of pages or screens 4',
       'Responsive Design ',
@@ -111,7 +111,7 @@ const mock2 = [
       'An e-com store and site curated and hosted through your own website, showcasing up to 10 products',
     price: { monthly: '₹8 Lacs', annual: '₹8 Lacs' },
     features: [
-      'Delivery days 30 Days',
+      'Delivery days 45s Days',
       'Revisions 3',
       'No.of pages or screens 7',
       'Responsive Design ',
