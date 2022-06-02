@@ -247,7 +247,7 @@ const WithOptionTogglerButton = () => {
                 Flexible pricing options
               </Typography>
               <Typography
-                variant="h3"
+                variant="h6"
                 component="p"
                 color="text.primary"
                 align={'center'}

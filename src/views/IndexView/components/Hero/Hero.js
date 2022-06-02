@@ -168,7 +168,7 @@ const Hero = () => {
                 >
                   <Button
                     component={'a'}
-                    href={'/portfolio'}
+                    href={'/docs/introduction'}
                     variant="outlined"
                     color="primary"
                     // sx={{ color: '#1983FF' }}

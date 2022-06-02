@@ -38,7 +38,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           src={
             mode === 'light' && !colorInvert
               ? '/images/IMG_3570.png'
-              : '/images/IMG_3570.png'
+              : '/images/IMG_3569.png'
           }
           height={1}
           width={1}

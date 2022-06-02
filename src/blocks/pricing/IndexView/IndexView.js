@@ -84,11 +84,11 @@ const IndexView = () => {
             './src/blocks/pricing/WithOptionTogglerButton/WithOptionTogglerButton.js|ts'
           }
         />
-        <ResizableFrame
+        {/* <ResizableFrame
           src={'/blocks/pricing/compare-table'}
           title={'Pricing compare table'}
           path={'./src/blocks/pricing/CompareTable/CompareTable.js|ts'}
-        />
+        /> */}
       </Box>
     </Fluid>
   );

@@ -71,6 +71,7 @@ const SidebarNav = ({ pages }) => {
             size={'large'}
             variant="outlined"
             color="primary"
+            href={'/docs/introduction'}
             fullWidth
             component="a"
             href="/portfolio"

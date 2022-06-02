@@ -24,9 +24,7 @@ const Pricing = () => {
           <Support />
         </Container>
       </Box>
-      <Container>
-        <PricingCompareTable />
-      </Container>
+      {/* <Container><PricingCompareTable /></Container> */}
       <Container maxWidth={400} paddingY={'0 !important'}>
         <Divider />
       </Container>
