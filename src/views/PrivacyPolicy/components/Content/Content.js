@@ -69,12 +69,12 @@ const Content = () => {
           sx={{ marginBottom: '10px' }}
         >
           At Site Design Agency, accessible from{' '}
-          <a href="https://SOFTLIX.agency">https://SOFTLIX.agency</a>, one of
-          our main priorities is the privacy of our visitors. This Privacy
-          Policy document contains types of information that is collected and
-          recorded by Site Design Agency and how we use it. If you have
-          additional questions or require more information about our Privacy
-          Policy, do not hesitate to contact us.
+          <a href="https://softlix.tech">https://softlix.tech</a>, one of our
+          main priorities is the privacy of our visitors. This Privacy Policy
+          document contains types of information that is collected and recorded
+          by Site Design Agency and how we use it. If you have additional
+          questions or require more information about our Privacy Policy, do not
+          hesitate to contact us.
         </Typography>
         <Typography component={'p'} color={'text.secondary'}>
           This Privacy Policy applies only to our online activities and is valid

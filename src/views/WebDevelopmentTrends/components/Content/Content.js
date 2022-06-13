@@ -275,7 +275,7 @@ const Content = () => {
           to us!
         </Typography>
         <Typography variant={'subtitle1'} marginTop={1}>
-          https://softlix.agency Thank you for using this service. We hope it
+          https://softlix.tech Thank you for using this service. We hope it
           helps! If it has been useful please share it among colleagues and
           friends. Your feedback is most welcome! If there are specific
           questions about anything or about other features, shoot us an email at
