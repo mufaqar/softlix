@@ -90,7 +90,7 @@ const Content = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ marginBottom: '20px' }}>
+      <Box sx={{ marginBottom: '21px' }}>
         <Typography
           variant={'h6'}
           gutterBottom
