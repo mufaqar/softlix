@@ -54,6 +54,13 @@ const SidebarNav = ({ pages }) => {
           <NavItem title={'Resource'} items={accountPages} link={'#'} />
         </Box>
         <Box>
+          <NavItem
+            title={'Portfolio'}
+            items={portfolioPages}
+            link={'/portfolio'}
+          />
+        </Box>
+        <Box>
           <NavItem title={'Blog'} items={blogPages} link={'/blog'} />
         </Box>
         <Box>

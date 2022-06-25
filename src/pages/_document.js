@@ -5,6 +5,7 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
 import Drift from 'react-driftjs';
+import Script from 'next/script';
 
 const getCache = () => {
   const cache = createCache({ key: 'css', prepend: true });
@@ -60,11 +61,14 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <script
+          {/* <script
             type="text/javascript"
             src="../scripts/intercomScript.js"
+          ></script> */}
+          <script
+            src="https://consent.cookiefirst.com/sites/softlix.tech-c7280872-7ff7-43ba-8c73-ae9eb1dbe444/consent.js"
+            defer
           ></script>
-          <script src="https://consent.cookiefirst.com/sites/softlix.tech-c7280872-7ff7-43ba-8c73-ae9eb1dbe444/consent.js"></script>
           <script
             dangerouslySetInnerHTML={{
               // eslint-disable-next-line quotes
@@ -94,6 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <body>
           <Drift appId="gv9ah6ni8h8b" />
           <Main />
+          <Script type="text/javascript" src="../scripts/intercomScript.js" />
           <NextScript />
 
           <noscript>

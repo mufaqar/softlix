@@ -91,7 +91,7 @@ const mock = [
     title: 'Basic',
     subtitle:
       'We provide you Basic app for both Android and IOS with fully working functionality',
-    price: { monthly: '₹70000', annual: '₹70000' },
+    price: { monthly: '$5000', annual: '$5000' },
     features: [
       'Delivery days 30 Days',
       'Revisions unlimited',
@@ -108,7 +108,7 @@ const mock = [
   {
     title: 'Standard',
     subtitle: 'Connecting App with Backend Server, With Free 1 month Support',
-    price: { monthly: '₹1.5 Lac', annual: '₹1.5 Lac' },
+    price: { monthly: '$8000', annual: '$8000' },
     features: [
       'Delivery days 45 Days',
       'Revisions unlimited',
@@ -126,7 +126,7 @@ const mock = [
     title: 'Premium',
     subtitle:
       'Fully Customised App, Depends on your project requirement, With Free 2 month Support ',
-    price: { monthly: '₹2.5 Lacs', annual: '₹2.5 Lacs' },
+    price: { monthly: '$12000', annual: '$12000' },
     features: [
       'Delivery days 60 Days',
       'Revisions unlimited',

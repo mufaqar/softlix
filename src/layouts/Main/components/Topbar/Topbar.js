@@ -80,6 +80,14 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         </Box>
         <Box marginLeft={4}>
           <NavItem
+            title={'Portfolio'}
+            id={'Portfolio-pages'}
+            colorInvert={colorInvert}
+            link={'#'}
+          />
+        </Box>
+        <Box marginLeft={4}>
+          <NavItem
             title={'Blog'}
             id={'Blog-pages'}
             colorInvert={colorInvert}
@@ -114,12 +122,18 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
                 backgroundColor: 'rgba(0,118,255,.9)',
               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
+              ['@media (min-width:391px) and (max-width:600px)']: {
                 // eslint-disable-line no-useless-computed-key
                 width: '20vw',
                 height: '50px',
-                fontSize: '14px',
+                fontSize: '12px',
               },
+              // ['@media (min-width:300px) and (max-width:600px)']: {
+              //   // eslint-disable-line no-useless-computed-key
+              //   width: '20vw',
+              //   height: '50px',
+              //   fontSize: '12px',
+              // },
             }}
             size="small"
             // fullWidth={isMd ? false : true}
@@ -148,6 +162,12 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
               fontWeight: 500,
               '&:hover': {
                 backgroundColor: 'rgba(0,118,255,.9)',
+              },
+              ['@media (min-width:350px) and (max-width:600px)']: {
+                // eslint-disable-line no-useless-computed-key
+                width: '22vw',
+                height: '40px',
+                fontSize: '12px',
               },
             }}
             size="small"
