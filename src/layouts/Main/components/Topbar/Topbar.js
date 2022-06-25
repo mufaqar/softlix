@@ -87,6 +87,14 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           />
         </Box>
         <Box marginLeft={4}>
+          <NavItem
+            title={'Contact'}
+            id={'Blog-pages'}
+            colorInvert={colorInvert}
+            link={'/contact'}
+          />
+        </Box>
+        <Box marginLeft={4}>
           <Button
             component={'a'}
             // variant="contained"
@@ -96,7 +104,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
               width: '140px',
               borderRadius: '7px',
               fontFamily: 'Inter',
-              fontSize: '16px',
+              // fontSize: '16px',
+              fontSize: '1rem',
+              padding: '0.25rem .8rem',
               color: 'white',
               border: '1px solid #0070f3',
               fontWeight: 500,
@@ -115,7 +125,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             // fullWidth={isMd ? false : true}
             href={'/hire-us'}
           >
-            Start Project
+            Lets Talk
           </Button>
         </Box>
       </Box>
@@ -131,7 +141,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
               width: '20vw',
               borderRadius: '7px',
               fontFamily: 'Inter',
-              fontSize: '14px',
+              fontSize: '1rem',
+              padding: '0.25rem 0.8rem',
               color: 'white',
               border: '1px solid #0070f3',
               fontWeight: 500,
@@ -143,7 +154,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             // fullWidth={isMd ? false : true}
             href={'/hire-us'}
           >
-            Start Project
+            Lets Talk
           </Button>
         </Box>
         <Button

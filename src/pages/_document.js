@@ -64,6 +64,7 @@ export default class MyDocument extends Document {
             type="text/javascript"
             src="../scripts/intercomScript.js"
           ></script>
+          <script src="https://consent.cookiefirst.com/sites/softlix.tech-c7280872-7ff7-43ba-8c73-ae9eb1dbe444/consent.js"></script>
           <script
             dangerouslySetInnerHTML={{
               // eslint-disable-next-line quotes

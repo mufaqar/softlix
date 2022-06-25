@@ -25,7 +25,7 @@ const CompanyTerms = () => {
                   color: theme.palette.common.white,
                 }}
               >
-               Site Design Privacy Policy
+                Softlix Privacy Policy
               </Typography>
               <Typography
                 gutterBottom

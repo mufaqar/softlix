@@ -12,14 +12,14 @@ import Typography from '@mui/material/Typography';
 
 import Link from '@mui/material/Link';
 
-const NavItem = ({ title, items, link=false }) => {
+const NavItem = ({ title, items, link = false }) => {
   const theme = useTheme();
   const [activeLink, setActiveLink] = useState('');
   useEffect(() => {
     setActiveLink(window && window.location ? window.location.pathname : '');
   }, []);
 
-  const hasActiveLink = () => items.find((i) => i.href === activeLink);
+  const hasActiveLink = () => items?.find((i) => i?.href === activeLink);
 
   return (
     <Box>
@@ -28,17 +28,13 @@ const NavItem = ({ title, items, link=false }) => {
         elevation={0}
         sx={{ backgroundColor: 'transparent' }}
       >
-        <AccordionSummary          id="panel1a-header"
-          sx={{ padding: 0 }}
-        >
-           <Link 
-              
-                href={link}
-                 sx={{
-                  
-                  textDecoration: 'none',
-                  }}
-               /* sx={{
+        <AccordionSummary id="panel1a-header" sx={{ padding: 0 }}>
+          <Link
+            href={link}
+            sx={{
+              textDecoration: 'none',
+            }}
+            /* sx={{
                     justifyContent: 'flex-start',
                     color:
                       activeLink === link
@@ -50,18 +46,15 @@ const NavItem = ({ title, items, link=false }) => {
                         : 'transparent',
                     fontWeight: activeLink === link ? 600 : 400,
                   }}*/
-                  >
-          <Typography
-            fontWeight={hasActiveLink() ? 600 : 400}
-            color={hasActiveLink() ? 'primary' : 'text.primary'}
           >
-        
-            {title}
-
-          </Typography>
-            </Link >
+            <Typography
+              fontWeight={hasActiveLink() ? 600 : 400}
+              color={hasActiveLink() ? 'primary' : 'text.primary'}
+            >
+              {title}
+            </Typography>
+          </Link>
         </AccordionSummary>
-   
       </Accordion>
     </Box>
   );

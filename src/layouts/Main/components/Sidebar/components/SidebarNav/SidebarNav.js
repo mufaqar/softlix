@@ -17,6 +17,7 @@ const SidebarNav = ({ pages }) => {
     account: accountPages,
     portfolio: portfolioPages,
     blog: blogPages,
+    contact: contactPages,
   } = pages;
 
   return (
@@ -54,6 +55,9 @@ const SidebarNav = ({ pages }) => {
         </Box>
         <Box>
           <NavItem title={'Blog'} items={blogPages} link={'/blog'} />
+        </Box>
+        <Box>
+          <NavItem title={'Contact'} items={contactPages} link={'/contact'} />
         </Box>
         <Box marginTop={2}>
           <Button

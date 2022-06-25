@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
@@ -28,9 +29,10 @@ const Thank = () => {
         height={1}
         marginTop={-12}
         paddingTop={12}
+        textAlign={'center'}
       >
         <Container>
-          <Grid container>
+          <Grid container justifyContent={'center'}>
             <Grid
               item
               container
@@ -39,61 +41,59 @@ const Thank = () => {
               xs={12}
               md={6}
             >
-              <Box>
-                <Typography
-                  variant="h1"
-                  component={'h1'}
-                  align={isMd ? 'left' : 'center'}
-                  sx={{ fontWeight: 700 }}
-                >
-                  ✔️
-                </Typography>
+              <Typography
+                variant="h1"
+                component={'h1'}
+                align={isMd ? 'left' : 'center'}
+                sx={{ fontWeight: 700, marginBottom: '30px' }}
+              >
+                <CheckRoundedIcon
+                  fontSize="large"
+                  sx={{
+                    background: '#0070f3',
+                    borderRadius: '50%',
+                    color: 'white',
+                    fontSize: '3rem',
+                  }}
+                />
+              </Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  textAlign: 'center',
+                }}
+              >
                 <Typography
                   variant="h6"
                   component="p"
                   color="text.secondary"
                   align={isMd ? 'left' : 'center'}
+                  style={{ fontSize: '2.135rem' }}
                 >
-                  Thank you very much for filling out our form
+                  Thank you for Providing the details, Our team Will Get in
+                  Touch with you Soon.
                   <br />
                   {/* If you think this is a problem with us, please{' '}
                   <Link href={''} underline="none">
                     tell us
                   </Link> */}
                 </Typography>
-                <Box
-                  marginTop={4}
-                  display={'flex'}
-                  justifyContent={{ xs: 'center', md: 'flex-start' }}
-                >
-                  <Button
-                    component={Link}
-                    variant="contained"
-                    color="primary"
-                    size="large"
-                    href={'/'}
-                  >
-                    Back home
-                  </Button>
-                </Box>
               </Box>
-            </Grid>
-            <Grid item container justifyContent={'center'} xs={12} md={6}>
-              <Box height={1} width={1} maxWidth={500}>
-                <Box
-                  component={'img'}
-                  src={
-                    'https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration6.svg'
-                  }
-                  width={1}
-                  height={1}
-                  sx={{
-                    filter:
-                      theme.palette.mode === 'dark'
-                        ? 'brightness(0.8)'
-                        : 'none',
-                  }}
-                />
+              <Box
+                marginTop={6}
+                display={'flex'}
+                justifyContent={{ xs: 'center', md: 'flex-start' }}
+              >
+                <Button
+                  component={Link}
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  href={'/'}
+                >
+                  Back home
+                </Button>
               </Box>
             </Grid>
           </Grid>

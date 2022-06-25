@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <Grid container spacing={2}>
-      <Box
+      {/* <Box
         sx={{ position: 'fixed', bottom: '40px', left: '30px', zIndex: '999' }}
       >
         <Link
@@ -39,7 +39,7 @@ const Footer = () => {
           />
           WhatsApp Us
         </Link>
-      </Box>
+      </Box> */}
 
       <Grid item xs={12}>
         <Box
