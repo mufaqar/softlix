@@ -86,8 +86,66 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             link={'/blog'}
           />
         </Box>
+        <Box marginLeft={4}>
+          <Button
+            component={'a'}
+            // variant="contained"
+            color="primary"
+            sx={{
+              backgroundColor: '#0070f3',
+              width: '140px',
+              borderRadius: '7px',
+              fontFamily: 'Inter',
+              fontSize: '16px',
+              color: 'white',
+              border: '1px solid #0070f3',
+              fontWeight: 500,
+              '&:hover': {
+                backgroundColor: 'rgba(0,118,255,.9)',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                // eslint-disable-line no-useless-computed-key
+                width: '20vw',
+                height: '50px',
+                fontSize: '14px',
+              },
+            }}
+            size="small"
+            // fullWidth={isMd ? false : true}
+            href={'/hire-us'}
+          >
+            Start Project
+          </Button>
+        </Box>
       </Box>
-      <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
+
+      <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>
+        <Box marginLeft={4}>
+          <Button
+            component={'a'}
+            // variant="contained"
+            color="primary"
+            sx={{
+              backgroundColor: '#0070f3',
+              width: '20vw',
+              borderRadius: '7px',
+              fontFamily: 'Inter',
+              fontSize: '14px',
+              color: 'white',
+              border: '1px solid #0070f3',
+              fontWeight: 500,
+              '&:hover': {
+                backgroundColor: 'rgba(0,118,255,.9)',
+              },
+            }}
+            size="small"
+            // fullWidth={isMd ? false : true}
+            href={'/hire-us'}
+          >
+            Start Project
+          </Button>
+        </Box>
         <Button
           onClick={() => onSidebarOpen()}
           aria-label="Menu"
@@ -97,6 +155,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             minWidth: 'auto',
             padding: 1,
             borderColor: alpha(theme.palette.divider, 0.2),
+            marginLeft: '14px',
           }}
         >
           <MenuIcon />

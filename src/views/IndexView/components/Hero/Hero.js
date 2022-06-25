@@ -226,14 +226,19 @@ const Hero = () => {
               <Box
                 component={LazyLoadImage}
                 effect="blur"
-                src="/images/home-hero.jpg"
+                src="/images/home-hero.png"
                 alt="Image Description"
                 width={1}
                 height={1}
                 sx={{
+                  marginTop: '-120px',
                   objectFit: 'cover',
                   filter:
                     theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+                  ['@media (min-width:300px) and (max-width:600px)']: {
+                    // eslint-disable-line no-useless-computed-key
+                    marginTop: '0px',
+                  },
                 }}
               ></Box>
             </Grid>

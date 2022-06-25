@@ -20,12 +20,78 @@ import Tab from '@mui/material/Tab';
 import Link from '@mui/material/Link';
 import Container from 'components/Container';
 
+// const mock = [
+//   {
+//     title: 'STARTER',
+//     subtitle:
+//       'We provide you Basic app for both Android and IOS with fully working functionality',
+//     price: { monthly: '₹4 Lacs', annual: '₹4 Lacs' },
+//     features: [
+//       '3 Layouts to Choose from',
+//       '4 pages included',
+//       'Revisions Included (1 hr)',
+//       'Custom color scheme',
+//       'Branding placement',
+//       'Content placement',
+//       'Mobile friendly',
+//       'Social media integration',
+//     ],
+//     isHighlighted: false,
+//   },
+//   {
+//     title: 'STANDARD',
+//     subtitle: 'Connecting App with Backend Server, With Free 1 month Support',
+//     price: { monthly: '₹6 Lacs', annual: '₹6 Lacs' },
+//     features: [
+//       '3 Layouts to Choose from',
+//       '8 pages included',
+//       'Revisions Included (3 hrs)',
+//       'Custom color scheme',
+//       'Branding placement',
+//       'Content placement',
+//       'Mobile friendly',
+//       'Social media integration',
+//       'Blog',
+//       'FAQ page',
+//       'Google an;ytics setup',
+//       'Market keyword research',
+//       'Schema markup optimization',
+//       'Google optimized content',
+//     ],
+//     isHighlighted: true,
+//   },
+//   {
+//     title: 'ULTIMATE',
+//     subtitle:
+//       'Fully Customised App, Depends on your project requirement, With Free 2 month Support ',
+//     price: { monthly: '₹8 Lacs', annual: '₹8 Lacs' },
+//     features: [
+//       'Full custom layout',
+//       'Total page count varies',
+//       'Revisions Included (varies)',
+//       'Custom color scheme',
+//       'Branding placement',
+//       'Content placement',
+//       'Mobile friendly',
+//       'Social media integration',
+//       'Blog',
+//       'FAQ page',
+//       'Google an;ytics setup',
+//       'Market keyword research',
+//       'Schema markup optimization',
+//       'Google optimized content',
+//       '1 on 1 design consultation',
+//       'custom design mockups',
+//     ],
+//     isHighlighted: false,
+//   },
+// ];
 const mock = [
   {
     title: 'Basic',
     subtitle:
       'We provide you Basic app for both Android and IOS with fully working functionality',
-    price: { monthly: '₹4 Lacs', annual: '₹4 Lacs' },
+    price: { monthly: '₹70000', annual: '₹70000' },
     features: [
       'Delivery days 30 Days',
       'Revisions unlimited',
@@ -42,7 +108,7 @@ const mock = [
   {
     title: 'Standard',
     subtitle: 'Connecting App with Backend Server, With Free 1 month Support',
-    price: { monthly: '₹6 Lacs', annual: '₹6 Lacs' },
+    price: { monthly: '₹1.5 Lac', annual: '₹1.5 Lac' },
     features: [
       'Delivery days 45 Days',
       'Revisions unlimited',
@@ -60,7 +126,7 @@ const mock = [
     title: 'Premium',
     subtitle:
       'Fully Customised App, Depends on your project requirement, With Free 2 month Support ',
-    price: { monthly: '₹8 Lacs', annual: '₹8 Lacs' },
+    price: { monthly: '₹2.5 Lacs', annual: '₹2.5 Lacs' },
     features: [
       'Delivery days 60 Days',
       'Revisions unlimited',
@@ -75,26 +141,30 @@ const mock = [
     isHighlighted: false,
   },
 ];
-
 const mock2 = [
   {
-    title: 'Basic',
+    title: 'STAR PACKAGE',
     subtitle:
       'The fundamentals to get your brand new company legitimate and up and running.',
-    price: { monthly: '₹70000', annual: '₹70000' },
+    price: { monthly: '$1190', annual: '$1190' },
     features: [
       'Delivery days 14 Days',
       'Revisions 1',
       'No.of pages or screens 1',
       'Responsive Design ',
+      'Branded Website with custom header design (5 pages)',
+      'Logo design',
+      'Social Media Online Presence Image Package',
+      'Lead Capture System Setup with squeeze page, thank you page and downloadable gift (provided by client)',
+      'copy review (client provides all copy)',
     ],
     isHighlighted: false,
   },
   {
-    title: 'Standard',
+    title: 'SUPERSTAR PACKAGE',
     subtitle:
       'Perfect for already running companies looking to redesign their existing website',
-    price: { monthly: '₹1.5 Lac', annual: '₹1.5 Lac' },
+    price: { monthly: '$2190', annual: '$2190' },
     features: [
       'Delivery days 30 Days',
       'Revisions 2',
@@ -102,16 +172,27 @@ const mock2 = [
       'Responsive Design ',
       'Convert to HTML/CSS',
       'Source File',
+      'Branded Website with custom header design (5 pages)',
+      'Logo design',
+      'Social Media Online Presence Image Package',
+      'Lead Capture System Setup with squeeze page, thank you page and downloadable gift (provided by client)',
+      'copy review (client provides all copy)',
+      'Sales letter page for product',
+      'product creation',
+      'shopping card setup (1 shopping cart purchased by client)',
+      'Podcast setup',
+      'Facebook Ads advanced targetting (client pays for ads)',
+      'Funnel system with one downsell and one upsell',
     ],
     isHighlighted: true,
   },
   {
-    title: 'Premium',
+    title: 'ROCKSTAR PACKAGE',
     subtitle:
       'An e-com store and site curated and hosted through your own website, showcasing up to 10 products',
-    price: { monthly: '₹2.5 Lacs', annual: '₹2.5 Lacs' },
+    price: { monthly: '$2790', annual: '$2790' },
     features: [
-      'Delivery days 45 Days',
+      'Delivery days 45s Days',
       'Revisions 3',
       'No.of pages or screens 7',
       'Responsive Design ',
@@ -119,6 +200,13 @@ const mock2 = [
       'Content Upload',
       'Convert to HTML/CSS',
       'Source File',
+      'Branded Website with custom header design (5 pages)',
+      'Social Media Online Presence Image Package',
+      'Lead Capture System Setup with squeeze page, thank you page and downloadable gift (provided by client)',
+      'copy review (client provides all copy)',
+      'Sales letter page for product',
+      'product creation setup (client to provide product)',
+      'shopping card setup (1 shopping cart purchased by client)',
     ],
     isHighlighted: false,
   },

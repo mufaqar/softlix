@@ -81,12 +81,7 @@ const Content = () => {
           for visitors to our website with regards to the information that they
           shared and/or collect in Site Design Agency. This policy is not
           applicable to any information collected offline or via channels other
-          than this website. Our Privacy Policy was created with the help of the{' '}
-          <a href="https://www.generateprivacypolicy.com" target="blank">
-            {' '}
-            Free Privacy Policy Generator
-          </a>
-          .
+          than this website.
         </Typography>
       </Box>
 

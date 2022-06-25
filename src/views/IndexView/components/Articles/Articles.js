@@ -12,7 +12,8 @@ import { useTheme } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 const mock = [
   {
-    media: '/images/outsourcing-in-India-is-it-the-right-decision-for-your-business.png', 
+    media:
+      '/images/outsourcing-in-India-is-it-the-right-decision-for-your-business.png',
     title: '5 Best Practices for Outsourcing IT Projects',
     link: '/blog/5-best-practices-for-outsourcing-it-projects',
     subtitle:
@@ -30,14 +31,14 @@ const mock = [
     title: 'An introduction to Web Development Technologies',
     link: '/blog/an-introduction-to-web-development-technologies',
     subtitle:
-      'Now that you know the basics of HTML, CSS, and JavaScript, you\'re ready to start learning some of the',
+      "Now that you know the basics of HTML, CSS, and JavaScript, you're ready to start learning some of the",
   },
   {
     media: '/images/mobile-app-development-for-2021-and-beyond.png',
     title: 'Top 7 Technologies Used For Creating Robust Mobile Apps in 2020',
     link: '/blog/top-7-technologies-used-for-creating-robust-mobile-apps-in-2020',
     subtitle:
-      'If you\'re looking to create a robust mobile app, you\'ll need to use the right tools and technologies.',
+      "If you're looking to create a robust mobile app, you'll need to use the right tools and technologies.",
   },
 ];
 
@@ -77,13 +78,33 @@ const Articles = () => {
             fontWeight: 700,
           }}
         >
-          Browse our popular articles 
+          Browse our popular articles
         </Typography>
         <Box display="flex" justifyContent={'flex-start'} marginTop={2}>
           <Button
-            variant="contained"
-            color="primary"
             size="large"
+            component={'a'}
+            // variant="contained"
+            color="primary"
+            sx={{
+              backgroundColor: '#0070f3',
+              width: '200px',
+              borderRadius: '7px',
+              fontFamily: 'Inter',
+              fontSize: '16px',
+              color: 'white',
+              border: '1px solid #0070f3',
+              fontWeight: 500,
+              '&:hover': {
+                backgroundColor: 'rgba(0,118,255,.9)',
+              },
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                // eslint-disable-line no-useless-computed-key
+                width: '140px',
+                height: '50px',
+                fontSize: '14px',
+              },
+            }}
             endIcon={
               <Box
                 component={'svg'}
@@ -103,7 +124,15 @@ const Articles = () => {
               </Box>
             }
           >
-            <Link underline="none" href="/blog" component="a" >   View all</Link>
+            <Link
+              style={{ color: 'white' }}
+              underline="none"
+              href="/blog"
+              component="a"
+            >
+              {' '}
+              View More
+            </Link>
           </Button>
         </Box>
       </Box>
@@ -127,7 +156,7 @@ const Articles = () => {
                   },
                 }}
               >
-                 <Box
+                <Box
                   component={Card}
                   width={1}
                   height={1}
@@ -135,38 +164,39 @@ const Articles = () => {
                   flexDirection={'column'}
                   sx={{ backgroundImage: 'none' }}
                 >
-                <Link underline="none" href={item.link} component="a" >
-                  <CardMedia
-                    title={item.title}
-                    image={item.media}
-                    sx={{
-                      position: 'relative',
-                      height: { xs: 240, sm: 340, md: 280 },
-                      overflow: 'hidden',
-                    }}
-                  >
-                       <Box
-                      component={'svg'}
-                      preserveAspectRatio="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 1921 273"
+                  <Link underline="none" href={item.link} component="a">
+                    <CardMedia
+                      title={item.title}
+                      image={item.media}
                       sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        left: 0,
-                        bottom: 0,
-                        right: 0,
-                        zIndex: 1,
+                        position: 'relative',
+                        height: { xs: 240, sm: 340, md: 280 },
+                        overflow: 'hidden',
                       }}
                     >
-                      <polygon
-                        fill={theme.palette.background.paper}
-                        points="0,273 1921,273 1921,0 "
-                      />
-                    </Box> 
-                  </CardMedia> </Link>
+                      <Box
+                        component={'svg'}
+                        preserveAspectRatio="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 1921 273"
+                        sx={{
+                          position: 'absolute',
+                          width: '100%',
+                          left: 0,
+                          bottom: 0,
+                          right: 0,
+                          zIndex: 1,
+                        }}
+                      >
+                        <polygon
+                          fill={theme.palette.background.paper}
+                          points="0,273 1921,273 1921,0 "
+                        />
+                      </Box>
+                    </CardMedia>{' '}
+                  </Link>
                   <CardContent>
                     <Typography
                       variant={'h6'}
@@ -174,7 +204,10 @@ const Articles = () => {
                       align={'left'}
                       sx={{ fontWeight: 700 }}
                     >
-                    <Link underline="none" href={item.link} component="a" >     {item.title} </Link>
+                      <Link underline="none" href={item.link} component="a">
+                        {' '}
+                        {item.title}{' '}
+                      </Link>
                     </Typography>
                     <Typography align={'left'} color={'text.secondary'}>
                       {item.subtitle}
@@ -182,7 +215,10 @@ const Articles = () => {
                   </CardContent>
                   <Box flexGrow={1} />
                   <CardActions sx={{ justifyContent: 'flex-end' }}>
-                  <Link underline="none" href={item.link} component="a" >    <Button>Learn more</Button> </Link>
+                    <Link underline="none" href={item.link} component="a">
+                      {' '}
+                      <Button>Learn more</Button>{' '}
+                    </Link>
                   </CardActions>
                 </Box>
               </Box>

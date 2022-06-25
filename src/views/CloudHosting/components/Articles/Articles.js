@@ -21,7 +21,7 @@ const mock = [
     media: 'https://assets.maccarianagency.com/backgrounds/img2.jpg',
     title: 'Motivation is the first step to success',
     subtitle:
-      'Once you\'re setup, instantly withdraw payments or deposit into your bank account within 2-3 business days.',
+      "Once you're setup, instantly withdraw payments or deposit into your bank account within 2-3 business days.",
   },
   {
     media: 'https://assets.maccarianagency.com/backgrounds/img3.jpg',
@@ -33,7 +33,7 @@ const mock = [
     media: 'https://assets.maccarianagency.com/backgrounds/img4.jpg',
     title: 'Increasing prosperity with positive thinking',
     subtitle:
-      'Once you\'re setup, instantly withdraw payments or deposit into your bank account within 2-3 business days.',
+      "Once you're setup, instantly withdraw payments or deposit into your bank account within 2-3 business days.",
   },
 ];
 
@@ -99,7 +99,7 @@ const Articles = () => {
               </Box>
             }
           >
-            View all
+            View More
           </Button>
         </Box>
       </Box>

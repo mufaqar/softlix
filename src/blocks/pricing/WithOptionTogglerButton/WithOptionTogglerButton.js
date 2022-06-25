@@ -78,23 +78,28 @@ const mock = [
 
 const mock2 = [
   {
-    title: 'Basic',
+    title: 'STAR PACKAGE',
     subtitle:
       'The fundamentals to get your brand new company legitimate and up and running.',
-    price: { monthly: '₹4 Lacs', annual: '₹4 Lacs' },
+    price: { monthly: '$1190', annual: '$1190' },
     features: [
       'Delivery days 14 Days',
       'Revisions 1',
       'No.of pages or screens 1',
       'Responsive Design ',
+      'Branded Website with custom header design (5 pages)',
+      'Logo design',
+      'Social Media Online Presence Image Package',
+      'Lead Capture System Setup with squeeze page, thank you page and downloadable gift (provided by client)',
+      'copy review (client provides all copy)',
     ],
     isHighlighted: false,
   },
   {
-    title: 'Standard',
+    title: 'SUPERSTAR PACKAGE',
     subtitle:
       'Perfect for already running companies looking to redesign their existing website',
-    price: { monthly: '₹6 Lacs', annual: '₹6 Lacs' },
+    price: { monthly: '$2190', annual: '$2190' },
     features: [
       'Delivery days 30 Days',
       'Revisions 2',
@@ -102,14 +107,25 @@ const mock2 = [
       'Responsive Design ',
       'Convert to HTML/CSS',
       'Source File',
+      'Branded Website with custom header design (5 pages)',
+      'Logo design',
+      'Social Media Online Presence Image Package',
+      'Lead Capture System Setup with squeeze page, thank you page and downloadable gift (provided by client)',
+      'copy review (client provides all copy)',
+      'Sales letter page for product',
+      'product creation',
+      'shopping card setup (1 shopping cart purchased by client)',
+      'Podcast setup',
+      'Facebook Ads advanced targetting (client pays for ads)',
+      'Funnel system with one downsell and one upsell',
     ],
     isHighlighted: true,
   },
   {
-    title: 'Premium',
+    title: 'ROCKSTAR PACKAGE',
     subtitle:
       'An e-com store and site curated and hosted through your own website, showcasing up to 10 products',
-    price: { monthly: '₹8 Lacs', annual: '₹8 Lacs' },
+    price: { monthly: '$2790', annual: '$2790' },
     features: [
       'Delivery days 45s Days',
       'Revisions 3',
@@ -119,10 +135,65 @@ const mock2 = [
       'Content Upload',
       'Convert to HTML/CSS',
       'Source File',
+      'Branded Website with custom header design (5 pages)',
+      'Social Media Online Presence Image Package',
+      'Lead Capture System Setup with squeeze page, thank you page and downloadable gift (provided by client)',
+      'copy review (client provides all copy)',
+      'Sales letter page for product',
+      'product creation setup (client to provide product)',
+      'shopping card setup (1 shopping cart purchased by client)',
     ],
     isHighlighted: false,
   },
 ];
+
+// const mock2 = [
+//   {
+//     title: 'Starter Package',
+//     subtitle:
+//       'The fundamentals to get your brand new company legitimate and up and running.',
+//     price: { monthly: '₹4 Lacs', annual: '₹4 Lacs' },
+//     features: [
+//       'Delivery days 14 Days',
+//       'Revisions 1',
+//       'No.of pages or screens 1',
+//       'Responsive Design ',
+//     ],
+//     isHighlighted: false,
+//   },
+//   {
+//     title: 'Standard',
+//     subtitle:
+//       'Perfect for already running companies looking to redesign their existing website',
+//     price: { monthly: '₹6 Lacs', annual: '₹6 Lacs' },
+//     features: [
+//       'Delivery days 30 Days',
+//       'Revisions 2',
+//       'No.of pages or screens 4',
+//       'Responsive Design ',
+//       'Convert to HTML/CSS',
+//       'Source File',
+//     ],
+//     isHighlighted: true,
+//   },
+//   {
+//     title: 'Premium',
+//     subtitle:
+//       'An e-com store and site curated and hosted through your own website, showcasing up to 10 products',
+//     price: { monthly: '₹8 Lacs', annual: '₹8 Lacs' },
+//     features: [
+//       'Delivery days 45s Days',
+//       'Revisions 3',
+//       'No.of pages or screens 7',
+//       'Responsive Design ',
+//       'Prototype',
+//       'Content Upload',
+//       'Convert to HTML/CSS',
+//       'Source File',
+//     ],
+//     isHighlighted: false,
+//   },
+// ];
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
