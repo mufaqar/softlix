@@ -95,6 +95,17 @@ const Form = () => {
         },
       );
   };
+
+  const callSheets = async (data) => {
+    const response = await fetch('/api/sheets', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    return response;
+  };
   const onSubmit = (values) => {
     // e.preventDefault();
     setBtnLabel('Sending...');
@@ -109,19 +120,10 @@ const Form = () => {
 
     sendEmail(data);
     console.log(data);
-    // .then((res) => {
-    //   console.log('Response received');
-    //   if (res.status === 200) {
-    //     console.log('Response succeeded!');
-    //     setSubmitted(true);
-    //     setFname('');
-    //     setLname('');
-    //     setEmail('');
-    //     setMessage('');
-    //     setSuccess('Email sent successfully');
-    //     setBtnLabel('Sent');
-    //   }
-    // });
+
+    const response = callSheets(data);
+    console.log(response);
+
     return values;
   };
 

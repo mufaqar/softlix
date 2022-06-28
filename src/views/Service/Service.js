@@ -68,7 +68,6 @@ const Service = () => {
       <Container paddingTop={'0 !important'}>
         <Integrations />
       </Container>
-     
     </Main>
   );
 };

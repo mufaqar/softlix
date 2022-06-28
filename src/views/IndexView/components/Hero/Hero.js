@@ -226,7 +226,7 @@ const Hero = () => {
               <Box
                 component={LazyLoadImage}
                 effect="blur"
-                src="/images/home-hero.png"
+                src="/images/home-hero.webp"
                 alt="Image Description"
                 width={1}
                 height={1}
@@ -235,7 +235,7 @@ const Hero = () => {
                   objectFit: 'cover',
                   filter:
                     theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
-                  ['@media (min-width:300px) and (max-width:600px)']: {
+                  ['@media (min-width:300px) and (max-width:1000px)']: {
                     // eslint-disable-line no-useless-computed-key
                     marginTop: '0px',
                   },

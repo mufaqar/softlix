@@ -1,6 +1,13 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+// import Document, { Html, Head, Main, NextScript } from 'next/document';
+import {
+  default as Document,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';

@@ -66,7 +66,7 @@ const Hero = () => {
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Box
+        {/* <Box
           sx={{
             position: 'relative',
             marginX: 'auto',
@@ -111,7 +111,7 @@ const Hero = () => {
                 <Box
                   component={LazyLoadImage}
                   effect="blur"
-                  src="/images/services-page.jpg"
+                  src="/images/service-image.webp"
                   alt="Image Description"
                   width={1}
                   height={1}
@@ -126,7 +126,29 @@ const Hero = () => {
               </Box>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
+        <div style={{ width: '100%' }}>
+          <Box
+            component={LazyLoadImage}
+            effect="blur"
+            src="/images/service-image.webp"
+            alt="Image Description"
+            width={1}
+            height={1}
+            sx={{
+              width: '100%',
+              height: '450px',
+              borderRadius: '10px',
+              objectFit: 'cover',
+              marginLeft: '40px',
+              filter:
+                theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                marginLeft: '0px',
+              },
+            }}
+          />
+        </div>
       </Grid>
     </Grid>
   );

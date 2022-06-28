@@ -4,18 +4,11 @@ import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
-  GetStarted,
-  QuickStart,
-  Services,
-  Benefits,
   Hero,
-  Pricing, 
+  Pricing,
   HowItWorks,
-  AuthFormWithDarkBg,
   Contact,
-  FeaturesWithMinimalDesign,
   Nike,
-  Features,
   Curology,
   Categories,
   Features2,
@@ -26,7 +19,7 @@ import {
   PopupWithDiscount,
   FeaturesWithCheckMarksAndAbstractImages,
   Partners,
-  Support
+  Support,
 } from './components';
 
 const IndexView = () => {
@@ -55,11 +48,11 @@ const IndexView = () => {
     });
   };
   const theme = useTheme();
-    const styles = (bgImage) => ({
+  const styles = (bgImage) => ({
     position: 'absolute',
     objectFit: 'cover',
     /* support for plugin https://github.com/bfred-it/object-fit-images */
-    fontFamily: 'object-fit: cover;',
+    // fontFamily: 'object-fit: cover;',
     top: 0,
     left: 0,
     width: '100%',
@@ -72,78 +65,77 @@ const IndexView = () => {
     filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
   });
   return (
-    <Box sx={{ overflowX: 'hidden' }}>
+    <Box sx={{ overflowX: 'none' }}>
       <Main bgcolor={'background.paper'}>
         <Hero />
-       <LogoGridSimpleCentered /> 
-       
-         <Container>
-        <Categories />  
-         </Container>  
-       <Partners />
-{/*<Container> <Features/>  </Container>*/}
-<Container> <Features2/>  </Container>
+        <LogoGridSimpleCentered />
 
-<Container> <HowItWorks /> </Container>
- <Box bgcolor={'alternate.main'}>
         <Container>
-          <Support />
+          <Categories />
         </Container>
-      </Box>
-<Container> <FeaturesWithCheckMarksAndAbstractImages />  </Container>
-      <FeaturesWithSimpleIcons />
+        <Partners />
+        {/*<Container> <Features/>  </Container>*/}
+        <Container>
+          {' '}
+          <Features2 />{' '}
+        </Container>
+
+        <Container>
+          {' '}
+          <HowItWorks />{' '}
+        </Container>
+        <Box bgcolor={'alternate.main'}>
+          <Container>
+            <Support />
+          </Container>
+        </Box>
+        <Container>
+          {' '}
+          <FeaturesWithCheckMarksAndAbstractImages />{' '}
+        </Container>
+        <FeaturesWithSimpleIcons />
+        <Box
+          className={'jarallax'}
+          data-jarallax
+          data-speed="0.2"
+          position={'relative'}
+          minHeight={'100vh'}
+          display={'flex'}
+          alignItems={'center'}
+          id="agency__portfolio-item--js-scroll"
+        >
+          <Box className={'jarallax-img'} sx={styles('/images/freshier.png')} />
+          <Container>
+            <Nike />
+          </Container>
+        </Box>
+        <Box
+          className={'jarallax'}
+          data-jarallax
+          data-speed="0.2"
+          position={'relative'}
+          minHeight={'100vh'}
+          display={'flex'}
+          alignItems={'center'}
+          id="agency__portfolio-item--js-scroll"
+        >
           <Box
-        className={'jarallax'}
-        data-jarallax
-        data-speed="0.2"
-        position={'relative'}
-        minHeight={'100vh'}
-        display={'flex'}
-        alignItems={'center'}
-        id="agency__portfolio-item--js-scroll"
-      >
-        <Box
-          className={'jarallax-img'}
-          sx={styles(
-            '/images/freshier.png',
-          )}
-        />
-        <Container>
-          <Nike />
-        </Container>
-      </Box>
-         <Box
-        className={'jarallax'}
-        data-jarallax
-        data-speed="0.2"
-        position={'relative'}
-        minHeight={'100vh'}
-        display={'flex'}
-        alignItems={'center'}
-        id="agency__portfolio-item--js-scroll"
-      >
-        <Box
-          className={'jarallax-img'}
-          sx={styles(
-            '/images/sracademy.png',
-          )}
-        />
-        <Container>
-          <Curology />
-        </Container>
-
-      </Box>   
+            className={'jarallax-img'}
+            sx={styles('/images/sracademy.png')}
+          />
+          <Container>
+            <Curology />
+          </Container>
+        </Box>
         <Container>
           <WithHighlightedCard />
         </Container>
-        
-          <Pricing />       
-          <Contact />
-          
-          
+
+        <Pricing />
+        <Contact />
+
         <Container>
           <Articles />
-
         </Container>
         <PopupWithDiscount />
       </Main>

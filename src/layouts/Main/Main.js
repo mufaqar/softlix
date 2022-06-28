@@ -5,6 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
+// import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import Container from 'components/Container';
@@ -35,10 +36,12 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 38,
+    // target: window ? window() : undefined,
   });
 
   return (
     <Box>
+      {/* <CssBaseline /> */}
       <Box
         sx={{ backgroundColor: 'white' }}
         // bgcolor={bgcolor}
@@ -46,20 +49,26 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         zIndex={theme.zIndex.appBar}
       >
         <Container paddingTop={'0px !important'} paddingBottom={'0 !important'}>
-          <TopNav colorInvert={colorInvert} />
+          <TopNav
+            // style={{ position: 'fixed', top: 0 }}
+            colorInvert={colorInvert}
+          />
         </Container>
       </Box>
 
       <AppBar
         position={'sticky'}
         sx={{
+          // position: 'sticky',
           top: 0,
+          // left: 'auto',
           backgroundColor: trigger ? theme.palette.background.paper : bgcolor,
         }}
         elevation={trigger ? 1 : 0}
       >
         <Container paddingY={1}>
           <Topbar
+            // style={{ position: 'sticky', top: 0 }}
             // sx={{ position: 'sticky' }}
             onSidebarOpen={handleSidebarOpen}
             pages={pages}

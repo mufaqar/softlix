@@ -17,13 +17,13 @@ import { useRouter } from 'next/router';
 import Container from 'components/Container';
 import axios from 'axios';
 const validationSchema = yup.object({
-  fname: yup
+  firstName: yup
     .string()
     .trim()
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your first name'),
-  mobile: yup
+  phone: yup
     .string()
     .trim()
     .min(10, 'Please enter a valid number')
@@ -41,31 +41,45 @@ const Contact = () => {
   const formRef = useRef();
   const router = useRouter();
   const theme = useTheme();
-  const [fname, setFname] = useState('');
-  const [mobile, setMobile] = useState('');
+  const [firstName, setFname] = useState('');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [success, setSuccess] = useState('');
   const [btnLabel, setBtnLabel] = useState('Submit');
   const [submitted, setSubmitted] = useState(false);
 
-  const onSubmit = (values) => {
-    console.log(formRef);
+  const callSheets = async (data) => {
+    const response = await fetch('/api/sheets', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    return response;
+  };
+
+  const onSubmit = async (values) => {
+    // console.log(formRef);
     setBtnLabel('Sending...');
     let data = {};
-    data.fname = formik.values.fname;
-    data.mobile = formik.values.mobile;
+    data.firstName = formik.values.firstName;
+    data.phone = formik.values.phone;
     data.email = formik.values.email;
     data.message = formik.values.message;
     console.log(data);
 
     sendMail();
 
+    const response = callSheets(data);
+    console.log(response);
+
     return values;
   };
   const initialValues = {
-    fname: '',
-    mobile: '',
+    firstName: '',
+    phone: '',
     email: '',
     message: '',
   };
@@ -75,7 +89,7 @@ const Contact = () => {
     onSubmit,
   });
   const sendMail = () => {
-    console.log('emailfunc' + formRef);
+    // console.log('emailfunc' + formRef);
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -96,28 +110,6 @@ const Contact = () => {
         },
       );
   };
-
-  // const RightSide = () => {
-  //   return (
-  //     <iframe
-  //       width="100%"
-  //       height="100%"
-  //       frameBorder="0"
-  //       title="map"
-  //       marginHeight={0}
-  //       marginWidth={0}
-  //       scrolling="no"
-  //       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.677922226045!2d77.38655839999998!3d28.6246822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff135b3084b%3A0x19ccb4e95c69306d!2sSector%2063%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1651040308281!5m2!1sen!2sin"
-  //       style={{
-  //         minHeight: 300,
-  //         filter:
-  //           theme.palette.mode === 'dark'
-  //             ? 'grayscale(0.5) opacity(0.7)'
-  //             : 'none',
-  //       }}
-  //     />
-  //   );
-  // };
 
   return (
     <Box
@@ -151,7 +143,7 @@ const Contact = () => {
                     Contact us
                   </Typography>
                   <Typography color="text.secondary" marginBottom={4}>
-                    SOFTLIX is your one-stop solutions provider for Web, Mobile
+                    SOFTLIX is your one-stop solutions provider for Web, phone
                     and Software Development. We strive day and night to deliver
                     quality services to our clients, and to address their design
                     and development needs. We strongly believe that integrity,
@@ -179,15 +171,16 @@ const Contact = () => {
                           variant="outlined"
                           color="primary"
                           size="medium"
-                          name="fname"
+                          name="firstName"
                           fullWidth
-                          value={formik.values.fname}
+                          value={formik.values.firstName}
                           onChange={formik.handleChange}
                           error={
-                            formik.touched.fname && Boolean(formik.errors.fname)
+                            formik.touched.firstName &&
+                            Boolean(formik.errors.firstName)
                           }
                           helperText={
-                            formik.touched.fname && formik.errors.fname
+                            formik.touched.firstName && formik.errors.firstName
                           }
                         />
                       </Grid>
@@ -198,16 +191,15 @@ const Contact = () => {
                           variant="outlined"
                           color="primary"
                           size="medium"
-                          name="mobile"
+                          name="phone"
                           fullWidth
-                          value={formik.values.mobile}
+                          value={formik.values.phone}
                           onChange={formik.handleChange}
                           error={
-                            formik.touched.mobile &&
-                            Boolean(formik.errors.mobile)
+                            formik.touched.phone && Boolean(formik.errors.phone)
                           }
                           helperText={
-                            formik.touched.mobile && formik.errors.mobile
+                            formik.touched.phone && formik.errors.phone
                           }
                         />
                       </Grid>
