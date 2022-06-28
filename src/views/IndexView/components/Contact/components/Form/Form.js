@@ -14,13 +14,13 @@ import emailjs from '@emailjs/browser';
 // import axios from 'axios';
 import { useRouter } from 'next/router';
 const validationSchema = yup.object({
-  fname: yup
+  firstName: yup
     .string()
     .trim()
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your first name'),
-  mobile: yup
+  phone: yup
     .string()
     .trim()
     .min(10, 'Please enter a valid number')
@@ -38,17 +38,28 @@ const Contact = () => {
   const form = useRef();
   const router = useRouter();
   const theme = useTheme();
-  const [fname, setFname] = useState('');
-  const [mobile, setMobile] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [success, setSuccess] = useState('');
   const [btnLabel, setBtnLabel] = useState('Submit');
   const [submitted, setSubmitted] = useState(false);
 
+  const callSheets = async (data) => {
+    const response = await fetch('/api/sheets', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    return response;
+  };
+
   const initialValues = {
-    fname: '',
-    mobile: '',
+    firstName: '',
+    phone: '',
     email: '',
     message: '',
   };
@@ -76,12 +87,14 @@ const Contact = () => {
   const onSubmit = (values) => {
     setBtnLabel('Sending...');
     let data = {};
-    data.fname = formik.values.fname;
-    data.mobile = formik.values.mobile;
+    data.firstName = formik.values.firstName;
+    data.phone = formik.values.phone;
     data.email = formik.values.email;
     data.message = formik.values.message;
 
     sendMail();
+
+    const response = callSheets(data);
 
     return values;
   };
@@ -121,12 +134,16 @@ const Contact = () => {
                   variant="outlined"
                   color="primary"
                   size="medium"
-                  name="fname"
+                  name="firstName"
                   fullWidth
-                  value={formik.values.fname}
+                  value={formik.values.firstName}
                   onChange={formik.handleChange}
-                  error={formik.touched.fname && Boolean(formik.errors.fname)}
-                  helperText={formik.touched.fname && formik.errors.fname}
+                  error={
+                    formik.touched.firstName && Boolean(formik.errors.firstName)
+                  }
+                  helperText={
+                    formik.touched.firstName && formik.errors.firstName
+                  }
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -136,12 +153,12 @@ const Contact = () => {
                   variant="outlined"
                   color="primary"
                   size="medium"
-                  name="mobile"
+                  name="phone"
                   fullWidth
-                  value={formik.values.mobile}
+                  value={formik.values.phone}
                   onChange={formik.handleChange}
-                  error={formik.touched.mobile && Boolean(formik.errors.mobile)}
-                  helperText={formik.touched.mobile && formik.errors.mobile}
+                  error={formik.touched.phone && Boolean(formik.errors.phone)}
+                  helperText={formik.touched.phone && formik.errors.phone}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -244,12 +261,12 @@ const Contact = () => {
   //               variant="outlined"
   //               color="primary"
   //               size="medium"
-  //               name="fname"
+  //               name="firstName"
   //               fullWidth
-  //               value={formik.values.fname}
+  //               value={formik.values.firstName}
   //               onChange={formik.handleChange}
-  //               error={formik.touched.fname && Boolean(formik.errors.fname)}
-  //               helperText={formik.touched.fname && formik.errors.fname}
+  //               error={formik.touched.firstName && Boolean(formik.errors.firstName)}
+  //               helperText={formik.touched.firstName && formik.errors.firstName}
   //             />
   //           </Grid>
   //           <Grid item xs={12} sm={6}>
@@ -259,12 +276,12 @@ const Contact = () => {
   //               variant="outlined"
   //               color="primary"
   //               size="medium"
-  //               name="mobile"
+  //               name="phone"
   //               fullWidth
-  //               value={formik.values.mobile}
+  //               value={formik.values.phone}
   //               onChange={formik.handleChange}
-  //               error={formik.touched.mobile && Boolean(formik.errors.mobile)}
-  //               helperText={formik.touched.mobile && formik.errors.mobile}
+  //               error={formik.touched.phone && Boolean(formik.errors.phone)}
+  //               helperText={formik.touched.phone && formik.errors.phone}
   //             />
   //           </Grid>
   //           <Grid item xs={12}>
@@ -371,12 +388,12 @@ const Contact = () => {
 //                 variant="outlined"
 //                 color="primary"
 //                 size="medium"
-//                 name="fname"
+//                 name="firstName"
 //                 fullWidth
-//                 value={formik.values.fname}
+//                 value={formik.values.firstName}
 //                 onChange={formik.handleChange}
-//                 error={formik.touched.fname && Boolean(formik.errors.fname)}
-//                 helperText={formik.touched.fname && formik.errors.fname}
+//                 error={formik.touched.firstName && Boolean(formik.errors.firstName)}
+//                 helperText={formik.touched.firstName && formik.errors.firstName}
 //               />
 //             </Grid>
 //             <Grid item xs={12} sm={6}>
@@ -386,12 +403,12 @@ const Contact = () => {
 //                 variant="outlined"
 //                 color="primary"
 //                 size="medium"
-//                 name="mobile"
+//                 name="phone"
 //                 fullWidth
-//                 value={formik.values.mobile}
+//                 value={formik.values.phone}
 //                 onChange={formik.handleChange}
-//                 error={formik.touched.mobile && Boolean(formik.errors.mobile)}
-//                 helperText={formik.touched.mobile && formik.errors.mobile}
+//                 error={formik.touched.phone && Boolean(formik.errors.phone)}
+//                 helperText={formik.touched.phone && formik.errors.phone}
 //               />
 //             </Grid>
 //             <Grid item xs={12}>

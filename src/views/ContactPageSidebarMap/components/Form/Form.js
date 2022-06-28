@@ -73,7 +73,7 @@ const Contact = () => {
     sendMail();
 
     const response = callSheets(data);
-    console.log(response);
+    // console.log(response);
 
     return values;
   };
