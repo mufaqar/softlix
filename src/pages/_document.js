@@ -12,7 +12,6 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
 import Drift from 'react-driftjs';
-import Script from 'next/script';
 
 const getCache = () => {
   const cache = createCache({ key: 'css', prepend: true });
