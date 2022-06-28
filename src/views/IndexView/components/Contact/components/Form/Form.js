@@ -10,6 +10,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 import emailjs from '@emailjs/browser';
+import LockIcon from '@mui/icons-material/Lock';
+import Link from 'next/link';
 // import Container from 'components/Container';
 // import axios from 'axios';
 import { useRouter } from 'next/router';
@@ -95,6 +97,7 @@ const Contact = () => {
     sendMail();
 
     const response = callSheets(data);
+    console.log(response);
 
     return values;
   };
@@ -217,18 +220,32 @@ const Contact = () => {
               </Grid>
               <Grid item xs={12}>
                 <Box>
-                  <Typography component="p" variant="body2" align="left">
-                    By clicking on "submit" you agree to our{' '}
-                    <Box
-                      component="a"
-                      href="/privacy-policy"
-                      color={theme.palette.text.primary}
-                      fontWeight={'700'}
-                    >
-                      Privacy Policy
-                    </Box>
+                  <h5
+                    style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      alignItems: 'center',
+                      // wordSpacing: '3px',
+                      color: '#677788',
+                    }}
+                  >
+                    <div style={{ display: 'inline', marginRight: '3px' }}>
+                      <LockIcon style={{ margin: 0, padding: 0 }} />
+                    </div>
+                    <div style={{ marginLeft: '3px', marginRight: '3px' }}>
+                      By clicking the "submit" button, you are agreeing to
+                    </div>
+                    <Link href={'/company-terms'}>
+                      <a> Softlix terms of use </a>
+                    </Link>
+                    <div style={{ marginLeft: '3px', marginRight: '3px' }}>
+                      and
+                    </div>
+                    <Link href={'/privacy-policy'}>
+                      <a> privacy policy</a>
+                    </Link>
                     .
-                  </Typography>
+                  </h5>
                 </Box>
               </Grid>
             </Grid>

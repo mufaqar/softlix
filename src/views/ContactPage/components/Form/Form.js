@@ -12,7 +12,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/router';
 import emailjs from '@emailjs/browser';
-
+import LockIcon from '@mui/icons-material/Lock';
+import Link from 'next/link';
 const validationSchema = yup.object({
   fullName: yup
     .string()
@@ -188,6 +189,30 @@ const Form = () => {
                 Send the question
               </Button>
             </Grid>
+            <h5
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                // wordSpacing: '3px',
+                color: '#677788',
+              }}
+            >
+              <div style={{ display: 'inline', marginRight: '3px' }}>
+                <LockIcon style={{ margin: 0, padding: 0 }} />
+              </div>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>
+                By clicking the "submit" button, you are agreeing to
+              </div>
+              <Link href={'/company-terms'}>
+                <a> Softlix terms of use </a>
+              </Link>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>and</div>
+              <Link href={'/privacy-policy'}>
+                <a> privacy policy</a>
+              </Link>
+              .
+            </h5>
           </Grid>
         </form>
       </Box>

@@ -87,6 +87,7 @@ const Hero = () => {
   return (
     <Box
       sx={{
+        backgroundColor: 'white',
         backgroundImage: `linear-gradient(to bottom, ${alpha(
           theme.palette.background.paper,
           0,
@@ -95,7 +96,10 @@ const Hero = () => {
         position: 'relative',
       }}
     >
-      <Box paddingY={{ xs: 0, sm: '1rem', md: '1.5rem' }}>
+      <Box
+        sx={{ backgroundColor: 'white' }}
+        paddingY={{ xs: 0, sm: '1rem', md: '1.5rem' }}
+      >
         <Container>
           <Grid container>
             <Grid xs={12} md={6}>
@@ -141,9 +145,9 @@ const Hero = () => {
                 sx={{ fontWeight: 400 }}
               >
                 Looking for a professional website design or Software company?
-                Look no further than SOFTLIX Agency. We create beautiful
-                websites, Apps, Software using the latest technologies like
-                Nextjs, Flutter, React Native & Firebase.
+                Look no further than SOFTLIX. We create beautiful websites,
+                Apps, Software using the latest technologies like Nextjs,
+                Flutter, React Native & Firebase.
               </Typography>
               <Box
                 display="flex"
@@ -231,6 +235,7 @@ const Hero = () => {
                 width={1}
                 height={1}
                 sx={{
+                  backgroundColor: 'white',
                   marginTop: '-120px',
                   objectFit: 'cover',
                   filter:

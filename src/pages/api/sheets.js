@@ -23,8 +23,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'only post requests are allowed' });
   }
 
-  const { firstName, lastName, email, phone, budget, ptype, message } =
-    req.body;
+  const { firstName, email, phone, budget, ptype, message } = req.body;
 
   try {
     //create auth
@@ -52,7 +51,7 @@ export default async function handler(req, res) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: 'Sheet1!A1:F1',
+      range: 'Leads!A1:F1',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[firstName, email, message, phone, ptype, budget]],

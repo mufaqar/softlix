@@ -54,7 +54,7 @@ const Hero = () => {
                 color: theme.palette.common.white,
               }}
             >
-              Newsroom
+              SOFTLIX BLOG
             </Typography>
           </Box>
           <Box>

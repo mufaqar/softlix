@@ -12,8 +12,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import axios from 'axios';
+
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
+import LockIcon from '@mui/icons-material/Lock';
+import Link from 'next/link';
 
 const validationSchema = yup.object({
   firstName: yup
@@ -311,6 +314,55 @@ const Form = () => {
             >
               {success}
             </Typography>
+            <h5
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                // wordSpacing: '3px',
+                color: '#677788',
+              }}
+            >
+              <div style={{ display: 'inline', marginRight: '3px' }}>
+                <LockIcon style={{ margin: 0, padding: 0 }} />
+              </div>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>
+                By clicking the "submit" button, you are agreeing to
+              </div>
+              <Link href={'/company-terms'}>
+                <a> Softlix terms of use </a>
+              </Link>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>and</div>
+              <Link href={'/privacy-policy'}>
+                <a> privacy policy</a>
+              </Link>
+              .
+            </h5>
+            {/* <Typography
+              variant={'subtitle2'}
+              color={'textSecondary'}
+              sx={{
+                marginTop: 2,
+                display: 'flex',
+                alignItems: 'center',
+                wordSpacing: '3px',
+                flexWrap: 'wrap',
+              }}
+              align={'center'}
+            >
+              <div style={{ display: 'inline' }}>
+                <LockIcon style={{ margin: 0, padding: 0 }} />
+              </div>
+              By clicking the "submit" button, you are agreeing to
+              <Link href={'/company-terms'}>
+                <a> Softlix terms of use </a>
+              </Link>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>and</div>
+              <Link href={'/privacy-policy'}>
+                <a> privacy policy</a>
+              </Link>
+              .
+            </Typography> */}
           </Grid>
         </Box>
       </form>

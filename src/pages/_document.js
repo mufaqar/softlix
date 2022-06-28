@@ -35,7 +35,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           ></link>
-
           <meta
             name="description"
             content="A modern design system for your new landing and web pages."
@@ -67,30 +66,37 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
             rel="stylesheet"
           />
-
           {/* <script
             type="text/javascript"
             src="../scripts/intercomScript.js"
           ></script> */}
-          <script
-            src="https://consent.cookiefirst.com/sites/softlix.tech-c7280872-7ff7-43ba-8c73-ae9eb1dbe444/consent.js"
-            defer
-          ></script>
+          <script src="https://consent.cookiefirst.com/sites/softlix.tech-c7280872-7ff7-43ba-8c73-ae9eb1dbe444/consent.js"></script>
           <script
             dangerouslySetInnerHTML={{
               // eslint-disable-next-line quotes
               __html: `(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/phlf7cpa';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();`,
             }}
           ></script>
-          {/* <script>
-(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/phlf7cpa';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-</script> */}
-          <script
+          {/* <script
+            dangerouslySetInnerHTML={{
+              // eslint-disable-next-line quotes
+              __html: `window.__COOKIE_BANNER_SETTINGS__ = {"autoblock":[],"integration":{"apiKey":"c7280872-7ff7-43ba-8c73-ae9eb1dbe444","dataLayer":"dataLayer","stealthMode":true,"forcedLang":"inherit","silentMode":true},"widgetConfig":{"baseConsent":{"necessary":true,"performance":false,"functional":false,"advertising":false},"preConsent":{"necessary":true,"performance":false,"functional":false,"advertising":false},"lastConsentReset":null,"bulkConsent":null,"consentPolicy":1,"autoblockKnownServices":false,"cookieCategories":["necessary","performance","functional"],"enableFloatingButton":false,"hideOutsideEU":false,"tabsOnSettingsPanel":["settings","cookies","policy"],"showLanguageSwitcher":false,"languages":[{"value":"en","label":"English"}],"loadInlineScripts":true,"increaseLocationPrecision":true,"okAcceptsAll":true,"bannerToggles":false,"banner_continue_button_type":"disabled","privacyPolicyUrl":"https:\/\/softlix.tech\/privacy-policy","additionalLink":null,"scripts":[{"id":"4df3646a-4e5a-4700-a464-661f26e409df","name":"CookieFirst","unique_service_uuid":null,"logo_path":"cookiefirst.png","categories":["necessary"],"privacy_policy_url":"https:\/\/cookiefirst.com\/legal\/privacy-policy\/","privacy_settings_url":null,"content":"","consent_key":"cookiefirst","integration":"manual"}],"showPrivacyUrlInBanner":true,"branding":{"banner":{"show":false},"panel":{"show":false}},"denyBtn":"visible","backdropEnabled":false,"widget":{"type":"banner","location":"bottom","fontFamily":null,"buttonsOrder":[{"value":"accept","width":"100%"},{"value":"reject","width":"50%"},{"value":"adjust","width":"50%"}],"width":"100%"},"consentLifetime":31104000,"reconsent":[],"bannerNonEuCountries":["IS","NO","CH","GB"],"googleConsentModeEnabled":false,"version":"9c7ce620-4e06-463d-bdd5-d1faa245d248"}};var src = "https://consent.cookiefirst.com/banner.js";if(document.body || document.readyState === 'complete') {    var s = document.createElement("script");    s.src = src;    document.head.appendChild(s);} else {    var s = ['<script src="', src, '"></script>'];document.write(s.join(""));}`,
+            }}
+          ></script> */}
+          {/* <script
             type="text/javascript"
             id="hs-script-loader"
             async
             defer
             src="//js-na1.hs-scripts.com/21402567.js"
+          ></script> */}{' '}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(window.intercomSettings = {
+                api_base: 'https://api-iam.intercom.io',
+                app_id: 'phlf7cpa',
+              })`,
+            }}
           ></script>
           <script
             dangerouslySetInnerHTML={{
@@ -105,7 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <body>
           <Drift appId="gv9ah6ni8h8b" />
           <Main />
-          <Script type="text/javascript" src="../scripts/intercomScript.js" />
+
           <NextScript />
 
           <noscript>

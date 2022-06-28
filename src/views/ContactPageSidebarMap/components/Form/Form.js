@@ -13,6 +13,8 @@ import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/router';
+import LockIcon from '@mui/icons-material/Lock';
+import Link from 'next/link';
 
 import Container from 'components/Container';
 import axios from 'axios';
@@ -73,7 +75,7 @@ const Contact = () => {
     sendMail();
 
     const response = callSheets(data);
-    // console.log(response);
+    console.log(response);
 
     return values;
   };
@@ -266,29 +268,45 @@ const Contact = () => {
                       </Grid>
                       <Grid item xs={12}>
                         <Box>
-                          <Typography
-                            component="p"
-                            variant="body2"
-                            align="left"
+                          <h5
+                            style={{
+                              display: 'flex',
+                              flexWrap: 'wrap',
+                              alignItems: 'center',
+                              // wordSpacing: '3px',
+                              color: '#677788',
+                            }}
                           >
-                            By clicking on "submit" you agree to our{' '}
-                            <Box
-                              component="a"
-                              href="/privacy-policy"
-                              color={theme.palette.text.primary}
-                              fontWeight={'700'}
+                            <div
+                              style={{ display: 'inline', marginRight: '3px' }}
                             >
-                              Privacy Policy
-                            </Box>
+                              <LockIcon style={{ margin: 0, padding: 0 }} />
+                            </div>
+                            <div
+                              style={{ marginLeft: '3px', marginRight: '3px' }}
+                            >
+                              By clicking the "submit" button, you are agreeing
+                              to
+                            </div>
+                            <Link href={'/company-terms'}>
+                              <a> Softlix terms of use </a>
+                            </Link>
+                            <div
+                              style={{ marginLeft: '3px', marginRight: '3px' }}
+                            >
+                              and
+                            </div>
+                            <Link href={'/privacy-policy'}>
+                              <a> privacy policy</a>
+                            </Link>
                             .
-                          </Typography>
+                          </h5>
                         </Box>
                       </Grid>
                     </Grid>
                   </form>
                 </Box>
               </Box>
-              );
             </Container>
           </Box>
           <Box

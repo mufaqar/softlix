@@ -36,7 +36,7 @@ const Hero = () => {
       </Box>
       <Typography variant="h6" component="p" color={'text.secondary'}>
         Looking for a professional website design or Software company? Look no
-        further than SOFTLIX Agency.
+        further than SOFTLIX.
       </Typography>
       <Box
         display="flex"

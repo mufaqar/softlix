@@ -26,7 +26,7 @@ const mock = [
   {
     title: 'Solution',
     subtitle:
-      "SOFTLIX Agency is here to help. We'll take care of everything for you, from designing and building your website, to setting up hosting and domain registration, and even creating custom Android apps and software. Plus, our websites are responsive so they look great on any device, and we use the latest technologies so your site will be fast and secure.",
+      "SOFTLIX is here to help. We'll take care of everything for you, from designing and building your website, to setting up hosting and domain registration, and even creating custom Android apps and software. Plus, our websites are responsive so they look great on any device, and we use the latest technologies so your site will be fast and secure.",
     suffix: '%',
   },
 ];
@@ -52,7 +52,7 @@ const Features = () => {
         <Grid item xs={12} md={6}>
           <Box marginBottom={4}>
             <Typography sx={{ fontWeight: 700 }} variant={'h4'} gutterBottom>
-              About SOFTLIX Agency
+              About SOFTLIX
             </Typography>
             <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
               We believe in the power of a good idea. We are committed to making
@@ -91,12 +91,12 @@ const Features = () => {
               Solution
             </Typography>
             <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
-              SOFTLIX Agency is here to help. We'll take care of everything for
-              you, from designing and building your website, to setting up
-              hosting and domain registration, and even creating custom Android
-              apps and software. Plus, our websites are responsive so they look
-              great on any device, and we use the latest technologies so your
-              site will be fast and secure.
+              SOFTLIX is here to help. We'll take care of everything for you,
+              from designing and building your website, to setting up hosting
+              and domain registration, and even creating custom Android apps and
+              software. Plus, our websites are responsive so they look great on
+              any device, and we use the latest technologies so your site will
+              be fast and secure.
             </Typography>
           </Box>
         </Grid>
