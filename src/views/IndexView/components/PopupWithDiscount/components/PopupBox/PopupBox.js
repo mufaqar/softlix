@@ -1,130 +1,35 @@
-import React, { useRef, useState } from 'react';
+/* eslint-disable react/no-unescaped-entities */
+import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Dialog from '@mui/material/Dialog';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+// import TextField from '@mui/material/TextField';
+// import Button from '@mui/material/Button';
+import Link from 'next/link';
+// import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
-import { useFormik } from 'formik';
-import { FormGroup } from '@mui/material';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import emailjs from '@emailjs/browser';
-import * as yup from 'yup';
-import MenuItem from '@mui/material/MenuItem';
+
+// import MenuItem from '@mui/material/MenuItem';
 //import axios from 'axios'
-import { useTheme } from '@mui/material/styles';
-import { useRouter } from 'next/router';
-const validationSchema = yup.object({
-  firstName: yup
-    .string()
-    .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your first name'),
-  // lastName: yup
-  //   .string()
-  //   .trim()
-  //   .min(2, 'Please enter a valid name')
-  //   .max(50, 'Please enter a valid name')
-  //   .required('Please specify your last name'),
-  email: yup
-    .string()
-    .trim()
-    .email('Please enter a valid email address')
-    .required('Email is required.'),
-  phone: yup
-    .string()
-    .trim()
-    .matches(
-      /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)$/,
-      'Please enter a valid phone number.',
-    ),
-  budget: yup.string().required('Please specify your project budget'),
-  ptype: yup.string().required('Please specify your project Project Type'),
-  message: yup
-    .string()
-    .trim()
-    .max(500, 'The message cannot contain more than 500 characters'),
-});
+// import { useTheme } from '@mui/material/styles';
+// import { useRouter } from 'next/router';
 
 const PopupBox = ({ onClose, open }) => {
-  const router = useRouter();
-  const formRef = useRef();
-  const theme = useTheme();
-  const [firstName, setFname] = useState('');
-  const [lastName, setLname] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [success, setSuccess] = useState('');
-  const [budget, setbudget] = useState('');
-  const [ptype, setptype] = useState('');
-  const [message, setMessage] = useState('');
-  const [btnLabel, setBtnLabel] = useState('Request A Call Back');
-  const [submitted, setSubmitted] = useState(false);
-
-  const initialValues = {
-    firstName: '',
-    //lastName: '',
-    email: '',
-    phone: '',
-    budget: '',
-    ptype: '',
-    message: '',
-  };
-  const sendMail = () => {
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_POPUP_ID,
-        formRef.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY,
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log(formRef.current);
-          router.push('/thank-page');
-        },
-        (error) => {
-          console.log(error.text);
-          setBtnLabel('Submit');
-        },
-      );
-  };
-  const onSubmit = (values) => {
-    setBtnLabel('Sending...');
-    let data = {};
-    data.firstName = formik.values.firstName;
-    // data.lastName=formik.values.lastName;
-    data.email = formik.values.email;
-    data.phone = formik.values.phone;
-    data.budget = formik.values.budget;
-    data.ptype = formik.values.ptype;
-    data.message = formik.values.message;
-
-    sendMail();
-
-    return values;
-  };
-
-  const formik = useFormik({
-    initialValues,
-    validationSchema: validationSchema,
-    onSubmit,
-  });
+  // const router = useRouter();
 
   return (
     <Dialog
       onClose={onClose}
       open={open}
-      maxWidth={'500px'}
+      maxWidth={'100%'}
       sx={{
         // width: '100%',
         '& .MuiPaper-root': {
           // borderRadius: 4,
           width: '100%',
-          maxWidth: '420px',
+          maxWidth: '100%',
           // width: '100%',
           borderRadius: '0.4375rem',
           margin: '0',
@@ -156,13 +61,6 @@ const PopupBox = ({ onClose, open }) => {
               border: 'none!important',
             }}
           >
-            {/*<Button
-            block
-            Boxor="default"
-            type="button"
-          >
-
-          </Button>*/}
             <Box>
               <Box className=" Box-body p-0">
                 <Box className=" bg-secondary shadow border-0">
@@ -203,384 +101,117 @@ const PopupBox = ({ onClose, open }) => {
                       </g>
                     </svg>
                   </Typography>
-                  <Box
-                    className=" bg-white pb-5"
-                    sx={{ padding: '1.25rem 1.5rem', border: 'none!important' }}
-                  >
+                  <Grid item xs={12} md={12}>
                     <Box
-                      className=" text-muted text-center mb-3"
                       sx={{
-                        fontWeight: '400',
-                        color: '#8898aa',
-                        textAlign: 'center',
-                        border: 'none!important',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        width: '100vw',
+                        gap: '20px',
+                        padding: '20px 50px',
+                        ['@media (min-width:320px) and (max-width:600px)']: {
+                          // eslint-disable-line no-useless-computed-key
+                          flexDirection: 'column',
+                          padding: '20px 20px',
+                        },
                       }}
                     >
                       <Box
-                        className="text-center text-muted mb-4"
-                        sx={{
-                          fontWeight: '400',
-                          color: '#8898aa',
-                          textAlign: 'center',
-                          border: 'none!important',
+                        style={{
+                          display: 'flex',
+                          flexWrap: 'wrap',
+                          alignItems: 'center',
+                          // wordSpacing: '3px',
+                          color: '#677788',
                         }}
                       >
-                        <Box sx={{ color: '#2c4bff' }}>
-                          Request A Call Back or Call Directly on{' '}
-                          <Button
-                            variant="text"
-                            color="primary"
-                            component="a"
-                            target="blank"
-                            href="tel:+919818565561"
-                            size="medium"
-                            sx={{ padding: 0 }}
+                        We use cookies to improve your experience We use cookies
+                        to deliver the best possible experience on our website.
+                        To learn more, visit our{'  '}
+                        <Link href={'/privacy-policy'}>
+                          <a
+                            style={{
+                              marginLeft: '4px',
+                              marginRight: '4px',
+                              display: 'contents',
+                              cursor: 'pointer',
+                            }}
                           >
-                            +919818565561{' '}
-                          </Button>{' '}
-                        </Box>
+                            {' '}
+                            privacy policy.{' '}
+                          </a>
+                        </Link>
+                        By continuing to use this site, or closing this box, you
+                        consent to our use of cookies.
+                        {/* <Link href={'/company-terms'}>
+                          <a> Softlix terms of use </a>
+                        </Link> */}
                       </Box>
-                      <small>
-                        We are always available to Answer your query
-                      </small>
-                    </Box>
-                    {/*
-                  <Box className=" btn-wrapper text-center" sx={{ padding: '1.25rem 1.5rem', paddingBottom:'2rem 3rem !important', width:'100%', justifyContent: 'space-between', display: 'flex', fontSize:'12px'}}>
-                     <Button
-                      className=" btn-neutral btn-icon"
-                      Boxor="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                      sx={{  width:'48%', boxShadow: '0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%)', padding:'0.625rem 1.25rem', fontWeight:'bold',  textTransform:'capitalize', letterSpacing: '.025em', fontSize: '.875rem'}}
-                    >
+                      <Box sx={{ display: 'flex', gap: '10px' }}>
+                        <Button
+                          onClick={onClose}
+                          component={'a'}
+                          sx={{
+                            backgroundColor: '#0070f3',
+                            width: '140px',
+                            borderRadius: '7px',
+                            fontFamily: 'Inter',
+                            // fontSize: '16px',
+                            fontSize: '1rem',
+                            padding: '0.25rem .8rem',
+                            color: 'white',
+                            border: '1px solid #0070f3',
+                            fontWeight: 500,
+                            '&:hover': {
+                              backgroundColor: 'rgba(0,118,255,.9)',
+                            },
 
-                      <img width="20px"
-                          alt="..."
-                          src="/images/github.svg"
-                        ></img>
-                      <span  sx={{  marginLeft:'0.75em', }} className=" btn-inner--text">Github</span>
-                    </Button>
-
-                    <Button
-                      className=" btn-neutral btn-icon"
-                      Boxor="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                       sx={{ width:'48%', boxShadow: '0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%)', padding:'0.625rem 1.25rem', fontWeight:'bold',  textTransform:'capitalize', letterSpacing: '.025em', fontSize: '.875rem'}}
-                    >
-
-                        <img width="20px"
-                          alt="..."
-                          src="/images/google.svg"
-                          sx={{  marginRight:'0.75em' }}
-                        ></img>
-
-                      <span  marginLeft="10px" className=" btn-inner--text">Google</span>
-                    </Button>
-                  </Box>
-                  */}
-                  </Box>
-                  <Box
-                    className=" px-lg-5 py-lg-5"
-                    sx={{
-                      paddingTop: '1rem !important',
-                      padding: '1rem !important',
-                      backgroundColor: '#f7fafc !important',
-                      borderTop: '1px solid rgba(0,0,0,0.05)',
-                    }}
-                  >
-                    {/* <Box className="text-center text-muted mb-4" sx={{ fontWeight: '400', color: '#8898aa', textAlign:'center',  border:'none!important', marginBottom: '1.5rem !important' }}>
-                    <small>Or sign in with credentials</small>
-                  </Box> */}
-
-                    <form ref={formRef} onSubmit={formik.handleSubmit}>
-                      <Box
-                        component={Grid}
-                        marginBottom={{ xs: 10, sm: 0 }}
-                        container
-                        spacing={2}
-                      >
-                        <Grid item xs={12} sm={6}>
-                          <Typography
-                            variant={'subtitle2'}
-                            sx={{ marginBottom: 1 }}
-                          >
-                            First Name *
-                          </Typography>
-                          <TextField
-                            label="First name"
-                            variant="outlined"
-                            name={'firstName'}
-                            fullWidth
-                            value={formik.values.firstName}
-                            onChange={formik.handleChange}
-                            error={
-                              formik.touched.firstName &&
-                              Boolean(formik.errors.firstName)
-                            }
-                            helperText={
-                              formik.touched.firstName &&
-                              formik.errors.firstName
-                            }
-                          />
-                        </Grid>
-                        {/* <Grid item xs={12} sm={6}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 1 }}>
-              Last Name *
-            </Typography>
-            <TextField
-              label="Last name"
-              variant="outlined"
-              name={'lastName'}
-              fullWidth
-              value={formik.values.lastName}
-              onChange={formik.handleChange}
-              error={formik.touched.lastName && Boolean(formik.errors.lastName)}
-              helperText={formik.touched.lastName && formik.errors.lastName}
-            />
-          </Grid> */}
-                        <Grid item xs={12} sm={6}>
-                          <Typography
-                            variant={'subtitle2'}
-                            sx={{ marginBottom: 1 }}
-                          >
-                            Email *
-                          </Typography>
-                          <TextField
-                            label="Email"
-                            variant="outlined"
-                            name={'email'}
-                            fullWidth
-                            value={formik.values.email}
-                            onChange={formik.handleChange}
-                            error={
-                              formik.touched.email &&
-                              Boolean(formik.errors.email)
-                            }
-                            helperText={
-                              formik.touched.email && formik.errors.email
-                            }
-                          />
-                        </Grid>
-                        <Grid item xs={12} sm={12}>
-                          <Typography
-                            variant={'subtitle2'}
-                            sx={{ marginBottom: 1 }}
-                          >
-                            Phone (optional)
-                          </Typography>
-                          <TextField
-                            label="Phone number"
-                            variant="outlined"
-                            name={'phone'}
-                            fullWidth
-                            value={formik.values.phone}
-                            onChange={formik.handleChange}
-                            error={
-                              formik.touched.phone &&
-                              Boolean(formik.errors.phone)
-                            }
-                            helperText={
-                              formik.touched.phone && formik.errors.phone
-                            }
-                          />
-                        </Grid>
-                        <Grid item xs={12}>
-                          <Typography
-                            variant={'subtitle2'}
-                            sx={{ marginBottom: 2 }}
-                          >
-                            Project Type
-                          </Typography>
-                          <TextField
-                            select
-                            label="Select Project Type"
-                            variant="outlined"
-                            name={'ptype'}
-                            fullWidth
-                            value={formik.values.ptype}
-                            onChange={formik.handleChange}
-                            error={
-                              formik.touched.ptype &&
-                              Boolean(formik.errors.ptype)
-                            }
-                            helperText={
-                              formik.touched.ptype && formik.errors.ptype
-                            }
-                          >
-                            {[
-                              'iPhone App Development',
-                              'Android App Development',
-                              'Cross Platform Apps',
-                              'Windows App Development',
-                              'Mobile Website Design',
-                              'Hire Developers',
-                              'Web Application',
-                              'Web Portal',
-                              'Mobile App With Website Development',
-                              'IPhone and Android App Development',
-                              'Mobile design UI graphics',
-                              'Virtual Employee',
-                              'Marketing project',
-                              'Maintenance  and support',
-                              'General query',
-                              'Other Services/Technology',
-                            ].map((option) => (
-                              <MenuItem key={option} value={option}>
-                                {option}
-                              </MenuItem>
-                            ))}
-                          </TextField>
-                        </Grid>
-                        <Grid item xs={12}>
-                          <Typography
-                            variant={'subtitle2'}
-                            sx={{ marginBottom: 2 }}
-                          >
-                            Project budget
-                          </Typography>
-                          <TextField
-                            select
-                            label="Select Project Budget (in Lakh)"
-                            variant="outlined"
-                            name={'budget'}
-                            fullWidth
-                            value={formik.values.budget}
-                            onChange={formik.handleChange}
-                            error={
-                              formik.touched.budget &&
-                              Boolean(formik.errors.budget)
-                            }
-                            helperText={
-                              formik.touched.budget && formik.errors.budget
-                            }
-                          >
-                            {[
-                              'Not Sure',
-                              '50000 to 1 Lac',
-                              '1 Lac to 2 Lacs',
-                              '2 Lacs to 5 Lacs',
-                              '5 Lacs to 10 Lacs',
-                              '10 Lacs to 20 Lacs',
-                              '20 Lacs to 30 Lacs',
-                              '30 Lacs to 50 Lacs',
-                              '50 Lacs Above',
-                            ].map((option) => (
-                              <MenuItem key={option} value={option}>
-                                {option}
-                              </MenuItem>
-                            ))}
-                          </TextField>
-                        </Grid>
-
-                        <Grid item xs={12}>
-                          <Typography
-                            variant={'subtitle2'}
-                            sx={{ marginBottom: 1 }}
-                          >
-                            Project Details (optional)
-                          </Typography>
-                          <TextField
-                            label="Message"
-                            variant="outlined"
-                            name={'message'}
-                            fullWidth
-                            multiline
-                            rows={4}
-                            value={formik.values.message}
-                            onChange={formik.handleChange}
-                            error={
-                              formik.touched.message &&
-                              Boolean(formik.errors.message)
-                            }
-                            helperText={
-                              formik.touched.message && formik.errors.message
-                            }
-                          />
-                        </Grid>
-                        <Grid
-                          item
-                          container
-                          xs={12}
-                          justifyContent={'center'}
-                          alignItems={'center'}
-                          flexDirection={'column'}
+                            ['@media (min-width:391px) and (max-width:600px)']:
+                              {
+                                // eslint-disable-line no-useless-computed-key
+                                width: '20vw',
+                                height: '50px',
+                                fontSize: '12px',
+                              },
+                          }}
+                          size="small"
                         >
-                          <Button
-                            size={'large'}
-                            variant={'contained'}
-                            type={'submit'}
-                            sx={{ backgroundColor: '#4a37a5!important' }}
-                          >
-                            {btnLabel}
-                          </Button>
-                          <Typography
-                            variant={'subtitle2'}
-                            color={'textSecondary'}
-                            sx={{ marginTop: 2 }}
-                            align={'center'}
-                          >
-                            {success}
-                          </Typography>
-                        </Grid>
+                          Decline
+                        </Button>
+                        <Button
+                          onClick={onClose}
+                          component={'a'}
+                          sx={{
+                            backgroundColor: '#0070f3',
+                            width: '140px',
+                            borderRadius: '7px',
+                            fontFamily: 'Inter',
+                            // fontSize: '16px',
+                            fontSize: '1rem',
+                            padding: '0.25rem .8rem',
+                            color: 'white',
+                            border: '1px solid #0070f3',
+                            fontWeight: 500,
+                            '&:hover': {
+                              backgroundColor: 'rgba(0,118,255,.9)',
+                            },
+
+                            ['@media (min-width:391px) and (max-width:600px)']:
+                              {
+                                // eslint-disable-line no-useless-computed-key
+                                width: '20vw',
+                                height: '50px',
+                                fontSize: '12px',
+                              },
+                          }}
+                          size="small"
+                        >
+                          Accept
+                        </Button>
                       </Box>
-
-                      {/*
-                    <FormGroup className=" mb-3">
-                      <Grid item xs={12} sm={6} sx={{ boxShadow: '0 1px 3px rgb(50 50 93 / 15%), 0 1px 0 rgb(0 0 0 / 2%)',
-    border: '0', transition: 'box-shadow .15s ease', borderRadius: '0.25rem', position: 'relative',
-    display: 'flex', flexWrap: 'wrap', alignItems: 'stretch',  width: '100%', padding: '0px 10px', background: '#fff', marginBottom: '1rem !important' }}>
-                        <Box addonType="prepend" sx={{  width:'100%',
-              "& fieldset": {
-            display: 'none',
-    },
-     }}>
-                          <Box>
-
-                          </Box>
-                          <OutlinedInput  placeholder="Email" type="email" sx={{ padding:'0!important' }} />
-                        </Box>
-
-                      </Grid>
-                    </FormGroup>
-                    <FormGroup>
-                      <Grid item xs={12} sm={6} sx={{ boxShadow: '0 1px 3px rgb(50 50 93 / 15%), 0 1px 0 rgb(0 0 0 / 2%)',
-    border: '0', transition: 'box-shadow .15s ease', borderRadius: '0.25rem', position: 'relative',
-    display: 'flex', flexWrap: 'wrap', alignItems: 'stretch',  width: '100%', padding: '0px 10px', background: '#fff',  marginBottom: '1rem !important' }}>
-                        <Box addonType="prepend" sx={{  width:'100%',
-              "& fieldset": {
-            display: 'none',
-    },
-     }}>
-                          <Box>
-                            <i className=" ni ni-lock-circle-open"></i>
-                          </Box>
-                          <OutlinedInput  placeholder="Password" type="password" />
-                        </Box>
-
-                      </Grid>
-                    </FormGroup>
-                    <Box className=" custom-control custom-control-alternative custom-checkbox" sx={{cursor: 'pointer',  fontSize: '.875rem',  height: '1rem',   lineHeight: '1.5',  color: '#525f7f'}}>
-                      <input
-                        className=" custom-control-input"
-                        id=" customCheckLogin"
-                        type="checkbox"
-                      ></input>
-                      <label
-                        className=" custom-control-label"
-                        htmlFor=" customCheckLogin"
-                      >
-                        <span>Remember me</span>
-                      </label>
                     </Box>
-                    <Box className=" text-center" sx={{ textAlign: 'center' }}>
-                      <Button className=" my-4" Boxor="primary" type="button" sx={{color: '#fff',  backgroundColor: '#5e72e4!important', borderColor: '#5e72e4', boxShadow: '0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%)', letterSpacing: '.025em', fontSize: '.875rem', border: '1px solid transparent', padding: '0.625rem 1.25rem', margin: '1.5rem 0 !important'}}>
-                        Sign in
-                      </Button>
-                    </Box>
-    */}
-                    </form>
-                  </Box>
+                  </Grid>
                 </Box>
               </Box>
             </Box>
