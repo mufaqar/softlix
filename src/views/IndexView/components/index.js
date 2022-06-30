@@ -9,6 +9,7 @@ export { default as HowItWorks } from './HowItWorks';
 export { default as GetStarted } from './GetStarted';
 export { default as FeaturesWithMinimalDesign } from './FeaturesWithMinimalDesign';
 export { default as Nike } from './Nike';
+export { default as Ebook } from './Ebook';
 export { default as Curology } from './Curology';
 export { default as Categories } from './Categories';
 export { default as Features } from './Features';

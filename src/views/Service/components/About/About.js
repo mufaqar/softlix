@@ -139,7 +139,7 @@ const Hero = () => {
               width: '100%',
               height: '450px',
               borderRadius: '10px',
-              objectFit: 'cover',
+              objectFit: 'contain',
               marginLeft: '40px',
               filter:
                 theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',

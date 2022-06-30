@@ -7,6 +7,10 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+// import PinterestIcon from '@mui/icons-material/Pinterest';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
@@ -53,7 +57,7 @@ const Thank = () => {
                     background: '#0070f3',
                     borderRadius: '50%',
                     color: 'white',
-                    fontSize: '3rem',
+                    fontSize: '5rem',
                   }}
                 />
               </Typography>
@@ -67,33 +71,172 @@ const Thank = () => {
                 <Typography
                   variant="h6"
                   component="p"
+                  color="text.primary"
+                  align={isMd ? 'left' : 'center'}
+                  style={{
+                    fontSize: '4.135rem',
+                    textAlign: 'center',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  Thank you!
+                  <br />
+                </Typography>
+                <Typography
+                  variant="h1"
+                  component="p"
                   color="text.secondary"
                   align={isMd ? 'left' : 'center'}
-                  style={{ fontSize: '2.135rem' }}
+                  style={{
+                    fontSize: '1.5rem',
+                    textAlign: 'center',
+                    width: '82vw',
+                    marginTop: '30px',
+                    marginBottom: '30px',
+                    fontWeight: '400',
+                  }}
                 >
                   Thank you for Providing the details, Our team Will Get in
                   Touch with you Soon.
                   <br />
-                  {/* If you think this is a problem with us, please{' '}
-                  <Link href={''} underline="none">
-                    tell us
-                  </Link> */}
                 </Typography>
               </Box>
               <Box
                 marginTop={6}
                 display={'flex'}
-                justifyContent={{ xs: 'center', md: 'flex-start' }}
+                sx={{
+                  gap: '100px',
+                  ['@media (min-width:350px) and (max-width:600px)']: {
+                    // eslint-disable-line no-useless-computed-key
+                    flexDirection: 'column',
+                    gap: '30px',
+                  },
+                }}
+                // justifyContent={{ xs: 'center', md: 'flex-start' }}
               >
-                <Button
-                  component={Link}
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  href={'/'}
+                <Box
+                  sx={{
+                    display: 'flex',
+                    // width: '55vw',
+
+                    // justifyContent: 'space-between',
+                  }}
                 >
-                  Back home
-                </Button>
+                  <Box
+                    sx={{
+                      background: 'white',
+                      borderRadius: '8px',
+                      // width: '55vw',
+                      padding: '20px 30px',
+                      // width: '100%',
+                      flex: 1,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '60px',
+                    }}
+                  >
+                    <Typography
+                      variant="h5"
+                      component="p"
+                      color="text.primary"
+                      // align={isMd ? 'left' : 'center'}
+                      style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+                    >
+                      Connect with us
+                    </Typography>
+                    <div
+                      style={{
+                        color: '#2c4bff',
+                        display: 'flex',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Button
+                        component="a"
+                        target="blank"
+                        href="https://facebook.com/softlixglobal"
+                        size="medium"
+                        sx={{
+                          padding: 0,
+                          background: 'none!important',
+                          minWidth: 'auto!important',
+                        }}
+                      >
+                        <FacebookIcon
+                          style={{ fontSize: '3rem', margin: '1rem' }}
+                        />
+                      </Button>
+                      <Button
+                        component="a"
+                        target="blank"
+                        href="https://www.linkedin.com/showcase/softlixglobal/"
+                        size="medium"
+                        sx={{
+                          padding: 0,
+                          background: 'none!important',
+                          minWidth: 'auto!important',
+                        }}
+                      >
+                        <LinkedInIcon
+                          style={{ fontSize: '3rem', margin: '1rem' }}
+                        />
+                      </Button>
+                      <Button
+                        component="a"
+                        target="blank"
+                        href="https://twitter.com/Softlixglobal"
+                        size="medium"
+                        sx={{
+                          padding: 0,
+                          background: 'none!important',
+                          minWidth: 'auto!important',
+                        }}
+                      >
+                        <TwitterIcon
+                          style={{ fontSize: '3rem', margin: '1rem' }}
+                        />
+                      </Button>
+                      {/* <PinterestIcon
+                        style={{ fontSize: '3rem', margin: '1rem' }}
+                      /> */}
+                    </div>
+                  </Box>
+                </Box>
+                <Box
+                  sx={{
+                    // width: '55vw',
+                    background: 'white',
+                    borderRadius: '8px',
+                    padding: '20px 30px',
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '60px',
+                    flex: 1,
+                    // marginTop: '100px',
+                  }}
+                >
+                  <Typography
+                    variant="h5"
+                    component="p"
+                    color="text.primary"
+                    // align={isMd ? 'left' : 'center'}
+                    style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+                  >
+                    Visit Our Website
+                  </Typography>
+                  <Button
+                    component={Link}
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    href={'/'}
+                    sx={{ width: '240px' }}
+                  >
+                    Visit Website
+                  </Button>
+                </Box>
               </Box>
             </Grid>
           </Grid>

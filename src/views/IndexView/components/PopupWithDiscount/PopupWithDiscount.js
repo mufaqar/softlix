@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -10,11 +11,11 @@ import Container from 'components/Container';
 const PopupWithDiscount = () => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
-  useEffect(() => {
-    setTimeout(function () {
-      setOpen(true);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(function () {
+  //     setOpen(true);
+  //   }, 5000);
+  // }, []);
   return (
     <Container display={'flex'} justifyContent={'center'} alignItems={'center'}>
       <Box>
