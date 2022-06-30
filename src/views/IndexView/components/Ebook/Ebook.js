@@ -15,7 +15,15 @@ const Ebook = () => {
   });
 
   return (
-    <Box sx={{ overflow: 'hidden' }}>
+    <Box
+      sx={{
+        overflow: 'hidden',
+        ['@media (min-width:350px) and (max-width:700px)']: {
+          // eslint-disable-line no-useless-computed-key
+          textAlign: 'center',
+        },
+      }}
+    >
       <Box
         sx={{
           backgroundImage: `linear-gradient(to bottom, ${alpha(
@@ -31,10 +39,10 @@ const Ebook = () => {
             <Box
               maxWidth={{ xs: 1, sm: '50%' }}
               sx={{
-                ['@media (min-width:350px) and (max-width:600px)']: {
+                ['@media (min-width:350px) and (max-width:700px)']: {
                   // eslint-disable-line no-useless-computed-key
-
-                  maxWidth: '50%',
+                  maxWidth: '100%',
+                  textAlign: 'center',
                 },
               }}
             >
@@ -44,10 +52,10 @@ const Ebook = () => {
                 gutterBottom
                 sx={{
                   fontWeight: 700,
-                  ['@media (min-width:350px) and (max-width:600px)']: {
+                  ['@media (min-width:320px) and (max-width:700px)']: {
                     // eslint-disable-line no-useless-computed-key
 
-                    fontSize: '16px',
+                    fontSize: '17px',
                   },
                 }}
               >
@@ -61,10 +69,10 @@ const Ebook = () => {
                 color="text.primary"
                 sx={{
                   fontWeight: 700,
-                  ['@media (min-width:350px) and (max-width:600px)']: {
+                  ['@media (min-width:320px) and (max-width:700px)']: {
                     // eslint-disable-line no-useless-computed-key
 
-                    fontSize: '12px',
+                    fontSize: '13px',
                   },
                 }}
               >
@@ -75,17 +83,14 @@ const Ebook = () => {
                 flexDirection={{ xs: 'column', sm: 'row' }}
                 alignItems={{ xs: 'stretched', sm: 'flex-start' }}
                 marginTop={4}
+                sx={{
+                  ['@media (min-width:320px) and (max-width:700px)']: {
+                    // eslint-disable-line no-useless-computed-key
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  },
+                }}
               >
-                {/* <Button
-                  component={'a'}
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  fullWidth={isMd ? false : true}
-                  href={'/home'}
-                >
-                  Download Ebook
-                </Button> */}
                 <Button
                   component={'a'}
                   // variant="contained"
@@ -103,12 +108,12 @@ const Ebook = () => {
                     '&:hover': {
                       backgroundColor: 'rgba(0,118,255,.9)',
                     },
-                    ['@media (min-width:320px) and (max-width:600px)']: {
+                    ['@media (min-width:320px) and (max-width:700px)']: {
                       // eslint-disable-line no-useless-computed-key
-                      width: '35vw',
+                      width: '38vw',
                       height: '40px',
-                      fontSize: '12px',
-                      padding: '0.5rem 0.5rem',
+                      fontSize: '13px',
+                      padding: '0.7rem 0.5rem',
                     },
                   }}
                   size="small"
@@ -119,60 +124,82 @@ const Ebook = () => {
                 </Button>
               </Box>
             </Box>
-          </Container>
-          <Box
-            sx={{
-              transform: 'rotate(-20deg)',
-              display: { xs: '', sm: 'block' },
-              ['@media (min-width:320px) and (max-width:800px)']: {
-                // eslint-disable-line no-useless-computed-key
-                transform: 'rotate(0deg)',
-              },
-            }}
-          >
             <Box
-              display={'flex'}
-              width={'50rem'}
-              left={'50%'}
-              top={'-125px'}
-              position={'absolute'}
+              component={'img'}
+              //   src={theme.palette.mode === 'dark' ? g.coverDark : g.cover}
+              src={'/images/ebook.png'}
+              height={1}
+              width={1}
+              maxWidth={'80vw'}
               sx={{
-                transform: 'translate3d(20%, -50%, 0)',
-                ['@media (min-width:320px) and (max-width:600px)']: {
+                display: { md: 'none', lg: 'none' },
+                ['@media (min-width:350px) and (max-width:700px)']: {
                   // eslint-disable-line no-useless-computed-key
-                  left: '38%',
-                  width: '200px',
-                  height: '500px',
-                  top: '0px',
+                  marginTop: '50px',
+                  objectFit: 'cover',
+                  marginLeft: 0,
+                  marginRight: 0,
+                },
+              }}
+            ></Box>
+          </Container>
+          {isMd ? (
+            <Box
+              sx={{
+                transform: 'rotate(-20deg)',
+                display: { xs: '', sm: 'block' },
+                ['@media (min-width:320px) and (max-width:800px)']: {
+                  // eslint-disable-line no-useless-computed-key
+                  transform: 'rotate(0deg)',
                 },
               }}
             >
-              <Box marginX={1}>
-                <Box
-                  padding={1}
-                  bgcolor={'background.paper'}
-                  borderRadius={2}
-                  boxShadow={3}
-                  marginTop={2}
-                >
+              <Box
+                display={'flex'}
+                width={'50rem'}
+                left={'50%'}
+                top={'-125px'}
+                position={'absolute'}
+                sx={{
+                  transform: 'translate3d(20%, -50%, 0)',
+                  ['@media (min-width:320px) and (max-width:600px)']: {
+                    // eslint-disable-line no-useless-computed-key
+                    left: '38%',
+                    width: '200px',
+                    height: '500px',
+                    top: '0px',
+                  },
+                }}
+              >
+                <Box marginX={1}>
                   <Box
-                    component={'img'}
-                    //   src={theme.palette.mode === 'dark' ? g.coverDark : g.cover}
-                    src={'/images/ebook.webp'}
-                    height={1}
-                    width={1}
-                    maxWidth={400}
-                    sx={{
-                      ['@media (min-width:350px) and (max-width:600px)']: {
-                        // eslint-disable-line no-useless-computed-key
-                        objectFit: 'cover',
-                      },
-                    }}
-                  />
+                    padding={1}
+                    bgcolor={'background.paper'}
+                    borderRadius={2}
+                    boxShadow={3}
+                    marginTop={2}
+                  >
+                    <Box
+                      component={'img'}
+                      //   src={theme.palette.mode === 'dark' ? g.coverDark : g.cover}
+                      src={'/images/ebook.png'}
+                      height={1}
+                      width={1}
+                      maxWidth={400}
+                      sx={{
+                        ['@media (min-width:350px) and (max-width:600px)']: {
+                          // eslint-disable-line no-useless-computed-key
+                          objectFit: 'cover',
+                        },
+                      }}
+                    />
+                  </Box>
                 </Box>
               </Box>
             </Box>
-          </Box>
+          ) : (
+            ''
+          )}
         </Box>
         {/* <Box
           component={'svg'}

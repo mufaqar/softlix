@@ -134,15 +134,16 @@ const IndexView = () => {
         </Container>
 
         <Pricing />
+        <Container>
+          {' '}
+          <Ebook />{' '}
+        </Container>
         <Contact />
 
         <Container>
           <Articles />
         </Container>
-        <Container>
-          {' '}
-          <Ebook />{' '}
-        </Container>
+
         <PopupWithDiscount />
       </Main>
     </Box>

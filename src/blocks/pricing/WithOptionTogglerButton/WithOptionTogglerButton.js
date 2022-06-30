@@ -315,7 +315,7 @@ const WithOptionTogglerButton = () => {
                   fontWeight: 900,
                 }}
               >
-                Flexible pricing options
+                Pricing
               </Typography>
               <Typography
                 variant="h3"
