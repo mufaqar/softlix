@@ -30,15 +30,14 @@ const BlogReachView = () => {
         >
           <SearchBox />
         </Container>
-       
+
         <Container paddingTop={'20px !important'}>
           <LastStories />
         </Container>
-        
-        
-        
+        <Container paddingTop={'20px !important'}>
+          <Newsletter />
+        </Container>
       </Box>
-     
     </Main>
   );
 };

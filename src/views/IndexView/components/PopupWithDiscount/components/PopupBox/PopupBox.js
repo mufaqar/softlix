@@ -104,31 +104,40 @@ const PopupBox = ({ onClose, open }) => {
                   <Grid item xs={12} md={12}>
                     <Box
                       sx={{
+                        fontSize: '1.3rem',
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        width: '100vw',
+                        width: '90vw',
                         gap: '20px',
-                        padding: '20px 50px',
+                        padding: '30px 40px',
                         ['@media (min-width:320px) and (max-width:600px)']: {
                           // eslint-disable-line no-useless-computed-key
                           flexDirection: 'column',
-                          padding: '20px 20px',
+                          padding: '20px 10px',
                         },
                       }}
                     >
                       <Box
-                        style={{
+                        // style={{}}
+                        sx={{
                           display: 'flex',
                           flexWrap: 'wrap',
                           alignItems: 'center',
                           // wordSpacing: '3px',
-                          color: '#677788',
+                          color: '#212121',
+                          maxWidth: '60vw',
+                          ['@media (min-width:390px) and (max-width:600px)']: {
+                            // eslint-disable-line no-useless-computed-key
+                            maxWidth: '80vw',
+                            padding: '10px 5px 0px 32px',
+                          },
                         }}
                       >
-                        We use cookies to improve your experience We use cookies
-                        to deliver the best possible experience on our website.
-                        To learn more, visit our{'  '}
+                        <h3>We use cookies to improve your experience </h3>
+                        <br /> We use cookies to deliver the best possible
+                        experience on our website. To learn more, visit our
+                        {'  '}
                         <Link href={'/privacy-policy'}>
                           <a
                             style={{
@@ -148,61 +157,32 @@ const PopupBox = ({ onClose, open }) => {
                           <a> Softlix terms of use </a>
                         </Link> */}
                       </Box>
-                      <Box sx={{ display: 'flex', gap: '10px' }}>
+                      <Box sx={{ display: 'flex' }}>
                         <Button
                           onClick={onClose}
                           component={'a'}
                           sx={{
-                            backgroundColor: '#0070f3',
-                            width: '140px',
-                            borderRadius: '7px',
+                            backgroundColor: '#0000d3',
+                            width: '125px',
+
                             fontFamily: 'Inter',
                             // fontSize: '16px',
                             fontSize: '1rem',
-                            padding: '0.25rem .8rem',
+                            padding: '12px 10px',
+                            borderRadius: '0px',
                             color: 'white',
-                            border: '1px solid #0070f3',
+                            // border: '1px solid #0070f3',
                             fontWeight: 500,
                             '&:hover': {
-                              backgroundColor: 'rgba(0,118,255,.9)',
+                              backgroundColor: '#0000A9',
                             },
 
-                            ['@media (min-width:391px) and (max-width:600px)']:
+                            ['@media (min-width:390px) and (max-width:600px)']:
                               {
                                 // eslint-disable-line no-useless-computed-key
-                                width: '20vw',
-                                height: '50px',
-                                fontSize: '12px',
-                              },
-                          }}
-                          size="small"
-                        >
-                          Decline
-                        </Button>
-                        <Button
-                          onClick={onClose}
-                          component={'a'}
-                          sx={{
-                            backgroundColor: '#0070f3',
-                            width: '140px',
-                            borderRadius: '7px',
-                            fontFamily: 'Inter',
-                            // fontSize: '16px',
-                            fontSize: '1rem',
-                            padding: '0.25rem .8rem',
-                            color: 'white',
-                            border: '1px solid #0070f3',
-                            fontWeight: 500,
-                            '&:hover': {
-                              backgroundColor: 'rgba(0,118,255,.9)',
-                            },
-
-                            ['@media (min-width:391px) and (max-width:600px)']:
-                              {
-                                // eslint-disable-line no-useless-computed-key
-                                width: '20vw',
-                                height: '50px',
-                                fontSize: '12px',
+                                width: '80vw',
+                                marginLeft: '15px',
+                                // fontSize: '12px',
                               },
                           }}
                           size="small"

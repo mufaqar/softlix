@@ -1,14 +1,227 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
+
 import Typography from '@mui/material/Typography';
 import NavItem from './components/NavItem';
+import Stack from '@mui/material/Stack';
+import Link from '@mui/material/Link';
+import Menu from '@mui/material/Menu';
 
+import { alpha, useTheme } from '@mui/material/styles';
+import MenuIcon from '@mui/icons-material/Menu';
+import Grid from '@mui/material/Grid';
+
+const Industries = () => {
+  return (
+    <Grid container spacing={4} sx={{ width: '300px' }}>
+      <Grid item xs={12}>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Industries
+        </Typography>
+        {[
+          'HealthTech and MedTech',
+          'Retail',
+          'FinTech',
+          'Logistics',
+          'Travel',
+          'Education',
+        ].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))}
+      </Grid>
+
+      <Grid item xs={12}>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Media
+        </Typography>
+        {['Video Streaming', 'Audio and video chat'].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))}
+        <Box sx={{ paddingTop: '30px' }}></Box>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Startups
+        </Typography>
+        {['Marketplaces', 'Social networks'].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))}
+      </Grid>
+      <Grid item xs={12}>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Digital transformation
+        </Typography>
+        {['RPA, automation, bots', 'CRM, ERM, HRM systems'].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))}
+        <Box sx={{ paddingTop: '30px' }}></Box>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Competence
+        </Typography>
+        {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))}
+      </Grid>
+    </Grid>
+  );
+};
+const Services = () => {
+  return (
+    <Grid container spacing={4} sx={{ width: '300px' }}>
+      <Grid item xs={12}>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Mobile Development
+        </Typography>
+        {[
+          'ios app development',
+          'Android app development ',
+          'Flutter app development',
+        ].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))}
+      </Grid>
+
+      <Grid item xs={12}>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Web Development
+        </Typography>
+        {[
+          'Web app development',
+          'DevOps services',
+          'legacy soft modernization',
+        ].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))}
+        {/* <Box sx={{ paddingTop: '30px' }}></Box>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Startups
+        </Typography>
+        {['Marketplaces', 'Social networks'].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))} */}
+      </Grid>
+      <Grid item xs={12}>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          For Startups
+        </Typography>
+        {['Discovery phase', 'MVP development', 'CTO as a service'].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))}
+        {/* <Box sx={{ paddingTop: '30px' }}></Box>
+        <Typography fontWeight={700} marginBottom={2} noWrap>
+          Competence
+        </Typography>
+        {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
+          <Link
+            key={i}
+            href={'#'}
+            underline={'hover'}
+            color={'text.primary'}
+            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+          >
+            {i}
+          </Link>
+        ))} */}
+      </Grid>
+    </Grid>
+  );
+};
 const SidebarNav = ({ pages }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl2, setAnchorEl2] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+    setOpen(true);
+  };
+  const handleClick2 = (event) => {
+    setAnchorEl2(event.currentTarget);
+    setOpen2(true);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+    setOpen(false);
+  };
+  const handleClose2 = () => {
+    setAnchorEl2(null);
+    setOpen2(false);
+  };
 
   const {
     landings: landingPages,
@@ -47,12 +260,121 @@ const SidebarNav = ({ pages }) => {
         <Box>
           <NavItem title={'Pricing'} items={companyPages} link={'/pricing'} />
         </Box>
+        <Box sx={{ padding: '7px' }}></Box>
         <Box>
-          <NavItem title={'Service'} items={secondaryPages} link={'/service'} />
+          <Stack
+            direction={{ xs: 'column', md: 'row' }}
+            spacing={{ xs: 2, md: 8 }}
+          >
+            <Link
+              href={'#'}
+              variant={'body2'}
+              underline={'none'}
+              color={'text.primary'}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+              onClick={(e) => handleClick(e)}
+            >
+              Industries{' '}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={20}
+                height={20}
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </Link>
+            <Menu
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              onClick={handleClose}
+              PaperProps={{
+                elevation: 1,
+                sx: {
+                  padding: 2,
+                  mt: 1.5,
+                },
+              }}
+              transformOrigin={{ horizontal: 'left', vertical: 'top' }}
+              anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+            >
+              <Box>
+                <Industries />
+              </Box>
+            </Menu>
+          </Stack>
+        </Box>
+
+        <Box sx={{ padding: '13px' }}></Box>
+        <Box>
+          <Stack
+            direction={{ xs: 'column', md: 'row' }}
+            spacing={{ xs: 2, md: 8 }}
+          >
+            <Link
+              href={'#'}
+              variant={'body2'}
+              underline={'none'}
+              color={'text.primary'}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+              onClick={(e) => handleClick2(e)}
+            >
+              Services{' '}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={20}
+                height={20}
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </Link>
+            <Menu
+              anchorEl={anchorEl2}
+              open={open2}
+              onClose={handleClose2}
+              onClick={handleClose2}
+              PaperProps={{
+                elevation: 1,
+                sx: {
+                  padding: 2,
+                  mt: 1.5,
+                },
+              }}
+              transformOrigin={{ horizontal: 'left', vertical: 'top' }}
+              anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+            >
+              <Box>
+                <Services />
+              </Box>
+            </Menu>
+          </Stack>
+        </Box>
+        <Box sx={{ padding: '7px' }}></Box>
+        <Box>
+          <NavItem title={'Career'} link={'/career'} />
         </Box>
         <Box>
           <NavItem title={'Resource'} items={accountPages} link={'#'} />
         </Box>
+
         <Box>
           <NavItem
             title={'Portfolio'}

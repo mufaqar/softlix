@@ -34,6 +34,14 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           ></link>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+            rel="stylesheet"
+          />
           <meta
             name="description"
             content="A modern design system for your new landing and web pages."
@@ -61,10 +69,6 @@ export default class MyDocument extends Document {
             content="https://thefront.maccarianagency.com/"
           />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-            rel="stylesheet"
-          />
           {/* <script
             type="text/javascript"
             src="../scripts/intercomScript.js"

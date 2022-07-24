@@ -9,7 +9,7 @@ const getTheme = (mode, themeToggler) =>
       palette: mode === 'light' ? light : dark,
       shadows: shadows(mode),
       typography: {
-        fontFamily: '"Roboto","Inter", sans-serif',
+        fontFamily: '"Roboto","Inter","Nunito","intercom-font", sans-serif',
         button: {
           textTransform: 'none',
           fontWeight: 'medium',

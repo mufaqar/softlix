@@ -36,10 +36,21 @@ const BlogArticle = () => {
                   <SidebarArticles />
                 </Box>
               ) : null}
-            
             </Grid>
           </Grid>
         </Container>
+        <Box
+          sx={{
+            position: 'sticky',
+            bottom: '0px',
+            left: '0px',
+            background: 'white',
+            color: 'black',
+            padding: '20px 10px 20px 10px',
+          }}
+        >
+          <FooterNewsletter />
+        </Box>
         <Box
           component={'svg'}
           preserveAspectRatio="none"
@@ -58,7 +69,6 @@ const BlogArticle = () => {
           ></path>
         </Box>
       </Box>
-    
     </Main>
   );
 };
