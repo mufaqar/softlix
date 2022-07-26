@@ -10,7 +10,8 @@ const mock = [
   '/images/blive.png',
   '/images/theprint.png',
   '/images/midday.png',
-
+  '/images/dailyhunt.webp',
+  '/images/newtrack.jpeg',
 ];
 
 const LogoGridSimpleCentered = () => {
@@ -32,7 +33,19 @@ const LogoGridSimpleCentered = () => {
         </Box>
         <Box display="flex" flexWrap="wrap" justifyContent={'center'}>
           {mock.map((item, i) => (
-            <Box maxWidth={145} marginTop={2} marginRight={4} key={i}>
+            <Box
+              maxWidth={160}
+              marginTop={2}
+              marginRight={4}
+              key={i}
+              sx={{
+                ['@media (min-width:320px) and (max-width:600px)']: {
+                  // eslint-disable-line no-useless-computed-key
+                  maxWidth: '130px',
+                  flexWrap: 'wrap',
+                },
+              }}
+            >
               <Box
                 component="img"
                 height={1}
@@ -40,10 +53,14 @@ const LogoGridSimpleCentered = () => {
                 src={item}
                 alt="..."
                 sx={{
+                  objectFit: 'contain',
                   filter:
                     theme.palette.mode === 'dark'
                       ? 'brightness(0) invert(0.7)'
                       : 'none',
+                  ['@media (min-width:320px) and (max-width:600px)']: {
+                    // eslint-disable-line no-useless-computed-key
+                  },
                 }}
               />
             </Box>
@@ -51,7 +68,6 @@ const LogoGridSimpleCentered = () => {
         </Box>
       </Box>
     </Container>
-
   );
 };
 

@@ -64,7 +64,7 @@ const PopupBox = ({ onClose, open }) => {
             <Box>
               <Box className=" Box-body p-0">
                 <Box className=" bg-secondary shadow border-0">
-                  <Typography
+                  {/* <Typography
                     align={'center'}
                     sx={{
                       textDecoration: 'underline',
@@ -100,7 +100,7 @@ const PopupBox = ({ onClose, open }) => {
                         </g>
                       </g>
                     </svg>
-                  </Typography>
+                  </Typography> */}
                   <Grid item xs={12} md={12}>
                     <Box
                       sx={{
@@ -114,7 +114,8 @@ const PopupBox = ({ onClose, open }) => {
                         ['@media (min-width:320px) and (max-width:600px)']: {
                           // eslint-disable-line no-useless-computed-key
                           flexDirection: 'column',
-                          padding: '20px 10px',
+                          padding: '18px 10px',
+                          gap: '0px',
                         },
                       }}
                     >
@@ -129,12 +130,16 @@ const PopupBox = ({ onClose, open }) => {
                           maxWidth: '60vw',
                           ['@media (min-width:390px) and (max-width:600px)']: {
                             // eslint-disable-line no-useless-computed-key
-                            maxWidth: '80vw',
-                            padding: '10px 5px 0px 32px',
+                            maxWidth: '100vw',
+                            padding: '5px 10px',
+                            fontSize: '16px',
+                            fontFamily: 'sans-serif',
                           },
                         }}
                       >
-                        <h3>We use cookies to improve your experience </h3>
+                        <h3 style={{ margin: '0px' }}>
+                          We use cookies to improve your experience{' '}
+                        </h3>
                         <br /> We use cookies to deliver the best possible
                         experience on our website. To learn more, visit our
                         {'  '}
@@ -172,7 +177,7 @@ const PopupBox = ({ onClose, open }) => {
                             borderRadius: '0px',
                             color: 'white',
                             // border: '1px solid #0070f3',
-                            fontWeight: 500,
+                            fontWeight: 700,
                             '&:hover': {
                               backgroundColor: '#0000A9',
                             },
@@ -180,9 +185,12 @@ const PopupBox = ({ onClose, open }) => {
                             ['@media (min-width:390px) and (max-width:600px)']:
                               {
                                 // eslint-disable-line no-useless-computed-key
-                                width: '80vw',
+                                width: '335px',
+                                height: '45px',
+                                padding: '12px 10px',
                                 marginLeft: '15px',
-                                // fontSize: '12px',
+                                marginTop: '10px',
+                                fontSize: '16px',
                               },
                           }}
                           size="small"
