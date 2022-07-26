@@ -17,7 +17,7 @@ const Industries = () => {
   return (
     <Grid container spacing={4} sx={{ width: '300px' }}>
       <Grid item xs={12}>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
+        <Typography fontWeight={700} marginBottom={2} color={'#0070F3'} noWrap>
           Industries
         </Typography>
         {[
@@ -41,7 +41,7 @@ const Industries = () => {
       </Grid>
 
       <Grid item xs={12}>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
+        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
           Media
         </Typography>
         {['Video Streaming', 'Audio and video chat'].map((i) => (
@@ -56,7 +56,7 @@ const Industries = () => {
           </Link>
         ))}
         <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
+        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
           Startups
         </Typography>
         {['Marketplaces', 'Social networks'].map((i) => (
@@ -72,7 +72,7 @@ const Industries = () => {
         ))}
       </Grid>
       <Grid item xs={12}>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
+        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
           Digital transformation
         </Typography>
         {['RPA, automation, bots', 'CRM, ERM, HRM systems'].map((i) => (
@@ -87,7 +87,7 @@ const Industries = () => {
           </Link>
         ))}
         <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
+        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
           Competence
         </Typography>
         {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
@@ -109,7 +109,7 @@ const Services = () => {
   return (
     <Grid container spacing={4} sx={{ width: '300px' }}>
       <Grid item xs={12}>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
+        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
           Mobile Development
         </Typography>
         {[
@@ -130,7 +130,7 @@ const Services = () => {
       </Grid>
 
       <Grid item xs={12}>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
+        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
           Web Development
         </Typography>
         {[
@@ -165,7 +165,7 @@ const Services = () => {
         ))} */}
       </Grid>
       <Grid item xs={12}>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
+        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
           For Startups
         </Typography>
         {['Discovery phase', 'MVP development', 'CTO as a service'].map((i) => (
@@ -174,7 +174,12 @@ const Services = () => {
             href={'#'}
             underline={'hover'}
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              cursor: 'pointer',
+            }}
           >
             {i}
           </Link>
@@ -274,6 +279,7 @@ const SidebarNav = ({ pages }) => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
+                fontSize: '16px',
               }}
               onClick={(e) => handleClick(e)}
             >
@@ -328,6 +334,7 @@ const SidebarNav = ({ pages }) => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
+                fontSize: '16px',
               }}
               onClick={(e) => handleClick2(e)}
             >
