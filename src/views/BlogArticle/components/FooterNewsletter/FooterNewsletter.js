@@ -164,7 +164,6 @@ const FooterNewsletter = () => {
               type="email"
               onChange={formik.handleChange}
               error={formik.touched.email && Boolean(formik.errors.email)}
-              // helperText={formik.touched.email && formik.errors.email}
               sx={{
                 maxWidth: 422,
                 backgroundColor: '#fff',
