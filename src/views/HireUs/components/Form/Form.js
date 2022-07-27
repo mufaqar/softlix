@@ -289,7 +289,7 @@ const Form = () => {
               select
               label="Select your country"
               variant="outlined"
-              name={'budget'}
+              name={'country'}
               fullWidth
               value={formik.values.country}
               onChange={formik.handleChange}
@@ -297,7 +297,7 @@ const Form = () => {
               helperText={formik.touched.budget && formik.errors.country}
             >
               {countries.map((option) => (
-                <MenuItem key={option} value={option}>
+                <MenuItem key={option} value={option.label}>
                   <img
                     loading="lazy"
                     width="20"
