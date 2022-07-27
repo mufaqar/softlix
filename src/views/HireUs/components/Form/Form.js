@@ -8,11 +8,12 @@ import * as yup from 'yup';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import axios from 'axios';
-
+import { countries } from '../../country';
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import LockIcon from '@mui/icons-material/Lock';
@@ -43,7 +44,7 @@ const validationSchema = yup.object({
       /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)$/,
       'Please enter a valid phone number.',
     ),
-  budget: yup.string().required('Please specify your project budget'),
+  country: yup.string().required('Please specify your country'),
   ptype: yup.string().required('Please specify your project Project Type'),
   message: yup
     .string()
@@ -60,7 +61,7 @@ const Form = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [success, setSuccess] = useState('');
-  const [budget, setbudget] = useState('');
+  const [country, setcountry] = useState('');
   const [ptype, setptype] = useState('');
   const [message, setMessage] = useState('');
   const [btnLabel, setBtnLabel] = useState('Submit');
@@ -71,7 +72,7 @@ const Form = () => {
     lastName: '',
     email: '',
     phone: '',
-    budget: '',
+    country: '',
     ptype: '',
     message: '',
   };
@@ -136,6 +137,8 @@ const Form = () => {
     onSubmit,
   });
 
+  const { countries1 } = countries;
+  // console.log(countries);
   return (
     <Box>
       <form ref={form} onSubmit={formik.handleSubmit}>
@@ -246,7 +249,7 @@ const Form = () => {
               ))}
             </TextField>
           </Grid>
-          <Grid item xs={6}>
+          {/* <Grid item xs={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Project budget
             </Typography>
@@ -274,6 +277,36 @@ const Form = () => {
               ].map((option) => (
                 <MenuItem key={option} value={option}>
                   {option}
+                </MenuItem>
+              ))}
+            </TextField>
+          </Grid> */}
+          <Grid item xs={6}>
+            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
+              Country
+            </Typography>
+            <TextField
+              select
+              label="Select your country"
+              variant="outlined"
+              name={'budget'}
+              fullWidth
+              value={formik.values.country}
+              onChange={formik.handleChange}
+              error={formik.touched.budget && Boolean(formik.errors.country)}
+              helperText={formik.touched.budget && formik.errors.country}
+            >
+              {countries.map((option) => (
+                <MenuItem key={option} value={option}>
+                  <img
+                    loading="lazy"
+                    width="20"
+                    src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                    srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+                    alt=""
+                    style={{ marginRight: '8px' }}
+                  />
+                  {option.label}
                 </MenuItem>
               ))}
             </TextField>

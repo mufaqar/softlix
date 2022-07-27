@@ -73,7 +73,10 @@ export default class MyDocument extends Document {
             type="text/javascript"
             src="../scripts/intercomScript.js"
           ></script> */}
-          <script src="https://consent.cookiefirst.com/sites/softlix.tech-c7280872-7ff7-43ba-8c73-ae9eb1dbe444/consent.js"></script>
+          {/* <script src="https://consent.cookiefirst.com/sites/softlix.tech-bf9a3d26-ad87-42c9-aefb-9bd9dca6871d/consent.js"></script> */}
+          <script src="https://consent.cookiefirst.com/sites/softlix.tech-cab0c4cd-4623-4a58-bfff-6e9236e6dc19/consent.js"></script>
+          <script src="https://consent.cookiefirst.com/banner.js?cookiefirst-key=cab0c4cd-4623-4a58-bfff-6e9236e6dc19"></script>
+          {/* <script src="https://consent.cookiefirst.com/sites/softlix.tech-c7280872-7ff7-43ba-8c73-ae9eb1dbe444/consent.js"></script> */}
           <script
             dangerouslySetInnerHTML={{
               // eslint-disable-next-line quotes

@@ -3,9 +3,12 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import { Headline, Form, Partners } from './components';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const HireUs = () => {
   const theme = useTheme();
@@ -25,8 +28,128 @@ const HireUs = () => {
             <Headline />
           </Container>
         </Box>
-        <Container maxWidth={800} paddingBottom={'0 !important'}>
-          <Form />
+        <Container maxWidth={1300} paddingBottom={'0 !important'}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              gap: '50px',
+              ['@media (min-width:390px) and (max-width:600px)']: {
+                // eslint-disable-line no-useless-computed-key
+
+                flexDirection: 'column',
+                gap: '20px',
+              },
+            }}
+          >
+            <Box>
+              <Typography
+                fontWeight={700}
+                variant={'h1'}
+                align={'left'}
+                gutterBottom
+                style={{ fontSize: '2.3rem' }}
+                fontFamily={('intercom-font', 'Nunito', 'Arial')}
+                sx={{
+                  color: '#333',
+                  paddingBottom: '1.4rem',
+                  ['@media (min-width:390px) and (max-width:600px)']: {
+                    // eslint-disable-line no-useless-computed-key
+
+                    fontSize: '23px !important',
+                    textAlign: 'left !important',
+                  },
+                }}
+              >
+                We delivering customer success
+              </Typography>
+              <Typography
+                fontWeight={500}
+                variant={'p'}
+                align={'left'}
+                gutterBottom
+                style={{ fontSize: '1.5rem', paddingBottom: '20px' }}
+                fontFamily={
+                  ('Inter', 'intercom-font', 'Roboto', 'Nunito', 'sans-serif')
+                }
+                sx={{
+                  color: '#333',
+                  ['@media (min-width:390px) and (max-width:600px)']: {
+                    // eslint-disable-line no-useless-computed-key
+
+                    fontSize: '19px !important',
+                    textAlign: 'center !important',
+                    paddingBottom: '40px',
+                  },
+                }}
+              >
+                We have a technically strong{' '}
+                <p
+                  style={{
+                    color: '#333',
+                    fontWeight: '700',
+                    fontSize: 'inherit',
+                    display: 'inline',
+                  }}
+                >
+                  enterprise software development{' '}
+                </p>
+                team that has successfully delivered 200+{' '}
+                <p
+                  style={{
+                    color: '#333',
+                    fontWeight: '700',
+                    fontSize: 'inherit',
+                    display: 'inline',
+                  }}
+                >
+                  custom software development{' '}
+                </p>
+                projects.
+              </Typography>
+              <Box
+                sx={{
+                  fontSize: '20px',
+                  ['@media (min-width:390px) and (max-width:600px)']: {
+                    marginTop: '40px',
+                  },
+                }}
+              >
+                {[
+                  'Excellent team',
+                  'Effective delivery',
+                  'Quality efforts',
+                  'Genuineness and commitment',
+                  'Up to 50% Cost saving',
+                  'Source Code Authorization',
+                  'Non-Disclosure Agreement',
+                  'No Lock-In contract',
+                  'Agile & DevOps Implementation',
+                  'Clean Code',
+                  'Fast and Easy On-boarding',
+                  'Total Control Over the code',
+                ].map((item, i) => (
+                  <p key={i}>
+                    {' '}
+                    <CheckCircleIcon
+                      fontSize={'medium'}
+                      backgroundColor={'#2c4bff'}
+                      style={{
+                        marginRight: '10px',
+                        color: '#2c4bff',
+                      }}
+                    />
+                    {item}
+                  </p>
+                ))}
+                <p style={{ color: '#333', fontSize: '14px' }}>
+                  This site is protected by reCAPTCHA and the google Privacy
+                  Policy and Terms of Service apply
+                </p>
+              </Box>
+            </Box>
+            <Form />
+          </Box>
         </Container>
         <Container>
           <Divider />

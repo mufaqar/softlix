@@ -15,7 +15,7 @@ const mock = [
     title: 'Enterprise Software Development',
     link: '/services/enterprise-software-development',
     subtitle:
-      'Create complex enterprise software, ensure reliable software integration, modernise your legacy system.',
+      'We are experts in Enterprise Software Development. Enterprise Software or Enterprise Software Application is generally used to satisfy the needs of an organization rather than individual users.',
     icon: (
       <svg
         height={55}

@@ -9,6 +9,8 @@ import TextField from '@mui/material/TextField';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
   const theme = useTheme();
@@ -308,8 +310,9 @@ const Footer = () => {
                 ['@media (min-width:390px) and (max-width:600px)']: {
                   // eslint-disable-line no-useless-computed-key
                   // flexDirection: 'column',
-                  // justifyContent: 'start',
+                  justifyContent: 'center',
                   margin: '0 auto',
+                  width: '100%',
                 },
               }}
             >
@@ -322,10 +325,20 @@ const Footer = () => {
                   padding: 0,
                   background: 'none!important',
                   minWidth: 'auto!important',
+                  // ['@media (min-width:390px) and (max-width:600px)']: {
+                  //   // eslint-disable-line no-useless-computed-key
+
+                  //   fontSize: '16px !important',
+                  //   // textAlign: 'left !important',
+                  // },
                 }}
               >
                 <FacebookIcon
-                  style={{ color: '#000', fontSize: '3rem', margin: '1rem' }}
+                  style={{
+                    color: '#000',
+                    fontSize: '2rem',
+                    margin: '1rem ',
+                  }}
                 />
               </Button>
               <Button
@@ -340,7 +353,11 @@ const Footer = () => {
                 }}
               >
                 <LinkedInIcon
-                  style={{ color: '#000', fontSize: '3rem', margin: '1rem' }}
+                  style={{
+                    color: '#000',
+                    fontSize: '2rem',
+                    margin: '1rem 0.5rem',
+                  }}
                 />
               </Button>
               <Button
@@ -355,36 +372,77 @@ const Footer = () => {
                 }}
               >
                 <TwitterIcon
-                  style={{ color: '#000', fontSize: '3rem', margin: '1rem' }}
+                  style={{
+                    color: '#000',
+                    fontSize: '2rem',
+                    margin: '1rem 0.5rem',
+                  }}
                 />
               </Button>
-              {/* <PinterestIcon
-                        style={{ fontSize: '3rem', margin: '1rem' }}
-                      /> */}
+              <Button
+                component="a"
+                target="blank"
+                href="https://youtube.com/channel/UCG9AQABVlwu89p-gNrzLSTA"
+                size="medium"
+                sx={{
+                  padding: 0,
+                  background: 'none!important',
+                  minWidth: 'auto!important',
+                }}
+              >
+                <YouTubeIcon
+                  style={{
+                    color: '#000',
+                    fontSize: '2rem',
+                    margin: '1rem 0.5rem',
+                  }}
+                />
+              </Button>
+              <Button
+                component="a"
+                target="blank"
+                href="https://www.instagram.com/softlixglobal/"
+                size="medium"
+                sx={{
+                  padding: 0,
+                  background: 'none!important',
+                  minWidth: 'auto!important',
+                }}
+              >
+                <InstagramIcon
+                  style={{
+                    color: '#000',
+                    fontSize: '2rem',
+                    margin: '1rem 0.5rem',
+                  }}
+                />
+              </Button>
+              <Button
+                component="a"
+                target="blank"
+                href="https://medium.com/@softlix"
+                size="medium"
+                sx={{
+                  padding: 0,
+                  background: 'none!important',
+                  minWidth: 'auto!important',
+                }}
+              >
+                <img
+                  style={{
+                    color: '#000',
+                    fontSize: '2rem',
+                    margin: '1rem 0.5rem',
+                    marginRight: '-12px',
+                  }}
+                  src="https://img.icons8.com/sf-regular-filled/48/000000/medium-logo.png"
+                />
+              </Button>
             </Box>
           </Box>
         </Box>
       </Grid>
       <Grid item xs={12}>
-        {/* <Typography
-          align={'center'}
-          variant={'subtitle2'}
-          color="text.secondary"
-          gutterBottom
-        >
-          &copy; 2022, SOFTLIX is Product of RDMI Tech Ventures Pvt. Ltd
-        </Typography>
-        <Typography
-          align={'center'}
-          variant={'caption'}
-          color="text.secondary"
-          component={'p'}
-        >
-          When you visit or interact with our sites, services or tools, we or
-          our authorised service providers may use cookies for storing
-          information to help provide you with a better, faster and safer
-          experience and for marketing purposes.
-        </Typography> */}
         <Box
           sx={{
             display: 'flex',
