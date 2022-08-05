@@ -1,15 +1,24 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import React,{ useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useFormik } from 'formik';
+import emailjs from '@emailjs/browser';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
-import axios from 'axios'
+import axios from 'axios';
+import { countries } from '../../../../utils/country';
 import { useTheme } from '@mui/material/styles';
+import { useRouter } from 'next/router';
+import LockIcon from '@mui/icons-material/Lock';
+import Link from 'next/link';
+
 const validationSchema = yup.object({
   firstName: yup
     .string()
@@ -35,8 +44,8 @@ const validationSchema = yup.object({
       /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)$/,
       'Please enter a valid phone number.',
     ),
-  budget: yup.string().required('Please specify your project budget'),
-   ptype: yup.string().required('Please specify your project Project Type'),
+  country: yup.string().required('Please specify your country'),
+  ptype: yup.string().required('Please specify your project Project Type'),
   message: yup
     .string()
     .trim()
@@ -44,62 +53,81 @@ const validationSchema = yup.object({
 });
 
 const Form = () => {
-
-const theme = useTheme();
-const [firstName, setFname] = useState('')
-const [lastName, setLname] = useState('')
-const [email, setEmail] = useState('')
-const [phone, setPhone] = useState('')
-const[success, setSuccess] = useState('')
-const [budget, setbudget] = useState('')
-const [ptype, setptype] = useState('')
-const[message, setMessage] = useState('')
-const[btnLabel, setBtnLabel] = useState('Submit')
-const [submitted, setSubmitted] = useState(false)
+  const router = useRouter();
+  const form = useRef();
+  const theme = useTheme();
+  const [firstName, setFname] = useState('');
+  const [lastName, setLname] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [success, setSuccess] = useState('');
+  const [country, setcountry] = useState('');
+  const [ptype, setptype] = useState('');
+  const [message, setMessage] = useState('');
+  const [btnLabel, setBtnLabel] = useState('Submit');
+  const [submitted, setSubmitted] = useState(false);
 
   const initialValues = {
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
-    budget: '',
+    country: '',
     ptype: '',
     message: '',
   };
 
-  const onSubmit = (values) => {
-    setBtnLabel('Sending...');
-    let data = {
-      
-    };
-    data.firstName=formik.values.firstName;
-    data.lastName=formik.values.lastName;
-    data.email=formik.values.email;
-    data.phone=formik.values.phone;
-    data.budget=formik.values.budget;
-    data.ptype=formik.values.ptype;
-    data.message=formik.values.message;
+  const sendEmail = (data) => {
+    // e.preventDefault();
 
-    fetch('api/email2', {
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_HIRE_US_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      )
+      .then(
+        (result) => {
+          // console.log(result.text);
+          // console.log(form.current);
+          router.push('/thank-page');
+        },
+        (error) => {
+          console.log(error.text);
+          setBtnLabel('Submit');
+        },
+      );
+  };
+
+  const callSheets = async (data) => {
+    const response = await fetch('/api/sheets', {
       method: 'POST',
+      body: JSON.stringify(data),
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data)
-    }).then((res) => {
-      console.log('Response received')
-      if (res.status === 200) {
-        console.log('Response succeeded!')
-        setSubmitted(true)
-        setFname('')
-        setLname('')
-        setEmail('')
-        setMessage('')
-        setSuccess('Email sent successfully');
-        setBtnLabel('Sent');
-      }
-    })
+    });
+    return response;
+  };
+  const onSubmit = (values) => {
+    // e.preventDefault();
+    setBtnLabel('Sending...');
+    let data = {};
+    data.firstName = formik.values.firstName;
+    data.lastName = formik.values.lastName;
+    data.email = formik.values.email;
+    data.phone = formik.values.phone;
+    data.budget = formik.values.budget;
+    data.ptype = formik.values.ptype;
+    data.message = formik.values.message;
+
+    sendEmail(data);
+    console.log(data);
+
+    const response = callSheets(data);
+    console.log(response);
+
     return values;
   };
 
@@ -109,9 +137,11 @@ const [submitted, setSubmitted] = useState(false)
     onSubmit,
   });
 
+  const { countries1 } = countries;
+  // console.log(countries);
   return (
     <Box>
-      <form onSubmit={formik.handleSubmit}>
+      <form ref={form} onSubmit={formik.handleSubmit}>
         <Box
           component={Grid}
           marginBottom={{ xs: 10, sm: 0 }}
@@ -144,7 +174,7 @@ const [submitted, setSubmitted] = useState(false)
               variant="outlined"
               name={'lastName'}
               fullWidth
-              value={formik.values.lastName} 
+              value={formik.values.lastName}
               onChange={formik.handleChange}
               error={formik.touched.lastName && Boolean(formik.errors.lastName)}
               helperText={formik.touched.lastName && formik.errors.lastName}
@@ -180,7 +210,7 @@ const [submitted, setSubmitted] = useState(false)
               helperText={formik.touched.phone && formik.errors.phone}
             />
           </Grid>
-           <Grid item xs={6}>
+          <Grid item xs={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Project Type
             </Typography>
@@ -219,7 +249,7 @@ const [submitted, setSubmitted] = useState(false)
               ))}
             </TextField>
           </Grid>
-          <Grid item xs={6}>
+          {/* <Grid item xs={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Project budget
             </Typography>
@@ -250,6 +280,36 @@ const [submitted, setSubmitted] = useState(false)
                 </MenuItem>
               ))}
             </TextField>
+          </Grid> */}
+          <Grid item xs={6}>
+            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
+              Country
+            </Typography>
+            <TextField
+              select
+              label="Select your country"
+              variant="outlined"
+              name={'country'}
+              fullWidth
+              value={formik.values.country}
+              onChange={formik.handleChange}
+              error={formik.touched.budget && Boolean(formik.errors.country)}
+              helperText={formik.touched.budget && formik.errors.country}
+            >
+              {countries.map((option) => (
+                <MenuItem key={option} value={option.label}>
+                  <img
+                    loading="lazy"
+                    width="20"
+                    src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                    srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+                    alt=""
+                    style={{ marginRight: '8px' }}
+                  />
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
           </Grid>
           <Grid item xs={12}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
@@ -277,7 +337,7 @@ const [submitted, setSubmitted] = useState(false)
             flexDirection={'column'}
           >
             <Button size={'large'} variant={'contained'} type={'submit'}>
-             {btnLabel}
+              {btnLabel}
             </Button>
             <Typography
               variant={'subtitle2'}
@@ -285,8 +345,57 @@ const [submitted, setSubmitted] = useState(false)
               sx={{ marginTop: 2 }}
               align={'center'}
             >
-            {success} 
+              {success}
             </Typography>
+            <h5
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                // wordSpacing: '3px',
+                color: '#677788',
+              }}
+            >
+              <div style={{ display: 'inline', marginRight: '3px' }}>
+                <LockIcon style={{ margin: 0, padding: 0 }} />
+              </div>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>
+                By clicking the "submit" button, you are agreeing to
+              </div>
+              <Link href={'/company-terms'}>
+                <a> Softlix terms of use </a>
+              </Link>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>and</div>
+              <Link href={'/privacy-policy'}>
+                <a> privacy policy</a>
+              </Link>
+              .
+            </h5>
+            {/* <Typography
+              variant={'subtitle2'}
+              color={'textSecondary'}
+              sx={{
+                marginTop: 2,
+                display: 'flex',
+                alignItems: 'center',
+                wordSpacing: '3px',
+                flexWrap: 'wrap',
+              }}
+              align={'center'}
+            >
+              <div style={{ display: 'inline' }}>
+                <LockIcon style={{ margin: 0, padding: 0 }} />
+              </div>
+              By clicking the "submit" button, you are agreeing to
+              <Link href={'/company-terms'}>
+                <a> Softlix terms of use </a>
+              </Link>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>and</div>
+              <Link href={'/privacy-policy'}>
+                <a> privacy policy</a>
+              </Link>
+              .
+            </Typography> */}
           </Grid>
         </Box>
       </form>

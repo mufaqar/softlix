@@ -166,14 +166,14 @@ const Hero = () => {
                   // variant="contained"
                   color="primary"
                   sx={{
-                    backgroundColor: '#0070f3',
+                    backgroundColor: ' #0000d3',
                     width: '200px',
                     borderRadius: '7px',
                     fontFamily: 'Inter',
                     fontSize: '16px',
                     color: 'white',
                     '&:hover': {
-                      backgroundColor: 'rgba(0,118,255,.9)',
+                      backgroundColor: '#0000a9',
                     },
 
                     ['@media (min-width:300px) and (max-width:600px)']: {

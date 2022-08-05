@@ -87,16 +87,16 @@ const Articles = () => {
             // variant="contained"
             color="primary"
             sx={{
-              backgroundColor: '#0070f3',
+              backgroundColor: ' #0000d3',
               width: '200px',
               borderRadius: '7px',
               fontFamily: 'Inter',
               fontSize: '16px',
               color: 'white',
-              border: '1px solid #0070f3',
+              border: '1px solid  #0000d3',
               fontWeight: 500,
               '&:hover': {
-                backgroundColor: 'rgba(0,118,255,.9)',
+                backgroundColor: '#0000a9',
               },
               ['@media (min-width:300px) and (max-width:600px)']: {
                 // eslint-disable-line no-useless-computed-key

@@ -31,9 +31,22 @@ const Industries = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -48,9 +61,22 @@ const Industries = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -63,9 +89,22 @@ const Industries = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -79,9 +118,22 @@ const Industries = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -94,9 +146,22 @@ const Industries = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -120,9 +185,22 @@ const Services = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -141,9 +219,22 @@ const Services = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -156,9 +247,23 @@ const Services = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
+
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -172,13 +277,22 @@ const Services = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
             color={'text.primary'}
+            underline={'none'}
             sx={{
               display: 'block',
               marginTop: 1,
               whiteSpace: 'nowrap',
               cursor: 'pointer',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
             }}
           >
             {i}
@@ -192,9 +306,23 @@ const Services = () => {
           <Link
             key={i}
             href={'#'}
-            underline={'hover'}
+
             color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+            underline={'none'}
+            sx={{
+              display: 'block',
+              marginTop: 1,
+              whiteSpace: 'nowrap',
+              '&:hover': {
+                color: '#1983FF',
+              },
+
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                '&:hover': {
+                  color: '#1983FF',
+                },
+              },
+            }}
           >
             {i}
           </Link>
@@ -375,12 +503,12 @@ const SidebarNav = ({ pages }) => {
           </Stack>
         </Box>
         <Box sx={{ padding: '7px' }}></Box>
-        <Box>
+        {/* <Box>
           <NavItem title={'Career'} link={'/career'} />
         </Box>
         <Box>
           <NavItem title={'Resource'} items={accountPages} link={'#'} />
-        </Box>
+        </Box> */}
 
         <Box>
           <NavItem
@@ -403,14 +531,14 @@ const SidebarNav = ({ pages }) => {
             component="a"
             href="/hire-us"
             sx={{
-              backgroundColor: '#0070f3',
+              backgroundColor: ' #0000d3',
               width: '200px',
               borderRadius: '7px',
               fontFamily: 'Inter',
               fontSize: '16px',
               color: 'white',
               '&:hover': {
-                backgroundColor: 'rgba(0,118,255,.9)',
+                backgroundColor: '#0000a9',
               },
 
               ['@media (min-width:300px) and (max-width:600px)']: {

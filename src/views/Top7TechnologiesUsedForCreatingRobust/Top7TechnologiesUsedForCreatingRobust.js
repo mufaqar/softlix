@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -16,6 +16,14 @@ import {
 } from './components';
 
 const BlogArticle = () => {
+  const [isDisplayed, setIsDisplayed] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsDisplayed(true);
+    }, 5000);
+  }, []);
+
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -39,19 +47,21 @@ const BlogArticle = () => {
             </Grid>
           </Grid>
         </Container>
-        <Box
-          sx={{
-            position: 'sticky',
-            bottom: '0px',
-            left: '0px',
-            background: 'white',
-            color: 'black',
-
-            padding: '20px 10px 20px 10px',
-          }}
-        >
-          <FooterNewsletter />
-        </Box>
+        {isDisplayed && (
+          <Box
+            sx={{
+              position: 'sticky',
+              bottom: '0px',
+              left: '0px',
+              background: 'white',
+              color: 'black',
+              padding: '20px 10px 20px 10px',
+              transition: 'all 1.5s linear',
+            }}
+          >
+            <FooterNewsletter />
+          </Box>
+        )}
         <Box
           component={'svg'}
           preserveAspectRatio="none"

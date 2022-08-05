@@ -38,6 +38,15 @@ const getTheme = (mode, themeToggler) =>
             },
           },
         },
+        MuiLink: {
+          styleOverrides: {
+            root: {
+              '&:hover': {
+                backgroundColor: '#E4F2FF !important',
+              },
+            },
+          },
+        },
         MuiOutlinedInput: {
           styleOverrides: {
             root: {
@@ -48,6 +57,7 @@ const getTheme = (mode, themeToggler) =>
             },
           },
         },
+
         MuiCard: {
           styleOverrides: {
             root: {

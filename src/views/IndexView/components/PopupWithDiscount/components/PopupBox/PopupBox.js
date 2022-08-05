@@ -176,7 +176,7 @@ const PopupBox = ({ onClose, open }) => {
                             padding: '12px 10px',
                             borderRadius: '0px',
                             color: 'white',
-                            // border: '1px solid #0070f3',
+                            // border: '1px solid  #0000d3',
                             fontWeight: 700,
                             '&:hover': {
                               backgroundColor: '#0000A9',

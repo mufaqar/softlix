@@ -424,22 +424,22 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             </Menu>
           </Stack>
         </Box>
-        <Box marginLeft={4}>
+        {/* <Box marginLeft={4}>
           <NavItem
             title={'Career'}
             id={'career-pages'}
             colorInvert={colorInvert}
             link={'/career'}
           />
-        </Box>
-        <Box marginLeft={4}>
+        </Box> */}
+        {/* <Box marginLeft={4}>
           <NavItem
             title={'Resource'}
             id={'Resource-pages'}
             colorInvert={colorInvert}
             link={'#'}
           />
-        </Box>
+        </Box> */}
         <Box marginLeft={4}>
           <NavItem
             title={'Portfolio'}
@@ -470,7 +470,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             // variant="contained"
             color="primary"
             sx={{
-              backgroundColor: '#0070f3',
+              backgroundColor: ' #0000d3',
               width: '140px',
               borderRadius: '7px',
               fontFamily: 'Inter',
@@ -478,10 +478,10 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
               fontSize: '1rem',
               padding: '0.25rem .8rem',
               color: 'white',
-              border: '1px solid #0070f3',
+              border: '1px solid  #0000d3',
               fontWeight: 500,
               '&:hover': {
-                backgroundColor: 'rgba(0,118,255,.9)',
+                backgroundColor: '#0000a9',
               },
 
               ['@media (min-width:391px) and (max-width:600px)']: {
@@ -513,17 +513,17 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             // variant="contained"
             color="primary"
             sx={{
-              backgroundColor: '#0070f3',
+              backgroundColor: ' #0000d3',
               width: '20vw',
               borderRadius: '7px',
               fontFamily: 'Inter',
               fontSize: '1rem',
               padding: '0.25rem 0.8rem',
               color: 'white',
-              border: '1px solid #0070f3',
+              border: '1px solid  #0000d3',
               fontWeight: 500,
               '&:hover': {
-                backgroundColor: 'rgba(0,118,255,.9)',
+                backgroundColor: '#0000a9',
               },
               ['@media (min-width:350px) and (max-width:600px)']: {
                 // eslint-disable-line no-useless-computed-key

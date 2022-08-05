@@ -9,6 +9,7 @@ import {
   SearchBox,
   FeaturedArticle,
   LastStories,
+  FooterNewsletter,
   CaseStudies,
   PopularArticles,
   Newsletter,
@@ -35,7 +36,7 @@ const BlogReachView = () => {
           <LastStories />
         </Container>
         <Container paddingTop={'20px !important'}>
-          <Newsletter />
+          <FooterNewsletter />
         </Container>
       </Box>
     </Main>

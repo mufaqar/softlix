@@ -65,7 +65,7 @@ const FooterNewsletter = () => {
   const onSubmit = async (values) => {
     let data = {};
     data.email = formik.values.email;
-    sendMail();
+
     callSheets(data);
     console.log(data);
     return values;

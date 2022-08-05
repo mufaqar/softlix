@@ -54,7 +54,7 @@ const Thank = () => {
                 <CheckRoundedIcon
                   fontSize="large"
                   sx={{
-                    background: '#0070f3',
+                    background: ' #0000d3',
                     borderRadius: '50%',
                     color: 'white',
                     fontSize: '5rem',
