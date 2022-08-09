@@ -5,3 +5,4 @@ export { default as LastStories } from './LastStories';
 export { default as CaseStudies } from './CaseStudies';
 export { default as PopularArticles } from './PopularArticles';
 export { default as Newsletter } from './Newsletter';
+export { default as FooterNewsletter } from './FooterNewsletter';

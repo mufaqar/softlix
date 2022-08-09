@@ -387,7 +387,7 @@ const WithOptionTogglerButton = () => {
                 </Tabs>
               </Box>
               <TabPanel value={value} index={1}>
-                <Container>
+                <Container style={{ padding: '10px 0px' }}>
                   <Grid container spacing={4}>
                     {mock.map((item, i) => (
                       <Grid item xs={12} md={4} key={i}>
@@ -397,12 +397,9 @@ const WithOptionTogglerButton = () => {
                           display={'flex'}
                           flexDirection={'column'}
                           variant={'outlined'}
+                          style={{ padding: '10px 10px !important' }}
                         >
-                          <CardContent
-                            sx={{
-                              padding: 4,
-                            }}
-                          >
+                          <CardContent>
                             <Box marginBottom={2}>
                               <Typography
                                 variant={'h4'}
@@ -496,7 +493,7 @@ const WithOptionTogglerButton = () => {
                 </Container>
               </TabPanel>
               <TabPanel value={value} index={0}>
-                <Container>
+                <Container style={{ padding: '10px 0px' }}>
                   <Grid container spacing={4}>
                     {mock2.map((item, i) => (
                       <Grid item xs={12} md={4} key={i}>

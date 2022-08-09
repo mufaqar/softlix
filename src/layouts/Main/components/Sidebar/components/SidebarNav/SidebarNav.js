@@ -393,9 +393,9 @@ const SidebarNav = ({ pages }) => {
         <Box>
           <NavItem title={'Pricing'} items={companyPages} link={'/pricing'} />
         </Box>
-        <Box sx={{ padding: '7px' }}></Box>
-        <Box>
-          <Stack
+        {/* <Box sx={{ padding: '7px' }}></Box> */}
+        {/* <Box> */}
+        {/* <Stack
             direction={{ xs: 'column', md: 'row' }}
             spacing={{ xs: 2, md: 8 }}
           >
@@ -445,12 +445,18 @@ const SidebarNav = ({ pages }) => {
                 <Industries />
               </Box>
             </Menu>
-          </Stack>
-        </Box>
+          </Stack> */}
+        {/* <NavItem
+            title={'Industries'}
+            id={'career-pages'}
+            // colorInvert={colorInvert}
+            link={'/service'}
+          /> */}
+        {/* </Box> */}
 
-        <Box sx={{ padding: '13px' }}></Box>
+        {/* <Box sx={{ padding: '13px' }}></Box> */}
         <Box>
-          <Stack
+          {/* <Stack
             direction={{ xs: 'column', md: 'row' }}
             spacing={{ xs: 2, md: 8 }}
           >
@@ -500,9 +506,15 @@ const SidebarNav = ({ pages }) => {
                 <Services />
               </Box>
             </Menu>
-          </Stack>
+          </Stack> */}
+          <NavItem
+            title={'Services'}
+            id={'career-pages'}
+            // colorInvert={colorInvert}
+            link={'/service'}
+          />
         </Box>
-        <Box sx={{ padding: '7px' }}></Box>
+        {/* <Box sx={{ padding: '7px' }}></Box> */}
         {/* <Box>
           <NavItem title={'Career'} link={'/career'} />
         </Box>

@@ -38,6 +38,7 @@ const getTheme = (mode, themeToggler) =>
             },
           },
         },
+
         MuiLink: {
           styleOverrides: {
             root: {

@@ -314,9 +314,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           />
         </Box>
 
-        <Box marginLeft={4}>
-          {/* <NavItem colorInvert={colorInvert}> */}
-          <Stack
+        {/* <Box marginLeft={4}> */}
+        {/* <Stack
             direction={{ xs: 'column', md: 'row' }}
             spacing={{ xs: 2, md: 8 }}
           >
@@ -366,11 +365,16 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
                 <Industries />
               </Box>
             </Menu>
-          </Stack>
-          {/* </NavItem> */}
-        </Box>
+          </Stack> */}
+        {/* <NavItem
+            title={'Industries'}
+            id={'career-pages'}
+            colorInvert={colorInvert}
+            link={'/service'}
+          /> */}
+        {/* </Box> */}
         <Box marginLeft={4}>
-          <Stack
+          {/* <Stack
             direction={{ xs: 'column', md: 'row' }}
             spacing={{ xs: 2, md: 8 }}
             colorInvert={colorInvert}
@@ -422,7 +426,13 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
                 <Services />
               </Box>
             </Menu>
-          </Stack>
+          </Stack> */}
+          <NavItem
+            title={'Services'}
+            id={'career-pages'}
+            colorInvert={colorInvert}
+            link={'/service'}
+          />
         </Box>
         {/* <Box marginLeft={4}>
           <NavItem
