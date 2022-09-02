@@ -80,10 +80,10 @@ const Main = () => {
               {[
                 'Our sign up is dead simple. We only require your basic company information',
                 'We support bulk uploading via SQL, integrations with most data storage products',
-                'Simply select where you\'d like to transfer your data',
+                "Simply select where you'd like to transfer your data",
                 'Our sign up is dead simple. We only require your basic company information',
                 'We support bulk uploading via SQL, integrations with most data storage products',
-                'Simply select where you\'d like to transfer your data',
+                "Simply select where you'd like to transfer your data",
               ].map((item, i) => (
                 <Grid item xs={12} key={i}>
                   <Box
