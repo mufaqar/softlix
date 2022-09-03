@@ -54,9 +54,7 @@ const Service = () => {
         </Box>
       </Box>
       <Box bgcolor={'alternate.main'}>
-        <Container>
-          <Advantages />
-        </Container>
+        <Advantages />
       </Box>
       <Container>
         <Features />

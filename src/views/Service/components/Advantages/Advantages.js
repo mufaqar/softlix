@@ -274,8 +274,8 @@ const WithOptionTogglerButton = () => {
                 color="text.primary"
                 align={'center'}
               >
-                We are founded g by a leading academic and researcher in the
-                field of Industrial Systems Engineering.
+                We are founded by a leading academic and researcher in the field
+                of Industrial Systems Engineering.
                 <br />
                 For entrepreneurs, startups and freelancers. If you didn’t find
                 what you needed, these could help!
