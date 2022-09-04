@@ -118,7 +118,7 @@ const Form = () => {
     data.lastName = formik.values.lastName;
     data.email = formik.values.email;
     data.phone = formik.values.phone;
-    data.budget = formik.values.budget;
+    data.country = formik.values.country;
     data.ptype = formik.values.ptype;
     data.message = formik.values.message;
 

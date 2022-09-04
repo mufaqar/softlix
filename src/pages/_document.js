@@ -58,11 +58,11 @@ export default class MyDocument extends Document {
           />
           <meta
             property="og:title"
-            content="SOFTLIX Agency | Modern Website Design & Mobile App Development"
+            content="SOFTLIX™ : Software Development, Mobile Application Development, Digital Transformation & Other IT Solutions"
           />
           <meta
             property="og:description"
-            content="Looking for a professional website design or Software company? Look no further than SOFTLIX Agency. We create beautiful websites, Apps, Software using the latest technologies like Nextjs, Flutter, React Native & Firebase."
+            content="SOFTLIX™ is An IT Solutions company which deals in the Enterprise Software, Digital Transformation, Cloud infrastructure, IOT and AI and ML Software, Digital Marketing services For 200+ Countries."
           />
           <meta
             property="og:url"

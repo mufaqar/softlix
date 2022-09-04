@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'only post requests are allowed' });
   }
 
-  const { firstName, email, phone, budget, ptype, message } = req.body;
+  const { firstName, email, phone, country, ptype, message } = req.body;
 
   try {
     //create auth
@@ -54,7 +54,7 @@ export default async function handler(req, res) {
       range: 'Leads!A1:F1',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[firstName, email, message, phone, ptype, budget]],
+        values: [[firstName, email, message, phone, ptype, country]],
       },
     });
 
