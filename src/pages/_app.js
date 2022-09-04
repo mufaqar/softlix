@@ -21,9 +21,12 @@ export default function App({ Component, pageProps }) {
 
         <meta
           name="description"
-          content="Softlix is IT services Company with certified Experts who can help you build your idea. Software, Apps, Website Development Using Modern Technologies & stacks"
+          content="SOFTLIX™ is An IT Solutions company which deals in the Enterprise Software, Digital Transformation, Cloud infrastructure, IOT and AI and ML Software, Digital Marketing services For 200+ Countries."
         />
-        <title>SOFTLIX : Software, Mobile Apps and Other IT Services</title>
+        <title>
+          SOFTLIX™ : Software Development, Mobile Application Development,
+          Digital Transformation & Other IT Solutions
+        </title>
       </Head>
       <Page>
         <Component {...pageProps} />
