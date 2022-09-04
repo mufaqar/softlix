@@ -128,10 +128,12 @@ const Hero = () => {
                 >
                   <Typed
                     strings={[
-                      'Websites',
-                      'Android Apps',
-                      'IOS Apps',
-                      'Softwares',
+                      'IT Solutions',
+                      'Enterprise Software',
+                      'Mobile App Development',
+                      'Digital Transformation',
+                      'Digital Marketing',
+                      'AI Softwares',
                     ]}
                     typeSpeed={80}
                     loop={true}
@@ -144,10 +146,10 @@ const Hero = () => {
                 color="text.secondary"
                 sx={{ fontWeight: 400 }}
               >
-                Looking for a professional website design or Software company?
-                Look no further than SOFTLIX. We create beautiful websites,
-                Apps, Software using the latest technologies like Nextjs,
-                Flutter, React Native & Firebase.
+                SOFTLIX™ is the global Leading IT Solutions Company which Create
+                Enterprise Software, Mobile Application, Cloud Migration, IOT,
+                AI and ML Software, Blockchain, Online Marketing and Digital
+                Transformation.
               </Typography>
               <Box
                 display="flex"
