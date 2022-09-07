@@ -48,7 +48,11 @@ export default class MyDocument extends Document {
           />
           <meta
             name="description"
+<<<<<<< HEAD
             content="SOFTLIX™ is An IT Solutions company which deals in the Enterprise Software, Digital Transformation, Cloud infrastructure, IOT and AI and ML Software, Digital Marketing services For 200+ Countries. "
+=======
+            content="SOFTLIX™ is An IT Solutions company which deals in the Enterprise Software, Digital Transformation, Cloud infrastructure, IOT and AI and ML Software, Digital Marketing services For 200+ Countries."
+>>>>>>> 4feb37c6a743708ff7347bb88e6292238ae9d2be
           />
           <meta
             name="robots"
