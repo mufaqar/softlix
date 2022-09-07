@@ -25,6 +25,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <title>
+            SOFTLIX™ : Software Development, Mobile Application Development,
+            Digital Transformation & Other IT Solutions
+          </title>
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/images/favicon.ico" />
           <meta name="theme-color" content="#ffffff" />
@@ -44,7 +48,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="description"
-            content="A modern design system for your new landing and web pages."
+            content="SOFTLIX™ is An IT Solutions company which deals in the Enterprise Software, Digital Transformation, Cloud infrastructure, IOT and AI and ML Software, Digital Marketing services For 200+ Countries. "
           />
           <meta
             name="robots"
