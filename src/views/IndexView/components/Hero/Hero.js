@@ -110,6 +110,9 @@ const Hero = () => {
                 sx={{
                   fontWeight: 700,
                   fontSize: '3.25rem!important',
+                  ['@media (min-width:300px) and (max-width:600px)']: {
+                    fontSize: '2.4rem!important',
+                  },
                 }}
               >
                 {/* We Build Software, Websites & Mobile Apps in A  */}

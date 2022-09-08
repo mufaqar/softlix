@@ -41,7 +41,7 @@ const Hero = () => {
       <Box
         display="flex"
         flexWrap="wrap"
-        justifyContent={'flex-start'}
+        justifyContent={'space-around'}
         marginTop={4}
       >
         {[
@@ -50,8 +50,32 @@ const Hero = () => {
           '/images/theprint.png',
           '/images/midday.png',
         ].map((item, i) => (
-          <Box maxWidth={70} marginTop={2} marginRight={4} key={i}>
-            <Box component="img" height={1} width={1} src={item} alt="..." />
+          <Box
+            maxWidth={300}
+            marginTop={2}
+            marginRight={4}
+            key={i}
+            sx={{
+              ['@media (min-width:300px) and (max-width:600px)']: {
+                // maxWidth: '90vw',
+                // display: 'flex',
+                marginTop: '0px',
+              },
+            }}
+          >
+            <Box
+              component="img"
+              width={'200px'}
+              height={1}
+              src={item}
+              alt="..."
+              sx={{
+                ['@media (min-width:300px) and (max-width:600px)']: {
+                  // maxWidth: '90vw',
+                  width: '100px',
+                },
+              }}
+            />
           </Box>
         ))}
       </Box>
@@ -60,11 +84,11 @@ const Hero = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item container alignItems={'center'} xs={12} md={6}>
+      <Grid item container alignItems={'center'} xs={12} md={12}>
         <Box
           sx={{
             ['@media (min-width:300px) and (max-width:600px)']: {
-              display: 'none',
+              // display: 'none',
             },
           }}
           data-aos={isMd ? 'fade-right' : 'fade-up'}
@@ -134,7 +158,7 @@ const Hero = () => {
             </Box>
           </Box>
         </Box> */}
-        <div style={{ width: '100%' }}>
+        {/* <div style={{ width: '100%' }}>
           <Box
             component={LazyLoadImage}
             effect="blur"
@@ -155,7 +179,7 @@ const Hero = () => {
               },
             }}
           />
-        </div>
+        </div> */}
       </Grid>
     </Grid>
   );

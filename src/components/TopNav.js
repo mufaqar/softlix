@@ -46,7 +46,7 @@ const TopNav = () => {
           color="primary"
           component="a"
           target="blank"
-          href="https://facebook.com/softlixglobal"
+          href="https://facebook.com/softlixofficial/"
           size="medium"
           sx={{
             padding: 0,
