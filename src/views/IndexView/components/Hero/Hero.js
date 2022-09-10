@@ -133,8 +133,7 @@ const Hero = () => {
                     strings={[
                       'IT Solutions',
                       'Enterprise Software',
-                      'Mobile App Development',
-                      'Digital Transformation',
+                      'Mobile Apps',
                       'Digital Marketing',
                       'AI Softwares',
                     ]}
