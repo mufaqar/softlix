@@ -9,6 +9,7 @@ import {
   Advantages,
   Features,
   Integrations,
+  Categories,
   Reviews,
   Team,
   VideoSection,
@@ -53,6 +54,9 @@ const Service = () => {
           />
         </Box>
       </Box>
+      <Container>
+        <Categories />
+      </Container>
       {/* <Box bgcolor={'alternate.main'}>
         <Advantages />
       </Box> */}
