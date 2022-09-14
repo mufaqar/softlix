@@ -20,15 +20,19 @@ const Features = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item container alignItems={'center'} xs={12} md={6}>
+      <Grid item container alignItems={'center'} xs={12}>
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
-          <Box marginBottom={2}>
-            <Typography variant={'h4'} sx={{ fontWeight: 700 }} gutterBottom>
+          <Box marginBottom={5}>
+            <Typography
+              sx={{ textAlign: 'center', fontWeight: 700 }}
+              variant={'h4'}
+              gutterBottom
+            >
               Why Choose Us?
             </Typography>
             <Typography color="text.secondary" variant={'h6'}></Typography>
           </Box>
-          <Grid container spacing={1}>
+          <Grid container alignItems={'center'}>
             {[
               'Excellent & Hybrid team',
               'Effective delivery',
@@ -43,7 +47,18 @@ const Features = () => {
               'Fast and Easy On-boarding',
               'Total Control Over the Code',
             ].map((item, i) => (
-              <Grid item xs={12} key={i}>
+              <Grid
+                sx={{
+                  ['@media (min-width:300px) and (max-width:500px)']: {
+                    marginLeft: '50px',
+                  },
+                }}
+                item
+                xs={12}
+                md={4}
+                lg={4}
+                key={i}
+              >
                 <Box
                   component={ListItem}
                   disableGutters
@@ -83,7 +98,7 @@ const Features = () => {
           </Grid>
         </Box>
       </Grid>
-      <Grid item xs={12} md={6}>
+      {/* <Grid item xs={12} md={6}>
         <Box
           sx={{
             maxWidth: 450,
@@ -147,7 +162,7 @@ const Features = () => {
             </Box>
           </Box>
         </Box>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
