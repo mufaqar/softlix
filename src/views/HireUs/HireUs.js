@@ -83,8 +83,7 @@ const HireUs = () => {
                   },
                 }}
               >
-                We have a technically strong{' '}
-                <p
+                {/* <p
                   style={{
                     color: '#333',
                     fontWeight: '700',
@@ -93,8 +92,10 @@ const HireUs = () => {
                   }}
                 >
                   enterprise software development{' '}
-                </p>
-                team that has successfully delivered 200+{' '}
+                </p> */}
+                Get a complete IT solution for your business, including Web
+                Design/ Development , Android/ IOS App Development & Digital
+                Marketing,{' '}
                 <p
                   style={{
                     color: '#333',
@@ -103,9 +104,9 @@ const HireUs = () => {
                     display: 'inline',
                   }}
                 >
-                  custom software development{' '}
-                </p>
-                projects.
+                  successfully delivered 1000+ Projects
+                </p>{' '}
+                worldwide.
               </Typography>
               <Box
                 sx={{

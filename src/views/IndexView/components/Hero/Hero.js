@@ -131,7 +131,7 @@ const Hero = () => {
                 >
                   <Typed
                     strings={[
-                      'IT Solutions',
+                      'IT services',
                       'Enterprise Software',
                       'Mobile Apps',
                       'Digital Marketing',
@@ -150,7 +150,7 @@ const Hero = () => {
               >
                 SOFTLIX™ is the global Leading IT Solutions Company which Create
                 Enterprise Software, Mobile Application, Cloud Migration, IOT,
-                AI and ML Software, Blockchain, Online Marketing and Digital
+                AI/ML Software, Blockchain, Online Marketing and Digital
                 Transformation.
               </Typography>
               <Box
