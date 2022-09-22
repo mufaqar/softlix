@@ -112,7 +112,8 @@ const HireUs = () => {
                 sx={{
                   fontSize: '20px',
                   ['@media (min-width:390px) and (max-width:600px)']: {
-                    marginTop: '40px',
+                    marginTop: '35px',
+                    fontSize: '15px',
                   },
                 }}
               >
@@ -140,7 +141,14 @@ const HireUs = () => {
                         color: '#2c4bff',
                       }}
                     />
-                    {item}
+                    <p
+                      style={{
+                        display: 'inline-block',
+                        margin: '0px',
+                      }}
+                    >
+                      {item}
+                    </p>
                   </p>
                 ))}
                 <p style={{ color: '#333', fontSize: '14px' }}>

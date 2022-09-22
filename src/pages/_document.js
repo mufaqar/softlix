@@ -56,10 +56,10 @@ export default class MyDocument extends Document {
           />
           <meta property="og:locale" content="en_US" />
           <meta property="og:type" content="website" />
-          <meta
+          {/* <meta
             property="og:image"
             content="https://assets.maccarianagency.com/screenshots/the-front/social.png"
-          />
+          /> */}
           <meta
             property="og:title"
             content="SOFTLIX™ : Software Development, Mobile Application Development, Digital Transformation & Other IT Solutions"
@@ -68,14 +68,14 @@ export default class MyDocument extends Document {
             property="og:description"
             content="SOFTLIX™ is An IT Solutions company which deals in the Enterprise Software, Digital Transformation, Cloud infrastructure, IOT and AI and ML Software, Digital Marketing services For 200+ Countries."
           />
-          <meta
+          {/* <meta
             property="og:url"
             content="https://thefront.maccarianagency.com/"
-          />
+          /> */}
           <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-          <script src="https://consent.cookiefirst.com/sites/softlix.tech-cab0c4cd-4623-4a58-bfff-6e9236e6dc19/consent.js"></script>
-          <script src="https://consent.cookiefirst.com/banner.js?cookiefirst-key=cab0c4cd-4623-4a58-bfff-6e9236e6dc19"></script>
+          {/* <script src="https://consent.cookiefirst.com/sites/softlix.tech-cab0c4cd-4623-4a58-bfff-6e9236e6dc19/consent.js"></script>
+          <script src="https://consent.cookiefirst.com/banner.js?cookiefirst-key=cab0c4cd-4623-4a58-bfff-6e9236e6dc19"></script> */}
 
           <script
             dangerouslySetInnerHTML={{

@@ -48,11 +48,11 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [success, setSuccess] = useState('');
-  const [btnLabel, setBtnLabel] = useState('Submit');
+  const [btnLabel, setBtnLabel] = useState('Get Quote');
   const [submitted, setSubmitted] = useState(false);
 
   const callSheets = async (data) => {
-    const response = await fetch('/api/sheets', {
+    const response = await fetch('/api/sheets/contactus', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -108,7 +108,7 @@ const Contact = () => {
         },
         (error) => {
           console.log(error.text);
-          setBtnLabel('Submit');
+          setBtnLabel('Get Quote');
         },
       );
   };

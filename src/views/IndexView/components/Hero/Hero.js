@@ -131,11 +131,15 @@ const Hero = () => {
                 >
                   <Typed
                     strings={[
-                      'IT services',
-                      'Enterprise Software',
+                      // 'IT services',
+                      // 'Enterprise Software',
+                      // 'Mobile Apps',
+                      // 'Digital Marketing',
+                      // 'AI Softwares',
+                      'Software Development',
                       'Mobile Apps',
                       'Digital Marketing',
-                      'AI Softwares',
+                      'IT Services',
                     ]}
                     typeSpeed={80}
                     loop={true}

@@ -21,7 +21,7 @@ const Support = () => {
               Need a support?
             </Typography>
             <Typography align={'center'}>
-              View message performance and test against variants and control.
+              We Are Always Available to Answer any Query
             </Typography>
             <Box marginTop={2} display={'flex'} justifyContent={'center'}>
               <Button
@@ -45,7 +45,10 @@ const Support = () => {
                   </Box>
                 }
               >
-           <Link underline="none" href="/contact" component="a" >     Contact us</Link>
+                <Link underline="none" href="/contact" component="a">
+                  {' '}
+                  Contact us
+                </Link>
               </Button>
             </Box>
           </Box>
@@ -68,7 +71,7 @@ const Support = () => {
               align={'center'}
               gutterBottom
             >
-              Customize plan 
+              Customize plan
             </Typography>
             <Typography align={'center'}>
               Looking for something else? Request a Consultation to customize a
@@ -96,7 +99,10 @@ const Support = () => {
                   </Box>
                 }
               >
-              <Link underline="none" href="/hire-us" component="a" >   Learn more </Link>
+                <Link underline="none" href="/hire-us" component="a">
+                  {' '}
+                  Get In Touch{' '}
+                </Link>
               </Button>
             </Box>
           </Box>

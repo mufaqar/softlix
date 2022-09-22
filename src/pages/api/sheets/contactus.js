@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'only post requests are allowed' });
   }
 
-  const { firstName, email, phone, country, ptype, message } = req.body;
+  const { firstName, email, phone, message } = req.body;
 
   try {
     //create auth
@@ -51,10 +51,10 @@ export default async function handler(req, res) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: 'Leads!A1:F1',
+      range: 'ContactUs!A1:D1',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[firstName, email, message, phone, ptype, country]],
+        values: [[firstName, email, message, phone]],
       },
     });
 
@@ -66,29 +66,3 @@ export default async function handler(req, res) {
     console.log(error.message);
   }
 }
-//  const { fname, message, mobile, email } = req.body;
-//     try {
-//     const authobj = createAuth();
-//     const sheets = google.sheets({
-//       authobj,
-//       version: 'v4',
-//     });
-
-//     const response = await sheets.spreadsheets.values.append({
-//       spreadsheetId: process.env.DATABASE_ID,
-//       range: 'Sheet1!A2:C',
-//       valueInputOption: 'USER_ENTERED',
-//       requestBody: {
-//         values: [[fname, message,mobile,email]],
-//       },
-//     });
-
-//    return res
-//       .status(201)
-//       .json({ response, result: 'Feedback posted to spreadsheet!' });
-//   }
-//      catch (error) {
-//         console.log(error.message);
-//     }
-
-// }
