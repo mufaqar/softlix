@@ -142,24 +142,24 @@ const mock = [
   },
 ];
 const mock2 = [
-  {
-    title: 'STAR PACKAGE',
-    subtitle:
-      'The fundamentals to get your brand new company legitimate and up and running.',
-    price: { monthly: '$1190', annual: '$1190' },
-    features: [
-      'Delivery days 14 Days',
-      'Revisions 1',
-      'No.of pages or screens 1',
-      'Responsive Design ',
-      'Branded Website with custom header design (5 pages)',
-      'Logo design',
-      'Social Media Online Presence Image Package',
-      'Lead Capture System Setup with squeeze page, thank you page and downloadable gift (provided by client)',
-      'copy review (client provides all copy)',
-    ],
-    isHighlighted: false,
-  },
+  // {
+  //   title: 'STAR PACKAGE',
+  //   subtitle:
+  //     'The fundamentals to get your brand new company legitimate and up and running.',
+  //   price: { monthly: '$1190', annual: '$1190' },
+  //   features: [
+  //     'Delivery days 14 Days',
+  //     'Revisions 1',
+  //     'No.of pages or screens 1',
+  //     'Responsive Design ',
+  //     'Branded Website with custom header design (5 pages)',
+  //     'Logo design',
+  //     'Social Media Online Presence Image Package',
+  //     'Lead Capture System Setup with squeeze page, thank you page and downloadable gift (provided by client)',
+  //     'copy review (client provides all copy)',
+  //   ],
+  //   isHighlighted: false,
+  // },
   {
     title: 'SUPERSTAR PACKAGE',
     subtitle:
@@ -494,7 +494,11 @@ const WithOptionTogglerButton = () => {
               </TabPanel>
               <TabPanel value={value} index={0}>
                 <Container style={{ padding: '10px 0px' }}>
-                  <Grid container spacing={4}>
+                  <Grid
+                    container
+                    spacing={2}
+                    sx={{ justifyContent: 'space-evenly' }}
+                  >
                     {mock2.map((item, i) => (
                       <Grid item xs={12} md={4} key={i}>
                         <Box
