@@ -12,231 +12,232 @@ import Typography from '@mui/material/Typography';
 
 import { NavItem } from './components';
 
-const Industries = () => {
-  return (
-    <Grid container spacing={10} sx={{ width: '900px' }}>
-      <Grid item xs={4}>
-        <Typography fontWeight={700} marginBottom={2} color={'#0070F3'} noWrap>
-          Industries
-        </Typography>
-        {[
-          'HealthTech and MedTech',
-          'Retail',
-          'FinTech',
-          'Logistics',
-          'Travel',
-          'Education',
-        ].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              fontFamily: ('Nunito', 'Inter'),
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-      </Grid>
+// const Industries = () => {
+//   return (
+//     <Grid container spacing={10} sx={{ width: '900px' }}>
+//       <Grid item xs={4}>
+//         <Typography fontWeight={700} marginBottom={2} color={'#0070F3'} noWrap>
+//           Industries
+//         </Typography>
+//         {[
+//           'HealthTech and MedTech',
+//           'Retail',
+//           'FinTech',
+//           'Logistics',
+//           'Travel',
+//           'Education',
+//         ].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               fontFamily: ('Nunito', 'Inter'),
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//       </Grid>
 
-      <Grid item xs={4}>
-        <Typography fontWeight={700} marginBottom={2} color={'#0070F3'} noWrap>
-          Media
-        </Typography>
-        {['Video Streaming', 'Audio and video chat'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              fontFamily: ('Nunito', 'Inter'),
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-        <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography fontWeight={700} color={'#0070F3'} marginBottom={2} noWrap>
-          Startups
-        </Typography>
-        {['Marketplaces', 'Social networks'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              fontFamily: ('Nunito', 'Inter'),
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-      </Grid>
-      <Grid item xs={4}>
-        <Typography fontWeight={700} color={'#0070F3'} marginBottom={2} noWrap>
-          Digital transformation
-        </Typography>
-        {['RPA, automation, bots', 'CRM, ERM, HRM systems'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              fontFamily: ('Nunito', 'Inter'),
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-        <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Competence
-        </Typography>
-        {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              fontFamily: ('Nunito', 'Inter'),
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-      </Grid>
-    </Grid>
-  );
-};
-const Services = () => {
-  return (
-    <Grid container spacing={10} sx={{ width: '900px' }}>
-      <Grid item xs={4}>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Mobile Development
-        </Typography>
-        {[
-          'ios app development',
-          'Android app development ',
-          'Flutter app development',
-        ].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              fontFamily: ('Nunito', 'Inter'),
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-      </Grid>
+//       <Grid item xs={4}>
+//         <Typography fontWeight={700} marginBottom={2} color={'#0070F3'} noWrap>
+//           Media
+//         </Typography>
+//         {['Video Streaming', 'Audio and video chat'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               fontFamily: ('Nunito', 'Inter'),
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//         <Box sx={{ paddingTop: '30px' }}></Box>
+//         <Typography fontWeight={700} color={'#0070F3'} marginBottom={2} noWrap>
+//           Startups
+//         </Typography>
+//         {['Marketplaces', 'Social networks'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               fontFamily: ('Nunito', 'Inter'),
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//       </Grid>
+//       <Grid item xs={4}>
+//         <Typography fontWeight={700} color={'#0070F3'} marginBottom={2} noWrap>
+//           Digital transformation
+//         </Typography>
+//         {['RPA, automation, bots', 'CRM, ERM, HRM systems'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               fontFamily: ('Nunito', 'Inter'),
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//         <Box sx={{ paddingTop: '30px' }}></Box>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Competence
+//         </Typography>
+//         {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               fontFamily: ('Nunito', 'Inter'),
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//       </Grid>
+//     </Grid>
+//   );
+// };
 
-      <Grid item xs={4}>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Web Development
-        </Typography>
-        {[
-          'Web app development',
-          'DevOps services',
-          'legacy soft modernization',
-        ].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              fontFamily: ('Nunito', 'Inter'),
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-        {/* <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
-          Startups
-        </Typography>
-        {['Marketplaces', 'Social networks'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
-          >
-            {i}
-          </Link>
-        ))} */}
-      </Grid>
-      <Grid item xs={4}>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          For Startups
-        </Typography>
-        {['Discovery phase', 'MVP development', 'CTO as a service'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              fontFamily: ('Nunito', 'Inter'),
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-        {/* <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
-          Competence
-        </Typography>
-        {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            underline={'hover'}
-            color={'text.primary'}
-            sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
-          >
-            {i}
-          </Link>
-        ))} */}
-      </Grid>
-    </Grid>
-  );
-};
+// const Services = () => {
+//   return (
+//     <Grid container spacing={10} sx={{ width: '900px' }}>
+//       <Grid item xs={4}>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Mobile Development
+//         </Typography>
+//         {[
+//           'ios app development',
+//           'Android app development ',
+//           'Flutter app development',
+//         ].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               fontFamily: ('Nunito', 'Inter'),
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//       </Grid>
+
+//       <Grid item xs={4}>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Web Development
+//         </Typography>
+//         {[
+//           'Web app development',
+//           'DevOps services',
+//           'legacy soft modernization',
+//         ].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               fontFamily: ('Nunito', 'Inter'),
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//         {/* <Box sx={{ paddingTop: '30px' }}></Box>
+//         <Typography fontWeight={700} marginBottom={2} noWrap>
+//           Startups
+//         </Typography>
+//         {['Marketplaces', 'Social networks'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+//           >
+//             {i}
+//           </Link>
+//         ))} */}
+//       </Grid>
+//       <Grid item xs={4}>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           For Startups
+//         </Typography>
+//         {['Discovery phase', 'MVP development', 'CTO as a service'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               fontFamily: ('Nunito', 'Inter'),
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//         {/* <Box sx={{ paddingTop: '30px' }}></Box>
+//         <Typography fontWeight={700} marginBottom={2} noWrap>
+//           Competence
+//         </Typography>
+//         {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             underline={'hover'}
+//             color={'text.primary'}
+//             sx={{ display: 'block', marginTop: 1, whiteSpace: 'nowrap' }}
+//           >
+//             {i}
+//           </Link>
+//         ))} */}
+//       </Grid>
+//     </Grid>
+//   );
+// };
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -305,14 +306,14 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             link={'/'}
           />
         </Box>
-        <Box marginLeft={4}>
+        {/* <Box marginLeft={4}>
           <NavItem
             title={'Pricing'}
             id={'Pricing-pages'}
             colorInvert={colorInvert}
             link={'/pricing'}
           />
-        </Box>
+        </Box> */}
 
         {/* <Box marginLeft={4}> */}
         {/* <Stack

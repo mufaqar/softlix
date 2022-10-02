@@ -243,7 +243,7 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </Box>
-              <Box marginTop={1} marginRight={2}>
+              {/* <Box marginTop={1} marginRight={2}>
                 <Link
                   underline="hover"
                   component="a"
@@ -253,7 +253,7 @@ const Footer = () => {
                 >
                   Pricing
                 </Link>
-              </Box>
+              </Box> */}
               <Box marginTop={1} marginRight={2}>
                 <Link
                   underline="hover"

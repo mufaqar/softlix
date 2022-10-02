@@ -13,324 +13,324 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import Grid from '@mui/material/Grid';
 
-const Industries = () => {
-  return (
-    <Grid container spacing={4} sx={{ width: '300px' }}>
-      <Grid item xs={12}>
-        <Typography fontWeight={700} marginBottom={2} color={'#0070F3'} noWrap>
-          Industries
-        </Typography>
-        {[
-          'HealthTech and MedTech',
-          'Retail',
-          'FinTech',
-          'Logistics',
-          'Travel',
-          'Education',
-        ].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+// const Industries = () => {
+//   return (
+//     <Grid container spacing={4} sx={{ width: '300px' }}>
+//       <Grid item xs={12}>
+//         <Typography fontWeight={700} marginBottom={2} color={'#0070F3'} noWrap>
+//           Industries
+//         </Typography>
+//         {[
+//           'HealthTech and MedTech',
+//           'Retail',
+//           'FinTech',
+//           'Logistics',
+//           'Travel',
+//           'Education',
+//         ].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-      </Grid>
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//       </Grid>
 
-      <Grid item xs={12}>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Media
-        </Typography>
-        {['Video Streaming', 'Audio and video chat'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//       <Grid item xs={12}>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Media
+//         </Typography>
+//         {['Video Streaming', 'Audio and video chat'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-        <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Startups
-        </Typography>
-        {['Marketplaces', 'Social networks'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//         <Box sx={{ paddingTop: '30px' }}></Box>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Startups
+//         </Typography>
+//         {['Marketplaces', 'Social networks'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-      </Grid>
-      <Grid item xs={12}>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Digital transformation
-        </Typography>
-        {['RPA, automation, bots', 'CRM, ERM, HRM systems'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//       </Grid>
+//       <Grid item xs={12}>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Digital transformation
+//         </Typography>
+//         {['RPA, automation, bots', 'CRM, ERM, HRM systems'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-        <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Competence
-        </Typography>
-        {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//         <Box sx={{ paddingTop: '30px' }}></Box>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Competence
+//         </Typography>
+//         {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-      </Grid>
-    </Grid>
-  );
-};
-const Services = () => {
-  return (
-    <Grid container spacing={4} sx={{ width: '300px' }}>
-      <Grid item xs={12}>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Mobile Development
-        </Typography>
-        {[
-          'ios app development',
-          'Android app development ',
-          'Flutter app development',
-        ].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//       </Grid>
+//     </Grid>
+//   );
+// };
+// const Services = () => {
+//   return (
+//     <Grid container spacing={4} sx={{ width: '300px' }}>
+//       <Grid item xs={12}>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Mobile Development
+//         </Typography>
+//         {[
+//           'ios app development',
+//           'Android app development ',
+//           'Flutter app development',
+//         ].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-      </Grid>
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//       </Grid>
 
-      <Grid item xs={12}>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          Web Development
-        </Typography>
-        {[
-          'Web app development',
-          'DevOps services',
-          'legacy soft modernization',
-        ].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//       <Grid item xs={12}>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           Web Development
+//         </Typography>
+//         {[
+//           'Web app development',
+//           'DevOps services',
+//           'legacy soft modernization',
+//         ].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-        {/* <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
-          Startups
-        </Typography>
-        {['Marketplaces', 'Social networks'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//         {/* <Box sx={{ paddingTop: '30px' }}></Box>
+//         <Typography fontWeight={700} marginBottom={2} noWrap>
+//           Startups
+//         </Typography>
+//         {['Marketplaces', 'Social networks'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
 
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))} */}
-      </Grid>
-      <Grid item xs={12}>
-        <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
-          For Startups
-        </Typography>
-        {['Discovery phase', 'MVP development', 'CTO as a service'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              cursor: 'pointer',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))} */}
+//       </Grid>
+//       <Grid item xs={12}>
+//         <Typography color={'#0070F3'} fontWeight={700} marginBottom={2} noWrap>
+//           For Startups
+//         </Typography>
+//         {['Discovery phase', 'MVP development', 'CTO as a service'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               cursor: 'pointer',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))}
-        {/* <Box sx={{ paddingTop: '30px' }}></Box>
-        <Typography fontWeight={700} marginBottom={2} noWrap>
-          Competence
-        </Typography>
-        {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
-          <Link
-            key={i}
-            href={'#'}
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))}
+//         {/* <Box sx={{ paddingTop: '30px' }}></Box>
+//         <Typography fontWeight={700} marginBottom={2} noWrap>
+//           Competence
+//         </Typography>
+//         {['AR/VR', 'Data science', 'Internet of things'].map((i) => (
+//           <Link
+//             key={i}
+//             href={'#'}
 
-            color={'text.primary'}
-            underline={'none'}
-            sx={{
-              display: 'block',
-              marginTop: 1,
-              whiteSpace: 'nowrap',
-              '&:hover': {
-                color: '#1983FF',
-              },
+//             color={'text.primary'}
+//             underline={'none'}
+//             sx={{
+//               display: 'block',
+//               marginTop: 1,
+//               whiteSpace: 'nowrap',
+//               '&:hover': {
+//                 color: '#1983FF',
+//               },
 
-              ['@media (min-width:300px) and (max-width:600px)']: {
-                '&:hover': {
-                  color: '#1983FF',
-                },
-              },
-            }}
-          >
-            {i}
-          </Link>
-        ))} */}
-      </Grid>
-    </Grid>
-  );
-};
+//               ['@media (min-width:300px) and (max-width:600px)']: {
+//                 '&:hover': {
+//                   color: '#1983FF',
+//                 },
+//               },
+//             }}
+//           >
+//             {i}
+//           </Link>
+//         ))} */}
+//       </Grid>
+//     </Grid>
+//   );
+// };
 const SidebarNav = ({ pages }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
@@ -390,9 +390,9 @@ const SidebarNav = ({ pages }) => {
         <Box>
           <NavItem title={'Home'} items={landingPages} link={'/'} />
         </Box>
-        <Box>
+        {/* <Box>
           <NavItem title={'Pricing'} items={companyPages} link={'/pricing'} />
-        </Box>
+        </Box> */}
         {/* <Box sx={{ padding: '7px' }}></Box> */}
         {/* <Box> */}
         {/* <Stack

@@ -133,7 +133,7 @@ const IndexView = () => {
           <WithHighlightedCard />
         </Container>
 
-        <Pricing />
+        {/* <Pricing /> */}
         <Container>
           {' '}
           <Ebook />{' '}
