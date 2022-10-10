@@ -111,7 +111,7 @@ const Hero = () => {
                   fontWeight: 700,
                   fontSize: '3.25rem!important',
                   ['@media (min-width:300px) and (max-width:600px)']: {
-                    fontSize: '2.4rem!important',
+                    fontSize: '2.3rem!important',
                   },
                 }}
               >
@@ -197,7 +197,7 @@ const Hero = () => {
                 >
                   Get Quotation
                 </Button>
-                <Box
+                {/* <Box
                   marginTop={{ xs: 2, sm: 0 }}
                   marginLeft={{ sm: 2 }}
                   width={{ xs: '100%', md: 'auto' }}
@@ -231,7 +231,67 @@ const Hero = () => {
                   >
                     View Pricing
                   </Button>
-                </Box>
+                </Box> */}
+              </Box>
+            </Grid>
+            <Grid sx={{ marginTop: '30px' }}>
+              <Box
+                sx={{
+                  width: '100%',
+                  // height: '250px',
+                  // margin: '0 auto',
+                  textAlign: 'center',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                  ['@media (min-width:300px) and (max-width:1000px)']: {
+                    // eslint-disable-line no-useless-computed-key
+                    marginTop: '0px',
+                  },
+                }}
+              >
+                <h5
+                  style={{
+                    margin: '0',
+                    color: '#677788',
+                    fontSize: '20px',
+                    fontWeight: '400',
+                  }}
+                >
+                  Get in Touch Directly with our Expert for personalised
+                  Quotation & Free Consultation.
+                </h5>
+                <h3
+                  style={{
+                    letterSpacing: '2px',
+                    margin: '2px',
+                    color: '#0000d3',
+                    fontSize: '18px',
+                  }}
+                >
+                  +919818565561
+                </h3>
+                <h3
+                  style={{
+                    margin: '0',
+                    color: '#677788',
+                    fontSize: '18px',
+                    fontWeight: '400',
+                  }}
+                >
+                  Monday-Sunday
+                </h3>
+                <h3
+                  style={{
+                    margin: '2px',
+                    color: '#677788',
+                    fontSize: '18px',
+                    fontWeight: '400',
+                  }}
+                >
+                  9 AM- 9 PM
+                </h3>
               </Box>
             </Grid>
             <Grid xs={12} md={6}>

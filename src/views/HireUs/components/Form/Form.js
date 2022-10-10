@@ -13,14 +13,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import axios from 'axios';
-import { countries } from '../../../../utils/country';
+// import { countries } from '../../../../utils/country';
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import LockIcon from '@mui/icons-material/Lock';
 import Link from 'next/link';
-import AttachFileIcon from '@mui/icons-material/AttachFile';
+// import AttachFileIcon from '@mui/icons-material/AttachFile';
 import Fab from '@mui/material/Fab';
-import FileUpload from '../FileUpload.js/FileUpload';
+// import FileUpload from '../FileUpload.js/FileUpload';
 
 const validationSchema = yup.object({
   firstName: yup
@@ -206,7 +206,7 @@ const Form = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please enter your phone number
+              Please enter your phone number *
             </Typography>
             <TextField
               label="Phone number"
@@ -332,7 +332,7 @@ const Form = () => {
           {/* <FileUpload /> */}
           <Grid item xs={12}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please tell us about your project (optional)
+              Please tell us about your project *
             </Typography>
             <TextField
               label="Message"

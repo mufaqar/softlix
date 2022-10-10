@@ -13,11 +13,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import axios from 'axios';
-import { countries } from '../../../../utils/country';
+// import { countries } from '../../../../utils/country';
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import LockIcon from '@mui/icons-material/Lock';
 import Link from 'next/link';
+// import AttachFileIcon from '@mui/icons-material/AttachFile';
+import Fab from '@mui/material/Fab';
+// import FileUpload from '../FileUpload.js/FileUpload';
 
 const validationSchema = yup.object({
   firstName: yup
@@ -26,12 +29,6 @@ const validationSchema = yup.object({
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your first name'),
-  lastName: yup
-    .string()
-    .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your last name'),
   email: yup
     .string()
     .trim()
@@ -44,8 +41,9 @@ const validationSchema = yup.object({
       /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)$/,
       'Please enter a valid phone number.',
     ),
-  country: yup.string().required('Please specify your country'),
+  // country: yup.string().required('Please specify your country'),
   ptype: yup.string().required('Please specify your project Project Type'),
+  company: yup.string().required('Please specify your company'),
   message: yup
     .string()
     .trim()
@@ -57,23 +55,27 @@ const Form = () => {
   const form = useRef();
   const theme = useTheme();
   const [firstName, setFname] = useState('');
-  const [lastName, setLname] = useState('');
+  // const [lastName, setLname] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  // const [files, setFiles] = useState([]);
   const [success, setSuccess] = useState('');
-  const [country, setcountry] = useState('');
+  // const [country, setcountry] = useState('');
   const [ptype, setptype] = useState('');
+  const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
   const [btnLabel, setBtnLabel] = useState('Submit');
   const [submitted, setSubmitted] = useState(false);
 
   const initialValues = {
     firstName: '',
-    lastName: '',
+    // lastName: '',
     email: '',
     phone: '',
-    country: '',
+    // country: '',
+    // files: [],
     ptype: '',
+    company: '',
     message: '',
   };
 
@@ -101,7 +103,7 @@ const Form = () => {
   };
 
   const callSheets = async (data) => {
-    const response = await fetch('/api/sheets', {
+    const response = await fetch('/api/sheets/hireus', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -115,12 +117,19 @@ const Form = () => {
     setBtnLabel('Sending...');
     let data = {};
     data.firstName = formik.values.firstName;
-    data.lastName = formik.values.lastName;
+    // data.lastName = formik.values.lastName;
     data.email = formik.values.email;
     data.phone = formik.values.phone;
-    data.budget = formik.values.budget;
+    // data.files = formik.values.files;
+    data.company = formik.values.company;
+    // data.country = formik.values.country;
     data.ptype = formik.values.ptype;
     data.message = formik.values.message;
+
+    // values.files.forEach((file, index) => {
+    //   data.append(`file$`, values.files[index]);
+    // });
+    console.log(values);
 
     sendEmail(data);
     console.log(data);
@@ -137,7 +146,7 @@ const Form = () => {
     onSubmit,
   });
 
-  const { countries1 } = countries;
+  // const { countries1 } = countries;
   // console.log(countries);
   return (
     <Box>
@@ -165,7 +174,7 @@ const Form = () => {
               helperText={formik.touched.firstName && formik.errors.firstName}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Please tell us your name *
             </Typography>
@@ -179,7 +188,7 @@ const Form = () => {
               error={formik.touched.lastName && Boolean(formik.errors.lastName)}
               helperText={formik.touched.lastName && formik.errors.lastName}
             />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} sm={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Please enter your email address *
@@ -197,7 +206,7 @@ const Form = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please enter your phone number (optional)
+              Please enter your phone number *
             </Typography>
             <TextField
               label="Phone number"
@@ -249,39 +258,8 @@ const Form = () => {
               ))}
             </TextField>
           </Grid>
+          {/* countries */}
           {/* <Grid item xs={6}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Project budget
-            </Typography>
-            <TextField
-              select
-              label="Select Project Budget (in Lakh)"
-              variant="outlined"
-              name={'budget'}
-              fullWidth
-              value={formik.values.budget}
-              onChange={formik.handleChange}
-              error={formik.touched.budget && Boolean(formik.errors.budget)}
-              helperText={formik.touched.budget && formik.errors.budget}
-            >
-              {[
-                'Not Sure',
-                '50000 to 1 Lac',
-                '1 Lac to 2 Lacs',
-                '2 Lacs to 5 Lacs',
-                '5 Lacs to 10 Lacs',
-                '10 Lacs to 20 Lacs',
-                '20 Lacs to 30 Lacs',
-                '30 Lacs to 50 Lacs',
-                '50 Lacs Above',
-              ].map((option) => (
-                <MenuItem key={option} value={option}>
-                  {option}
-                </MenuItem>
-              ))}
-            </TextField>
-          </Grid> */}
-          <Grid item xs={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Country
             </Typography>
@@ -310,10 +288,51 @@ const Form = () => {
                 </MenuItem>
               ))}
             </TextField>
+          </Grid> */}
+          <Grid item md={12} sm={6}>
+            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
+              Company
+            </Typography>
+            <TextField
+              label="Company"
+              variant="outlined"
+              name={'company'}
+              fullWidth
+              value={formik.values.company}
+              onChange={formik.handleChange}
+              error={formik.touched.company && Boolean(formik.errors.company)}
+              helperText={formik.touched.company && formik.errors.company}
+            />
           </Grid>
+          {/* //file upload */}
+          {/* <Grid item xs={12}>
+            <label style={{ cursor: 'pointer' }}>
+              <input
+                style={{ display: 'none' }}
+                id="files"
+                name="files"
+                type="file"
+                onChange={(event) => {
+                  setFieldValue('file', event.currentTarget.files[0]);
+                }}
+                // multiple
+              />
+              <Fab
+                color="primary"
+                size="small"
+                component="span"
+                aria-label="add"
+                sx={{ marginRight: '10px', cursor: 'pointer' }}
+              >
+                <AttachFileIcon />
+              </Fab>
+              Send an Attachment
+            </label>
+          </Grid> */}
+          {/* <FileUpload /> */}
           <Grid item xs={12}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please tell us about your project (optional)
+              Please tell us about your project *
             </Typography>
             <TextField
               label="Message"
