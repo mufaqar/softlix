@@ -238,8 +238,7 @@ const Hero = () => {
               <Box
                 sx={{
                   width: '100%',
-                  // height: '250px',
-                  // margin: '0 auto',
+
                   textAlign: 'center',
                   display: 'flex',
                   alignItems: 'center',
