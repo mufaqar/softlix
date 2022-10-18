@@ -197,7 +197,7 @@ const Hero = () => {
                 >
                   Get Quotation
                 </Button>
-                {/* <Box
+                <Box
                   marginTop={{ xs: 2, sm: 0 }}
                   marginLeft={{ sm: 2 }}
                   width={{ xs: '100%', md: 'auto' }}
@@ -215,7 +215,7 @@ const Hero = () => {
                       fontFamily: 'Inter',
                       width: '200px',
                       borderRadius: '7px',
-                      color: '#696969',
+                      color: '#0000d3',
                       boxShadow: '0 4px 14px 0 rgb(0 0 0 / 10%)',
                       '&:hover': {
                         backgroundColor: 'rgba(255,255,255,.9)',
@@ -229,70 +229,21 @@ const Hero = () => {
                       },
                     }}
                   >
-                    View Pricing
+                    <svg
+                      width="20"
+                      height="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                    </svg>
+                    &nbsp; +919818565561
                   </Button>
-                </Box> */}
+                </Box>
               </Box>
             </Grid>
-            <Grid sx={{ marginTop: '30px' }}>
-              <Box
-                sx={{
-                  width: '100%',
 
-                  textAlign: 'center',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexDirection: 'column',
-                  ['@media (min-width:300px) and (max-width:1000px)']: {
-                    // eslint-disable-line no-useless-computed-key
-                    marginTop: '0px',
-                  },
-                }}
-              >
-                <h5
-                  style={{
-                    margin: '0',
-                    color: '#677788',
-                    fontSize: '20px',
-                    fontWeight: '400',
-                  }}
-                >
-                  Get in Touch Directly with our Expert for personalised
-                  Quotation & Free Consultation.
-                </h5>
-                <h3
-                  style={{
-                    letterSpacing: '2px',
-                    margin: '2px',
-                    color: '#0000d3',
-                    fontSize: '18px',
-                  }}
-                >
-                  +919818565561
-                </h3>
-                <h3
-                  style={{
-                    margin: '0',
-                    color: '#677788',
-                    fontSize: '18px',
-                    fontWeight: '400',
-                  }}
-                >
-                  Monday-Sunday
-                </h3>
-                <h3
-                  style={{
-                    margin: '2px',
-                    color: '#677788',
-                    fontSize: '18px',
-                    fontWeight: '400',
-                  }}
-                >
-                  9 AM- 9 PM
-                </h3>
-              </Box>
-            </Grid>
             <Grid xs={12} md={6}>
               <Box
                 component={LazyLoadImage}
@@ -309,7 +260,7 @@ const Hero = () => {
                     theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
                   ['@media (min-width:300px) and (max-width:1000px)']: {
                     // eslint-disable-line no-useless-computed-key
-                    marginTop: '0px',
+                    marginTop: '10px',
                   },
                 }}
               ></Box>
