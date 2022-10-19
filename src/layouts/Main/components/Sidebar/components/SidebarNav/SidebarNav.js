@@ -569,7 +569,7 @@ const SidebarNav = ({ pages }) => {
             size={'large'}
             // variant="outlined"
             color="primary"
-            href={'/pricing'}
+            href={'/portfolio'}
             fullWidth
             component="a"
             sx={{
@@ -578,7 +578,7 @@ const SidebarNav = ({ pages }) => {
               fontFamily: 'Inter',
               width: '200px',
               borderRadius: '7px',
-              color: '#696969',
+              color: '#0000d3',
               boxShadow: '0 4px 14px 0 rgb(0 0 0 / 10%)',
               '&:hover': {
                 backgroundColor: 'rgba(255,255,255,.9)',
@@ -594,7 +594,7 @@ const SidebarNav = ({ pages }) => {
             // href="/portfolio"
             // sx={{ color: '#1983FF' }}
           >
-            View Pricing
+            View Portfolio
           </Button>
         </Box>
         <Box marginTop={1}>
