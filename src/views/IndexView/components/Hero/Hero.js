@@ -204,7 +204,9 @@ const Hero = () => {
                 >
                   <Button
                     component={'a'}
-                    href={'/pricing'}
+                    // href={'/pricing'}
+                    target="blank"
+                    href="tel:+919818565561"
                     // variant=" "
                     // color="primary"
                     size="large"
