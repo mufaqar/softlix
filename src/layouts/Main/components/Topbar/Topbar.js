@@ -502,9 +502,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
                 fontSize: '12px',
               },
               // ['@media (min-width:300px) and (max-width:600px)']: {
-              //   // eslint-disable-line no-useless-computed-key
-              //   width: '20vw',
-
+              //   // eslint-disable-line no-useless-computed-ke
               //   fontSize: '12px',
               // },
             }}
