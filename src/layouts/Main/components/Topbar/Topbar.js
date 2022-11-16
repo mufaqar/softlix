@@ -456,7 +456,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             title={'Portfolio'}
             id={'Portfolio-pages'}
             colorInvert={colorInvert}
-            link={'#'}
+            link={'/portfolio'}
           />
         </Box>
         <Box marginLeft={4}>

@@ -1,8 +1,8 @@
 import React from 'react';
-import AgencyView  from 'views/Agency';
+import PortfolioPage from 'views/PortfolioPage';
 
 const AgencyPage = () => {
-  return <AgencyView />;
+  return <PortfolioPage />;
 };
 
 export default AgencyPage;
