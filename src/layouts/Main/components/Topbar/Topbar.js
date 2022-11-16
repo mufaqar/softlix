@@ -504,7 +504,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
               // ['@media (min-width:300px) and (max-width:600px)']: {
               //   // eslint-disable-line no-useless-computed-key
               //   width: '20vw',
-              //   height: '50px',
+
               //   fontSize: '12px',
               // },
             }}
