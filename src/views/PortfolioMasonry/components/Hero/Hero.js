@@ -50,7 +50,7 @@ const Hero = () => {
                 color: theme.palette.common.white,
               }}
             >
-              Our work
+              Case Studies
             </Typography>
           </Box>
           <Box>

@@ -459,6 +459,14 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             link={'/portfolio'}
           />
         </Box>
+        <Box marginLeft={4} sx={{ whiteSpace: 'nowrap' }}>
+          <NavItem
+            title={'Case Studies'}
+            id={'Case-Studies'}
+            colorInvert={colorInvert}
+            link={'/case-studies'}
+          />
+        </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Blog'}
