@@ -1,7 +1,8 @@
 import React from 'react';
-import EBook from '../views/EBook/EBook';
+import DownloadBook from 'views/DownloadBook';
 
-const EBookPage = () => {
-  return <EBook />;
+const DownloadBookPage = () => {
+  return <DownloadBook />;
 };
-export default EBookPage;
+
+export default DownloadBookPage;

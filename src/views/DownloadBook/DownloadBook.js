@@ -2,12 +2,15 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
+
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Form, Partners } from './components';
+import { Headline, Form, Partners } from './components';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-const EBook = () => {
+const HireUs = () => {
   const theme = useTheme();
 
   return (
@@ -22,39 +25,7 @@ const EBook = () => {
           }}
         >
           <Container>
-            <Box>
-              <Typography
-                sx={{
-                  textTransform: 'uppercase',
-                  fontWeight: 'medium',
-                }}
-                gutterBottom
-                color={'textSecondary'}
-                align={'center'}
-              >
-                Free
-              </Typography>
-              <Box marginBottom={2}>
-                <Typography
-                  variant="h2"
-                  align={'center'}
-                  sx={{
-                    fontWeight: 700,
-                  }}
-                >
-                  Download E-book
-                </Typography>
-              </Box>
-              <Box>
-                <Typography
-                  variant="h6"
-                  align={'center'}
-                  color={'textSecondary'}
-                >
-                  Fill the form and download free copy of book
-                </Typography>
-              </Box>
-            </Box>
+            <Headline />
           </Container>
         </Box>
         <Container maxWidth={1300} paddingBottom={'0 !important'}>
@@ -90,7 +61,7 @@ const EBook = () => {
                   },
                 }}
               >
-                Download E-book
+                We delivering customer success
               </Typography>
               <Typography
                 fontWeight={500}
@@ -122,7 +93,9 @@ const EBook = () => {
                 >
                   enterprise software development{' '}
                 </p> */}
-                Download E-book for App DesignTrends in 2022
+                Get a complete IT solution for your business, including Web
+                Design/ Development , Android/ IOS App Development & Digital
+                Marketing,{' '}
                 <p
                   style={{
                     color: '#333',
@@ -131,9 +104,58 @@ const EBook = () => {
                     display: 'inline',
                   }}
                 >
-                  It's the ebook your customers want you to read
-                </p>
+                  successfully delivered 1000+ Projects
+                </p>{' '}
+                worldwide.
               </Typography>
+              <Box
+                sx={{
+                  fontSize: '20px',
+                  ['@media (min-width:390px) and (max-width:600px)']: {
+                    marginTop: '35px',
+                    fontSize: '15px',
+                  },
+                }}
+              >
+                {[
+                  'Excellent team',
+                  'Effective delivery',
+                  'Quality efforts',
+                  'Genuineness and commitment',
+                  'Up to 50% Cost saving',
+                  'Source Code Authorization',
+                  'Non-Disclosure Agreement',
+                  'No Lock-In contract',
+                  'Agile & DevOps Implementation',
+                  'Clean Code',
+                  'Fast and Easy On-boarding',
+                  'Total Control Over the code',
+                ].map((item, i) => (
+                  <p key={i}>
+                    {' '}
+                    <CheckCircleIcon
+                      fontSize={'medium'}
+                      backgroundColor={'#2c4bff'}
+                      style={{
+                        marginRight: '10px',
+                        color: '#2c4bff',
+                      }}
+                    />
+                    <p
+                      style={{
+                        display: 'inline-block',
+                        margin: '0px',
+                      }}
+                    >
+                      {item}
+                    </p>
+                  </p>
+                ))}
+                <p style={{ color: '#333', fontSize: '14px' }}>
+                  This site is protected by reCAPTCHA and the google Privacy
+                  Policy and Terms of Service apply
+                </p>
+              </Box>
             </Box>
             <Form />
           </Box>
@@ -149,4 +171,4 @@ const EBook = () => {
   );
 };
 
-export default EBook;
+export default HireUs;
