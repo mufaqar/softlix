@@ -1,9 +1,7 @@
-//import EBook from 'views/EBook';
+import React from 'react';
+import EBook from 'views/EBook';
 
-const EbookPage = () => {
-  //return "<EBook />";
-
-  return 'Hello Ebook Updated';
+const EBookPage = () => {
+  return <EBook />;
 };
-
-export default EbookPage;
+export default EBookPage;
