@@ -13,7 +13,7 @@ import Container from 'components/Container';
 const mock = [
   {
     label: 'Phone',
-    value: '+9198185 65561',
+    value: '+1 929-460-0564',
     icon: (
       <svg
         width={20}

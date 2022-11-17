@@ -206,7 +206,7 @@ const Hero = () => {
                     component={'a'}
                     // href={'/pricing'}
                     target="blank"
-                    href="tel:+919818565561"
+                    href="tel:+1 929-460-0564"
                     // variant=" "
                     // color="primary"
                     size="large"

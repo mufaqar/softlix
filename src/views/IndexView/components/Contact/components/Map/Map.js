@@ -58,10 +58,10 @@ const Map = () => {
           </Typography>
           <Box
             component="a"
-            href="tel:919818565561"
+            href="tel:+1 929-460-0564"
             sx={{ color: '#2c4bff', textDecoration: 'none' }}
           >
-            <Typography variant={'subtitle1'}>+9198185 65561</Typography>
+            <Typography variant={'subtitle1'}>+1 929-460-0564</Typography>
           </Box>
         </Grid>
         <Grid item xs={12} sm={6}>

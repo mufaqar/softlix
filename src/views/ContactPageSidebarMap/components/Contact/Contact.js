@@ -11,8 +11,8 @@ import Link from '@mui/material/Link';
 const mock = [
   {
     label: 'Phone',
-    value: '+9198185 65561',
-    link: 'tel:+9198185 65561',
+    value: '+1 929-460-0564',
+    link: 'tel:+1 929-460-0564',
     icon: (
       <svg
         width={20}
@@ -44,7 +44,7 @@ const mock = [
   },
   {
     label: 'Address',
-    value: 'Sector 63, Noida, UP, India, 201309',
+    value: '1401 21ST ST STE R SACRAMENTO, California, United States, 95811',
     link: '',
     icon: (
       <svg
