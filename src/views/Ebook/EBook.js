@@ -2,13 +2,10 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-
-import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Headline, Form, Partners } from './components';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Form, Partners } from './components';
 
 const EBook = () => {
   const theme = useTheme();
