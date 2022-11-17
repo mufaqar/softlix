@@ -7,8 +7,15 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Link from 'next/link';
 
-const NavItem = ({ title, id, items=false, colorInvert = false,link=false }) => {
+const NavItem = ({
+  title,
+  id,
+  items = false,
+  colorInvert = false,
+  link = false,
+}) => {
   const theme = useTheme();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -42,22 +49,22 @@ const NavItem = ({ title, id, items=false, colorInvert = false,link=false }) => 
         onClick={(e) => handleClick(e, id)}
       >
         <Typography
-          fontWeight={openedPopoverId === id  ? 700 : 400}
+          fontWeight={openedPopoverId === id ? 700 : 400}
           color={linkColor}
         >
-         <Button
-                component={'a'}
-                href={link}
- sx={{
-            marginLeft: theme.spacing(1 / 4),
-            width: 16,
-            height: 16,
-            color: linkColor,
-        
-        }}
-                >
-          {title}
-          </Button>
+          <Link href={link}>
+            <Button
+              component={'a'}
+              sx={{
+                marginLeft: theme.spacing(1 / 4),
+                width: 16,
+                height: 16,
+                color: linkColor,
+              }}
+            >
+              {title}
+            </Button>
+          </Link>
         </Typography>
         {/*<ExpandMoreIcon
           sx={{

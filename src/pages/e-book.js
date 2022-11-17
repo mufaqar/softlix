@@ -1,8 +1,8 @@
 import React from 'react';
-//import EBook from 'views/EBook';
+import EBook from 'views/EBook';
 
 const EbookPage = () => {
-  return 'Hello EBook';
+  //return "<EBook />";
 };
 
 export default EbookPage;

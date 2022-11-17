@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-
+import Link from 'next/link';
 import { NavItem } from './components';
 
 // const Industries = () => {
@@ -484,42 +483,43 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           />
         </Box>
         <Box marginLeft={4}>
-          <Button
-            component={'a'}
-            // variant="contained"
-            color="primary"
-            sx={{
-              backgroundColor: ' #0000d3',
-              width: '140px',
-              borderRadius: '7px',
-              fontFamily: 'Inter',
-              // fontSize: '16px',
-              fontSize: '1rem',
-              padding: '0.25rem .8rem',
-              color: 'white',
-              border: '1px solid  #0000d3',
-              fontWeight: 500,
-              '&:hover': {
-                backgroundColor: '#0000a9',
-              },
+          <Link href={'/hire-us'}>
+            <Button
+              component={'a'}
+              // variant="contained"
+              color="primary"
+              sx={{
+                backgroundColor: ' #0000d3',
+                width: '140px',
+                borderRadius: '7px',
+                fontFamily: 'Inter',
+                // fontSize: '16px',
+                fontSize: '1rem',
+                padding: '0.25rem .8rem',
+                color: 'white',
+                border: '1px solid  #0000d3',
+                fontWeight: 500,
+                '&:hover': {
+                  backgroundColor: '#0000a9',
+                },
 
-              ['@media (min-width:391px) and (max-width:600px)']: {
-                // eslint-disable-line no-useless-computed-key
-                width: '20vw',
-                height: '50px',
-                fontSize: '12px',
-              },
-              // ['@media (min-width:300px) and (max-width:600px)']: {
-              //   // eslint-disable-line no-useless-computed-ke
-              //   fontSize: '12px',
-              // },
-            }}
-            size="small"
-            // fullWidth={isMd ? false : true}
-            href={'/hire-us'}
-          >
-            Lets Talk
-          </Button>
+                ['@media (min-width:391px) and (max-width:600px)']: {
+                  // eslint-disable-line no-useless-computed-key
+                  width: '20vw',
+                  height: '50px',
+                  fontSize: '12px',
+                },
+                // ['@media (min-width:300px) and (max-width:600px)']: {
+                //   // eslint-disable-line no-useless-computed-ke
+                //   fontSize: '12px',
+                // },
+              }}
+              size="small"
+              // fullWidth={isMd ? false : true}
+            >
+              Lets Talk
+            </Button>
+          </Link>
         </Box>
       </Box>
 
