@@ -350,7 +350,7 @@ const Contact = () => {
                     marginHeight={0}
                     marginWidth={0}
                     scrolling="no"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.677922226045!2d77.38655839999998!3d28.6246822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff135b3084b%3A0x19ccb4e95c69306d!2sSector%2063%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1651040308281!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.356376331496!2d-121.48248508439067!3d38.57164037368421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ad0dd31655555%3A0x4400fdc2363ca6c4!2s1401%2021st%20Street%20Suite%20R%2C%20Sacramento%2C%20CA%2095811%2C%20USA!5e0!3m2!1sen!2s!4v1668687879587!5m2!1sen!2s"
                     style={{
                       minHeight: 300,
                       filter:

@@ -44,7 +44,8 @@ const mock = [
   },
   {
     label: 'Address',
-    value: 'Sector 63, Noida, UP, India, 201309',
+    value: '1401 21ST ST STE R
+SACRAMENTO, California, United States, 95811',
     icon: (
       <svg
         width={20}
