@@ -3,7 +3,7 @@
 const EbookPage = () => {
   //return "<EBook />";
 
-  return 'Hello Ebook';
+  return 'Hello Ebook Updated';
 };
 
 export default EbookPage;
