@@ -278,24 +278,25 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       alignItems={'center'}
       width={1}
     >
-      <Box
-        display={'flex'}
-        component="a"
-        href="/"
-        title="Softlix"
-        width={{ xs: 160, md: 170 }}
-      >
+      <Link href="/">
         <Box
-          component={'img'}
-          src={
-            mode === 'light' && !colorInvert
-              ? '/images/IMG_3570.png'
-              : '/images/IMG_3569.png'
-          }
-          height={1}
-          width={1}
-        />
-      </Box>
+          display={'flex'}
+          component="a"
+          title="Softlix"
+          width={{ xs: 160, md: 170 }}
+        >
+          <Box
+            component={'img'}
+            src={
+              mode === 'light' && !colorInvert
+                ? '/images/IMG_3570.png'
+                : '/images/IMG_3569.png'
+            }
+            height={1}
+            width={1}
+          />
+        </Box>
+      </Link>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
           <NavItem
