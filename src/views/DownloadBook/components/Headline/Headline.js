@@ -14,7 +14,7 @@ const Headline = () => {
         color={'textSecondary'}
         align={'center'}
       >
-        Hire us
+        Free
       </Typography>
       <Box marginBottom={2}>
         <Typography
@@ -24,7 +24,7 @@ const Headline = () => {
             fontWeight: 700,
           }}
         >
-          Got a project for us?
+          Download E Book
         </Typography>
       </Box>
       <Box>
