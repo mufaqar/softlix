@@ -118,7 +118,7 @@ const Ebook = () => {
                   }}
                   size="small"
                   // fullWidth={isMd ? false : true}
-                  href={'https://ebook.softlix.tech/trends'}
+                  href={'/e-book'}
                 >
                   Download Ebook
                 </Button>
