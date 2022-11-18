@@ -7,7 +7,7 @@ import Avatar from '@mui/material/Avatar';
 
 import Container from 'components/Container';
 
-const Hero = () => {
+const Hero = ({ title }) => {
   useEffect(() => {
     const jarallaxInit = async () => {
       const jarallaxElems = document.querySelectorAll('.jarallax');
@@ -80,7 +80,7 @@ const Hero = () => {
               marginBottom: 2,
             }}
           >
-            5 Best Practices for Outsourcing IT Projects
+            {title}
           </Typography>
         </Box>
       </Container>

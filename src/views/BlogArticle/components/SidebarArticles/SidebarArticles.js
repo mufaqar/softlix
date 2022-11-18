@@ -11,7 +11,8 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 const mock = [
   {
-    image: '/images/outsourcing-in-India-is-it-the-right-decision-for-your-business.png',
+    image:
+      '/images/outsourcing-in-India-is-it-the-right-decision-for-your-business.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     title: '5 Best Practices for Outsourcing IT Projects',
@@ -65,7 +66,7 @@ const mock = [
     },
     date: '03 May',
   },
-    {
+  {
     image: '/images/how-to-choose-right-dev.jpeg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -78,7 +79,8 @@ const mock = [
   },
 ];
 
-const SidebarArticles = () => {
+const SidebarArticles = ({ latestBlogs }) => {
+  console.log(latestBlogs);
   const theme = useTheme();
   return (
     <Box component={Card} variant={'outlined'} padding={2}>
@@ -90,10 +92,10 @@ const SidebarArticles = () => {
           marginBottom: 2,
         }}
       >
-       Similar Posts
+        Similar Posts
       </Typography>
       <Grid container spacing={2}>
-        {mock.map((item, i) => (
+        {latestBlogs.map((item, i) => (
           <Grid key={i} item xs={12}>
             <Box
               component={Card}
@@ -118,7 +120,7 @@ const SidebarArticles = () => {
                   component={LazyLoadImage}
                   height={1}
                   width={1}
-                  src={item.image}
+                  src={item.featureImage?.asset.url}
                   alt="..."
                   effect="blur"
                   sx={{
@@ -141,12 +143,16 @@ const SidebarArticles = () => {
                     variant={'caption'}
                     color={'text.secondary'}
                     component={'i'}
-                  >
-                   
-                  </Typography>
+                  ></Typography>
                 </Box>
-                <Link underline="none" href={item.link} component="a" >  <Button size={'small'}>Read More</Button>   </Link> 
-                
+                <Link
+                  underline="none"
+                  href={`blog/${item.slug.current}`}
+                  component="a"
+                >
+                  {' '}
+                  <Button size={'small'}>Read More</Button>{' '}
+                </Link>
               </CardContent>
             </Box>
           </Grid>

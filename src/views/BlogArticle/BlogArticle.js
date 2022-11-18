@@ -16,7 +16,8 @@ import {
   SimilarStories,
 } from './components';
 
-const BlogArticle = () => {
+const BlogArticle = ({ blog, latestBlogs }) => {
+  const { title } = blog;
   // const container = {
   //   hidden: { x: -1000 },
   //   show: {
@@ -44,16 +45,16 @@ const BlogArticle = () => {
   return (
     <Main colorInvert={true}>
       <Box>
-        <Hero />
+        <Hero title={title} />
         <Container>
           <Grid container spacing={4}>
             <Grid item xs={12} md={8}>
-              <Content />
+              <Content blog={blog} />
             </Grid>
             <Grid item xs={12} md={4}>
               {isMd ? (
                 <Box marginBottom={4}>
-                  <SidebarArticles />
+                  <SidebarArticles latestBlogs={latestBlogs} />
                 </Box>
               ) : null}
             </Grid>
