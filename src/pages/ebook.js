@@ -1,8 +1,8 @@
 import React from 'react';
-import DownloadBook from 'views/DownloadBook';
+//import DownloadBook from 'views/DownloadBook';
 
 const DownloadBookPage = () => {
-  return <DownloadBook />;
+  return '<DownloadBook />';
 };
 
 export default DownloadBookPage;
