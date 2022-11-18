@@ -15,7 +15,8 @@ import {
   Newsletter,
 } from './components';
 
-const BlogReachView = () => {
+const BlogReachView = ({ blog }) => {
+  
   const theme = useTheme();
   return (
     <Main colorInvert={true}>
@@ -33,7 +34,7 @@ const BlogReachView = () => {
         </Container>
 
         <Container paddingTop={'20px !important'}>
-          <LastStories />
+          <LastStories blog={blog} />
         </Container>
         <Container paddingTop={'20px !important'}>
           <FooterNewsletter />

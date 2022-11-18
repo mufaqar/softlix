@@ -9,10 +9,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
+
 const mock = [
   {
-    media: '/images/outsourcing-in-India-is-it-the-right-decision-for-your-business.png',
+    media:
+      '/images/outsourcing-in-India-is-it-the-right-decision-for-your-business.png',
     title: '5 Best Practices for Outsourcing IT Projects',
     link: '/blog/5-best-practices-for-outsourcing-it-projects',
     author: {
@@ -42,7 +44,7 @@ const mock = [
       avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
     },
     subtitle:
-      'Now that you know the basics of HTML, CSS, and JavaScript, you\'re ready to start learning some of the',
+      "Now that you know the basics of HTML, CSS, and JavaScript, you're ready to start learning some of the",
   },
   {
     media: '/images/mobile-app-development-for-2021-and-beyond.png',
@@ -53,7 +55,7 @@ const mock = [
       avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
     },
     subtitle:
-      'If you\'re looking to create a robust mobile app, you\'ll need to use the right tools and technologies.',
+      "If you're looking to create a robust mobile app, you'll need to use the right tools and technologies.",
   },
   {
     media: '/images/10-tech-trendsthat-will-influence.jpg',
@@ -79,7 +81,8 @@ const mock = [
   },
 ];
 
-const LastStories = () => {
+const LastStories = ({ blog }) => {
+  console.log('blog', blog);
   const theme = useTheme();
   return (
     <Box>
@@ -111,73 +114,75 @@ const LastStories = () => {
         </Box>
       </Box>
       <Grid container spacing={4}>
-        {mock.map((item, i) => (
+        {blog.map((item, i) => (
           <Grid item xs={12} sm={6} md={4} key={i}>
-            <Box
-              component={'a'}
-              href={item.link}
-              display={'block'}
-              width={1}
-              height={1}
-              sx={{
-                textDecoration: 'none',
-                transition: 'all .2s ease-in-out',
-                '&:hover': {
-                  transform: `translateY(-${theme.spacing(1 / 2)})`,
-                },
-              }}
-            >
+            <Link href={`blog/${item.slug.current}`}>
               <Box
-                component={Card}
+                component={'a'}
+                display={'block'}
                 width={1}
                 height={1}
-                boxShadow={4}
-                display={'flex'}
-                flexDirection={'column'}
-                sx={{ backgroundImage: 'none' }}
+                sx={{
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  transition: 'all .2s ease-in-out',
+                  '&:hover': {
+                    transform: `translateY(-${theme.spacing(1 / 2)})`,
+                  },
+                }}
               >
-                <CardMedia
-                  image={item.media}
-                  title={item.title}
-                  sx={{
-                    height: { xs: 300, md: 360 },
-                    position: 'relative',
-                  }}
+                <Box
+                  component={Card}
+                  width={1}
+                  height={1}
+                  boxShadow={4}
+                  display={'flex'}
+                  flexDirection={'column'}
+                  sx={{ backgroundImage: 'none' }}
                 >
-                  <Box
-                    component={'svg'}
-                    viewBox="0 0 2880 480"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <CardMedia
+                    image={item.featureImage.asset.url}
+                    title={item.title}
                     sx={{
-                      position: 'absolute',
-                      bottom: 0,
-                      color: theme.palette.background.paper,
-                      transform: 'scale(2)',
-                      height: 'auto',
-                      width: 1,
-                      transformOrigin: 'top center',
+                      height: { xs: 300, md: 360 },
+                      position: 'relative',
                     }}
                   >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z"
-                      fill="currentColor"
-                    />
+                    <Box
+                      component={'svg'}
+                      viewBox="0 0 2880 480"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      sx={{
+                        position: 'absolute',
+                        bottom: 0,
+                        color: theme.palette.background.paper,
+                        transform: 'scale(2)',
+                        height: 'auto',
+                        width: 1,
+                        transformOrigin: 'top center',
+                      }}
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z"
+                        fill="currentColor"
+                      />
+                    </Box>
+                  </CardMedia>
+                  <Box component={CardContent} position={'relative'}>
+                    <Typography variant={'h6'} gutterBottom>
+                      {item.title}
+                    </Typography>
+                    <Typography color="text.secondary">
+                      {item.description}
+                    </Typography>
                   </Box>
-                </CardMedia>
-                <Box component={CardContent} position={'relative'}>
-                  <Typography variant={'h6'} gutterBottom>    {item.title}  
-                  </Typography>
-                  <Typography color="text.secondary">
-                    {item.description}
-                  </Typography>
+                  <Box flexGrow={1} />
                 </Box>
-                <Box flexGrow={1} />
-                
               </Box>
-            </Box>
+            </Link>
           </Grid>
         ))}
       </Grid>
