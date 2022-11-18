@@ -1,8 +1,6 @@
 import React from 'react';
 import BlogArticle from 'views/BlogArticle';
-
 import { Client } from '../../lib/client';
-
 // Queray
 const query = ` *[ _type == "blog" && slug.current == $pageSlug ][0]{
   title,
