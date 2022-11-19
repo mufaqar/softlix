@@ -64,7 +64,7 @@ SACRAMENTO, California, United States, 95811',
   },
   {
     label: 'Company',
-    value: 'RDMI Tech Ventures Pvt. Ltd',
+    value: 'SOFTLIX Inc.',
     icon: (
       <svg
         width={20}

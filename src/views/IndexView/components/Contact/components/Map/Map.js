@@ -104,9 +104,7 @@ const Map = () => {
           >
             Company:
           </Typography>
-          <Typography variant={'subtitle1'}>
-            RDMI Tech Ventures Pvt. Ltd
-          </Typography>
+          <Typography variant={'subtitle1'}>SOFTLIX Inc.</Typography>
         </Grid>
       </Grid>
     </Box>
