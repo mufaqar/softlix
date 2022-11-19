@@ -4,5 +4,4 @@ import DownloadBook from 'views/DownloadBook';
 const DownloadBookPage = () => {
   return <DownloadBook />;
 };
-
 export default DownloadBookPage;

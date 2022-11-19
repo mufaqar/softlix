@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { alpha, useTheme } from '@mui/material/styles';
+import Link from 'next/link';
 
 import Container from 'components/Container';
 
@@ -91,37 +92,38 @@ const Ebook = () => {
                   },
                 }}
               >
-                <Button
-                  component={'a'}
-                  // variant="contained"
-                  color="primary"
-                  sx={{
-                    backgroundColor: ' #0000d3',
-                    width: '14vw',
-                    borderRadius: '7px',
-                    fontFamily: 'Inter',
-                    fontSize: '1rem',
-                    padding: '0.7rem 0.8rem',
-                    color: 'white',
-                    border: '1px solid  #0000d3',
-                    fontWeight: 500,
-                    '&:hover': {
-                      backgroundColor: '#0000a9',
-                    },
-                    ['@media (min-width:320px) and (max-width:700px)']: {
-                      // eslint-disable-line no-useless-computed-key
-                      width: '38vw',
-                      height: '40px',
-                      fontSize: '13px',
-                      padding: '0.7rem 0.5rem',
-                    },
-                  }}
-                  size="small"
-                  // fullWidth={isMd ? false : true}
-                  href={'/e-book'}
-                >
-                  Download Ebook
-                </Button>
+                <Link href={'/ebook'}>
+                  <Button
+                    component={'a'}
+                    // variant="contained"
+                    color="primary"
+                    sx={{
+                      backgroundColor: ' #0000d3',
+                      width: '14vw',
+                      borderRadius: '7px',
+                      fontFamily: 'Inter',
+                      fontSize: '1rem',
+                      padding: '0.7rem 0.8rem',
+                      color: 'white',
+                      border: '1px solid  #0000d3',
+                      fontWeight: 500,
+                      '&:hover': {
+                        backgroundColor: '#0000a9',
+                      },
+                      ['@media (min-width:320px) and (max-width:700px)']: {
+                        // eslint-disable-line no-useless-computed-key
+                        width: '38vw',
+                        height: '40px',
+                        fontSize: '13px',
+                        padding: '0.7rem 0.5rem',
+                      },
+                    }}
+                    size="small"
+                    // fullWidth={isMd ? false : true}
+                  >
+                    Download Ebook
+                  </Button>
+                </Link>
               </Box>
             </Box>
             <Box

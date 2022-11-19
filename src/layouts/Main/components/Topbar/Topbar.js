@@ -297,6 +297,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           />
         </Box>
       </Link>
+
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
           <NavItem
