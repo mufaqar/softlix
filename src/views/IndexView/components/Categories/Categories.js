@@ -618,8 +618,7 @@ const Categories = () => {
                         }
                       >
                         <Link underline="none" href={item.link} component="a">
-                          {' '}
-                          Learn more{' '}
+                          Learn more
                         </Link>
                       </Button>
                     </Box>
