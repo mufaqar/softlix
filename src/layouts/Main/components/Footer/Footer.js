@@ -471,13 +471,12 @@ const Footer = () => {
             alignItems: 'center',
             gap: '20px',
             ['@media (min-width:390px) and (max-width:600px)']: {
-              // eslint-disable-line no-useless-computed-key
               flexDirection: 'column',
             },
           }}
         >
           <Box sx={{ flex: '1', fontSize: '12px', textAlign: 'center' }}>
-            <p>&copy; 2022, SOFTLIX Inc. Ltd</p>
+            <p>&copy; 2022, SOFTLIX Inc.</p>
           </Box>
         </Box>
       </Grid>
