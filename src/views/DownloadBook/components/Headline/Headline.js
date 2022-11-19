@@ -24,7 +24,7 @@ const Headline = () => {
             fontWeight: 700,
           }}
         >
-          Download E-book
+          Download E-Book
         </Typography>
       </Box>
       <Box>
