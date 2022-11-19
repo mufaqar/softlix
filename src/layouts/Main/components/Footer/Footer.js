@@ -477,10 +477,7 @@ const Footer = () => {
           }}
         >
           <Box sx={{ flex: '1', fontSize: '12px', textAlign: 'center' }}>
-            <p>
-              &copy; 2022, SOFTLIX Inc. is Product of RDMI Tech Ventures Pvt.
-              Ltd
-            </p>
+            <p>&copy; 2022, SOFTLIX Inc. Ltd</p>
           </Box>
         </Box>
       </Grid>
