@@ -29,8 +29,7 @@ const Headline = () => {
       </Box>
       <Box>
         <Typography variant="h6" align={'center'} color={'textSecondary'}>
-          We help brands and platforms turn big ideas into beautiful digital
-          products and experiences.
+          Download E-book for App DesignTrends in 2022
         </Typography>
       </Box>
     </Box>

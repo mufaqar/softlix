@@ -61,7 +61,7 @@ const HireUs = () => {
                   },
                 }}
               >
-                We delivering customer success
+                Download E-book
               </Typography>
               <Typography
                 fontWeight={500}
@@ -93,69 +93,9 @@ const HireUs = () => {
                 >
                   enterprise software development{' '}
                 </p> */}
-                Get a complete IT solution for your business, including Web
-                Design/ Development , Android/ IOS App Development & Digital
-                Marketing,{' '}
-                <p
-                  style={{
-                    color: '#333',
-                    fontWeight: '700',
-                    fontSize: 'inherit',
-                    display: 'inline',
-                  }}
-                >
-                  successfully delivered 1000+ Projects
-                </p>{' '}
-                worldwide.
+                for App DesignTrends in 2022 successfully delivered 1000+
+                Projects
               </Typography>
-              <Box
-                sx={{
-                  fontSize: '20px',
-                  ['@media (min-width:390px) and (max-width:600px)']: {
-                    marginTop: '35px',
-                    fontSize: '15px',
-                  },
-                }}
-              >
-                {[
-                  'Excellent team',
-                  'Effective delivery',
-                  'Quality efforts',
-                  'Genuineness and commitment',
-                  'Up to 50% Cost saving',
-                  'Source Code Authorization',
-                  'Non-Disclosure Agreement',
-                  'No Lock-In contract',
-                  'Agile & DevOps Implementation',
-                  'Clean Code',
-                  'Fast and Easy On-boarding',
-                  'Total Control Over the code',
-                ].map((item, i) => (
-                  <p key={i}>
-                    {' '}
-                    <CheckCircleIcon
-                      fontSize={'medium'}
-                      backgroundColor={'#2c4bff'}
-                      style={{
-                        marginRight: '10px',
-                        color: '#2c4bff',
-                      }}
-                    />
-                    <p
-                      style={{
-                        display: 'inline-block',
-                        margin: '0px',
-                      }}
-                    >
-                      {item}
-                    </p>
-                  </p>
-                ))}
-                <p style={{ color: '#333', fontSize: '14px' }}>
-                  This site is protected by reCAPTCHA and the google Privacy
-                  Policy and Terms of Service apply
-                </p>
-              </Box>
             </Box>
             <Form />
           </Box>
