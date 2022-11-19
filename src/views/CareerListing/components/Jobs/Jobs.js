@@ -2,69 +2,108 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+// import InputLabel from '@mui/material/InputLabel';
+// import MenuItem from '@mui/material/MenuItem';
+// import FormControl from '@mui/material/FormControl';
+// import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 export const mock = [
   {
-    title: 'Front-End Developer',
-    location: 'Madrid',
-    type: 'Remote',
-    team: 'Consumer',
-    subtitle: 'Responsible for design systems and brand management.',
+    title: 'Sales VP',
+    position: 5,
+    url: 'https://paper.dropbox.com/doc/Sales-VP-Job-Description-jDUTnSMrFYWsiV7AhyG36',
   },
   {
-    title: 'Community Manager',
-    location: 'Paris',
-    type: 'Full time',
-    team: 'Consulting',
-    subtitle: 'Responsible for creating life in our apps.',
+    title: 'Project Manager',
+    position: 5,
+    url: 'https://paper.dropbox.com/doc/Sales-VP-Job-Description-jDUTnSMrFYWsiV7AhyG36',
   },
   {
-    title: 'UX/UI Designer',
-    location: 'Yerevan',
-    type: 'Part time',
-    team: 'Internal tools',
-    subtitle: 'Help us make the best decisions with qualitative experiments.',
+    title: 'Business Development Manager',
+    position: 5,
+    url: 'https://paper.dropbox.com/doc/Business-Development-Manager-Job-Description--BnMSI2G4RBwotCHmaGDGjTm7AQ-HRpgKKbjHzpcBSzT3j49f',
   },
   {
-    title: 'Front-End Developer',
-    location: 'Madrid',
-    type: 'Remote',
-    team: 'Internal tools',
-    subtitle: 'Responsible for design systems and brand management.',
+    title: 'Business Development Executive',
+    position: 10,
+    url: 'https://paper.dropbox.com/doc/Business-Development-Executive-Job-Description--BnNi09b4uOz46vFB9aTZFAbkAQ-0Y5sSooWGLabtNFPRrUpEhttps://paper.dropbox.com/doc/Business-Development-Executive-Job-Description--BnNi09b4uOz46vFB9aTZFAbkAQ-0Y5sSooWGLabtNFPRrUpE',
   },
   {
-    title: 'Community Manager',
-    location: 'Paris',
-    type: 'Full time',
-    team: 'Consulting',
-    subtitle: 'Responsible for creating life in our apps.',
+    title: 'UI/ UX Designer',
+    position: 50,
+    url: 'https://paper.dropbox.com/doc/UIUX-Designer-job-description--BnMlpfn9l9MIimoz1F4pgI65AQ-MijNLeGJ65mMtrwna6OS7',
   },
   {
-    title: 'UX/UI Designer',
-    location: 'Yerevan',
-    type: 'Part time',
-    team: 'Consumer',
-    subtitle: 'Help us make the best decisions with qualitative experiments.',
+    title: 'Python Developers',
+    position: 50,
+    url: 'https://paper.dropbox.com/doc/Python-Developer-job-description--BnMP280uNo_U6lFt91DAw2LpAQ-nAKBDkAyBFYq2CJZM3Rsq',
   },
   {
-    title: 'Front-End Developer',
-    location: 'Madrid',
-    type: 'Remote',
-    team: 'Consumer',
-    subtitle: 'Responsible for design systems and brand management.',
+    title: 'Email Marketer',
+    position: 50,
+    url: 'https://paper.dropbox.com/doc/Email-Marketing-Specialist-Job-Description--BnOptAAsi3EOHUk6EKcj_XbDAQ-siyMkxJWLG7xpOMTo37tR',
   },
   {
-    title: 'Community Manager',
-    location: 'Paris',
-    type: 'Full time',
-    team: 'Consulting',
-    subtitle: 'Responsible for creating life in our apps.',
+    title: 'PPC Experts',
+    position: 50,
+    url: 'https://paper.dropbox.com/doc/PPC-Pay-Per-Click-Manager-job-description--BnMobILZs1~G0LGU5G1UotbuAQ-hJKw0DsBqD3KDUuijZOQj',
+  },
+  {
+    title: 'Content Writers',
+    position: 100,
+    url: 'https://paper.dropbox.com/doc/Content-Writer-JD--BnOrfcw_tI3~jLxTLtZ03CckAQ-THpgDKQ7wzADK4VSEFCyc',
+  },
+  {
+    title: 'Software Developers',
+    position: 100,
+    url: 'https://paper.dropbox.com/doc/Software-Developer-Job-Description--BnNJawycO_nhDVEyyDT2cZvkAQ-zI2LLsXnXizztfrlGVZ0w',
+  },
+  {
+    title: 'Website Designer',
+    position: 200,
+    url: 'https://paper.dropbox.com/doc/Web-Designer-Job-Description--BnMIy6dmQ2od78316Q79NnqLAQ-U2FD5csyDpUPEgVoRAyx6',
+  },
+  {
+    title: 'Web Developers',
+    position: 500,
+    url: 'https://paper.dropbox.com/doc/Web-Developer-Job-Description--BnMETaSzbXlcvQStHGebNpH5AQ-xvyPnQEsCMVWheAzd3NED',
+  },
+  {
+    title: 'Full Stack Developers',
+    position: 500,
+    url: 'https://paper.dropbox.com/doc/Full-Stack-Developer-job-description--BnMwNkCinnGVyOiwkJ7xsqB6AQ-1JEYvtEGC5FPNVJHM1YK8',
+  },
+  {
+    title: 'Flutter Developer',
+    position: 500,
+    url: 'https://paper.dropbox.com/doc/Flutter-Mobile-App-Developer-Job-description--BnMjUmOvFcgwv23c5AtEnpMFAQ-mr82BRC6Wq8ThdU0V3T4Jhttps://paper.dropbox.com/doc/Flutter-Mobile-App-Developer-Job-description--BnMjUmOvFcgwv23c5AtEnpMFAQ-mr82BRC6Wq8ThdU0V3T4J',
+  },
+  {
+    title: 'Mobile App Developer',
+    position: 500,
+    url: 'https://paper.dropbox.com/doc/Mobile-App-Developer-Job-Description--BnO2te6J_qZcfJS1Bkl7H0aTAQ-cpCh4ZJg8eIq270kV972e',
+  },
+  {
+    title: 'Digital Marketer',
+    position: 5,
+    url: 'https://paper.dropbox.com/doc/Digital-Marketing-Manager-Job-Description--BnO3au1liVcj5tErNwuvkiFnAQ-vqqYjOhGBye2z8VlcGJq0',
+  },
+  {
+    title: 'SEO Experts',
+    position: 500,
+    url: 'https://paper.dropbox.com/doc/Search-Engine-Optimization-SEO-Specialist-job-description--BnNT_UlJuiJ4SUehUHHV_PrpAQ-F9FvGqiWwNXK3GMGe4ROd',
+  },
+  {
+    title: 'IT Consultants',
+    position: 500,
+    url: 'https://paper.dropbox.com/doc/IT-Consultant-Job-Description--BnNVPFypcGijhckS39wibmeGAQ-x2MMIApM3Qlt2SQ43PeDf',
+  },
+  {
+    title: 'Management Consultants',
+    position: 500,
+    url: 'https://paper.dropbox.com/doc/Management-Consultant-Job-Description--BnOdwMbuReF6~ZAlNb_QWlb4AQ-uWanztgTya4FO37a1WQvs',
   },
 ];
 
@@ -86,61 +125,7 @@ const Jobs = () => {
           Current job openings
         </Typography>
       </Box>
-      <Grid
-        container
-        spacing={4}
-        sx={{
-          '.MuiOutlinedInput-root': {
-            background: theme.palette.background.paper,
-          },
-        }}
-      >
-        <Grid item xs={12} md={4}>
-          <FormControl variant="outlined" sx={{ minWidth: 1 }}>
-            <InputLabel id="career-listing__jobs-role--label">Roles</InputLabel>
-            <Select labelId="career-listing__jobs-role--label" label="Roles">
-              <MenuItem value="">
-                <em>All roles</em>
-              </MenuItem>
-              <MenuItem value={'design'}>Design</MenuItem>
-              <MenuItem value={'engineering'}>Engineering</MenuItem>
-              <MenuItem value={'product'}>Product</MenuItem>
-              <MenuItem value={'support'}>Support</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <FormControl variant="outlined" sx={{ minWidth: 1 }}>
-            <InputLabel id="career-listing__jobs-role--label">Teams</InputLabel>
-            <Select labelId="career-listing__jobs-role--label" label="Teams">
-              <MenuItem value="">
-                <em>All teams</em>
-              </MenuItem>
-              <MenuItem value={'consumer'}>Consumer</MenuItem>
-              <MenuItem value={'consulting'}>Consulting</MenuItem>
-              <MenuItem value={'internal-tools'}>Internal tools</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <FormControl variant="outlined" sx={{ minWidth: 1 }}>
-            <InputLabel id="career-listing__jobs-role--label">
-              Locations
-            </InputLabel>
-            <Select
-              labelId="career-listing__jobs-role--label"
-              label="Locations"
-            >
-              <MenuItem value="">
-                <em>All locations</em>
-              </MenuItem>
-              <MenuItem value={'milan'}>Milan</MenuItem>
-              <MenuItem value={'yerevan'}>Yerevan</MenuItem>
-              <MenuItem value={'paris'}>Paris</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-      </Grid>
+
       <Box
         display={'flex'}
         flexDirection={{ xs: 'column', sm: 'row' }}
@@ -151,7 +136,7 @@ const Jobs = () => {
       >
         <Box marginBottom={{ xs: 1, sm: 0 }}>
           <Typography variant={'h6'} fontWeight={700}>
-            Design & UX, Engineering
+            Hiring Goal 2022: 5000 Employees
           </Typography>
           <Typography color={'text.secondary'}>
             User experience and design are top priorities at Softlix.
@@ -205,37 +190,39 @@ const Jobs = () => {
                     {item.title}
                   </Typography>
                   <Typography color={'text.secondary'}>
-                    {item.subtitle}
+                    SOFTLIX™ Hiring
                   </Typography>
                 </Box>
                 <Typography color={'text.secondary'}>
-                  {`${item.team} / ${item.location}`}
+                  Total Positions : {item.position}
                 </Typography>
               </Box>
               <Box marginLeft={2}>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  size="small"
-                  endIcon={
-                    <Box
-                      component={'svg'}
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      width={12}
-                      height={12}
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </Box>
-                  }
-                >
-                  Apply
-                </Button>
+                <a href={item.url} target="_blank">
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    size="small"
+                    endIcon={
+                      <Box
+                        component={'svg'}
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        width={12}
+                        height={12}
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </Box>
+                    }
+                  >
+                    Apply
+                  </Button>
+                </a>
               </Box>
             </Box>
           </Grid>
