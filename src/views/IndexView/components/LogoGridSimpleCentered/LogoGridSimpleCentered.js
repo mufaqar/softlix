@@ -6,12 +6,16 @@ import Typography from '@mui/material/Typography';
 import Container from 'components/Container';
 
 const mock = [
-  '/images/logo-1.png',
-  '/images/blive.png',
-  '/images/theprint.png',
-  '/images/midday.png',
-  '/images/dailyhunt.webp',
-  '/images/newtrack.jpeg',
+  '/images/clients/client1.png',
+  '/images/clients/client2.png',
+  '/images/clients/client3.png',
+  '/images/clients/client4.png',
+  '/images/clients/client5.png',
+  '/images/clients/client6.png',
+  '/images/clients/client7.png',
+  '/images/clients/client8.png',
+  '/images/clients/client9.png',
+  '/images/clients/client10.png',
 ];
 
 const LogoGridSimpleCentered = () => {
@@ -40,7 +44,6 @@ const LogoGridSimpleCentered = () => {
               key={i}
               sx={{
                 ['@media (min-width:320px) and (max-width:600px)']: {
-                  // eslint-disable-line no-useless-computed-key
                   maxWidth: '130px',
                   flexWrap: 'wrap',
                 },
