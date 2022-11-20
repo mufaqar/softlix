@@ -2,110 +2,9 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-// import InputLabel from '@mui/material/InputLabel';
-// import MenuItem from '@mui/material/MenuItem';
-// import FormControl from '@mui/material/FormControl';
-// import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
-export const mock = [
-  {
-    title: 'Sales VP',
-    position: 5,
-    url: 'https://paper.dropbox.com/doc/Sales-VP-Job-Description-jDUTnSMrFYWsiV7AhyG36',
-  },
-  {
-    title: 'Project Manager',
-    position: 5,
-    url: 'https://paper.dropbox.com/doc/Sales-VP-Job-Description-jDUTnSMrFYWsiV7AhyG36',
-  },
-  {
-    title: 'Business Development Manager',
-    position: 5,
-    url: 'https://paper.dropbox.com/doc/Business-Development-Manager-Job-Description--BnMSI2G4RBwotCHmaGDGjTm7AQ-HRpgKKbjHzpcBSzT3j49f',
-  },
-  {
-    title: 'Business Development Executive',
-    position: 10,
-    url: 'https://paper.dropbox.com/doc/Business-Development-Executive-Job-Description--BnNi09b4uOz46vFB9aTZFAbkAQ-0Y5sSooWGLabtNFPRrUpEhttps://paper.dropbox.com/doc/Business-Development-Executive-Job-Description--BnNi09b4uOz46vFB9aTZFAbkAQ-0Y5sSooWGLabtNFPRrUpE',
-  },
-  {
-    title: 'UI/ UX Designer',
-    position: 50,
-    url: 'https://paper.dropbox.com/doc/UIUX-Designer-job-description--BnMlpfn9l9MIimoz1F4pgI65AQ-MijNLeGJ65mMtrwna6OS7',
-  },
-  {
-    title: 'Python Developers',
-    position: 50,
-    url: 'https://paper.dropbox.com/doc/Python-Developer-job-description--BnMP280uNo_U6lFt91DAw2LpAQ-nAKBDkAyBFYq2CJZM3Rsq',
-  },
-  {
-    title: 'Email Marketer',
-    position: 50,
-    url: 'https://paper.dropbox.com/doc/Email-Marketing-Specialist-Job-Description--BnOptAAsi3EOHUk6EKcj_XbDAQ-siyMkxJWLG7xpOMTo37tR',
-  },
-  {
-    title: 'PPC Experts',
-    position: 50,
-    url: 'https://paper.dropbox.com/doc/PPC-Pay-Per-Click-Manager-job-description--BnMobILZs1~G0LGU5G1UotbuAQ-hJKw0DsBqD3KDUuijZOQj',
-  },
-  {
-    title: 'Content Writers',
-    position: 100,
-    url: 'https://paper.dropbox.com/doc/Content-Writer-JD--BnOrfcw_tI3~jLxTLtZ03CckAQ-THpgDKQ7wzADK4VSEFCyc',
-  },
-  {
-    title: 'Software Developers',
-    position: 100,
-    url: 'https://paper.dropbox.com/doc/Software-Developer-Job-Description--BnNJawycO_nhDVEyyDT2cZvkAQ-zI2LLsXnXizztfrlGVZ0w',
-  },
-  {
-    title: 'Website Designer',
-    position: 200,
-    url: 'https://paper.dropbox.com/doc/Web-Designer-Job-Description--BnMIy6dmQ2od78316Q79NnqLAQ-U2FD5csyDpUPEgVoRAyx6',
-  },
-  {
-    title: 'Web Developers',
-    position: 500,
-    url: 'https://paper.dropbox.com/doc/Web-Developer-Job-Description--BnMETaSzbXlcvQStHGebNpH5AQ-xvyPnQEsCMVWheAzd3NED',
-  },
-  {
-    title: 'Full Stack Developers',
-    position: 500,
-    url: 'https://paper.dropbox.com/doc/Full-Stack-Developer-job-description--BnMwNkCinnGVyOiwkJ7xsqB6AQ-1JEYvtEGC5FPNVJHM1YK8',
-  },
-  {
-    title: 'Flutter Developer',
-    position: 500,
-    url: 'https://paper.dropbox.com/doc/Flutter-Mobile-App-Developer-Job-description--BnMjUmOvFcgwv23c5AtEnpMFAQ-mr82BRC6Wq8ThdU0V3T4Jhttps://paper.dropbox.com/doc/Flutter-Mobile-App-Developer-Job-description--BnMjUmOvFcgwv23c5AtEnpMFAQ-mr82BRC6Wq8ThdU0V3T4J',
-  },
-  {
-    title: 'Mobile App Developer',
-    position: 500,
-    url: 'https://paper.dropbox.com/doc/Mobile-App-Developer-Job-Description--BnO2te6J_qZcfJS1Bkl7H0aTAQ-cpCh4ZJg8eIq270kV972e',
-  },
-  {
-    title: 'Digital Marketer',
-    position: 5,
-    url: 'https://paper.dropbox.com/doc/Digital-Marketing-Manager-Job-Description--BnO3au1liVcj5tErNwuvkiFnAQ-vqqYjOhGBye2z8VlcGJq0',
-  },
-  {
-    title: 'SEO Experts',
-    position: 500,
-    url: 'https://paper.dropbox.com/doc/Search-Engine-Optimization-SEO-Specialist-job-description--BnNT_UlJuiJ4SUehUHHV_PrpAQ-F9FvGqiWwNXK3GMGe4ROd',
-  },
-  {
-    title: 'IT Consultants',
-    position: 500,
-    url: 'https://paper.dropbox.com/doc/IT-Consultant-Job-Description--BnNVPFypcGijhckS39wibmeGAQ-x2MMIApM3Qlt2SQ43PeDf',
-  },
-  {
-    title: 'Management Consultants',
-    position: 500,
-    url: 'https://paper.dropbox.com/doc/Management-Consultant-Job-Description--BnOdwMbuReF6~ZAlNb_QWlb4AQ-uWanztgTya4FO37a1WQvs',
-  },
-];
+import Link from 'next/link';
 
 const Jobs = ({ jobs }) => {
   const theme = useTheme();
@@ -154,7 +53,7 @@ const Jobs = ({ jobs }) => {
             fontWeight={700}
             sx={{ color: 'common.black' }}
           >
-            {mock.length} openings
+            19 openings
           </Typography>
         </Box>
       </Box>
@@ -198,7 +97,7 @@ const Jobs = ({ jobs }) => {
                 </Typography>
               </Box>
               <Box marginLeft={2}>
-                <a href={item.url} target="_blank">
+                <Link href={`job/${item.slug.current}`}>
                   <Button
                     variant="outlined"
                     color="primary"
@@ -222,7 +121,7 @@ const Jobs = ({ jobs }) => {
                   >
                     Apply
                   </Button>
-                </a>
+                </Link>
               </Box>
             </Box>
           </Grid>
