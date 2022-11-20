@@ -1,21 +1,16 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
-import Divider from '@mui/material/Divider';
-
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-
 import { Hero, Jobs, Newsletter, About, CompanyValues } from './components';
 
 const CareerListing = ({ jobs }) => {
-  console.log(jobs);
   const theme = useTheme();
   return (
     <Main>
       <Box>
         <Hero />
-
         <Box
           component={'svg'}
           preserveAspectRatio="none"

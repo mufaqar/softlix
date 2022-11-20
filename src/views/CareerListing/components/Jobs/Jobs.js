@@ -53,7 +53,7 @@ const Jobs = ({ jobs }) => {
             fontWeight={700}
             sx={{ color: 'common.black' }}
           >
-            19 openings
+            Openings
           </Typography>
         </Box>
       </Box>
