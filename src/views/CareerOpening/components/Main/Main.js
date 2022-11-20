@@ -12,8 +12,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
+import PortableText from 'react-portable-text';
 
-const Main = () => {
+const Main = ({ job }) => {
+  console.log(job);
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -29,9 +31,9 @@ const Main = () => {
       >
         <Box>
           <Typography fontWeight={700} variant={'h4'} gutterBottom>
-            UX /UI Designer
+            {job.title}
           </Typography>
-          <Typography variant={'h6'}>San Francisco, CA · Full time</Typography>
+          <Typography variant={'h6'}>Position : {job.position}</Typography>
         </Box>
         <Box display="flex" marginTop={{ xs: 2, md: 0 }}>
           <Button variant="contained" color="primary" size="large">
@@ -52,92 +54,58 @@ const Main = () => {
       <Grid container spacing={isMd ? 4 : 2}>
         <Grid item xs={12} md={8}>
           <Box marginBottom={3}>
-            <Typography variant={'h5'} fontWeight={700} gutterBottom>
-              Who we are
-            </Typography>
-            <Typography component={'p'}>
-              We believe lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Phasellus feugiat elit vitae enim lacinia semper. Cras nulla
-              lectus, porttitor vitae urna iaculis, malesuada tincidunt lectus.
-              Proin nec tellus sit amet massa auctor imperdiet id vitae diam.
-              Aenean gravida est nec diam suscipit iaculis. Praesent urna velit,
-              auctor nec turpis et, vehicula lobortis sem. Vivamus convallis mi
-              sagittis eleifend laoreet. Praesent vitae venenatis enim. Nulla
-              tincidunt felis et lectus rhoncus laoreet.
-            </Typography>
-          </Box>
-          <Box marginBottom={3}>
-            <Typography variant={'h5'} fontWeight={700} gutterBottom>
-              What we’re looking for
-            </Typography>
-            <Typography component={'p'}>
-              Aenean gravida est nec diam suscipit iaculis. Praesent urna velit,
-              auctor nec turpis et, vehicula lobortis sem. Vivamus convallis mi
-              sagittis eleifend laoreet. Praesent vitae venenatis enim. Nulla
-              tincidunt felis et lectus rhoncus laoreet.
-            </Typography>
-            <Grid container spacing={1} sx={{ marginTop: 1 }}>
-              {[
-                'Our sign up is dead simple. We only require your basic company information',
-                'We support bulk uploading via SQL, integrations with most data storage products',
-                "Simply select where you'd like to transfer your data",
-                'Our sign up is dead simple. We only require your basic company information',
-                'We support bulk uploading via SQL, integrations with most data storage products',
-                "Simply select where you'd like to transfer your data",
-              ].map((item, i) => (
-                <Grid item xs={12} key={i}>
-                  <Box
-                    component={ListItem}
-                    disableGutters
-                    width={'auto'}
-                    padding={0}
-                  >
-                    <Box
-                      component={ListItemAvatar}
-                      minWidth={'auto !important'}
-                      marginRight={2}
-                    >
-                      <Box
-                        component={Avatar}
-                        bgcolor={theme.palette.secondary.main}
-                        width={20}
-                        height={20}
-                      >
-                        <svg
-                          width={12}
-                          height={12}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </Box>
-                    </Box>
-                    <ListItemText primary={item} />
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
-          <Box>
-            <Typography variant={'h5'} fontWeight={700} gutterBottom>
-              Why to apply
-            </Typography>
-            <Typography component={'p'}>
-              We believe lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Phasellus feugiat elit vitae enim lacinia semper. Cras nulla
-              lectus, porttitor vitae urna iaculis, malesuada tincidunt lectus.
-              Proin nec tellus sit amet massa auctor imperdiet id vitae diam.
-              Aenean gravida est nec diam suscipit iaculis. Praesent urna velit,
-              auctor nec turpis et, vehicula lobortis sem. Vivamus convallis mi
-              sagittis eleifend laoreet. Praesent vitae venenatis enim. Nulla
-              tincidunt felis et lectus rhoncus laoreet.
-            </Typography>
+            <PortableText
+              // Pass in block content straight from Sanity.io
+              content={job.content}
+              // Optionally override marks, decorators, blocks, etc. in a flat
+              // structure without doing any gymnastics
+              serializers={{
+                h6: ({ children }) => (
+                  <Typography variant={'h6'} fontWeight={700} gutterBottom>
+                    {children}
+                  </Typography>
+                ),
+                h5: ({ children }) => (
+                  <Typography variant={'h5'} fontWeight={700} gutterBottom>
+                    {children}
+                  </Typography>
+                ),
+
+                h4: ({ children }) => (
+                  <Typography variant={'h4'} fontWeight={700} gutterBottom>
+                    {children}
+                  </Typography>
+                ),
+                h3: ({ children }) => (
+                  <Typography variant={'h3'} fontWeight={700} gutterBottom>
+                    {children}
+                  </Typography>
+                ),
+                h2: ({ children }) => (
+                  <Typography variant={'h6'} fontWeight={700} gutterBottom>
+                    {children}
+                  </Typography>
+                ),
+                h1: ({ children }) => (
+                  <Typography variant={'h5'} fontWeight={700} gutterBottom>
+                    {children}
+                  </Typography>
+                ),
+                p: ({ children }) => (
+                  <Typography component={'p'}>{children}</Typography>
+                ),
+                ul: ({ children }) => (
+                  <ul className="space-y-2 list-disc list-inside">
+                    {children}
+                  </ul>
+                ),
+                li: ({ children }) => (
+                  <li className="text-lg font-normal font-interRegular md:text-xl text-skin-primary">
+                    {children}
+                  </li>
+                ),
+              }}
+            />
           </Box>
         </Grid>
         <Grid item xs={12} md={4}>
