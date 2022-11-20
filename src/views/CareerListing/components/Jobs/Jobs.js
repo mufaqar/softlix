@@ -107,7 +107,7 @@ export const mock = [
   },
 ];
 
-const Jobs = () => {
+const Jobs = ({ jobs }) => {
   const theme = useTheme();
   return (
     <Box>
@@ -165,7 +165,7 @@ const Jobs = () => {
           borderRadius: 2,
         }}
       >
-        {mock.map((item, i) => (
+        {jobs.map((item, i) => (
           <Grid
             item
             xs={12}

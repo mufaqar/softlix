@@ -8,7 +8,8 @@ import Container from 'components/Container';
 
 import { Hero, Jobs, Newsletter, About, CompanyValues } from './components';
 
-const CareerListing = () => {
+const CareerListing = ({ jobs }) => {
+  console.log(jobs);
   const theme = useTheme();
   return (
     <Main>
@@ -35,7 +36,7 @@ const CareerListing = () => {
       </Box>
       <Box bgcolor={'alternate.main'}>
         <Container maxWidth={1000}>
-          <Jobs />
+          <Jobs jobs={jobs} />
         </Container>
         <Container paddingTop={'0 !important'}>
           <Newsletter />
