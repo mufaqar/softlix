@@ -408,11 +408,11 @@ const Footer = () => {
                 <Link
                   underline="hover"
                   component="a"
-                  href="/contact"
+                  href="/career"
                   color="text.primary"
                   variant={'subtitle2'}
                 >
-                  Contact Us
+                  Career
                 </Link>
               </Box>
               {/* <Box marginTop={1} marginRight={2}>
