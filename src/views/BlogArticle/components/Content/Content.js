@@ -26,29 +26,6 @@ const Content = ({ blog }) => {
     defaultMatches: true,
   });
 
-  const photos = [
-    {
-      src: 'https://assets.maccarianagency.com/backgrounds/img25.jpg',
-      rows: 1,
-      cols: 2,
-    },
-    {
-      src: 'https://assets.maccarianagency.com/backgrounds/img22.jpg',
-      rows: 1,
-      cols: 1,
-    },
-    {
-      src: 'https://assets.maccarianagency.com/backgrounds/img24.jpg',
-      rows: 1,
-      cols: 1,
-    },
-    {
-      src: 'https://assets.maccarianagency.com/backgrounds/img21.jpg',
-      rows: 1,
-      cols: 2,
-    },
-  ];
-
   return (
     <Box>
       <Box paddingX={{ xs: 0, sm: 4, md: 6 }}>
