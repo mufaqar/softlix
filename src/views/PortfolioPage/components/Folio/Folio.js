@@ -27,18 +27,19 @@ const mock = [
   },
   {
     image: 'https://assets.maccarianagency.com/backgrounds/img43.jpg',
-    description: 'The world\'s best bikes and cycling gear',
+    description: "The world's best bikes and cycling gear",
     title: 'Trek',
     color: '#000000',
   },
 ];
 
-const Folio = () => {
+const Folio = ({ portfolio }) => {
+  console.log(portfolio);
   const theme = useTheme();
   return (
     <Box>
       <Grid container spacing={2}>
-        {mock.map((item, i) => (
+        {portfolio.map((item, i) => (
           <Grid key={i} item xs={12} md={6}>
             <Box
               sx={{
@@ -59,7 +60,7 @@ const Folio = () => {
                 component={LazyLoadImage}
                 height={1}
                 width={1}
-                src={item.image}
+                src={item.featureImage?.asset.url}
                 alt="..."
                 effect="blur"
                 minHeight={{ xs: 400, md: 600 }}
@@ -96,13 +97,6 @@ const Folio = () => {
                 >
                   {item.description}
                 </Typography>
-                <Button
-                  size={'large'}
-                  variant={'contained'}
-                  color={'secondary'}
-                >
-                  Read more
-                </Button>
               </Box>
             </Box>
           </Grid>
