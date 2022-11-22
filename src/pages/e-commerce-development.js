@@ -5,7 +5,7 @@ export default function Ecommerece() {
         Hello Taiwlindcss
       </h1>
 
-      <p className="text-3xl font-bold underline text-red-700">
+      <p className="text-3xl font-bold underline text-blue-700">
         Hello Taiwlindcss
       </p>
     </>
