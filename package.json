@@ -67,7 +67,8 @@
     "react-typed": "^1.2.0",
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "@lottiefiles/react-lottie-player": "^3.4.7"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.7.0",

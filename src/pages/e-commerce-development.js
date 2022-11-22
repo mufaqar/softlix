@@ -2,49 +2,52 @@ import Header from 'components/Header';
 import Link from 'next/link';
 import React from 'react';
 
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+
 export default function EcommercePage() {
   return (
     <>
       <Header />
       <section className="bg-white">
-        <div className="flex flex-col lg:flex-row lg:items-center">
-          <div className="w-full lg:w-1/2">
-            <div className="py-20 px-6">
-              <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
-                Launch your eCommerce Business & Sell Products Worldwide with
-                the #1
-                <br /> Easy-to-Use eCommerce App and Website (Complete Solution)
-              </h1>
-              <p className="leading-relaxed text-lg mt-3">
-                Perfect for beginners and seasoned eCommerce giants
-              </p>
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row lg:items-center">
+            <div className="w-full lg:w-1/2">
+              <div className="py-20 px-6">
+                <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
+                  Launch your eCommerce Business & Sell Products Worldwide with
+                  the #1
+                  <br /> Easy-to-Use eCommerce App and Website (Complete
+                  Solution)
+                </h1>
+                <p className="leading-relaxed text-lg mt-3">
+                  Perfect for beginners and seasoned eCommerce giants
+                </p>
 
-              <div className="space-x-3 mt-5">
-                <Link href="#">
-                  <a className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
-                    {' '}
-                    Get started
-                    <span className="text-indigo-200 ml-3" aria-hidden="true">
-                      &rarr;
-                    </span>
-                  </a>
-                </Link>
+                <div className="space-x-3 mt-5">
+                  <Link href="#">
+                    <a className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
+                      Get started
+                      <span className="text-indigo-200 ml-3" aria-hidden="true">
+                        &rarr;
+                      </span>
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="w-full lg:w-1/2 _banner">
-            <img
-              className="object-cover"
-              src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt="glasses photo"
-            />
+            <div className="w-full lg:w-1/2 _banner">
+              <Player
+                autoplay
+                loop
+                src="https://assets8.lottiefiles.com/packages/lf20_q6wsiidu.json"
+              ></Player>
+            </div>
           </div>
         </div>
       </section>
-
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
               E-Commerce
@@ -175,63 +178,134 @@ export default function EcommercePage() {
         </div>
       </section>
 
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto flex items-center md:flex-row flex-col">
-          <div className="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
-            <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
-              Start selling today
-            </h2>
-            <h1 className="md:text-3xl text-2xl font-medium title-font text-gray-900">
-              By completing our short sign-up form
-            </h1>
-          </div>
-          <div className="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
-            <Link href="#">
-              <a className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
-                Sign Up Today
-                <span className="text-indigo-200 ml-3" aria-hidden="true">
-                  &rarr;
+      <section className="py-20 lg:py-[60px]">
+        <div className="container mx-auto">
+          <div className="bg-blue-800 relative z-10 overflow-hidden rounded py-12 px-8 md:p-[70px]">
+            <div className="-mx-4 flex flex-wrap items-center">
+              <div className="w-full px-4 lg:w-2/3">
+                <h2 className="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[38px] lg:mb-0">
+                  Let's get started!
+                </h2>
+                <span className="mt-2 text-sm text-white">
+                  If your business isn't online, you're missing out on a world
+                  of customers (literally). Start today, and by tomorrow, Maybe
+                  you'll be selling thousands of units to hundreds of customers
+                  all over the globe!
                 </span>
-              </a>
-            </Link>
+              </div>
+              <div className="w-full px-4 lg:w-1/3">
+                <div className="flex flex-wrap lg:justify-end">
+                  <a
+                    href="javascript:void(0)"
+                    className="hover:text-blue-800 my-1 mr-4 inline-block rounded bg-white bg-opacity-[15%] py-4 px-6 text-base font-medium text-white transition hover:bg-opacity-100 md:px-9 lg:px-6 xl:px-9"
+                  >
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span className="absolute top-0 left-0 z-[-1]">
+                <svg
+                  width="189"
+                  height="162"
+                  viewBox="0 0 189 162"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="16"
+                    cy="-16.5"
+                    rx="173"
+                    ry="178.5"
+                    transform="rotate(180 16 -16.5)"
+                    fill="url(#paint0_linear)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear"
+                      x1="-157"
+                      y1="-107.754"
+                      x2="98.5011"
+                      y2="-106.425"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="white" stopOpacity="0.07" />
+                      <stop offset="1" stopColor="white" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <span className="absolute bottom-0 right-0 z-[-1]">
+                <svg
+                  width="191"
+                  height="208"
+                  viewBox="0 0 191 208"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="173"
+                    cy="178.5"
+                    rx="173"
+                    ry="178.5"
+                    fill="url(#paint0_linear)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear"
+                      x1="-3.27832e-05"
+                      y1="87.2457"
+                      x2="255.501"
+                      y2="88.5747"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="white" stopOpacity="0.07" />
+                      <stop offset="1" stopColor="white" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="bg-white">
-        <div className="flex flex-col lg:flex-row lg:items-center">
-          <div className="w-full lg:w-1/2">
-            <div className="py-20 px-6">
-              <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
-                Building a Six to Seven-Figure eCommerce Business is Quick &
-                Simple With our All-in-One App
-              </h1>
-              <p className="leading-relaxed text-lg mt-3">
-                The key to building a profitable eCommerce business is to make
-                it watertight. Even the smallest of issues can cause customers
-                to run a mile and your sales to plummet.
-              </p>
-              <p className="leading-relaxed text-lg mt-3">
-                The SOFTLIX™ app makes it simple & effortless to launch your
-                eCommerce business, attract waves of buyers, & sell your
-                products online with little to no work.
-              </p>
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row lg:items-center">
+            <div className="w-full lg:w-1/2">
+              <div className="py-20 px-6">
+                <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
+                  Building a Six to Seven-Figure eCommerce Business is Quick &
+                  Simple With our All-in-One App
+                </h1>
+                <p className="leading-relaxed text-lg mt-3">
+                  The key to building a profitable eCommerce business is to make
+                  it watertight. Even the smallest of issues can cause customers
+                  to run a mile and your sales to plummet.
+                </p>
+                <p className="leading-relaxed text-lg mt-3">
+                  The SOFTLIX™ app makes it simple & effortless to launch your
+                  eCommerce business, attract waves of buyers, & sell your
+                  products online with little to no work.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="w-full lg:w-1/2">
-            <img
-              className="object-cover"
-              src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt="glasses photo"
-            />
+            <div className="w-full lg:w-1/2">
+              <Player
+                autoplay
+                loop
+                src="https://assets5.lottiefiles.com/packages/lf20_h7ofe9pc.json"
+              ></Player>
+            </div>
           </div>
         </div>
       </section>
-
       <section>
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <div className="container mx-auto px-4 py-16 ">
+          <div className="  mb-10  sm:text-center ">
             <div>
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
                 Brand new
@@ -441,10 +515,12 @@ export default function EcommercePage() {
           </div>
         </div>
       </section>
-
       <section>
         <div className="flex justify-center ">
-          <div className="flex flex-col justify-center  my-10 w-[90%] space-y-28 lg:space-y-24 max-w-7xl">
+          <div
+            className="container mx-auto flex flex-col justify-center  my-10 
+           space-y-28 lg:space-y-24"
+          >
             <div className="flex flex-col justify-center items-center ">
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
                 We have
@@ -549,9 +625,8 @@ export default function EcommercePage() {
           </div>
         </div>
       </section>
-
       <section className="bg-white dark:bg-gray-900">
-        <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+        <div className="container mx-auto py-8 lg:py-16">
           <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">
             Trusted & Used by Big Name Brands
           </h2>
@@ -766,9 +841,8 @@ export default function EcommercePage() {
           </div>
         </div>
       </section>
-
       <section className="bg-white">
-        <div className="flex flex-col lg:flex-row lg:items-center">
+        <div className="container mx-auto  flex flex-col lg:flex-row lg:items-center">
           <div className="w-full lg:w-1/2">
             <div className="py-20 md:px-16 px-6">
               <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
@@ -789,18 +863,17 @@ export default function EcommercePage() {
           </div>
 
           <div className="w-full lg:w-1/2 _banner">
-            <img
-              className="object-cover"
-              src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt="glasses photo"
-            />
+            <Player
+              autoplay
+              loop
+              src="https://assets5.lottiefiles.com/private_files/lf30_otdghgza.json"
+            ></Player>
           </div>
         </div>
       </section>
-
       <section>
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <div className="container mx-auto px-4 py-16 ">
+          <div className=" mb-10 sm:text-center">
             <div>
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
                 Launch your eCommerce business and
@@ -1119,25 +1192,34 @@ export default function EcommercePage() {
         </div>
       </section>
 
-      <section>
-        <div className="relative bg-[#c7def3]">
-          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
-              <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
+      <section className="bg-white">
+        <div className="container mx-auto  flex flex-col lg:flex-row lg:items-center">
+          <div className="w-full lg:w-1/2">
+            <div className="py-20 md:px-16 px-6">
+              <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
                 Start today; Sell Tomorrow
-              </h2>
-              <p className="text-base md:text-lg">
+              </h1>
+
+              <p className="leading-relaxed text-lg mt-3">
                 We Use Well Know Platform Shopify, WooCommerce, Opencart,
                 Magento, PHP, or Python, the SOFTLIX™ app makes it simple,
                 quick, & more effective - Helping you to launch your online
                 business and sell more products in less time (and with less
                 effort!)
               </p>
-              <p className="mb-6 text-base md:text-lg">
+              <p className="leading-relaxed text-lg mt-3">
                 Sign up today, pick a package that suits you, and start selling
                 online within hours of starting
               </p>
             </div>
+          </div>
+
+          <div className="w-full lg:w-1/2 _banner">
+            <Player
+              autoplay
+              loop
+              src="https://assets2.lottiefiles.com/packages/lf20_be0o9mdo.json"
+            ></Player>
           </div>
         </div>
       </section>
