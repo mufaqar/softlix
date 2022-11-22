@@ -52,10 +52,10 @@ export default function Page({ children }) {
       duration: 800,
       offset: 0,
       easing: 'ease-in-out',
-      disable: function() {
+      disable: function () {
         var maxWidth = 800;
         return window.innerWidth < maxWidth;
-      }
+      },
     });
   }, []);
 

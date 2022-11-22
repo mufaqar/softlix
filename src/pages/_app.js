@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'react-image-lightbox/style.css';
 import 'aos/dist/aos.css';
 
-import '../style/global.css';
+import '../style/style.css';
 
 export default function App({ Component, pageProps }) {
   return (
