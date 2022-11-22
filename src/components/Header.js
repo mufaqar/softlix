@@ -8,12 +8,16 @@ export default function Header() {
       <nav className="relative bg-white shadow-sm">
         <div className="top_row bg-zinc-100">
           <div className="container mx-auto  px-6 py-3 flex space-x-4 md:justify-end">
-            <a href="tel:+1 929-460-0564" target="_blank">
+            <a href="tel:+1 929-460-0564" target="_blank" rel="noreferrer">
               <span className="text-sm leading-5 text-gray-700 transition-colors duration-300 transform hover:text-blue-600 hover:underline md:my-0">
                 CALL: +1 929-460-0564
               </span>
             </a>
-            <a href="https://facebook.com/softlixofficial/" target="_blank">
+            <a
+              href="https://facebook.com/softlixofficial/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <span className="text-sm leading-5 text-gray-700 transition-colors duration-300 transform hover:text-blue-600 hover:underline md:my-0">
                 <svg
                   className="h-5 w-5 text-black"
@@ -28,7 +32,11 @@ export default function Header() {
                 </svg>
               </span>
             </a>
-            <a href="https://twitter.com/Softlixglobal" target="_blank">
+            <a
+              href="https://twitter.com/Softlixglobal"
+              target="_blank"
+              rel="noreferrer"
+            >
               <span className="text-sm leading-5 text-gray-700 transition-colors duration-300 transform hover:text-blue-600 hover:underline md:my-0">
                 <svg
                   className="h-5 w-5 text-black"
@@ -46,7 +54,11 @@ export default function Header() {
                 </svg>
               </span>
             </a>
-            <a href="https://instagram.com/softlixglobal" target="_blank">
+            <a
+              href="https://instagram.com/softlixglobal"
+              target="_blank"
+              rel="noreferrer"
+            >
               <span className="text-sm leading-5 text-gray-700 transition-colors duration-300 transform hover:text-blue-600 hover:underline md:my-0">
                 <svg
                   className="h-5 w-5 text-black"

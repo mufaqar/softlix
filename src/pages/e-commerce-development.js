@@ -2,7 +2,7 @@ import Header from 'components/Header';
 import Link from 'next/link';
 import React from 'react';
 
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 export default function EcommercePage() {
   return (
