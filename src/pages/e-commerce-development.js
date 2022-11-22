@@ -52,7 +52,7 @@ export default function EcommercePage() {
                 </p>
 
                 <div className="space-x-3 mt-5">
-                  <Link href="#">
+                  <Link href="/contact">
                     <a className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
                       Get started
                       <span className="text-indigo-200 ml-3" aria-hidden="true">
@@ -224,12 +224,12 @@ export default function EcommercePage() {
               </div>
               <div className="w-full px-4 lg:w-1/3">
                 <div className="flex flex-wrap lg:justify-end">
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    href="/contact"
                     className="hover:text-blue-800 my-1 mr-4 inline-block rounded bg-white bg-opacity-[15%] py-4 px-6 text-base font-medium text-white transition hover:bg-opacity-100 md:px-9 lg:px-6 xl:px-9"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1057,12 +1057,12 @@ export default function EcommercePage() {
                 </div>
               </div>
               <div>
-                <a
-                  href="/"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
                 >
                   Get Started
-                </a>
+                </Link>
                 <p className="text-sm text-gray-600">
                   Launch your store & sell online | Only RS. 39,999 or USD 500
                 </p>
@@ -1205,12 +1205,12 @@ export default function EcommercePage() {
                 </div>
               </div>
               <div>
-                <a
-                  href="/"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-600 hover:bg-indigo-700 focus:shadow-outline focus:outline-none"
                 >
                   Get started
-                </a>
+                </Link>
                 <p className="text-sm text-gray-600">
                   Build multiple high-profit online stores | Only RS. 59,999 or
                   USD 750
@@ -1270,12 +1270,12 @@ export default function EcommercePage() {
               </div>
               <div className="w-full px-4 lg:w-1/3">
                 <div className="flex flex-wrap lg:justify-end">
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    href="/contact"
                     className="hover:text-blue-800 my-1 mr-4 inline-block rounded bg-white bg-opacity-[15%] py-4 px-6 text-base font-medium text-white transition hover:bg-opacity-100 md:px-9 lg:px-6 xl:px-9"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
