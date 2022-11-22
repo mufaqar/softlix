@@ -8,17 +8,45 @@ export default function EcommercePage() {
   return (
     <>
       <Header />
-      <section className="bg-white">
+      <section className="bg-white isolate relative">
+        <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+          <svg
+            class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+            viewBox="0 0 1155 678"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
+              fill-opacity=".3"
+              d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+            />
+            <defs>
+              <linearGradient
+                id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+                x1="1155.49"
+                x2="-78.208"
+                y1=".177"
+                y2="474.645"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#9089FC"></stop>
+                <stop offset="1" stop-color="#FF80B5"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row lg:items-center">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-3/4">
               <div className="py-20 px-6">
-                <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
-                  Launch your eCommerce Business & Sell Products Worldwide with
-                  the #1
-                  <br /> Easy-to-Use eCommerce App and Website (Complete
-                  Solution)
+                <h1 className="text-2xl font-bold tracking-wide text-gray-600 lg:text-5xl">
+                  Launch your eCommerce Business <br />& Sell Products Worldwide
+                  with the #1
                 </h1>
+                <h2 className="text-2xl font-bold tracking-wide  text-gray-500 lg:text-2xl my-4">
+                  Easy-to-Use eCommerce App and Website (Complete Solution)
+                </h2>
                 <p className="leading-relaxed text-lg mt-3">
                   Perfect for beginners and seasoned eCommerce giants
                 </p>
@@ -41,12 +69,13 @@ export default function EcommercePage() {
                 autoplay
                 loop
                 src="https://assets9.lottiefiles.com/packages/lf20_57TxAX.json"
+                className="w-[450px]"
               ></Player>
             </div>
           </div>
         </div>
       </section>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font ">
         <div className="container py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
@@ -1178,7 +1207,7 @@ export default function EcommercePage() {
               <div>
                 <a
                   href="/"
-                  className="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                  className="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-600 hover:bg-indigo-700 focus:shadow-outline focus:outline-none"
                 >
                   Get started
                 </a>
