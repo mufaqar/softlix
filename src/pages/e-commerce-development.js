@@ -40,7 +40,7 @@ export default function EcommercePage() {
               <Player
                 autoplay
                 loop
-                src="https://assets8.lottiefiles.com/packages/lf20_q6wsiidu.json"
+                src="https://assets9.lottiefiles.com/packages/lf20_57TxAX.json"
               ></Player>
             </div>
           </div>
