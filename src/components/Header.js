@@ -46,7 +46,7 @@ if (typeof window !== "undefined") {
               <div className="flex md:hidden">
                 <button
                   type="button"
-                  className="text-gray-500  hover:text-gray-600 focus:outline-none focus:text-gray-600 "
+                  className={`${headerClr ? 'text-black' : 'text-white'}`}
                   aria-label="toggle menu"
                   onClick={() => {
                     setOpen(!open)
@@ -94,27 +94,27 @@ if (typeof window !== "undefined") {
             <div className={` ${open ? "-translate-x-0" : "-translate-x-full"} absolute inset-x-0 z-40 px-6 py-2 transition-all duration-300 ease-in-out bg-white top-16 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-full md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-between w-full`}>
               <div className="flex flex-col md:flex-row md:mx-1 ">
                 <Link href="#feature">
-                  <a className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${headerClr ? 'text-black/70 hover:text-black' : 'text-white/60 hover:text-white' }`}>
+                  <a className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${headerClr ? 'md:text-black/70 md:hover:text-black' : 'md:text-white/60 md:hover:text-white' }`}>
                     Feature
                   </a>
                 </Link>
                 <Link href="#pricing">
-                  <a className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${headerClr ? 'text-black/70 hover:text-black' : 'text-white/60 hover:text-white' }`}>
+                  <a className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${headerClr ? 'md:text-black/70 md:hover:text-black' : 'md:text-white/60 md:hover:text-white' }`}>
                     Pricing
                   </a>
                 </Link>
                 <Link href="#support">
-                  <a className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${headerClr ? 'text-black/70 hover:text-black' : 'text-white/60 hover:text-white' }`}>
+                  <a className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${headerClr ? 'md:text-black/70 md:hover:text-black' : 'md:text-white/60 md:hover:text-white' }`}>
                     Support
                   </a>
                 </Link>
                 <Link href="#testimonial">
-                  <a className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${headerClr ? 'text-black/70 hover:text-black' : 'text-white/60 hover:text-white' }`}>
+                  <a className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${headerClr ? 'md:text-black/70 md:hover:text-black' : 'md:text-white/60 md:hover:text-white' }`}>
                     Testimonials
                   </a>
                 </Link>
               </div>
-              <div className="">
+              <div className="md:my-0 my-4">
                   <Link href="#">
                     <a className="inline-block rounded-lg bg-[#f1cd00] px-4 py-1.5 text-sm font-semibold leading-7 text-black shadow-sm ring-1 ring-[#f1cd00] hover:bg-[#f1cd00] hover:ring-[#f1cd00]">
                       GET STARTED

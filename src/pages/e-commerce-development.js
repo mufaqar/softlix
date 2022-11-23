@@ -1,8 +1,10 @@
 import Header from 'components/Header';
 import Link from 'next/link';
-import React from 'react';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 import { Player } from '@lottiefiles/react-lottie-player';
+import Image from 'next/image';
 
 export default function EcommercePage() {
   return (
@@ -75,7 +77,7 @@ export default function EcommercePage() {
           </div>
         </div>
       </section>
-      <section className="relative ">
+      <section className="relative" >
         <div className="container md:-mt-24 mt-5 z-40 bg-white shadow-lg md:p-10 mx-auto rounded-lg">
 
           <div className="flex flex-wrap ">
@@ -200,7 +202,7 @@ export default function EcommercePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-[60px] ">
+      <section className="py-20 md:py-[60px]">
         <div className="container mx-auto">
           <div className="bg-[url(/images/blue.jpg)] bg-bottom bg-no-repeat bg-cover relative z-10 overflow-hidden rounded-lg py-12 px-8 md:p-[70px]">
             <div className="-mx-4 flex flex-wrap items-center">
@@ -293,27 +295,82 @@ export default function EcommercePage() {
         </div>
       </section>
 
-      <section className="bg-white md:py-16 py-8 px-6">
-        <div className="container mx-auto">
-          <div className="w-full md:w-2/3 mx-auto">
-            <h1 className="text-2xl font-bold tracking-wide text-gray-800 md:text-3xl text-center">
-              Building a Six to Seven-Figure eCommerce Business is Quick &
-              Simple With our All-in-One App
-            </h1>
-            <p className="leading-relaxed text-base mt-3 text-center">
-              The key to building a profitable eCommerce business is to make
-              it watertight. Even the smallest of issues can cause customers
-              to run a mile and your sales to plummet.
-            </p>
-            <p className="leading-relaxed text-base mt-2 text-center">
-              The SOFTLIX™ app makes it simple & effortless to launch your
-              eCommerce business, attract waves of buyers, & sell your
-              products online with little to no work.
-            </p>
+      <section className="bg-white">
+        <div className="container mx-auto  flex flex-col md:flex-row items-center">
+          <div className="w-full lg:w-1/2 bg-[#f8f9fb] max-h-[450px]">
+            <div className="md:py-24 py-16 md:px-16 px-6">
+              <h1 className="text-2xl font-bold tracking-wide text-gray-800 md:text-3xl">
+                Building a Six to Seven-Figure eCommerce Business is Quick & Simple With our All-in-One App
+              </h1>
+
+              <p className="leading-relaxed text-lg mt-3">
+                The key to building a profitable eCommerce business is to make it watertight. Even the smallest of issues can cause customers to run a mile and your sales to plummet.
+              </p>
+              <p className="leading-relaxed text-lg mt-3">
+                The SOFTLIX™ app makes it simple & effortless to launch your eCommerce business, attract waves of buyers, & sell your products online with little to no work.
+              </p>
+            </div>
+          </div>
+
+          <div className="w-full md:w-1/2 md:h-[450px] h-[300px] _banner relative">
+            <Image src="/images/2.jpg" layout='fill' alt="Image" className='object-cover' />
           </div>
         </div>
       </section>
-      <section className='py-16'>
+      <section className="bg-white">
+        <div className="container mx-auto  flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/2 md:h-[450px] h-[300px] _banner relative">
+            <Image src="/images/3.jpg" layout='fill' alt="Image" className='object-cover' />
+          </div>
+
+          <div className="w-full lg:w-1/2 bg-[#f8f9fb] max-h-[450px]">
+            <div className="md:py-24 py-16 md:px-16 px-6">
+              <h1 className="text-2xl font-bold tracking-wide text-gray-800 md:text-3xl">
+                What makes SOFTLIX™ the #1 eCommerce app?
+              </h1>
+
+              <p className="leading-relaxed text-lg mt-3">
+                Simplicity!
+              </p>
+              <p className="leading-relaxed text-lg mt-3">
+                The intuitive dashboard removes the stress & confusion of launching an eCommerce business - Making it perfect for beginners and professionals.
+              </p>
+              <p className="leading-relaxed text-lg mt-3">
+                After we build your web and App, you can start optimizing your business, marketing your goods, & selling products to thousands of customers all over the world</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="container mx-auto  flex flex-col md:flex-row items-center">
+          <div className="w-full lg:w-1/2 bg-[#f8f9fb] max-h-[450px]">
+            <div className="md:py-24 py-16 md:px-16 px-6">
+              <h1 className="text-2xl font-bold tracking-wide text-gray-800 md:text-3xl">
+                Start today; Sell Tomorrow
+              </h1>
+
+              <p className="leading-relaxed text-lg mt-3">
+                We Use Well Know Platform Shopify, WooCommerce, Opencart,
+                Magento, PHP, or Python, the SOFTLIX™ app makes it simple,
+                quick, & more effective - Helping you to launch your online
+                business and sell more products in less time (and with less
+                effort!)
+              </p>
+              <p className="leading-relaxed text-lg mt-3">
+                Sign up today, pick a package that suits you, and start selling
+                online within hours of starting
+              </p>
+            </div>
+          </div>
+
+          <div className="w-full md:w-1/2 md:h-[450px] h-[300px] _banner relative">
+            <Image src="/images/1.jpg" layout='fill' alt="Image" className='object-cover' />
+          </div>
+        </div>
+      </section>
+
+
+      <section className='py-16' id='feature'>
         <div className="container mx-auto px-6">
           <div className="mb-10 text-center ">
             <div>
@@ -500,117 +557,87 @@ export default function EcommercePage() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="flex justify-center ">
-          <div
-            className="container mx-auto flex flex-col justify-center  my-10 
-           space-y-28 lg:space-y-24"
-          >
-            <div className="flex flex-col justify-center items-center ">
-              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                We have
-              </p>
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-                <span className="relative inline-block">
-                  <svg
-                    viewBox="0 0 52 24"
-                    fill="currentColor"
-                    className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                  >
-                    <defs>
-                      <pattern
-                        id="f51618fb-0edb-4bcb-b35a-ffc770941286"
-                        x="0"
-                        y="0"
-                        width=".135"
-                        height=".30"
-                      >
-                        <circle cx="1" cy="1" r=".7" />
-                      </pattern>
-                    </defs>
-                    <rect
-                      fill="url(#f51618fb-0edb-4bcb-b35a-ffc770941286)"
-                      width="52"
-                      height="24"
-                    />
-                  </svg>
-                  <span className="relative">Hundreds</span>
-                </span>{' '}
-                of users now selling online using SOFTLIX™
-              </h2>
-              <p className="text-base text-gray-700 md:text-lg">
-                Reviews/Testimonials
-              </p>
+      <section id='testimonial'>
+        <div className='container mx-auto relative'>
+        <div className="flex items-center justify-between h-full w-full absolute z-0">
+                <div className="w-1/3 bg-white h-full" />
+                <div className="w-4/6 ml-16 bg-[#f8f9fb] h-full" />
             </div>
-            <div className="flex flex-col justify-center items-center lg:flex-row space-y-28 lg:space-y-0  lg:space-x-10">
-              <div className="bg-slate-200 shadow-lg flex flex-col justify-center items-center py-4 h-56 md:w-[80%] lg:w-fit">
-                <div className="-mt-20 ">
-                  <img
-                    src="https://source.unsplash.com/150x150/?man"
-                    className="rounded-full "
-                    alt=""
-                  />
-                </div>
-                <p className="text-center text-sm p-5">
-                  Tailblockss provides best Tailwind CSS Components and Blocks
-                  to create an unique websites within minutes.
-                </p>
-                <div className="flex flex-col lg:flex-row justify-center text-center lg:space-x-3">
-                  <h1 className="text-orange-500 text-lg font-semibold">
-                    Antonio Starc
-                  </h1>
-                  <p className="text-black text-sm lg:mt-[5px]">
-                    Co-Founder at xyz
+          <div className="xl:px-20 px-8 py-20 2xl:mx-auto 2xl:container relative ">
+            <CarouselProvider naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={2}>
+              <div className="mb-10 text-center ">
+                <div>
+                  <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                    WE HAVE
                   </p>
                 </div>
-              </div>
-              <div className="bg-slate-200 shadow-lg flex flex-col justify-center items-center py-4 h-56 md:w-[80%] lg:w-fit">
-                <div className="-mt-20 ">
-                  <img
-                    src="https://source.unsplash.com/150x150/?woman"
-                    className="rounded-full "
-                    alt=""
-                  />
-                </div>
-                <p className="text-center text-sm p-5">
-                  Tailblockss provides best Tailwind CSS Components and Blocks
-                  to create an unique websites within minutes.
+                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                  Hundreds of users now selling online using SOFTLIX™
+                </h2>
+                <p className="text-base text-gray-700 md:text-lg">
+                  Reviews/Testimonials
                 </p>
-                <div className="flex flex-col lg:flex-row justify-center text-center lg:space-x-3">
-                  <h1 className="text-orange-500 text-lg font-semibold">
-                    Maria Starc
-                  </h1>
-                  <p className="text-black text-sm lg:mt-[5px]">
-                    Co-Founder at xyz
-                  </p>
-                </div>
               </div>
-              <div className="bg-slate-200 shadow-lg flex flex-col justify-center items-center py-4 h-56 md:w-[80%] lg:w-fit">
-                <div className="-mt-20 ">
-                  <img
-                    src="https://source.unsplash.com/150x150/?girl"
-                    className="rounded-full "
-                    alt=""
-                  />
-                </div>
-                <p className="text-center text-sm p-5">
-                  Tailblockss provides best Tailwind CSS Components and Blocks
-                  to create an unique websites within minutes.
-                </p>
-                <div className="flex flex-col lg:flex-row justify-center text-center lg:space-x-3">
-                  <h1 className="text-orange-500 text-lg font-semibold">
-                    Jessica Starc
-                  </h1>
-                  <p className="text-black text-sm lg:mt-[5px]">
-                    Co-Founder at xyz
-                  </p>
-                </div>
+              <Slider>
+                <Slide index={0} tabIndex="null">
+                  <div className="flex">
+                    <div className="mt-14 md:flex">
+                      <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
+                        <img src="https://i.ibb.co/4g1D9cv/imgslider1.png" alt="image of profile" className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded" />
+                        <div className="w-32 md:flex hidden items-center justify-center absolute top-0 -mr-16 -mt-14 right-0 h-32 bg-indigo-100 rounded-full">
+                          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/testimonial-svg1.svg" alt="commas" />
+                        </div>
+                      </div>
+                      <div className="md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0 mt-4 flex flex-col justify-between">
+                        <div>
+                          <h1 className="text-2xl font-semibold xl:leading-loose text-gray-800">Some of the best work that was done!</h1>
+                          <p className="text-base font-medium leading-6 mt-4 text-gray-600">Our core values are at the heart of all that we do. They are integrated into our daily work lives and help us to remember our customers always comes first, the last thank you should always comes from us.</p>
+                        </div>
+                        <div className="md:mt-0 mt-8">
+                          <p className="text-base font-medium leading-4 text-gray-800">Anna Smith</p>
+                          <p className="text-base leading-4 mt-2 mb-4 text-gray-600">Senior Web Designer</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Slide>
+                <Slide index={1}>
+                  <div className="flex relative" style={{ transform: 'translateX(0%)' }}>
+                    <div className="mt-14 md:flex">
+                      <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
+                        <img src="https://i.ibb.co/4g1D9cv/imgslider1.png" alt="image of profile" className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded" />
+                        <div className="w-32 md:flex hidden items-center justify-center absolute top-0 -mr-16 -mt-14 right-0 h-32 bg-indigo-100 rounded-full">
+                          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/testimonial-svg1.svg" alt="commas" />
+                        </div>
+                      </div>
+                      <div className="md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0 mt-4 flex flex-col justify-between">
+                        <div>
+                          <h1 className="text-2xl font-semibold xl:leading-loose text-gray-800">Some of the best work that was done!</h1>
+                          <p className="text-base font-medium leading-6 mt-4 text-gray-600">Our core values are at the heart of all that we do. They are integrated into our daily work lives and help us to remember our customers always comes first, the last thank you should always comes from us.</p>
+                        </div>
+                        <div className="md:mt-0 mt-8">
+                          <p className="text-base font-medium leading-4 text-gray-800">Anna Smith</p>
+                          <p className="text-base leading-4 mt-2 mb-4 text-gray-600">Senior Web Designer</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Slide>
+              </Slider>
+              <div className="flex items-center mt-8">
+                <ButtonBack className="cursor-pointer " role="button" aria-label="previous slide">
+                  <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/testimonal-svg2.svg" alt="previous" />
+                </ButtonBack>
+
+                <ButtonNext role="button" aria-label="next slide" className="cursor-pointer ml-2">
+                  <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/testimonial-svg3.svg" alt="next" />
+                </ButtonNext>
               </div>
-            </div>
+            </CarouselProvider>
           </div>
         </div>
       </section>
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-white dark:bg-gray-900" id='clients'>
         <div className="container mx-auto py-8 lg:py-16">
           <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">
             Trusted & Used by Big Name Brands
@@ -826,79 +853,24 @@ export default function EcommercePage() {
           </div>
         </div>
       </section>
-      <section className="bg-white">
-        <div className="container mx-auto  flex flex-col lg:flex-row lg:items-center">
-          <div className="w-full lg:w-1/2">
-            <div className="py-20 md:px-16 px-6">
-              <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
-                What makes SOFTLIX™ the #1 eCommerce app?
-              </h1>
-              <p className="leading-relaxed text-lg mt-3">Simplicity!</p>
-              <p className="leading-relaxed text-lg mt-3">
-                The intuitive dashboard removes the stress & confusion of
-                launching an eCommerce business - Making it perfect for
-                beginners and professionals.
-              </p>
-              <p className="leading-relaxed text-lg mt-3">
-                After we build your web and App, you can start optimizing your
-                business, marketing your goods, & selling products to thousands
-                of customers all over the world
-              </p>
-            </div>
-          </div>
 
-          <div className="w-full lg:w-1/2 _banner">
-            <Player
-              autoplay
-              loop
-              src="https://assets5.lottiefiles.com/private_files/lf30_otdghgza.json"
-              className="md:w-[450px] w-[300px]"
-            ></Player>
-          </div>
-        </div>
-      </section>
-      <section>
+      <section id='pricing' className='bg-[#f8f9fb] '>
         <div className="container mx-auto px-4 py-16 ">
-          <div className=" mb-10 sm:text-center">
+          <div className="mb-10 text-center ">
             <div>
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                Launch your eCommerce business and
+                LAUNCH YOUR ECOMMERCE BUSINESS AND
               </p>
             </div>
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-              <span className="relative inline-block">
-                <svg
-                  viewBox="0 0 52 24"
-                  fill="currentColor"
-                  className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                >
-                  <defs>
-                    <pattern
-                      id="ace59d72-08d5-4850-b9e4-d9d0b86c0525"
-                      x="0"
-                      y="0"
-                      width=".135"
-                      height=".30"
-                    >
-                      <circle cx="1" cy="1" r=".7"></circle>
-                    </pattern>
-                  </defs>
-                  <rect
-                    fill="url(#ace59d72-08d5-4850-b9e4-d9d0b86c0525)"
-                    width="52"
-                    height="24"
-                  ></rect>
-                </svg>
-                <span className="relative">Sell </span>
-              </span>
-              worldwide with our affordable packages
+              Sellworldwide with our affordable packages
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
               One-time payments & no hidden fees
             </p>
           </div>
           <div className="grid max-w-md gap-10 row-gap-5 sm:row-gap-10 lg:max-w-screen-md lg:grid-cols-2 sm:mx-auto">
-            <div className="flex flex-col justify-between p-5 bg-white border rounded shadow-sm">
+            <div className="flex flex-col justify-between p-5 bg-white rounded-lg shadow-2xl">
               <div className="mb-6">
                 <div className="flex items-center justify-between pb-6 mb-6 border-b">
                   <div>
@@ -1016,16 +988,17 @@ export default function EcommercePage() {
               <div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
                 >
-                  Get Started
+                  <a className="inline-flex items-center justify-center w-full h-12 px-6 mb-8 font-medium tracking-wide text-black border-2 border-[#f1cd00] transition duration-200 bg-transparent rounded-lg shadow-md hover:bg-[#f1cd00] focus:shadow-outline focus:outline-none">
+                    Get Started
+                  </a>
                 </Link>
                 <p className="text-sm text-gray-600">
                   Launch your store & sell online | Only RS. 39,999 or USD 500
                 </p>
               </div>
             </div>
-            <div className="flex flex-col justify-between p-5 bg-white border rounded shadow-sm">
+            <div className="flex flex-col justify-between p-5 bg-white rounded-lg shadow-2xl">
               <div className="mb-6">
                 <div className="flex items-center justify-between pb-6 mb-6 border-b">
                   <div>
@@ -1164,9 +1137,10 @@ export default function EcommercePage() {
               <div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center w-full h-12 px-6 mb-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-600 hover:bg-indigo-700 focus:shadow-outline focus:outline-none"
                 >
-                  Get started
+                  <a className="inline-flex items-center justify-center w-full h-12 px-6 mb-8 font-medium tracking-wide text-black transition duration-200 rounded-lg shadow-md bg-[#f1cd00] hover:bg-transparent border-2 border-[#f1cd00] focus:shadow-outline focus:outline-none">
+                    Get started
+                  </a>
                 </Link>
                 <p className="text-sm text-gray-600">
                   Build multiple high-profit online stores | Only RS. 59,999 or
@@ -1178,40 +1152,7 @@ export default function EcommercePage() {
         </div>
       </section>
 
-      <section className="bg-white">
-        <div className="container mx-auto  flex flex-col lg:flex-row lg:items-center">
-          <div className="w-full lg:w-1/2">
-            <div className="py-20 md:px-16 px-6">
-              <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
-                Start today; Sell Tomorrow
-              </h1>
-
-              <p className="leading-relaxed text-lg mt-3">
-                We Use Well Know Platform Shopify, WooCommerce, Opencart,
-                Magento, PHP, or Python, the SOFTLIX™ app makes it simple,
-                quick, & more effective - Helping you to launch your online
-                business and sell more products in less time (and with less
-                effort!)
-              </p>
-              <p className="leading-relaxed text-lg mt-3">
-                Sign up today, pick a package that suits you, and start selling
-                online within hours of starting
-              </p>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-1/2 _banner">
-            <Player
-              autoplay
-              loop
-              src="https://assets2.lottiefiles.com/packages/lf20_be0o9mdo.json"
-              className="md:w-[450px] w-[300px]"
-            ></Player>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-[60px] ">
+      <section className="py-20 md:py-[60px] " id='support'>
         <div className="container mx-auto">
           <div className="bg-[url(/images/blue.jpg)] bg-bottom bg-no-repeat bg-cover relative z-10 overflow-hidden rounded-lg py-12 px-8 md:p-[70px]">
             <div className="-mx-4 flex flex-wrap items-center">
@@ -1303,6 +1244,13 @@ export default function EcommercePage() {
           </div>
         </div>
       </section>
+
+<section className='bg-[#020637] py-2'>
+  <div className='container mx-auto'>
+    <p className='leading-relaxed text-base text-white text-center'>© 2022 SOFTLIX Ltd. All rights reserved</p>
+  </div>
+</section>
+
     </>
   );
 }
