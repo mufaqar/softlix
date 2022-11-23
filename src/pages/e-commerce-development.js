@@ -8,7 +8,7 @@ export default function EcommercePage() {
   return (
     <>
       <Header />
-      <section className="bg-white isolate relative">
+      <section className="bg-[url(/images/blue.jpg)] bg-center bg-no-repeat bg-cover pt-24 pb-24 isolate relative">
         <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
           <svg
             className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -38,24 +38,24 @@ export default function EcommercePage() {
         </div>
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row lg:items-center">
-            <div className="w-full lg:w-3/4">
+            <div className="w-full md:w-3/4">
               <div className="py-20 px-6">
-                <h1 className="text-2xl font-bold tracking-wide text-gray-600 lg:text-5xl">
+                <h1 className="text-2xl font-bold tracking-wide text-white md:text-4xl">
                   Launch your eCommerce Business <br />& Sell Products Worldwide
                   with the #1
                 </h1>
-                <h2 className="text-2xl font-bold tracking-wide  text-gray-500 lg:text-2xl my-4">
+                <h2 className="text-lg font-bold tracking-wide  text-white md:text-xl my-4">
                   Easy-to-Use eCommerce App and Website (Complete Solution)
                 </h2>
-                <p className="leading-relaxed text-lg mt-3">
+                <p className="leading-relaxed md:text-lg text-base mt-3 text-white/70">
                   Perfect for beginners and seasoned eCommerce giants
                 </p>
 
-                <div className="space-x-3 mt-5">
+                <div className="mt-5">
                   <Link href="/contact">
-                    <a className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700">
+                    <a className="inline-block rounded-lg bg-[#f1cd00] px-4 py-1.5 text-base font-semibold leading-7 text-black shadow-sm ring-1 ring-[#f1cd00] hover:bg-[#f1cd00] hover:ring-[#f1cd00]">
                       Get started
-                      <span className="text-indigo-200 ml-3" aria-hidden="true">
+                      <span className="text-black ml-3" aria-hidden="true">
                         &rarr;
                       </span>
                     </a>
@@ -64,30 +64,23 @@ export default function EcommercePage() {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2 _banner">
+            <div className="w-full md:w-1/2 _banner">
               <Player
                 autoplay
                 loop
                 src="https://assets9.lottiefiles.com/packages/lf20_57TxAX.json"
-                className="w-[450px]"
+                className="md:w-[450px] w-[300px]"
               ></Player>
             </div>
           </div>
         </div>
       </section>
-      <section className="text-gray-600 body-font ">
-        <div className="container py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-20">
-            <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
-              E-Commerce
-            </h2>
-            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-              Perfect for beginners and seasoned eCommerce giants
-            </h1>
-          </div>
-          <div className="flex flex-wrap -m-4">
-            <div className="p-4 md:w-1/4">
-              <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+      <section className="relative ">
+        <div className="container md:-mt-24 mt-5 z-40 bg-white shadow-lg md:p-10 mx-auto rounded-lg">
+
+          <div className="flex flex-wrap ">
+            <div className="p-4 md:w-1/4 w-full">
+              <div className="md:py-0 py-5 flex h-full w-full flex-col relative">
                 <div className="flex items-center mb-3">
                   <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                     <svg
@@ -114,8 +107,8 @@ export default function EcommercePage() {
                 </div>
               </div>
             </div>
-            <div className="p-4 md:w-1/4">
-              <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+            <div className="p-4 md:w-1/4 w-full">
+              <div className="md:py-0 py-5 flex h-full w-full flex-col relative before:content-[''] before:absolute md:before:h-full before:h-[2px] md:before:w-[2px] before:w-full before:bg-black/20 md:before:top-0 before:-top-5 md:before:-left-6 before:left-auto">
                 <div className="flex items-center mb-3">
                   <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                     <svg
@@ -143,8 +136,8 @@ export default function EcommercePage() {
                 </div>
               </div>
             </div>
-            <div className="p-4 md:w-1/4">
-              <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+            <div className="p-4 md:w-1/4 w-full">
+              <div className="md:py-0 py-5 flex h-full w-full flex-col relative before:content-[''] before:absolute md:before:h-full before:h-[2px] md:before:w-[2px] before:w-full before:bg-black/20 md:before:top-0 before:-top-5 md:before:-left-6 before:left-auto">
                 <div className="flex items-center mb-3">
                   <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                     <svg
@@ -173,8 +166,8 @@ export default function EcommercePage() {
                 </div>
               </div>
             </div>
-            <div className="p-4 md:w-1/4">
-              <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+            <div className="p-4 md:w-1/4 w-full">
+              <div className="md:py-0 py-5 flex h-full w-full flex-col relative before:content-[''] before:absolute md:before:h-full before:h-[2px] md:before:w-[2px] before:w-full before:bg-black/20 md:before:top-0 before:-top-5 md:before:-left-6 before:left-auto">
                 <div className="flex items-center mb-3">
                   <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                     <svg
@@ -207,9 +200,9 @@ export default function EcommercePage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-[60px]">
+      <section className="py-20 md:py-[60px] ">
         <div className="container mx-auto">
-          <div className="bg-blue-800 relative z-10 overflow-hidden rounded py-12 px-8 md:p-[70px]">
+          <div className="bg-[url(/images/blue.jpg)] bg-bottom bg-no-repeat bg-cover relative z-10 overflow-hidden rounded-lg py-12 px-8 md:p-[70px]">
             <div className="-mx-4 flex flex-wrap items-center">
               <div className="w-full px-4 lg:w-2/3">
                 <h2 className="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[38px] lg:mb-0">
@@ -226,9 +219,9 @@ export default function EcommercePage() {
                 <div className="flex flex-wrap lg:justify-end">
                   <Link
                     href="/contact"
-                    className="hover:text-blue-800 my-1 mr-4 inline-block rounded bg-white bg-opacity-[15%] py-4 px-6 text-base font-medium text-white transition hover:bg-opacity-100 md:px-9 lg:px-6 xl:px-9"
                   >
-                    Contact Us
+                    <a className=" bg-[#f1cd00] hover:bg-[#f1cd00] my-1 mr-4 inline-block rounded-lg py-2 px-6 text-base font-medium text-black transition md:px-9">
+                      Contact Us</a>
                   </Link>
                 </div>
               </div>
@@ -300,83 +293,46 @@ export default function EcommercePage() {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-white md:py-16 py-8 px-6">
         <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-center">
-            <div className="w-full lg:w-1/2">
-              <div className="py-20 px-6">
-                <h1 className="text-2xl font-bold tracking-wide text-gray-800 lg:text-3xl">
-                  Building a Six to Seven-Figure eCommerce Business is Quick &
-                  Simple With our All-in-One App
-                </h1>
-                <p className="leading-relaxed text-lg mt-3">
-                  The key to building a profitable eCommerce business is to make
-                  it watertight. Even the smallest of issues can cause customers
-                  to run a mile and your sales to plummet.
-                </p>
-                <p className="leading-relaxed text-lg mt-3">
-                  The SOFTLIX™ app makes it simple & effortless to launch your
-                  eCommerce business, attract waves of buyers, & sell your
-                  products online with little to no work.
-                </p>
-              </div>
-            </div>
-
-            <div className="w-full lg:w-1/2">
-              <Player
-                autoplay
-                loop
-                src="https://assets5.lottiefiles.com/packages/lf20_h7ofe9pc.json"
-              ></Player>
-            </div>
+          <div className="w-full md:w-2/3 mx-auto">
+            <h1 className="text-2xl font-bold tracking-wide text-gray-800 md:text-3xl text-center">
+              Building a Six to Seven-Figure eCommerce Business is Quick &
+              Simple With our All-in-One App
+            </h1>
+            <p className="leading-relaxed text-base mt-3 text-center">
+              The key to building a profitable eCommerce business is to make
+              it watertight. Even the smallest of issues can cause customers
+              to run a mile and your sales to plummet.
+            </p>
+            <p className="leading-relaxed text-base mt-2 text-center">
+              The SOFTLIX™ app makes it simple & effortless to launch your
+              eCommerce business, attract waves of buyers, & sell your
+              products online with little to no work.
+            </p>
           </div>
         </div>
       </section>
-      <section>
-        <div className="container mx-auto px-4 py-16 ">
-          <div className="  mb-10  sm:text-center ">
+      <section className='py-16'>
+        <div className="container mx-auto px-6">
+          <div className="mb-10 text-center ">
             <div>
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
                 Brand new
               </p>
             </div>
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-              <span className="relative inline-block">
-                <svg
-                  viewBox="0 0 52 24"
-                  fill="currentColor"
-                  className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                >
-                  <defs>
-                    <pattern
-                      id="f51618fb-0edb-4bcb-b35a-ffc770941286"
-                      x="0"
-                      y="0"
-                      width=".135"
-                      height=".30"
-                    >
-                      <circle cx="1" cy="1" r=".7" />
-                    </pattern>
-                  </defs>
-                  <rect
-                    fill="url(#f51618fb-0edb-4bcb-b35a-ffc770941286)"
-                    width="52"
-                    height="24"
-                  />
-                </svg>
-                <span className="relative">How</span>
-              </span>{' '}
               SOFTLIX Works
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
               (Features that SELL!)
             </p>
           </div>
-          <div className="grid gap-8 row-gap-0 lg:grid-cols-4">
-            <div className="relative text-center">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+          <div className="grid md:gap-16 gap-8 row-gap-0 md:grid-cols-4">
+            <div className="relative text-center  group">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full transition-all duration-300 ease-in-out bg-transparent group-hover:bg-[#f1cd00] border-4 border-[#f1cd00] sm:w-20 sm:h-20">
                 <svg
-                  className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"
+                  className="w-12 h-12 text-[#f1cd00] group-hover:text-black transition-all duration-300 ease-in-out sm:w-16 sm:h-16"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -389,7 +345,7 @@ export default function EcommercePage() {
                   />
                 </svg>
               </div>
-              <h6 className="mb-2 text-xl font-extrabold">
+              <h6 className="mb-2 text-lg font-bold">
                 Ready-to-Go Websites that Attract Customers
               </h6>
               <p className="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
@@ -421,10 +377,10 @@ export default function EcommercePage() {
                 </svg>
               </div>
             </div>
-            <div className="relative text-center">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+            <div className="relative text-center group">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full transition-all duration-300 ease-in-out bg-transparent group-hover:bg-[#f1cd00] border-4 border-[#f1cd00] sm:w-20 sm:h-20">
                 <svg
-                  className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"
+                  className="w-12 h-12 text-[#f1cd00] group-hover:text-black transition-all duration-300 ease-in-out sm:w-16 sm:h-16"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -437,7 +393,7 @@ export default function EcommercePage() {
                   />
                 </svg>
               </div>
-              <h6 className="mb-2 text-xl font-extrabold">
+              <h6 className="mb-2 text-lg font-bold">
                 Powerful Marketing at your Fingertips
               </h6>
               <p className="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
@@ -469,10 +425,10 @@ export default function EcommercePage() {
                 </svg>
               </div>
             </div>
-            <div className="relative text-center">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+            <div className="relative text-center group">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full transition-all duration-300 ease-in-out bg-transparent group-hover:bg-[#f1cd00] border-4 border-[#f1cd00] sm:w-20 sm:h-20">
                 <svg
-                  className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"
+                  className="w-12 h-12 text-[#f1cd00] group-hover:text-black transition-all duration-300 ease-in-out sm:w-16 sm:h-16"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -485,7 +441,7 @@ export default function EcommercePage() {
                   />
                 </svg>
               </div>
-              <h6 className="mb-2 text-xl font-extrabold">
+              <h6 className="mb-2 text-lg font-bold">
                 Payment Systems for Everyone & Anyone
               </h6>
               <p className="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
@@ -517,10 +473,10 @@ export default function EcommercePage() {
                 </svg>
               </div>
             </div>
-            <div className="relative text-center">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+            <div className="relative text-center group">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full transition-all duration-300 ease-in-out bg-transparent group-hover:bg-[#f1cd00] border-4 border-[#f1cd00] sm:w-20 sm:h-20">
                 <svg
-                  className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"
+                  className="w-12 h-12 text-[#f1cd00] group-hover:text-black transition-all duration-300 ease-in-out sm:w-16 sm:h-16"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >
@@ -533,7 +489,7 @@ export default function EcommercePage() {
                   />
                 </svg>
               </div>
-              <h6 className="mb-2 text-xl font-extrabold">
+              <h6 className="mb-2 text-lg font-bold">
                 Shipping Made Easy
               </h6>
               <p className="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
@@ -896,6 +852,7 @@ export default function EcommercePage() {
               autoplay
               loop
               src="https://assets5.lottiefiles.com/private_files/lf30_otdghgza.json"
+              className="md:w-[450px] w-[300px]"
             ></Player>
           </div>
         </div>
@@ -1248,14 +1205,15 @@ export default function EcommercePage() {
               autoplay
               loop
               src="https://assets2.lottiefiles.com/packages/lf20_be0o9mdo.json"
+              className="md:w-[450px] w-[300px]"
             ></Player>
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-[120px]">
+      <section className="py-20 md:py-[60px] ">
         <div className="container mx-auto">
-          <div className="bg-blue-800 relative z-10 overflow-hidden rounded py-12 px-8 md:p-[70px]">
+          <div className="bg-[url(/images/blue.jpg)] bg-bottom bg-no-repeat bg-cover relative z-10 overflow-hidden rounded-lg py-12 px-8 md:p-[70px]">
             <div className="-mx-4 flex flex-wrap items-center">
               <div className="w-full px-4 lg:w-2/3">
                 <h2 className="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[38px] lg:mb-0">
@@ -1272,9 +1230,9 @@ export default function EcommercePage() {
                 <div className="flex flex-wrap lg:justify-end">
                   <Link
                     href="/contact"
-                    className="hover:text-blue-800 my-1 mr-4 inline-block rounded bg-white bg-opacity-[15%] py-4 px-6 text-base font-medium text-white transition hover:bg-opacity-100 md:px-9 lg:px-6 xl:px-9"
                   >
-                    Contact Us
+                    <a className=" bg-[#f1cd00] hover:bg-[#f1cd00] my-1 mr-4 inline-block rounded-lg py-2 px-6 text-base font-medium text-black transition md:px-9">
+                      Contact Us</a>
                   </Link>
                 </div>
               </div>
