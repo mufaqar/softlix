@@ -6,8 +6,10 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import { Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
 import Form from 'components/Form';
+import { useState } from 'react';
 
 export default function EcommercePage() {
+  const [form, setForm] = useState(false);
   return (
     <>
       <Header />
@@ -55,14 +57,14 @@ export default function EcommercePage() {
                 </p>
 
                 <div className="mt-5">
-                  <Link href="/contact">
-                    <a className="inline-block rounded-lg bg-[#f1cd00] px-4 py-1.5 text-base font-semibold leading-7 text-black shadow-sm ring-1 ring-[#f1cd00] hover:bg-[#f1cd00] hover:ring-[#f1cd00]">
-                      Book A Call
-                      <span className="text-black ml-3" aria-hidden="true">
-                        &rarr;
-                      </span>
-                    </a>
-                  </Link>
+                  <button onClick={() => {
+                    setForm(!form)
+                  }} className="inline-block rounded-lg bg-[#f1cd00] px-4 py-1.5 text-base font-semibold leading-7 text-black shadow-sm ring-1 ring-[#f1cd00] hover:bg-[#f1cd00] hover:ring-[#f1cd00]">
+                    Book A Call
+                    <span className="text-black ml-3" aria-hidden="true">
+                      &rarr;
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -220,12 +222,11 @@ export default function EcommercePage() {
               </div>
               <div className="w-full px-4 lg:w-1/3">
                 <div className="flex flex-wrap lg:justify-end">
-                  <Link
-                    href="/contact"
-                  >
-                    <a className=" bg-[#f1cd00] hover:bg-[#f1cd00] my-1 mr-4 inline-block rounded-lg py-2 px-6 text-base font-medium text-black transition md:px-9">
-                      Contact Us</a>
-                  </Link>
+                  <button onClick={() => {
+                    setForm(!form)
+                  }} className=" bg-[#f1cd00] hover:bg-[#f1cd00] my-1 mr-4 inline-block rounded-lg py-2 px-6 text-base font-medium text-black transition md:px-9">
+                    Book A Call
+                  </button>
                 </div>
               </div>
             </div>
@@ -987,13 +988,13 @@ export default function EcommercePage() {
                 </div>
               </div>
               <div>
-                <Link
-                  href="/contact"
-                >
-                  <a className="inline-flex items-center justify-center w-full h-12 px-6 mb-8 font-medium tracking-wide text-black border-2 border-[#f1cd00] transition duration-200 bg-transparent rounded-lg shadow-md hover:bg-[#f1cd00] focus:shadow-outline focus:outline-none">
-                    Get Started
-                  </a>
-                </Link>
+                <button
+                  onClick={() => {
+                    setForm(!form)
+                  }}
+                  className="inline-flex items-center justify-center w-full h-12 px-6 mb-8 font-medium tracking-wide text-black border-2 border-[#f1cd00] transition duration-200 bg-transparent rounded-lg shadow-md hover:bg-[#f1cd00] focus:shadow-outline focus:outline-none">
+                  Get Started
+                </button>
                 <p className="text-sm text-gray-600">
                   Launch your store & sell online | Only RS. 39,999 or USD 500
                 </p>
@@ -1136,13 +1137,12 @@ export default function EcommercePage() {
                 </div>
               </div>
               <div>
-                <Link
-                  href="/contact"
-                >
-                  <a className="inline-flex items-center justify-center w-full h-12 px-6 mb-8 font-medium tracking-wide text-black transition duration-200 rounded-lg shadow-md bg-[#f1cd00] hover:bg-transparent border-2 border-[#f1cd00] focus:shadow-outline focus:outline-none">
-                    Get started
-                  </a>
-                </Link>
+                <button
+                  onClick={() => {
+                    setForm(!form)
+                  }} className="inline-flex items-center justify-center w-full h-12 px-6 mb-8 font-medium tracking-wide text-black transition duration-200 rounded-lg shadow-md bg-[#f1cd00] hover:bg-transparent border-2 border-[#f1cd00] focus:shadow-outline focus:outline-none">
+                  Get started
+                </button>
                 <p className="text-sm text-gray-600">
                   Build multiple high-profit online stores | Only RS. 59,999 or
                   USD 750
@@ -1170,12 +1170,12 @@ export default function EcommercePage() {
               </div>
               <div className="w-full px-4 lg:w-1/3">
                 <div className="flex flex-wrap lg:justify-end">
-                  <Link
-                    href="/contact"
-                  >
-                    <a className=" bg-[#f1cd00] hover:bg-[#f1cd00] my-1 mr-4 inline-block rounded-lg py-2 px-6 text-base font-medium text-black transition md:px-9">
-                      Contact Us</a>
-                  </Link>
+                  <button
+                    onClick={() => {
+                      setForm(!form)
+                    }} className=" bg-[#f1cd00] hover:bg-[#f1cd00] my-1 mr-4 inline-block rounded-lg py-2 px-6 text-base font-medium text-black transition md:px-9">
+                    Contact Us
+                  </button>
                 </div>
               </div>
             </div>
@@ -1246,7 +1246,16 @@ export default function EcommercePage() {
         </div>
       </section>
 
-      <Form />
+      <div className="relative flex justify-center">
+        <div className={`flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0 ${form ? 'flex sm:block bg-black/30 fixed inset-0 z-10 overflow-y-auto' : 'hidden'}`}
+          aria-labelledby="modal-title" role="dialog" aria-modal="true"
+          onClick={() => {
+            setForm(!form)
+          }}>
+
+          <Form />
+        </div>
+      </div>
 
       <section className='bg-[#020637] py-2'>
         <div className='container mx-auto'>
