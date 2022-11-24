@@ -5,6 +5,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 
 import { Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
+import Form from 'components/Form';
 
 export default function EcommercePage() {
   return (
@@ -44,7 +45,7 @@ export default function EcommercePage() {
               <div className="py-20 px-6">
                 <h1 className="text-2xl font-bold tracking-wide text-white md:text-4xl">
                   Launch your eCommerce Business <br />& Sell Products Worldwide
-                  with the #1 123
+                  with the #1
                 </h1>
                 <h2 className="text-lg font-bold tracking-wide  text-white md:text-xl my-4">
                   Easy-to-Use eCommerce App and Website (Complete Solution)
@@ -56,7 +57,7 @@ export default function EcommercePage() {
                 <div className="mt-5">
                   <Link href="/contact">
                     <a className="inline-block rounded-lg bg-[#f1cd00] px-4 py-1.5 text-base font-semibold leading-7 text-black shadow-sm ring-1 ring-[#f1cd00] hover:bg-[#f1cd00] hover:ring-[#f1cd00]">
-                      Get started
+                      Book A Call
                       <span className="text-black ml-3" aria-hidden="true">
                         &rarr;
                       </span>
@@ -313,7 +314,7 @@ export default function EcommercePage() {
           </div>
 
           <div className="w-full md:w-1/2 md:h-[450px] h-[300px] _banner relative">
-            <Image src="/images/2.jpg" layout='fill' alt="Image" className='object-cover' />
+            <Image src="/images/2.jpg" layout='fill' alt="Image" priority="true" className='object-cover' />
           </div>
         </div>
       </section>
@@ -559,10 +560,10 @@ export default function EcommercePage() {
       </section>
       <section id='testimonial'>
         <div className='container mx-auto relative'>
-        <div className="flex items-center justify-between h-full w-full absolute z-0">
-                <div className="w-1/3 bg-white h-full" />
-                <div className="w-4/6 ml-16 bg-[#f8f9fb] h-full" />
-            </div>
+          <div className="flex items-center justify-between h-full w-full absolute z-0">
+            <div className="w-1/3 bg-white h-full" />
+            <div className="w-4/6 ml-16 bg-[#f8f9fb] h-full" />
+          </div>
           <div className="xl:px-20 px-8 py-20 2xl:mx-auto 2xl:container relative ">
             <CarouselProvider naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={2}>
               <div className="mb-10 text-center ">
@@ -1245,11 +1246,13 @@ export default function EcommercePage() {
         </div>
       </section>
 
-<section className='bg-[#020637] py-2'>
-  <div className='container mx-auto'>
-    <p className='leading-relaxed text-base text-white text-center'>© 2022 SOFTLIX Ltd. All rights reserved</p>
-  </div>
-</section>
+      <Form />
+
+      <section className='bg-[#020637] py-2'>
+        <div className='container mx-auto'>
+          <p className='leading-relaxed text-base text-white text-center'>© 2022 SOFTLIX Ltd. All rights reserved</p>
+        </div>
+      </section>
 
     </>
   );

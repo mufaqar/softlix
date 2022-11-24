@@ -117,7 +117,7 @@ if (typeof window !== "undefined") {
               <div className="md:my-0 my-4">
                   <Link href="#">
                     <a className="inline-block rounded-lg bg-[#f1cd00] px-4 py-1.5 text-sm font-semibold leading-7 text-black shadow-sm ring-1 ring-[#f1cd00] hover:bg-[#f1cd00] hover:ring-[#f1cd00]">
-                      GET STARTED
+                    Book A Call
                     </a>
                   </Link>
                 </div>
