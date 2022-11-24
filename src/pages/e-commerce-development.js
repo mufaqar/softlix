@@ -44,7 +44,7 @@ export default function EcommercePage() {
               <div className="py-20 px-6">
                 <h1 className="text-2xl font-bold tracking-wide text-white md:text-4xl">
                   Launch your eCommerce Business <br />& Sell Products Worldwide
-                  with the #1
+                  with the #1 123
                 </h1>
                 <h2 className="text-lg font-bold tracking-wide  text-white md:text-xl my-4">
                   Easy-to-Use eCommerce App and Website (Complete Solution)
