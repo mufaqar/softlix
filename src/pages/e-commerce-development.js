@@ -1250,7 +1250,7 @@ export default function EcommercePage() {
 
       <section className='bg-[#020637] py-2'>
         <div className='container mx-auto'>
-          <p className='leading-relaxed text-base text-white text-center'>© 2022 SOFTLIX Ltd. All rights reserved</p>
+          <p className='leading-relaxed text-base text-white text-center'>123 © 2022 SOFTLIX Ltd. All rights reserved</p>
         </div>
       </section>
 
