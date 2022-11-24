@@ -35,14 +35,14 @@ export default function Form() {
                                 </div>
 
                                 <div className="mt-6">
-                                    <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                                        Sign in
+                                    <button className="w-full px-4 py-2 tracking-wide text-black border-2 border-[#f1cd00] transition-colors duration-300 transform bg-[#f1cd00] rounded-md hover:bg-transparent focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                                        Submit
                                     </button>
                                 </div>
 
                             </form>
 
-                            <p className="mt-6 text-sm text-center text-gray-400">Don&#x27;t have an account yet? <a href="#" className="text-blue-500 focus:outline-none focus:underline hover:underline">Sign up</a>.</p>
+                            <p className="mt-6 text-sm text-center text-gray-400">Your Information is safe.</p>
                         </div>
                     </div>
                 </div>
